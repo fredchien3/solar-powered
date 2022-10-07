@@ -27,12 +27,12 @@ class User < ApplicationRecord
   before_validation :ensure_session_token, :set_display_name
   
   def self.find_by_credentials(credential, password)
-    if URI::MailTo::EMAIL_REGEXP.match(credential)  # credential is email
+    if URI::MailTo::EMAIL_REGEXP.match(credential)
       user = User.find_by(email: credential)
-    else                                            # credential is username
+    else
       user = User.find_by(username: credential)
     end
-    return true if user && user.authenticate(password)
+    return user if user && user.authenticate(password)
     false
   end
 
