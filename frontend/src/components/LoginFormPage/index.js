@@ -23,16 +23,9 @@ export default function LoginFormPage() {
       .catch(async (res) => {
         const data = await res.json();
         if (data && data.errors) {
-          console.log('first')
           setErrors(data.errors);
-        } else if (data) {
-          console.log('second')
-          setErrors(data);
-        } else {
-          console.log(res.statusText);
-          setErrors([res.statusText]);
         }
-      })
+      });
   }
   
   return (
