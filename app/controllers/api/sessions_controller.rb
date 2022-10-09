@@ -14,7 +14,7 @@ class Api::SessionsController < ApplicationController
       login! @user
       render 'api/users/show'
     else 
-      render json: { errors: ['The provided credentials where invalid.'] }, status: :unauthorized
+      render json: { errors: ['Please check your password and account name and try again.'] }, status: :unauthorized
     end
   end
 
