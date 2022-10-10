@@ -51,6 +51,14 @@ export const signup = (user) => async (dispatch) => {
   dispatch(setSessionUser(data.user));
 }
 
+export const logout = () => async (dispatch) => {
+  const res = await csrfFetch('/api/session', {
+    method: 'DELETE'
+  });
+  storeCurrentUser(null);
+  dispatch(removeSessionUser());
+}
+
 export const restoreSession = () => async (dispatch) => {
   const res = await csrfFetch('/api/session');
   storeCSRFToken(res);
