@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Navigation />
-      <h1>Hello from App</h1>
+      <h1>solar powered</h1>
       <Switch>
         <Route path="/login">
           <LoginFormPage />

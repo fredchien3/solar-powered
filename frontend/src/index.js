@@ -36,7 +36,7 @@ const renderApplication = () => {
 };
 
 if (sessionStorage.getItem('X-CSRF-Token') && sessionStorage.getItem('currentUser')) {
-  renderApplication();
+renderApplication();
 } else {
-  store.dispatch(sessionActions.restoreSession()).then(renderApplication);
+store.dispatch(sessionActions.restoreSession()).then(renderApplication);
 }

@@ -2,5 +2,10 @@
 @import url('reset.css');
 
 h1 {
-  font-size: 50px;
+  /* font-size: ; */
+}
+
+body {
+  background-color: #1b2838;
+  color: white;
 }

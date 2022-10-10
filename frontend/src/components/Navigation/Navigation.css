@@ -1,0 +1,128 @@
+.header-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #171a21;
+  color: #b8b6b4;
+  height: 104px;
+}
+
+.logo {
+  width: 176px;
+  height: 44px;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  /* background-color: rgba(255, 255, 255, 0.469); */
+}
+
+.center-cluster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background-color: rgba(255, 255, 255, 0.469); */
+}
+
+.center-cluster li {
+  padding: 0 7px 0 7px; 
+}
+
+.right-cluster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -53px;
+  /* background-color: rgba(255, 255, 255, 0.469); */
+}
+
+.login-signup-links {
+  display: flex;
+}
+
+.login-signup-links a {
+  color: #b8b6b4;
+  font-size: 11px;
+  text-decoration: none;
+  margin: 0 11px 0 11px;
+}
+
+.login-signup-links a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.install-steam {
+  width: 110px;
+  height: 24px;
+  background-color: #616a72;
+  color: #e5e4dc;
+  border: none;
+  font-size: 12px;
+  margin-right: 14px;
+}
+
+.install-steam:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.green {
+  background-color: #5c7e10;
+}
+
+.login-signup-links {
+  color: #b8b6b4;
+}
+
+.mail-button {
+  width: 27px;
+  height: 24px;
+  background-color: #262625;
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin-right: 6px;
+}
+
+.mail-button:hover {
+  background-color: #575451;
+  
+}
+
+.profile-button-wrapper {
+  position: relative;  
+}
+
+.profile-button {
+  height: 24px;
+  background: none;
+  border: none;
+  margin-right: 6px;
+  color: #c5c3c2;
+}
+
+.profile-button:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.profile-button-nav {
+  position: absolute;
+  right: 0;
+}
+
+.small-profile-pic {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border: 2px solid #6a6a6a;
+  box-sizing: border-box;
+}
+
+.small-profile-pic:hover {
+  
+}
