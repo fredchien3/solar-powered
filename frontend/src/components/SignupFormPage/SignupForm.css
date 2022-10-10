@@ -1,0 +1,23 @@
+.signup-form {
+  background-color: #181a21;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.signup-form label {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  width: 513px;
+}
+
+.signup-form input {
+  box-sizing: border-box;
+  height: 47px;
+}
+
+.signup-form button {
+  width: 337px;
+  height: 62px;
+}
