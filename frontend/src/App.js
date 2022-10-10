@@ -8,16 +8,16 @@ function App() {
   return (
     <>
       <Navigation />
-      <h1>solar powered</h1>
-      <p>hello world!</p>
-      <Switch>
-        <Route path="/login">
-          <LoginFormPage />
-        </Route>
-        <Route path="/signup">
-          <SignupFormPage />
-        </Route>
-      </Switch>
+      <section className="main-display">
+        <Switch>
+          <Route path="/login">
+            <LoginFormPage />
+          </Route>
+          <Route path="/signup">
+            <SignupFormPage />
+          </Route>
+        </Switch>
+      </section>
     </>
   );
 }

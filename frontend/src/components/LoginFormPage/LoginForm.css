@@ -2,22 +2,65 @@
   background-color: #181a21;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  margin-top: 174px;
+  padding: 24px 32px;
+  box-sizing: border-box; 
+  width: 700px;
+  height: 328px;
   color: #1999ff;
+  position: relative;
+}
+
+.login-form h1 {
+  position: absolute;
+  text-transform: uppercase;
+  font-family:'Motiva Sans 100', sans-serif;
+  font-size: 32px;
+  color: white;
+  font-weight: 200;
+  top: -75px;
+  left: 20px;
 }
 
 .login-form label {
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
+  font-size: 12px;
+  font-family: 'Motiva Sans 500', sans-serif;
   width: 513px;
+  margin-bottom: 4px;
+}
+
+.login-form label:last-of-type {
+  color: #afafaf;
+  font-family: 'Motiva Sans 400', sans-serif;
 }
 
 .login-form input {
-  box-sizing: border-box;
-  height: 47px;
+  /* box-sizing: border-box; */
+  width: 614px;
+  height: 17px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: #32353c;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  outline: none;
+  color: white;
+}
+
+.login-form input:hover {
+  background-color: #393c44;
 }
 
 .login-form button {
-  width: 337px;
-  height: 62px;
+  width: 270px;
+  height: 50px;
+  background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
+  outline: none;
+  border: none;
+  border-radius: 2px;
 }

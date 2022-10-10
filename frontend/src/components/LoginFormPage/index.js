@@ -30,17 +30,14 @@ export default function LoginFormPage() {
   
   return (
     <form className="login-form" onSubmit={handleSubmit}>
+      <h1>Sign In</h1>
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
-      <label>
-        Sign in with account name
-        <input value={credential} onChange={e => setCredential(e.target.value)} />
-      </label>
-      <label>
-        Password
-        <input value={password} onChange={e => setPassword(e.target.value)} />
-      </label>
+      <label htmlFor="credential">Sign in with account name</label>
+      <input id="credential"  value={credential} onChange={e => setCredential(e.target.value)} />
+      <label htmlFor="password">Password</label>
+      <input id="password" value={password} onChange={e => setPassword(e.target.value)} type="password" />
       <button type="submit">Sign In</button>
     </form>
   );

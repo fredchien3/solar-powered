@@ -1,6 +1,21 @@
 @font-face {
-  font-family: 'Motiva Sans';
+  font-family: 'Motiva Sans 100';
+  src: url('./fonts/MotivaSans/MotivaSansThin.ttf');
+}
+
+@font-face {
+  font-family: 'Motiva Sans 400';
   src: url('./fonts/MotivaSans/MotivaSansRegular.woff.ttf');
+}
+
+@font-face {
+  font-family: 'Motiva Sans 500';
+  src: url('./fonts/MotivaSans/MotivaSansMedium.woff.ttf');
+}
+
+@font-face {
+  font-family: 'Motiva Sans 700';
+  src: url('./fonts/MotivaSans/MotivaSansBold.woff.ttf');
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -26,7 +41,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	font-family: "Motiva Sans", sans-serif;
+	font-family: "Motiva Sans 400", sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */

@@ -49,11 +49,11 @@ export default function SignupFormPage() {
       </label>
       <label>
         Choose Password
-        <input value={password} onChange={e => setPassword(e.target.value)} />
+        <input value={password} onChange={e => setPassword(e.target.value)} type="password" />
       </label>
       <label>
         Confirm Password
-        <input value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
+        <input value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} type="password" />
       </label>
       <button type="submit">Done</button>
     </form>
