@@ -1,10 +1,6 @@
 /* TODO Add site wide styles */
 @import url('reset.css');
 
-h1 {
-  /* font-size: ; */
-}
-
 body {
   background-color: #1b2838;
   color: white;

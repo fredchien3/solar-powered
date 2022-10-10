@@ -8,14 +8,13 @@ export default function ProfileButton({currentUser}) {
   const [showMenu, setShowMenu] = useState(false);
 
   const menu = (
-    <ul className="profile-button-nav">
-      <li><Link to="/">View profile</Link></li>
-      <li><button onClick={() => dispatch(logout())}>Logout: {currentUser.username}</button></li>
-      <li><Link to="/">Account details</Link></li>
-      <li><Link to="/">Logout: {currentUser.username}</Link></li>
-      <li><Link to="/">Preferences</Link></li>
-      <li><Link to="/">Change language</Link></li>
-    </ul>
+    <div className="profile-button-dropdown">
+      <Link to="/">View profile</Link>
+      <Link to="/">Account details</Link>
+      <button onClick={() => dispatch(logout())}>Logout: <p>{currentUser.username}</p></button>
+      <Link to="/">Preferences</Link>
+      <Link to="/">Change language</Link>
+    </div>
   )
   
   const openMenu = () => {

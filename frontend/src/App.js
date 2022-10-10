@@ -9,6 +9,7 @@ function App() {
     <>
       <Navigation />
       <h1>solar powered</h1>
+      <p>hello world!</p>
       <Switch>
         <Route path="/login">
           <LoginFormPage />
