@@ -66,18 +66,33 @@ export default function LoginFormPage() {
   
   return (
     <div className="login-page-wrapper">
-      <form className="login-form" onSubmit={handleSubmit}>
-        <h1>Sign In</h1>
-        <label htmlFor="credential">Sign in with account name</label>
-        <input id="credential" className={errors.length ? "error-border" : ""} value={credential} onChange={e => setCredential(e.target.value)} />
-        <label htmlFor="password">Password</label>
-        <input id="password"  className={errors.length ? "error-border" : ""} value={password} onChange={e => setPassword(e.target.value)} type="password" />
-        <button type="submit">Sign in</button>
-        <ul className="login-form-errors" >
-          {errors.map(error => <li key={error}>{error}</li>)}
-        </ul>
-        <Link to="/demo" className="demo-user-link" onClick={handleDemoClick}>Input demo user credentials</Link>
-      </form>
+      <div className="login-form-wrapper">
+        <form className="login-form" onSubmit={handleSubmit}>
+          <h1>Sign In</h1>
+          <label className="login-form-label" htmlFor="credential">Sign in with account name</label>
+          <input className={errors.length ? "signup-form-label error-border" : "signup-form-label"} id="credential" value={credential} onChange={e => setCredential(e.target.value)} />
+          <label className="login-form-label" htmlFor="password">Password</label>
+          <input className={errors.length ? "signup-form-label error-border" : "signup-form-label"} id="password" value={password} onChange={e => setPassword(e.target.value)} type="password" />
+          <label className="remember-me">
+            <input type="checkbox" checked disabled></input>
+            Remember me
+          </label>
+          <button type="submit">Sign in</button>
+          <ul className="login-form-errors" >
+            {errors.map(error => <li key={error}>{error}</li>)}
+          </ul>
+          <Link to="/demo" className="cant-sign-in" onClick={handleDemoClick}>Help, I can't sign in</Link>
+        </form>
+        <aside className="new-beta-feature">
+          <h2 className="login-form-label">New Beta Feature</h2>
+          <div>
+            <i className="fa-solid fa-user-astronaut"></i>
+            <p>Just visiting? You can sign in to Solar with guest credentials.</p>
+          </div>
+          <button onClick={handleDemoClick}>Make it so</button>
+          <Link to={{pathname: "https://en.wikipedia.org/wiki/Gabe_Newell"}} target="_blank">Wikipedia Page for Gabe Newell</Link>
+        </aside>
+      </div>
     </div>
   );
 }
