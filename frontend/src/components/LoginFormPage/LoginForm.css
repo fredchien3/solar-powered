@@ -25,11 +25,8 @@
 
 .login-form label {
   text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
   font-size: 12px;
   font-family: 'Motiva Sans 500', sans-serif;
-  width: 513px;
   margin-bottom: 4px;
 }
 

@@ -57,8 +57,9 @@
   align-items: flex-start;
   font-size: 14px;
   position: absolute;
-  left: 210px;
+  left: 208px;
   height: 100%;
+  margin-top: -4px;
 }
 
 .center-cluster a {
@@ -210,6 +211,7 @@
   padding: 6px 0 6px 0;
   box-shadow: 0 0 12px #000000;
   animation: fadein 2s;
+  overflow: hidden;
 }
 
 .profile-button-dropdown * {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import { Link, useHistory } from "react-router-dom/cjs/react-router-dom";
 import { signup } from "../../store/session";
 import './SignupForm.css'
 
@@ -35,27 +35,26 @@ export default function SignupFormPage() {
   }
   
   return (
-    <form className="signup-form" onSubmit={handleSubmit}>
-      <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>
-      <label>
-        Email Address
-        <input value={email} onChange={e => setEmail(e.target.value)} />
-      </label>
-      <label>
-        Solar Account Name
-        <input value={username} onChange={e => setUsername(e.target.value)} />
-      </label>
-      <label>
-        Choose Password
-        <input value={password} onChange={e => setPassword(e.target.value)} type="password" />
-      </label>
-      <label>
-        Confirm Password
-        <input value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} type="password" />
-      </label>
-      <button type="submit">Done</button>
-    </form>
+    <div className="signup-page-wrapper">
+      <form className="signup-form" onSubmit={handleSubmit}>
+        <h1>Create your account</h1>
+        <label htmlFor="email">Email Address</label>
+        <input id="email" value={email} onChange={e => setEmail(e.target.value)} />
+        <label htmlFor="username">Solar Account Name</label>
+        <input id="username" value={username} onChange={e => setUsername(e.target.value)} />
+        <label htmlFor="password">Choose Password</label>
+        <input id="password" value={password} onChange={e => setPassword(e.target.value)} type="password" />
+        <label htmlFor="confirmPassword">Confirm Password</label>
+        <input id="confirmPassword" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} type="password" />
+        <label>
+          <input type="checkbox"></input>
+          I am 13 years of age or older and agree to the terms of the <Link to="/subscriber_agreement" onClick={e => e.preventDefault()}>Solar Subscriber Agreement</Link> and the <Link to="/privacy_agreement" onClick={e => e.preventDefault()}>Valve Privacy Policy</Link>.
+        </label>
+        <button type="submit">Continue</button>
+        <ul>
+          {errors.map(error => <li key={error}>{error}</li>)}
+        </ul>
+      </form>
+    </div>
   );
 }
