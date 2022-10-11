@@ -65,17 +65,19 @@ export default function LoginFormPage() {
   }
   
   return (
-    <form className="login-form" onSubmit={handleSubmit}>
-      <h1>Sign In</h1>
-      <label htmlFor="credential">Sign in with account name</label>
-      <input id="credential" className={errors.length ? "error-border" : ""} value={credential} onChange={e => setCredential(e.target.value)} />
-      <label htmlFor="password">Password</label>
-      <input id="password"  className={errors.length ? "error-border" : ""} value={password} onChange={e => setPassword(e.target.value)} type="password" />
-      <button type="submit">Sign in</button>
-      <ul className="login-form-errors" >
-        {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>
-      <Link to="/demo" className="demo-user-link" onClick={handleDemoClick}>Input demo user credentials</Link>
-    </form>
+    <div className="login-page-wrapper">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h1>Sign In</h1>
+        <label htmlFor="credential">Sign in with account name</label>
+        <input id="credential" className={errors.length ? "error-border" : ""} value={credential} onChange={e => setCredential(e.target.value)} />
+        <label htmlFor="password">Password</label>
+        <input id="password"  className={errors.length ? "error-border" : ""} value={password} onChange={e => setPassword(e.target.value)} type="password" />
+        <button type="submit">Sign in</button>
+        <ul className="login-form-errors" >
+          {errors.map(error => <li key={error}>{error}</li>)}
+        </ul>
+        <Link to="/demo" className="demo-user-link" onClick={handleDemoClick}>Input demo user credentials</Link>
+      </form>
+    </div>
   );
 }

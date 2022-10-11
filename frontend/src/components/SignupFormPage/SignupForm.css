@@ -1,10 +1,26 @@
 .signup-page-wrapper {
+  display: flex;
+  width: 100%;
+  background-color: #212429;
+}
+
+.signup-page-background {
+  width: 490px;
+  height: 740px;
+  background-image: radial-gradient(30% 40% at center, rgba(0, 94, 255, 0) 0%, rgba(0, 94, 255, 0.361) 100%), url(signup_page_background.jpg);
+  /* background-image: radial-gradient(circle at center, rgba(255, 0, 0, 0.196) 0, rgba(0, 0, 255, 0.155) 100%), url(signup_page_background.jpg); */
+  background-image: radial-gradient(30% 40% at center, transparent 0%, rgb(33, 36, 41, 0.3) 0%, rgba(33, 36, 41, 0.3) 100%), url(signup_page_background.jpg);
+  background-position: 62% 60%;
+}
+
+.signup-page-form-column {
   /* Page content */
   width: 940px;
-  height: 740px;
+  height: 847px;
   background-color: #212429;
   padding: 50px;
   box-sizing: border-box;
+
 }
 
 .signup-form {
@@ -14,19 +30,19 @@
   color: white;
   width: 700px;
   height: 623px;
-  padding: 20px 16px;
+  padding: 26px 10px;
 }
 
 .signup-form h1 {
   font-family: 'Motiva Sans 100';
   font-size: 34px;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
   letter-spacing: 2px;
 }
 
 .signup-form label {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 14px;
   color: #b8b6b4;
   margin: 5px 0 5px 0;

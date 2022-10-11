@@ -36,25 +36,28 @@ export default function SignupFormPage() {
   
   return (
     <div className="signup-page-wrapper">
-      <form className="signup-form" onSubmit={handleSubmit}>
-        <h1>Create your account</h1>
-        <label htmlFor="email">Email Address</label>
-        <input id="email" value={email} onChange={e => setEmail(e.target.value)} />
-        <label htmlFor="username">Solar Account Name</label>
-        <input id="username" value={username} onChange={e => setUsername(e.target.value)} />
-        <label htmlFor="password">Choose Password</label>
-        <input id="password" value={password} onChange={e => setPassword(e.target.value)} type="password" />
-        <label htmlFor="confirmPassword">Confirm Password</label>
-        <input id="confirmPassword" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} type="password" />
-        <label>
-          <input type="checkbox"></input>
-          I am 13 years of age or older and agree to the terms of the <Link to="/subscriber_agreement" onClick={e => e.preventDefault()}>Solar Subscriber Agreement</Link> and the <Link to="/privacy_agreement" onClick={e => e.preventDefault()}>Valve Privacy Policy</Link>.
-        </label>
-        <button type="submit">Continue</button>
-        <ul>
-          {errors.map(error => <li key={error}>{error}</li>)}
-        </ul>
-      </form>
+      <section className="signup-page-background"></section>
+      <section className="signup-page-form-column">
+        <form className="signup-form" onSubmit={handleSubmit}>
+          <h1>Create your account</h1>
+          <label htmlFor="email">Email Address</label>
+          <input id="email" value={email} onChange={e => setEmail(e.target.value)} />
+          <label htmlFor="username">Solar Account Name</label>
+          <input id="username" value={username} onChange={e => setUsername(e.target.value)} />
+          <label htmlFor="password">Choose Password</label>
+          <input id="password" value={password} onChange={e => setPassword(e.target.value)} type="password" />
+          <label htmlFor="confirmPassword">Confirm Password</label>
+          <input id="confirmPassword" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} type="password" />
+          <label>
+            <input type="checkbox"></input>
+            I am 13 years of age or older and agree to the terms of the <Link to="/subscriber_agreement" onClick={e => e.preventDefault()}>Solar Subscriber Agreement</Link> and the <Link to="/privacy_agreement" onClick={e => e.preventDefault()}>Valve Privacy Policy</Link>.
+          </label>
+          <button type="submit">Continue</button>
+          <ul>
+            {errors.map(error => <li key={error}>{error}</li>)}
+          </ul>
+        </form>
+      </section>
     </div>
   );
 }
