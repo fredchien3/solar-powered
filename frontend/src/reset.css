@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: 'Motiva Sans 300';
+  src: url('./fonts/MotivaSans/MotivaSansLight.woff.ttf');
+}
+
+@font-face {
   font-family: 'Motiva Sans 400';
   src: url('./fonts/MotivaSans/MotivaSansRegular.woff.ttf');
 }

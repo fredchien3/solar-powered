@@ -59,8 +59,53 @@
 .login-form button {
   width: 270px;
   height: 50px;
-  background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
+  background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
   outline: none;
   border: none;
   border-radius: 2px;
+  border: 1px solid transparent;
+  font-family: 'Motiva Sans 500', sans-serif;
+  font-size: 18px;
+  color: white;
+  margin: 28px auto 0 auto;
+}
+
+.login-form button:hover {
+  cursor: pointer;
+  background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
+}
+
+.login-form button:active {
+  outline: 1px solid #06bfff;
+}
+
+.error-border {
+  border: 1px solid #c15755 !important;
+}
+
+.login-form-errors {
+  margin: 16px auto 0 auto;
+}
+
+.login-form-errors li {
+  font-family: 'Motiva Sans 500', sans-serif;
+  font-size: 12px;
+  color: #c15755;
+}
+
+.demo-user-link {
+  color: #b8b6b4;
+  font-size: 11px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 26px;
+}
+
+.demo-user-link:hover {
+  color: #E9E9E9;
 }

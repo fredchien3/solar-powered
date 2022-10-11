@@ -11,7 +11,7 @@ export default function ProfileButton({currentUser}) {
     <div className="profile-button-dropdown">
       <Link to="/">View profile</Link>
       <Link to="/">Account details</Link>
-      <button onClick={() => dispatch(logout())}>Logout: <p>{currentUser.username}</p></button>
+      <button onClick={() => dispatch(logout())}>Logout: <p>{currentUser.displayName}</p></button>
       <Link to="/">Preferences</Link>
       <Link to="/">Change language</Link>
     </div>
@@ -31,7 +31,7 @@ export default function ProfileButton({currentUser}) {
 
   return (
     <div className="profile-button-wrapper">
-      <button onClick={openMenu} className="profile-button">{currentUser.username} ▼</button>
+      <button onClick={openMenu} className="profile-button">{currentUser.displayName} ▼</button>
       {showMenu ? menu : <></>}
     </div>
   )
