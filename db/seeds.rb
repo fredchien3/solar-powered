@@ -7,6 +7,7 @@ ApplicationRecord.transaction do
 
   puts "Resetting primary keys..."
   ApplicationRecord.connection.reset_pk_sequence!('users')
+  ApplicationRecord.connection.reset_pk_sequence!('games')
 
   puts "Creating users..."
   User.create!(

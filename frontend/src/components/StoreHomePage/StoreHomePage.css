@@ -102,7 +102,13 @@
   position: relative;
 }
 
-.store-featured-box-wide-wrapper h1 {
+.store-featured-box-wide-wrapper > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.store-featured-box-wide-wrapper > div h1 {
   position: absolute;
   top: 24px;
   left: 25.2%;
@@ -118,6 +124,10 @@
   overflow: hidden;
   display: flex;
   justify-content: space-between;
+}
+
+.store-featured-box * {
+  cursor: pointer;
 }
 
 .store-featured-box figure {
@@ -209,4 +219,31 @@
 
 .price-line p {
   margin-left: 16px;
+}
+
+.carousel-nubs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 37px;
+}
+
+.carousel-nub {
+  background-color: #4d657b;
+  width: 15px;
+  height: 9px;
+  margin: 15px 2px;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+
+.carousel-nub:hover {
+  cursor: pointer;
+  background-color: #64788c;
+}
+
+.nub-active {
+  background-color: #7a8b9c;
 }
