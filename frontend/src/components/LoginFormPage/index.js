@@ -43,26 +43,32 @@ export default function LoginFormPage() {
     setDemoClicked(true);
     setCredential('');
     setPassword('');
-    setTimeout(fillCredential, 100);
+    setTimeout(fillCredential, 50);
     setTimeout(fillPassword, 1800);
+    setTimeout(loginDemoUser, 3000)
   }
 
+  let inputCredential = 'gaben';
   const fillCredential = () => {
-    let inputCredential = 'gaben';
     for (let i = 0; i < inputCredential.length; i++) {
       setTimeout(() => {
         setCredential(c => c + inputCredential[i]);
-      }, i * 200)
+      }, i * 150)
     }
   }
   
+  let inputPassword = 'MoolyFTW';
   const fillPassword = () => {
-    let inputPassword = 'MoolyFTW';
     for (let i = 0; i < inputPassword.length; i++) {
       setTimeout(() => {
         setPassword(c => c + inputPassword[i]);
       }, i * 100)
     }
+  }
+  
+  const loginDemoUser = () => {
+    const demoUser = { credential: inputCredential, password: inputPassword };
+    return (dispatch(login(demoUser)));
   }
   
   return (
