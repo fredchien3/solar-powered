@@ -1,36 +1,53 @@
 .store-home-page {
   background: url(https://store.akamai.steamstatic.com/public/images/v6/colored_body_top.png?v=2) center top no-repeat #1b2838;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-}
-
-.store-home-page aside {
-  width: 210px;
-  margin-right: 24px;
-  border: 1px solid white;
-}
-
-.store-home-main-column {
-  background: url(https://store.akamai.steamstatic.com/public/images/v6/home/cluster_bg.png?v=1) no-repeat transparent;
+  width: 100vw;
+  height: 1500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
-  width: 940px;
-  height: 1000px;
-  margin-top: 31px;
-  margin-right: 285px;
 }
+
+/* .store-home-main-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1000px;
+  position: relative;
+  width: 100vw;
+  box-sizing: border-box;
+  padding-top: 31px;
+  padding-left: 285px;
+  padding-right: 285px;
+  border: 1px solid white; */
+  
+  /* width: 940px; */
+  /* box-sizing: border-box;
+  margin-top: 31px;
+  margin-right: 285px; */
+/* } */
 
 .store-top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 940px;
-  height: 37px;
+  height: 35px;
   background: linear-gradient(90deg, rgba(62, 103, 150, 0.9) 10%, rgba(58, 120, 177, 0.8) 25%, rgb(15, 33, 110) 100%);
+  margin-top: 31px;
+  margin-bottom: 16px;
+  position: relative;
+  box-shadow: 0 0 3px rgb(0 0 0 / 40%);
+}
+
+.store-home-page aside { /* StoreSidebar */
+  width: 210px;
+  height: 1086px;
+  margin-right: 24px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: -235px;
 }
 
 .store-top-nav-links {
@@ -50,13 +67,13 @@
 }
 
 .store-top-nav-links div:hover {
-  background: linear-gradient(90deg, rgba(33, 162, 255, 0.25) 0%, rgba(33, 162, 255, 0.15) 50%, transparent 100%);
+  background: linear-gradient(90deg, rgba(33, 162, 255, 0.5) 0%, rgba(33, 162, 255, 0.15) 50%, transparent 100%);
   cursor: pointer;
 }
 
 .store-top-nav input {
   width: 202px;
-  height: 30px;
+  height: 29px;
   background-color: #316282;
   border-radius: 3px;
   margin-bottom: 1px;
@@ -72,4 +89,124 @@
 
 .store-top-nav input:hover {
   outline: 1px solid lightblue;
+}
+
+.store-featured-box-wide-wrapper {
+  background: url(https://store.akamai.steamstatic.com/public/images/v6/home/cluster_bg.png?v=1) center bottom no-repeat transparent;
+  width: 100%;
+  height: 454px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.store-featured-box-wide-wrapper h1 {
+  position: absolute;
+  top: 24px;
+  left: 25.2%;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.store-featured-box {
+  width: 940px;
+  height: 353px;
+  margin-top: 52px;
+  box-shadow: 0 0 7px 0px black;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.store-featured-box figure {
+  width: 616px;
+  height: 353px;
+  padding-right: 10px;
+  box-shadow: 0 0 10px 5px black;
+  background-color: white;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.featured-description-box {
+  width: 324px;
+  height: 100%;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v6/home/background_maincap_2.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.featured-title, .featured-text-wrapper {
+  width: 100%;
+  height: 69px;
+  display: flex;
+  align-items: center;
+}
+
+.featured-title h2 {
+  font-family: 'Motiva Sans 300', sans-serif;
+  font-size: 24px;
+  margin-left: 16px;
+}
+
+.featured-screenshots-wrapper {
+  width: 344px;
+  height: 164px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.featured-screenshot {
+  width: 162px;
+  height: 69px;
+  margin: 10px 10px 0 0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.featured-text-wrapper {
+  height: auto;
+  margin-top: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.featured-text-wrapper h3 {
+  font-family: 'Motiva Sans 100', sans-serif;
+  font-size: 21px;
+  margin-left: 16px;
+
+}
+
+.featured-text-wrapper div {
+  width: 62px;
+  height: 19px;
+  margin: 5px 2px 3px 0;
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #394148;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.price-line {
+  width: 100%;
+  margin-top: 22px;
+  height: 24px;
+  display: flex;
+  align-items: flex-end;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #acdbf5;
+}
+
+.price-line p {
+  margin-left: 16px;
 }
