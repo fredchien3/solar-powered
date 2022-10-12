@@ -13,6 +13,7 @@ export default function LoginFormPage() {
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
   const [demoClicked, setDemoClicked] = useState(false);
+  document.title = "Sign In";
 
   if (stateSession.user) {
     history.push('/');

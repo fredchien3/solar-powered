@@ -13,6 +13,7 @@ export default function SignupFormPage() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errors, setErrors] = useState([]);
+  document.title = "Create Your Account";
 
   if (stateSession.user) {
     history.push('/');
