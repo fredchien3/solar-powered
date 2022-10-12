@@ -36,7 +36,7 @@ export default function SignupFormPage() {
   }
   
   return (
-    <div className="signup-page-wrapper">
+    <div className="signup-page">
       <section className="signup-page-background"></section>
       <section className="signup-page-form-column">
         {errors.length > 0 && (<ul className="signup-form-errors">

@@ -20,7 +20,6 @@ const addGame = (game) => {
 export const fetchGames = () => async (dispatch) => {
   const res = await csrfFetch('/api/games');
   const games = await res.json(); // normalized, i.e. { id => {gameData}}
-  console.log(games);
   dispatch(setGames(games));
 }
 
