@@ -10,9 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_07_160218) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_12_140515) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "games", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "image_url"
+    t.float "price", null: false
+    t.date "release_date", null: false
+    t.text "short_description", null: false
+    t.text "long_description", null: false
+    t.string "developer", null: false
+    t.string "publiser", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["developer"], name: "index_games_on_developer"
+    t.index ["publiser"], name: "index_games_on_publiser"
+    t.index ["title"], name: "index_games_on_title"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
