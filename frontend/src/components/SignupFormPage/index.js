@@ -38,24 +38,35 @@ export default function SignupFormPage() {
     <div className="signup-page-wrapper">
       <section className="signup-page-background"></section>
       <section className="signup-page-form-column">
+        {errors.length > 0 && (<ul className="signup-form-errors">
+          {errors.map(error => <li key={error}>{error}.</li>)}
+        </ul>)}
         <form className="signup-form" onSubmit={handleSubmit}>
           <h1>Create your account</h1>
           <label htmlFor="email">Email Address</label>
-          <input id="email" value={email} onChange={e => setEmail(e.target.value)} />
+          <input className={errors.length ? "signup-form-label error-border" : "signup-form-label"} id="email" value={email} onChange={e => setEmail(e.target.value)} />
           <label htmlFor="username">Solar Account Name</label>
-          <input id="username" value={username} onChange={e => setUsername(e.target.value)} />
+          <input className={errors.length ? "signup-form-label error-border" : "signup-form-label"} id="username" value={username} onChange={e => setUsername(e.target.value)} />
           <label htmlFor="password">Choose Password</label>
-          <input id="password" value={password} onChange={e => setPassword(e.target.value)} type="password" />
+          <input className={errors.length ? "signup-form-label error-border" : "signup-form-label"} id="password" value={password} onChange={e => setPassword(e.target.value)} type="password" />
           <label htmlFor="confirmPassword">Confirm Password</label>
-          <input id="confirmPassword" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} type="password" />
-          <label>
-            <input type="checkbox"></input>
-            I am 13 years of age or older and agree to the terms of the <Link to="/subscriber_agreement" onClick={e => e.preventDefault()}>Solar Subscriber Agreement</Link> and the <Link to="/privacy_agreement" onClick={e => e.preventDefault()}>Valve Privacy Policy</Link>.
+          <input className={errors.length ? "signup-form-label error-border" : "signup-form-label"} id="confirmPassword" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} type="password" />
+          <div className="captcha-wrapper">
+            <label>
+              <input type="checkbox"></input>
+              I'm not a litterbug
+            </label>
+            <div className="captcha-logo-wrapper">
+              <i className="fa-solid fa-recycle"></i>
+              <h3>reCYCLE</h3>
+              <h4>Privacy - Terms</h4>
+            </div>
+          </div>
+          <label className="agreement-wrapper">
+            <input type="checkbox" checked disabled></input>
+            I am 13 years of age or older and agree to the terms of the <Link to="/subscriber_agreement" onClick={e => e.preventDefault()}>Solar Subscriber Agreement</Link> and the <Link to="/privacy_agreement" onClick={e => e.preventDefault()}>Array Privacy Policy</Link>.
           </label>
           <button type="submit">Continue</button>
-          <ul>
-            {errors.map(error => <li key={error}>{error}</li>)}
-          </ul>
         </form>
       </section>
     </div>

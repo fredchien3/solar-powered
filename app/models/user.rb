@@ -13,7 +13,7 @@
 #
 class User < ApplicationRecord
   has_secure_password
-  validates_presence_of :display_name, :session_token
+  validates_presence_of :session_token
   validates_uniqueness_of :username, :email, :display_name, :session_token
   validates :username,
   length: { in: 3..30 },

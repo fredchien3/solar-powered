@@ -84,10 +84,10 @@ export default function LoginFormPage() {
           <Link to="/demo" className="cant-sign-in" onClick={handleDemoClick}>Help, I can't sign in</Link>
         </form>
         <aside className="new-beta-feature">
-          <h2 className="login-form-label">New Beta Feature</h2>
+          <h2 className="login-form-label">Sign in as guest</h2>
           <div>
             <i className="fa-solid fa-user-astronaut"></i>
-            <p>Just visiting? You can sign in to Solar with guest credentials.</p>
+            <p>Just visiting? You can sign in to Solar with a guest account.</p>
           </div>
           <button onClick={handleDemoClick}>Make it so</button>
           <Link to={{pathname: "https://en.wikipedia.org/wiki/Gabe_Newell"}} target="_blank">Wikipedia Page for Gabe Newell</Link>
