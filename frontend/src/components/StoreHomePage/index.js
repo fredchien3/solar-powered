@@ -7,12 +7,13 @@ import StoreSidebar from "./StoreSidebar";
 
 export default function StoreHomePage() {
   const dispatch = useDispatch();
+  let games = [];
   
   useEffect(() => {
     dispatch(fetchGames());
   }, [dispatch])
 
-  const games = useSelector(state => Object.values(state.games))
+  games = useSelector(state => Object.values(state.games))
   
   return (
     <div className="store-home-page">
@@ -31,12 +32,8 @@ export default function StoreHomePage() {
       </nav>
 
       <div className="store-featured-box-wide-wrapper">
-        <FeaturedBox />
+        <FeaturedBox games={games} />
       </div>
-
-      {/* <section className="store-home-main-column"> */}
-      {/* </section> */}
-
     </div>
     
   )

@@ -47,10 +47,10 @@
   margin-bottom: 13px;
   font-size: 15px;
   line-height: 23px;
-  animation: fadeIn 1.25s;
+  animation: signupErrorBoxFadeIn 1.25s;
 }
 
-@keyframes fadeIn {
+@keyframes signupErrorBoxFadeIn {
   0% { background-color: #e49762; }
   100% { background-color: #101010; }
 }

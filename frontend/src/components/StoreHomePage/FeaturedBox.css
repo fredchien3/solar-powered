@@ -1,0 +1,161 @@
+.store-featured-carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 940px;
+  height: 353px;
+  padding-top: 52px;
+}
+
+.store-featured-carousel-container h1 {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.store-featured-carousel-slide {
+  width: 940px;
+  height: 353px;
+  /* margin-top: 52px; */
+  box-shadow: 0 0 7px 0px black;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  visibility: visible;
+  opacity: 1;
+  transition: 400ms;
+  position: absolute;
+}
+
+.slide-hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: 400ms;
+}
+
+.store-featured-carousel-slide * {
+  cursor: pointer;
+}
+
+.store-featured-carousel-slide figure {
+  width: 616px;
+  height: 353px;
+  padding-right: 10px;
+  box-shadow: 0 0 10px 5px black;
+  background-color: white;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.featured-description-box {
+  width: 324px;
+  height: 100%;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v6/home/background_maincap_2.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.featured-title, .featured-text-wrapper {
+  width: 100%;
+  height: 69px;
+  display: flex;
+  align-items: center;
+}
+
+.featured-title h2 {
+  font-family: 'Motiva Sans 300', sans-serif;
+  font-size: 24px;
+  margin-left: 16px;
+}
+
+.featured-screenshots-wrapper {
+  width: 344px;
+  height: 164px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.featured-screenshot {
+  width: 162px;
+  height: 69px;
+  margin: 10px 10px 0 0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.featured-text-wrapper {
+  height: auto;
+  margin-top: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.featured-text-wrapper h3 {
+  font-family: 'Motiva Sans 100', sans-serif;
+  font-size: 21px;
+  margin-left: 16px;
+
+}
+
+.featured-text-wrapper div {
+  width: 62px;
+  height: 19px;
+  margin: 5px 2px 3px 0;
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #394148;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.price-line {
+  width: 100%;
+  margin-top: 22px;
+  height: 24px;
+  display: flex;
+  align-items: flex-end;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #acdbf5;
+}
+
+.price-line p {
+  margin-left: 16px;
+}
+
+.featured-carousel-nubs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 37px;
+  position: absolute;
+  bottom: -36px;
+}
+
+.featured-carousel-nub {
+  background-color: #4d657b;
+  width: 15px;
+  height: 9px;
+  margin: 15px 2px;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+
+.featured-carousel-nub:hover {
+  cursor: pointer;
+  background-color: #64788c;
+}
+
+.nub-active {
+  background-color: #7a8b9c;
+}

@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 import ProfileButton from "./ProfileButton";
 import './Navigation.css'
@@ -32,7 +32,7 @@ export default function Navigation() {
         </button>
         <ProfileButton currentUser={currentUser} />
         <div className="small-profile-pic-wrapper">
-          <img src={coberHappy} className="small-profile-pic"/>
+          <img alt="cober-pic" src={coberHappy} className="small-profile-pic"/>
         </div>
       </div>
     )
