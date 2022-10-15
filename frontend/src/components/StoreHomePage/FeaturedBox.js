@@ -9,24 +9,24 @@ export default function FeaturedBox({ games }) {
   const cycleIndex = (n = 1) => {
     let newIndex = index + n;
     if (n > 0) {
-      if (newIndex >= 5) newIndex = 0;
+      if (newIndex >= numGames) newIndex = 0;
     } else if (newIndex < 0) {
-      newIndex = 4;
+      newIndex = numGames-1;
     } 
     setIndex(newIndex);
   }
 
-  const featuredSlides = []
-  const nubs = []
+  const featuredSlides = [];
+  const nubs = [];
   for (let i = 0; i < numGames; i++) {
     const game = games[i];
     featuredSlides.push(
       <FeaturedSlide
-        key={game}
+        key={game.id}
         game={game}
         show={index === i ? true : false}
       />
-    )
+    );
 
     nubs.push(
       <span id={"featured-carousel-nub-" + i}
@@ -34,7 +34,7 @@ export default function FeaturedBox({ games }) {
         onClick={() => setIndex(i)}
         key={i}
       />
-    )
+    );
   }
 
   return (

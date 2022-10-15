@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 
 export default function FeaturedSlide({game, show}) {
+  console.log(game)
 
   return (
     <section className={show ? "store-featured-carousel-slide" : "store-featured-carousel-slide slide-hide"}>
-      <figure>picture</figure>
+      <figure><img src={game.mainImageUrl} alt={game.title + ' main image'}></img></figure>
       <figcaption className="featured-description-box">
         <div className="featured-title">
           <h2>{game ? game.title : 'Loading...'}</h2>

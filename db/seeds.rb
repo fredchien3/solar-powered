@@ -1,5 +1,14 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+fallout_4_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-main.jpg"
+rimworld_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-main.jpg"
+csgo_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-main.jpg"
+space_engineers_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-main.jpg"
+project_zomboid_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-main.jpg"
+
+fallout_4_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-banner.jpg"
+rimworld_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-banner.jpg"
+csgo_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-banner.jpg"
+space_engineers_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-banner.jpg"
+project_zomboid_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-banner.jpg"
 
 ApplicationRecord.transaction do 
   puts "Destroying tables..."
@@ -33,7 +42,8 @@ ApplicationRecord.transaction do
     }) 
   end
 
-  Game.create!( # Fallout 4
+  puts "Creating games..."
+  fallout_4 = Game.create!( # Fallout 4
     title: 'Fallout 4',
     price: '59.99',
     release_date: Date.parse('Nov 10, 2015'),
@@ -57,10 +67,13 @@ ApplicationRecord.transaction do
     Collect and Build!
     Collect, upgrade, and build thousands of items in the most advanced crafting system ever. Weapons, armor, chemicals, and food are just the beginning - you can even build and manage entire settlements.",
     developer: 'Bethesda Game Studios',
-    publiser: 'Bethesda Softworks'
+    publisher: 'Bethesda Softworks',
+    main_image_url: fallout_4_main_image_url,
+    banner_image_url: fallout_4_banner_image_url
   )
 
-  Game.create!( # RimWorld
+
+  rimworld = Game.create!( # RimWorld
     title: 'RimWorld',
     price: '34.99',
     release_date: Date.parse('Oct 17, 2018'),
@@ -107,10 +120,13 @@ ApplicationRecord.transaction do
     
     (All non-English translations are made by fans.)",
     developer: 'Ludeon Studios',
-    publiser: 'Ludeon Studios'
+    publisher: 'Ludeon Studios',
+    main_image_url: rimworld_main_image_url,
+    banner_image_url: rimworld_banner_image_url
   )
 
-  Game.create!( # CS:GO
+
+  csgo = Game.create!( # CS:GO
     title: 'Counter-Strike: Global Offensive',
     price: '0',
     release_date: Date.parse('Aug 21, 2012'),
@@ -121,10 +137,13 @@ ApplicationRecord.transaction do
     
     \"Counter-Strike took the gaming industry by surprise when the unlikely MOD became the most played online PC action game in the world almost immediately after its release in August 1999,\" said Doug Lombardi at Valve. \"For the past 12 years, it has continued to be one of the most-played games in the world, headline competitive gaming tournaments and selling over 25 million units worldwide across the franchise. CS: GO promises to expand on CS' award-winning gameplay and deliver it to gamers on the PC as well as the next gen consoles and the Mac.\"",
     developer: 'Valve, Hidden Path Entertainment',
-    publiser: 'Valve'
+    publisher: 'Valve',
+    main_image_url: csgo_main_image_url,
+    banner_image_url: csgo_banner_image_url
   )
 
-  Game.create!( # Space Engineers
+
+  space_engineers = Game.create!( # Space Engineers
     title: 'Space Engineers',
     price: '19.99',
     release_date: Date.parse('Feb 28, 2019'),
@@ -213,10 +232,13 @@ ApplicationRecord.transaction do
     
     Minimum requirements represent the bare minimum to run simple scenes and don’t guarantee a perfect experience.",
     developer: 'Keen Software House',
-    publiser: 'Keen Software House'
+    publisher: 'Keen Software House',
+    main_image_url: space_engineers_main_image_url,
+    banner_image_url: space_engineers_banner_image_url
   )
 
-  Game.create!( # Project Zomboid
+
+  project_zomboid = Game.create!( # Project Zomboid
     title: 'Project Zomboid',
     price: '19.99',
     release_date: Date.parse('Nov 8, 2013'),
@@ -253,7 +275,9 @@ ApplicationRecord.transaction do
     
     For more details on the game follow us on @theindiestone or visit http://www.projectzomboid.com",
     developer: 'The Indie Stone',
-    publiser: 'The Indie Stone'
+    publisher: 'The Indie Stone',
+    main_image_url: project_zomboid_main_image_url,
+    banner_image_url: project_zomboid_banner_image_url
   )
 
   puts "Done!"
