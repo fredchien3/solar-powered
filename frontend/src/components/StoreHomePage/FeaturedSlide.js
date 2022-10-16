@@ -1,20 +1,56 @@
-import { useEffect, useState } from "react"
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 export default function FeaturedSlide({game, show}) {
-  console.log(game)
+  const history = useHistory();
+  const [displayUrl, setDisplayUrl] = useState(game.mainImageUrl);
+
+  const handleMouseEnter = (e) => {
+    setDisplayUrl(e.target.src);
+  }
+
+  const handleMouseLeave = () => {
+    setDisplayUrl(game.mainImageUrl);
+  }
+
+  const goToShowPage = () => {
+    history.push('/games/' + game.id);
+  }
+  
+  const featuredImages = [];  
+  const screenshotDivs = [];
+  for (let i = 0; i < 4; i++) {
+    const url = game.imageUrls[i];
+
+    featuredImages.push(
+      <img 
+        key={i} 
+        src={url} 
+        alt={game.title + ' featured #' + (i+1)}
+        className={url === displayUrl ? "featured-image-show" : "featured-image-hide"}
+      />
+    );
+    
+    screenshotDivs.push(
+    <div 
+      className="featured-screenshot-div" 
+      onMouseEnter={handleMouseEnter} 
+      onMouseLeave={handleMouseLeave} 
+      key={i}>
+        <img src={url} alt={game.title + ' screenshot #' + (i+1)} />
+    </div>
+    );
+  }
 
   return (
-    <section className={show ? "store-featured-carousel-slide" : "store-featured-carousel-slide slide-hide"}>
-      <figure><img src={game.mainImageUrl} alt={game.title + ' main image'}></img></figure>
+    <section className={show ? "store-featured-carousel-slide" : "store-featured-carousel-slide slide-hide"} onClick={goToShowPage}>
+      <figure style={{"backgroundImage": `url(${game.mainImageUrl})`}}>{featuredImages}</figure>
       <figcaption className="featured-description-box">
         <div className="featured-title">
           <h2>{game ? game.title : 'Loading...'}</h2>
         </div>
         <div className="featured-screenshots-wrapper">
-          <div className="featured-screenshot">1</div>
-          <div className="featured-screenshot">2</div>
-          <div className="featured-screenshot">3</div>
-          <div className="featured-screenshot">4</div>
+          {screenshotDivs}
         </div>
         <div className="featured-text-wrapper">
           <h3>Now Available</h3>

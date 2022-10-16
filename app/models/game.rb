@@ -14,6 +14,7 @@
 #  updated_at        :datetime         not null
 #  main_image_url    :string           not null
 #  banner_image_url  :string           not null
+#  image_urls        :text             default([]), is an Array
 #
 class Game < ApplicationRecord
   validates_presence_of :title, :price, :release_date, :short_description, :long_description, :developer, :publisher, :main_image_url, :banner_image_url

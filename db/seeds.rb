@@ -1,14 +1,74 @@
 fallout_4_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-main.jpg"
-rimworld_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-main.jpg"
-csgo_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-main.jpg"
-space_engineers_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-main.jpg"
-project_zomboid_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-main.jpg"
-
 fallout_4_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-banner.jpg"
+fallout_4_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-9.jpg"
+]
+
+rimworld_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-main.jpg"
 rimworld_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-banner.jpg"
+rimworld_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-9.jpg"
+]
+
+csgo_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-main.jpg"
 csgo_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-banner.jpg"
+csgo_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-8.jpg"
+]
+
+space_engineers_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-main.jpg"
 space_engineers_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-banner.jpg"
+space_engineers_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-10.jpg"
+]
+
+project_zomboid_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-main.jpg"
 project_zomboid_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-banner.jpg"
+project_zomboid_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-11.jpg"
+]
 
 ApplicationRecord.transaction do 
   puts "Destroying tables..."
@@ -34,13 +94,13 @@ ApplicationRecord.transaction do
     password: 'MoolyFTW'
   )
 
-  10.times do 
-    User.create!({
-      username: Faker::Internet.unique.username(specifier: 3),
-      email: Faker::Internet.unique.email,
-      password: 'password'
-    }) 
-  end
+  # 10.times do 
+  #   User.create!({
+  #     username: Faker::Internet.unique.username(specifier: 3),
+  #     email: Faker::Internet.unique.email,
+  #     password: 'password'
+  #   }) 
+  # end
 
   puts "Creating games..."
   fallout_4 = Game.create!( # Fallout 4
@@ -69,9 +129,9 @@ ApplicationRecord.transaction do
     developer: 'Bethesda Game Studios',
     publisher: 'Bethesda Softworks',
     main_image_url: fallout_4_main_image_url,
-    banner_image_url: fallout_4_banner_image_url
+    banner_image_url: fallout_4_banner_image_url,
+    image_urls: fallout_4_image_urls
   )
-
 
   rimworld = Game.create!( # RimWorld
     title: 'RimWorld',
@@ -122,7 +182,8 @@ ApplicationRecord.transaction do
     developer: 'Ludeon Studios',
     publisher: 'Ludeon Studios',
     main_image_url: rimworld_main_image_url,
-    banner_image_url: rimworld_banner_image_url
+    banner_image_url: rimworld_banner_image_url,
+    image_urls: rimworld_image_urls
   )
 
 
@@ -139,9 +200,9 @@ ApplicationRecord.transaction do
     developer: 'Valve, Hidden Path Entertainment',
     publisher: 'Valve',
     main_image_url: csgo_main_image_url,
-    banner_image_url: csgo_banner_image_url
+    banner_image_url: csgo_banner_image_url,
+    image_urls: csgo_image_urls
   )
-
 
   space_engineers = Game.create!( # Space Engineers
     title: 'Space Engineers',
@@ -234,9 +295,9 @@ ApplicationRecord.transaction do
     developer: 'Keen Software House',
     publisher: 'Keen Software House',
     main_image_url: space_engineers_main_image_url,
-    banner_image_url: space_engineers_banner_image_url
+    banner_image_url: space_engineers_banner_image_url,
+    image_urls: space_engineers_image_urls
   )
-
 
   project_zomboid = Game.create!( # Project Zomboid
     title: 'Project Zomboid',
@@ -277,7 +338,8 @@ ApplicationRecord.transaction do
     developer: 'The Indie Stone',
     publisher: 'The Indie Stone',
     main_image_url: project_zomboid_main_image_url,
-    banner_image_url: project_zomboid_banner_image_url
+    banner_image_url: project_zomboid_banner_image_url,
+    image_urls: project_zomboid_image_urls
   )
 
   puts "Done!"

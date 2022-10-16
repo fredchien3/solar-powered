@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_15_161543) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_16_023613) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,6 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_15_161543) do
     t.datetime "updated_at", null: false
     t.string "main_image_url", null: false
     t.string "banner_image_url", null: false
+    t.text "image_urls", default: [], array: true
     t.index ["developer"], name: "index_games_on_developer"
     t.index ["publisher"], name: "index_games_on_publisher"
     t.index ["title"], name: "index_games_on_title"

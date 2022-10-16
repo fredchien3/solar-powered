@@ -43,11 +43,29 @@
 .store-featured-carousel-slide figure {
   width: 616px;
   height: 353px;
-  padding-right: 10px;
   box-shadow: 0 0 10px 5px black;
   background-color: white;
-  box-sizing: border-box;
   z-index: 1;
+  position: relative;
+}
+
+.store-featured-carousel-slide figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.featured-image-hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: 400ms;
+}
+
+.featured-image-show {
+  visibility: visible;
+  opacity: 1;
+  transition: none;
 }
 
 .featured-description-box {
@@ -78,14 +96,27 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  margin: 5px 5px -5px 0;
 }
 
-.featured-screenshot {
+.featured-screenshot-div {
+  background-color: none;
   width: 162px;
   height: 69px;
-  margin: 10px 10px 0 0;
-  box-sizing: border-box;
-  background-color: white;
+  margin: 5px;
+}
+
+.featured-screenshot-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  transition: 200ms;
+}
+
+.featured-screenshot-div img:hover {
+  opacity: 1;
+  transition: 200ms;
 }
 
 .featured-text-wrapper {

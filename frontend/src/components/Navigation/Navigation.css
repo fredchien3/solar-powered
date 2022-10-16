@@ -212,6 +212,7 @@
   box-shadow: 0 0 12px #000000;
   animation: fadein 2s;
   overflow: hidden;
+  z-index: 1;
 }
 
 .profile-button-dropdown * {

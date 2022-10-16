@@ -8,7 +8,7 @@ import StoreSidebar from "./StoreSidebar";
 export default function StoreHomePage() {
   const dispatch = useDispatch();
   let games = [];
-  
+
   useEffect(() => {
     dispatch(fetchGames());
   }, [dispatch])
@@ -17,7 +17,6 @@ export default function StoreHomePage() {
   
   return (
     <div className="store-home-page">
-
       <nav className="store-top-nav">
         <StoreSidebar />
         <div className="store-top-nav-links">

@@ -7,88 +7,15 @@
   align-items: center;
 }
 
-/* .store-home-main-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 1000px;
-  position: relative;
-  width: 100vw;
-  box-sizing: border-box;
-  padding-top: 31px;
-  padding-left: 285px;
-  padding-right: 285px;
-  border: 1px solid white; */
-  
-  /* width: 940px; */
-  /* box-sizing: border-box;
-  margin-top: 31px;
-  margin-right: 285px; */
-/* } */
-
-.store-top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 940px;
-  height: 35px;
-  background: linear-gradient(90deg, rgba(62, 103, 150, 0.9) 10%, rgba(58, 120, 177, 0.8) 25%, rgb(15, 33, 110) 100%);
-  margin-top: 31px;
-  margin-bottom: 16px;
-  position: relative;
-  box-shadow: 0 0 3px rgb(0 0 0 / 40%);
-}
-
 .store-home-page aside { /* StoreSidebar */
   width: 210px;
   height: 1086px;
   margin-right: 24px;
-  border: 1px solid white;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
+  background-color: rgba(0, 0, 0, 0.25);
   position: absolute;
-  top: 0;
-  left: -235px;
-}
-
-.store-top-nav-links {
-  display: flex;
-  height: 100%;
-}
-
-.store-top-nav-links div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  text-shadow: 0px 2px 3px rgb(0 0 0 / 30%)
-}
-
-.store-top-nav-links div:hover {
-  background: linear-gradient(90deg, rgba(33, 162, 255, 0.5) 0%, rgba(33, 162, 255, 0.15) 50%, transparent 100%);
-  cursor: pointer;
-}
-
-.store-top-nav input {
-  width: 202px;
-  height: 29px;
-  background-color: #316282;
-  border-radius: 3px;
-  margin-bottom: 1px;
-  margin-right: 4px;
-  padding: 0 6px 0 8px;
-  border: 1px solid rgba( 0, 0, 0, 0.3);
-  box-shadow: 1px 1px 0px rgb(255 255 255 / 20%);
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  font-size: 13px;
-  outline: none;
-}
-
-.store-top-nav input:hover {
-  outline: 1px solid lightblue;
+  top: -65px;
+  left: 58px;
 }
 
 .store-featured-box-wide-wrapper {
