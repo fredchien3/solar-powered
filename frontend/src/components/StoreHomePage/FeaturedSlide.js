@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-export default function FeaturedSlide({game, show}) {
+export default function FeaturedSlide({ game, show }) {
   const history = useHistory();
   const [displayUrl, setDisplayUrl] = useState(game.mainImageUrl);
 

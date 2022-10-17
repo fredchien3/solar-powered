@@ -1,0 +1,92 @@
+.game-show-carousel-wrapper {
+  width: 600px;
+  height: 432px;
+  position: relative;
+}
+
+.game-show-carousel-slides-wrapper {
+  width: 100%;
+  height: 337px;
+  background-color: rgba(255, 255, 255, 0.123);
+}
+
+.game-show-carousel-image {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: 500ms;
+}
+
+.show-image-selected {
+  visibility: visible;
+  opacity: 1;
+}
+
+.game-show-carousel-thumbs-wrapper {
+  width: 100%;
+  height: 90px;
+  margin: 4px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+.game-show-carousel-thumb {
+  height: 65px;
+  margin: 2px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.show-thumb-selected {
+  opacity: 1;
+  border: 2px solid white;
+}
+
+.game-show-carousel-image:hover, .game-show-carousel-thumb:hover {
+   cursor: pointer;
+}
+
+.game-show-carousel-thumbs-wrapper::-webkit-scrollbar {
+  width: 5px;
+  height: 18px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.game-show-carousel-thumbs-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(39, 71, 97, 0.4);
+  border-radius: 3px;
+  border: none;
+}
+
+.game-show-carousel-thumbs-wrapper::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #3d6c8d 0%,#2e5470 100%);
+  cursor: pointer !important;
+}
+
+.game-show-carousel-thumbs-wrapper::-webkit-scrollbar-button:single-button {
+  width: 38px;
+}
+
+.game-show-carousel-button {
+  background-color: rgba( 35, 60, 81, 0.4 );
+  width: 38px;
+  height: 18px;
+  border-radius: 3px;
+  border: none;
+  color: #407899;
+  position: absolute;
+  bottom: 1px;
+}
+
+.game-show-carousel-button:hover {
+  background: linear-gradient(135deg, #3d6c8d 0%,#2e5470 100%);
+  cursor: pointer;
+  color: white;
+}
+
+.show-carousel-button-right {
+  right: 0;
+}
