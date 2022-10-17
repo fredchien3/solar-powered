@@ -66,8 +66,7 @@ project_zomboid_image_urls = [
   "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-7.jpg",
   "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-8.jpg",
   "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-9.jpg",
-  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-10.jpg",
-  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-11.jpg"
+  "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-10.jpg"
 ]
 
 ApplicationRecord.transaction do 
