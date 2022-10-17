@@ -73,10 +73,14 @@ ApplicationRecord.transaction do
   puts "Destroying tables..."
   User.destroy_all
   Game.destroy_all
+  CartItem.destroy_all
+  LibraryItem.destroy_all
 
   puts "Resetting primary keys..."
   ApplicationRecord.connection.reset_pk_sequence!('users')
   ApplicationRecord.connection.reset_pk_sequence!('games')
+  ApplicationRecord.connection.reset_pk_sequence!('cart_items')
+  ApplicationRecord.connection.reset_pk_sequence!('library_items')
 
   puts "Creating users..."
   User.create!(

@@ -26,6 +26,16 @@ class User < ApplicationRecord
   allow_nil: true
   before_validation :ensure_session_token, :set_display_name
   
+  has_many :cart_items
+  has_many :games_in_cart,
+    through: :cart_items,
+    source: :game
+  
+  has_many :library_items
+  has_many :owned_games,
+    through: :library_items,
+    source: :game
+  
   def self.find_by_credentials(credential, password)
     if URI::MailTo::EMAIL_REGEXP.match(credential)
       user = User.find_by(email: credential)

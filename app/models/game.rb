@@ -18,4 +18,14 @@
 #
 class Game < ApplicationRecord
   validates_presence_of :title, :price, :release_date, :short_description, :long_description, :developer, :publisher, :main_image_url, :banner_image_url
+
+  has_many :cart_items
+  # has_many :shoppers,
+  #   through: :cart_items,
+  #   source: :user
+  
+  has_many :library_items
+  has_many :owners,
+    through: :library_items,
+    source: :user
 end
