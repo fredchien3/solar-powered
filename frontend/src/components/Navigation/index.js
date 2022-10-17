@@ -32,7 +32,7 @@ export default function Navigation() {
         </button>
         <ProfileButton currentUser={currentUser} />
         <div className="small-profile-pic-wrapper">
-          <img alt="cober-pic" src={coberHappy} className="small-profile-pic"/>
+          <img alt="cober dog" src={coberHappy} className="small-profile-pic"/>
         </div>
       </div>
     )

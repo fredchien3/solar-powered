@@ -84,12 +84,8 @@
   justify-content: space-between;
 }
 
-.game-show-main-carousel {
-  width: 600px;
-  height: 432px;
-  
-  background-color: rgba(255, 0, 0, 0.123);
-}
+/* Thank you Mario! */
+/* But our carousel CSS is in another file!  */
 
 .game-show-main-info-panel {
   font-family: Arial, Helvetica, sans-serif;
@@ -189,7 +185,7 @@
   padding: 0 7px;
   margin: 0px 2px 3px 0;
   color: #67c1f5;
-  background-color: rgba( 103, 193, 245, 0.2 );
+  background-color: rgba(103, 193, 245, 0.2);
   border: none;
   border-radius: 2px;
   height: 19px;
@@ -200,4 +196,94 @@
   color: #ffffff;
   background: linear-gradient(135deg, #67c1f5 0%,#417a9b 100%);
   cursor: pointer;
+}
+
+.wishlist-buttons-bar {
+  margin-top: 444px;
+  width: 908px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #c6d4df;
+  padding: 16px;
+  margin-bottom: 32px;
+}
+
+.wishlist-buttons-bar a {
+  font: inherit;
+  text-decoration: none;
+  color: white;
+  margin-right: 3px;
+}
+.game-show-main-column-wrapper {
+  width: 940px;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-show-main-left {
+  width: 616px;
+  height: 100%;
+  /* background-color: rgba(255, 255, 255, 0.075); */
+}
+
+.buy-box {
+  width: 100%;
+  height: 72px;
+  box-sizing: border-box;
+  padding: 20px 16px 26px 16px;
+  background-image: linear-gradient( -60deg, rgba(226, 244, 255, 0.3) 5%,rgba(84, 107, 115, 0.3) 95%);
+  font-size: 21px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.buy-box-buttons {
+  background-color: black;
+  border-radius: 2px;
+  width: 183px;
+  height: 32px;
+  padding: 2px 2px 2px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  position: absolute;
+  right: 15px;
+  bottom: -16px;
+}
+
+.buy-box-buttons p {
+  width: 38%;
+  display: flex;
+  justify-content: center;
+  color: #c6d4df;
+}
+
+.buy-box-buttons button {
+  height: 30px;
+  margin-right: 1px;
+  border: none;
+  border-radius: 2px;
+  color: #d2efa9;
+  text-shadow: 1px 1px 0px rgb(0 0 0 / 30%);
+  background: linear-gradient( to right, #75b022 5%, #588a1b 95%);
+  padding: 0 15px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.buy-box-buttons button:hover {
+  cursor: pointer;
+  background: linear-gradient( to right, #8ed629 5%, #6aa621 95%);
+  color: white;
+}
+
+
+.game-show-main-right {
+  width: 308px;
+  height: 100%;
 }

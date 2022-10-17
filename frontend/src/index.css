@@ -43,3 +43,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   border: 4px solid #4e5157;  
 }
+
+::-webkit-scrollbar-corner {
+  background: #202020;
+}
