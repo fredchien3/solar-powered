@@ -56,7 +56,9 @@ export default function Navigation() {
     <nav className="header-nav">
       <div className="header-nav-content">
         <Link to="/" className="logo">
-          <i className="fa-solid fa-cloud-sun"></i>
+          <i className="fa-solid fa-sun"></i>
+          {/* <i className="fa-solid fa-cloud-sun"></i> */}
+          {/* <i className="fa-solid fa-solar-panel"></i> */}
           <h1>Solar</h1>
         </Link>
         {centerCluster}

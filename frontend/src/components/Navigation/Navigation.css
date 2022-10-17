@@ -10,6 +10,7 @@
   background-color: #171a21;
   color: #b8b6b4;
   height: 104px;
+  padding-left: 11px;
 }
 
 .header-nav-content {
@@ -19,11 +20,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  /* background-color: rgba(255, 255, 255, 0.469); */
-
-  /* space for the scroll wheel */
   margin-right: 30px;
-  /*  */
 }
 
 .logo {
@@ -212,7 +209,7 @@
   box-shadow: 0 0 12px #000000;
   animation: fadein 2s;
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
 }
 
 .profile-button-dropdown * {
