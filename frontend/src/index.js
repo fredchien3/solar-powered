@@ -8,6 +8,8 @@ import configureStore from './store';
 import csrfFetch from './store/csrf';
 import * as sessionActions from './store/session';
 import * as gameActions from './store/games'
+import * as cartItemActions from './store/cartItems';
+import * as libraryItemActions from './store/libraryItems';
 
 const store = configureStore();
 
@@ -16,6 +18,8 @@ if (process.env.NODE_ENV !== 'production') {
   window.csrfFetch = csrfFetch;
   window.sessionActions = sessionActions;
   window.gameActions = gameActions;
+  window.cartItemActions = cartItemActions;
+  window.libraryItemActions = libraryItemActions;
 }
 
 function Root() {
