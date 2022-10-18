@@ -37,7 +37,7 @@
   align-items: flex-end;
 }
 
-.price-and-remove p {
+.cart-item-price {
   color: #c7d5e0;
   font-size: 13px;
   margin-top: -2px;

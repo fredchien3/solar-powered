@@ -228,9 +228,9 @@
 .buy-box-buttons {
   background-color: black;
   border-radius: 2px;
-  width: 183px;
+  /* width: 183px; */
   height: 32px;
-  padding: 2px 2px 2px 0;
+  padding: 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -241,10 +241,12 @@
 }
 
 .buy-box-buttons p {
-  width: 38%;
+  /* width: 38%; */
   display: flex;
   justify-content: center;
+  white-space: nowrap;
   color: #c6d4df;
+  padding: 0 10px;
 }
 
 .buy-box-buttons button {

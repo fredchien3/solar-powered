@@ -18,10 +18,10 @@ const addCartItem = (cartItem) => {
   };
 }
 
-const removeCartItem = (cartItem) => {
+const removeCartItem = (cartItemId) => {
   return {
     type: REMOVE_CART_ITEM,
-    payload: cartItem
+    payload: cartItemId
   };
 }
 
@@ -34,14 +34,13 @@ export const fetchCartItems = () => async (dispatch) => {
 // export const fetchCartItem
 // dispatches addCartItem
 
-export const createCartItem = (cartItem) => async (dispatch) => {
+export const createCartItem = (gameId) => async (dispatch) => {
   const res = await csrfFetch('/api/cart_items', {
-    method: postMessage,
-    body: JSON.stringify(cartItem)
+    method: "POST",
+    body: JSON.stringify({gameId: gameId})
   });
   const data = await res.json();
-  console.log(data);
-  dispatch(addCartItem);
+  dispatch(addCartItem(data));
 }
 
 export const deleteCartItem = (cartItemId) => async (dispatch) => {

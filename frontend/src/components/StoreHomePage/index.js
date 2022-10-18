@@ -7,7 +7,7 @@ import StoreNavbar from "./StoreNavbar";
 import StoreSidebar from "./StoreSidebar";
 
 export default function StoreHomePage({ error }) {
-  document.title = "Welcome to Steam";
+  document.title = "Welcome to Solar";
   const dispatch = useDispatch();
   let games = [];
   

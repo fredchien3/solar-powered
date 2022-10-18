@@ -5,20 +5,41 @@ import { fetchGame } from "../../store/games";
 import StoreNavbar from "../StoreHomePage/StoreNavbar";
 import "./GameShowPage.css";
 import GameShowCarousel from "./GameShowCarousel";
+import { createCartItem } from "../../store/cartItems";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function GameShowPage() {
   const dispatch = useDispatch();
-  const gameId = useParams().id;
+  const history = useHistory();
+  const gameId = parseInt(useParams().id);
   const game = useSelector(state => state.games[gameId] ? state.games[gameId] : {loading: true});
   const stateSession = useSelector(state => state.session);
+  const cartItemsSlice = useSelector(state => state.cartItems);
+  const cartItems = Object.values(cartItemsSlice);
   document.title = game.loading ? "loading..." : game.title + " on Solar";
 
   const currentUser = stateSession.user;
+  const gameAlreadyInCart = cartItems.some(cartItem => cartItem.gameId === gameId);
   
   useEffect(() => {
     dispatch(fetchGame(gameId));
   }, [dispatch, gameId])
   
+  const handleAddToCart = () => {
+    if (gameAlreadyInCart) {
+      history.push("/cart");
+    } else {
+      dispatch(createCartItem(gameId))
+      .then(() => {
+        history.push("/cart");
+      })
+      .catch(async res => {
+        const data = await res.json();
+        console.log(data.message);
+      });
+    }
+  }
+    
   let underMainBox;
   if (currentUser) {
     underMainBox = (
@@ -33,6 +54,8 @@ export default function GameShowPage() {
       </div>
     )
   }
+
+  const addToCartButtonText = gameAlreadyInCart ? "In Cart" : "Add to Cart";
   
   return (
     <div className="game-show-page">
@@ -87,8 +110,8 @@ export default function GameShowPage() {
           <div className="buy-box">
             Buy {game.title}
             <div className="buy-box-buttons">
-              <p>${game.price}</p>
-              <button>Add to Cart</button>
+              <p>{game.price === 0 ? "Free to Play" : '$' + game.price}</p>
+              <button onClick={handleAddToCart}>{addToCartButtonText}</button>
             </div>
           </div>
         </aside>

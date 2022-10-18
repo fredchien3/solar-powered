@@ -18,11 +18,11 @@ export default function Navigation() {
   
   const centerCluster = (
       <div className="center-cluster">
-        <Link to="/">Store</Link>
-        <Link to="/">Community</Link>
-        {currentUser ? <Link to="/">{currentUser.displayName}</Link> : <></>}
-        {currentUser ? <Link to="/">Chat</Link> : <Link to="/">About</Link>}
-        <Link to="/">Support</Link>
+        <Link to="/store">Store</Link>
+        <Link to="#">Community</Link>
+        {currentUser ? <Link to="#">{currentUser.displayName}</Link> : <></>}
+        {currentUser ? <Link to="#">Chat</Link> : <Link to="#">About</Link>}
+        <Link to="#">Support</Link>
       </div>
   )
 

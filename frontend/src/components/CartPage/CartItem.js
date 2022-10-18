@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { deleteCartItem } from '../../store/cartItems';
-import { fetchGame } from '../../store/games';
+import { removeGame, fetchGame } from '../../store/games';
 import './CartItem.css';
 
 export default function CartItem({ cartItem }) {
@@ -12,7 +12,7 @@ export default function CartItem({ cartItem }) {
   }, [dispatch, cartItem.gameId])
   const game = useSelector(state => state.games[cartItem.gameId]) || {};
 
-  const handleClick = () => {
+  const handleRemove = () => {
     dispatch(deleteCartItem(cartItem.id));
   }
 
@@ -22,8 +22,8 @@ export default function CartItem({ cartItem }) {
       <div>
           <Link to={'games/' + game.id}>{game.title}</Link>
         <div className="price-and-remove">
-          <p>{game.price ? '$' + game.price : 'Free'}</p>
-          <span onClick={handleClick} className="cart-remove">Remove</span>
+          <p className="cart-item-price">{game.price ? '$' + game.price : 'Free'}</p>
+          <span onClick={handleRemove} className="cart-remove">Remove</span>
         </div>
       </div>
     </div>

@@ -1,12 +1,15 @@
 # main_image => the big image in the store home page
 # 616 x 353
+# imagesize:616x353
 
 # banner_image => the image in the info box in the game show page
 # also the little game tiles on the store home page
 # 460 x 215
+# imagesize:460x215
 
 # small_image => search and cart
 # 231 x 87
+# imagesize:231x87
 
 
 fallout_4_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-main.jpg"
