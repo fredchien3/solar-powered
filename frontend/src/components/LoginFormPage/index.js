@@ -8,14 +8,14 @@ import './LoginForm.css';
 export default function LoginFormPage() {
   const dispatch = useDispatch();
   const history = useHistory();
-  const stateSession = useSelector(state => state.session);
+  const sessionSlice = useSelector(state => state.session);
   const [credential, setCredential] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
   const [demoClicked, setDemoClicked] = useState(false);
   document.title = "Sign In";
 
-  if (stateSession.user) {
+  if (sessionSlice.user) {
     history.push('/');
   }
 

@@ -9,8 +9,8 @@ import "./CartPage.css";
 export default function CartPage() {
   document.title = "Shopping Cart";
   const dispatch = useDispatch();
-  const stateSession = useSelector(state => state.session);
-  const currentUser = stateSession.user || null;
+  const sessionSlice = useSelector(state => state.session);
+  const currentUser = sessionSlice.user || null;
   const cartItemsSlice = useSelector(state => state.cartItems);
   const cartItemsArray = Object.values(cartItemsSlice);
   const cartItemsGameIds = cartItemsArray.map(cartItem => cartItem.gameId);

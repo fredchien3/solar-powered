@@ -13,12 +13,12 @@ export default function GameShowPage() {
   const history = useHistory();
   const gameId = parseInt(useParams().id);
   const game = useSelector(state => state.games[gameId] ? state.games[gameId] : {loading: true});
-  const stateSession = useSelector(state => state.session);
+  const sessionSLice = useSelector(state => state.session);
   const cartItemsSlice = useSelector(state => state.cartItems);
   const cartItems = Object.values(cartItemsSlice);
   document.title = game.loading ? "loading..." : game.title + " on Solar";
 
-  const currentUser = stateSession.user;
+  const currentUser = sessionSLice.user;
   const gameAlreadyInCart = cartItems.some(cartItem => cartItem.gameId === gameId);
   
   useEffect(() => {

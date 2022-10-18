@@ -109,7 +109,7 @@
   color: white;
 }
 
-.install-steam {
+.install-solar {
   display: flex;
   justify-content: center;
   padding: 0 10px 0 10px;
@@ -123,14 +123,14 @@
   margin-right: 14px;
 }
 
-.install-steam i {
+.install-solar i {
   margin-top: -2px;
   font-size: 14px;
   color: white;
   margin-right: 10px;
 }
 
-.install-steam:hover {
+.install-solar:hover {
   cursor: pointer;
   color: white;
 }
@@ -155,93 +155,27 @@
 
 .mail-button:hover {
   background-color: #575451;
-  
 }
 
-.profile-button-wrapper {
-  position: relative;
-}
-
-.profile-button {
-  height: 24px;
-  background: none;
+.green-cart-link {
+  height: 20px;
   border: none;
-  margin-right: 6px;
-  color: #c5c3c2;
-  font-size: 11px;
-}
-
-.profile-button:hover {
-  cursor: pointer;
-  color: white;
-}
-
-.small-profile-pic-wrapper {
-  width: 36px;
-  height: 36px;
-  border: 2px solid #458097;
-  box-sizing: border-box;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.small-profile-pic {
-  width: 36px;
-  height: 36px;
-}
-
-.small-profile-pic:hover {
-  cursor: pointer;
-}
-
-.profile-button-dropdown {
+  border-radius: 1px;
   position: absolute;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #171a21;
-  width: 150px;
-  height: 132px;
-  padding: 6px 0 6px 0;
-  box-shadow: 0 0 12px #000000;
-  animation: fadein 2s;
-  overflow: hidden;
+  right: -10px;
+  bottom: -28px;
+  color: #a4d007;
+  box-shadow: 0 0 4px #000;
+  background-color: rgba( 164, 208, 7, 0.4 );
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  padding: 0 26px;
   z-index: 2;
 }
 
-.profile-button-dropdown * {
-  background: none;
-  border: none;
-  color: #b8b6b4;
-  display: flex;
-  align-items: center;
-  height: 27px;
-  text-decoration: none;
-  font-size: 12px;
-  padding: 5px 12px 5px 12px;
-  margin: 0;
-  font-family: inherit;
-}
-
-.profile-button-dropdown *:hover {
+.green-cart-link:hover {
+  color: #111111;
+  background-color: rgba( 164, 208, 7, 0.75 );
   cursor: pointer;
-  color: white;
-}
-
-.profile-button-dropdown p {
-  color: #57cbde;
-  margin-left: 4px;
-  padding: 0;
-  white-space: nowrap;
-}
-
-.profile-button-dropdown p:hover {
-  color: #57cbde;
-}
-
-.profile-button-dropdown > :last-child {
-  cursor: default
 }

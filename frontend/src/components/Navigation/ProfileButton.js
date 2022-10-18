@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom";
-import { logout } from "../../store/session"
+import { logout } from "../../store/session";
+import "./ProfileButton.css";
 
 export default function ProfileButton({currentUser}) {
   const dispatch = useDispatch();

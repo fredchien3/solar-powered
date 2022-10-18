@@ -7,7 +7,7 @@ import './SignupForm.css'
 export default function SignupFormPage() {
   const dispatch = useDispatch();
   const history = useHistory();
-  const stateSession = useSelector(state => state.session);
+  const sessionSlice = useSelector(state => state.session);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,7 +15,7 @@ export default function SignupFormPage() {
   const [errors, setErrors] = useState([]);
   document.title = "Create Your Account";
 
-  if (stateSession.user) {
+  if (sessionSlice.user) {
     history.push('/');
   }
   

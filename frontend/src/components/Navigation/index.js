@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 import ProfileButton from "./ProfileButton";
@@ -8,14 +8,23 @@ import { fetchCartItems } from "../../store/cartItems";
 
 export default function Navigation() {
   const dispatch = useDispatch();
-  const stateSession = useSelector(state => state.session);
+  const sessionSlice = useSelector(state => state.session);
+  const cartItemsSlice = useSelector(state => state.cartItems);
+  const cartItemsArray = Object.values(cartItemsSlice);
+
+  const [numCartItems, setNumCartItems] = useState(cartItemsArray.length);
+
   let currentUser;
-  if (stateSession) currentUser = stateSession.user;
+  if (sessionSlice) currentUser = sessionSlice.user;
     
   useEffect(() => {
     if (currentUser) dispatch(fetchCartItems());
   }, [dispatch, currentUser])
-  
+
+  useEffect(() => {
+    setNumCartItems(cartItemsArray.length);
+  }, [cartItemsArray])
+
   const centerCluster = (
       <div className="center-cluster">
         <Link to="/store">Store</Link>
@@ -30,7 +39,7 @@ export default function Navigation() {
   if (currentUser) {
     rightCluster = (
       <div className="right-cluster">
-        <button className="install-steam">
+        <button className="install-solar">
           <i className="fa-solid fa-download"></i>
           Install Solar
         </button>
@@ -46,7 +55,7 @@ export default function Navigation() {
   } else {
     rightCluster = (
       <div className="right-cluster">
-        <button className="install-steam green">
+        <button className="install-solar green">
           <i className="fa-solid fa-download"></i>
           Install Solar
         </button>
@@ -70,6 +79,7 @@ export default function Navigation() {
         </Link>
         {centerCluster}
         {rightCluster}
+        {numCartItems > 0 ? <button className="green-cart-link">Cart ({numCartItems})</button> : <></>}
       </div>
     </nav>
   )
