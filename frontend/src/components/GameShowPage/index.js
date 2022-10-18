@@ -45,7 +45,7 @@ export default function GameShowPage() {
           <h1>{game.title}</h1>
         </div>
         <div>
-          <button className="community-hub">Community Hub</button>
+          <button className="light-blue-button">Community Hub</button>
         </div>
       </header>
       <section className="game-show-main-box-wide-wrapper">

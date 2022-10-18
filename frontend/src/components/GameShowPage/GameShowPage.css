@@ -48,23 +48,7 @@
   align-items: flex-end;
 }
 
-.community-hub {
-  height: 32px;
-  padding: 0 15px;
-  background-color: rgba( 103, 193, 245, 0.2 );
-  border: none;
-  color: #67c1f5;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  border-radius: 2px;
-  margin-bottom: -2px;
-}
-
-.community-hub:hover {
-  cursor: pointer;
-  background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
-  color: white;
-}
+/* community-hub button style refactored to light-blue-button */
 
 .game-show-main-box-wide-wrapper {
   width: 100%;

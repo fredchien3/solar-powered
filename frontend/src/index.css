@@ -22,6 +22,29 @@ body {
   animation: flashErrorsFadeIn 2s;
 }
 
+.light-blue-button {
+  height: 32px;
+  padding: 0 15px;
+  background-color: rgba( 103, 193, 245, 0.2 );
+  border: none;
+  color: #67c1f5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border-radius: 2px;
+  margin-bottom: -2px;
+}
+
+.light-blue-button:hover {
+  cursor: pointer;
+  background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+  color: white;
+}
+
+sup {
+  font-size: .83em;
+  vertical-align: super;
+}
+
 @keyframes flashErrorsFadeIn {
   0% { background-color: white; }
   100% { background-color: #e49762; }

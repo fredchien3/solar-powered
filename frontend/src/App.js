@@ -5,6 +5,7 @@ import LoginFormPage from './components/LoginFormPage';
 import Navigation from './components/Navigation';
 import SignupFormPage from './components/SignupFormPage';
 import GameShowPage from './components/GameShowPage';
+import CartPage from './components/CartPage';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/games/:id">
             <GameShowPage />
+          </Route>
+          <Route path="/cart">
+            <CartPage />
           </Route>
           <Route path="/login">
             <LoginFormPage />
