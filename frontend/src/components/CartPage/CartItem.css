@@ -25,6 +25,11 @@
   box-sizing: border-box;
 }
 
+.cart-item-wrapper > div > a {
+  color: #c7d5e0;
+  text-decoration: none;
+}
+
 .price-and-remove {
   display: flex;
   flex-direction: column;

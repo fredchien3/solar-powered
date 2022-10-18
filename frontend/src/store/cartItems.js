@@ -1,7 +1,7 @@
 import csrfFetch from "./csrf";
 
-const SET_CART_ITEMS = "cartItems/SET_CART_ITEM";
-// const ADD_CART_ITEM = "cartItems/ADD_CART_ITEM";
+const SET_CART_ITEMS = "cartItems/SET_CART_ITEMS";
+const ADD_CART_ITEM = "cartItems/ADD_CART_ITEM";
 const REMOVE_CART_ITEM = "cartItems/REMOVE_CART_ITEM";
 
 const setCartItems = (cartItems) => {
@@ -11,12 +11,12 @@ const setCartItems = (cartItems) => {
   };
 }
 
-// const addCartItem = (cartItem) => {
-//   return {
-//     type: ADD_CART_ITEM,
-//     payload: cartItem
-//   };
-// }
+const addCartItem = (cartItem) => {
+  return {
+    type: ADD_CART_ITEM,
+    payload: cartItem
+  };
+}
 
 const removeCartItem = (cartItem) => {
   return {
@@ -41,7 +41,7 @@ export const createCartItem = (cartItem) => async (dispatch) => {
   });
   const data = await res.json();
   console.log(data);
-  // dispatch(addCartItem)
+  dispatch(addCartItem);
 }
 
 export const deleteCartItem = (cartItemId) => async (dispatch) => {
@@ -55,9 +55,9 @@ export default function cartItemsReducer(state = {}, action) {
   switch (action.type) {
     case SET_CART_ITEMS:
       return action.payload;
-    // case ADD_CART_ITEM:
-    //   const cartItem = action.payload;
-    //   return {...state, ...cartItem};
+    case ADD_CART_ITEM:
+      const cartItem = action.payload;
+      return {...state, ...cartItem};
     case REMOVE_CART_ITEM:
       const newState = {...state};
       delete newState[action.payload];

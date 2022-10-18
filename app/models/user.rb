@@ -26,7 +26,9 @@ class User < ApplicationRecord
   allow_nil: true
   before_validation :ensure_session_token, :set_display_name
   
-  has_many :cart_items
+  has_many :cart_items,
+    dependent: :destroy
+
   has_many :games_in_cart,
     through: :cart_items,
     source: :game

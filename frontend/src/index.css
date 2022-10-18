@@ -32,6 +32,9 @@ body {
   font-size: 15px;
   border-radius: 2px;
   margin-bottom: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .light-blue-button:hover {

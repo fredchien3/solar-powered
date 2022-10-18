@@ -1,1 +1,1 @@
-json.extract! game, :id, :title, :price, :release_date, :short_description, :long_description, :developer, :publisher, :main_image_url, :banner_image_url, :image_urls
+json.extract! game, :id, :title, :price, :release_date, :short_description, :long_description, :developer, :publisher, :main_image_url, :banner_image_url, :small_image_url, :image_urls

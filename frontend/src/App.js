@@ -14,7 +14,7 @@ function App() {
       <section className="main-display-flex">
         <Switch>
           <Route exact path="/">
-            <Redirect to="/store" />
+            <Redirect to="/store"/>
           </Route>
           <Route exact path="/store">
             <StoreHomePage />
@@ -32,8 +32,7 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route>
-            <div class="flash-error">Nothing found</div>
-            <StoreHomePage />
+            <StoreHomePage error={"URL Not Found :^)"} />
           </Route>
         </Switch>
       </section>

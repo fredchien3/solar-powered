@@ -13,8 +13,7 @@ export default function GameShowPage() {
   const stateSession = useSelector(state => state.session);
   document.title = game.loading ? "loading..." : game.title + " on Solar";
 
-  let currentUser;
-  if (stateSession) currentUser = stateSession.user;
+  const currentUser = stateSession.user;
   
   useEffect(() => {
     dispatch(fetchGame(gameId));

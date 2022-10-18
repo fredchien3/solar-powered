@@ -1,8 +1,20 @@
+# main_image => the big image in the store home page
+# 616 x 353
+
+# banner_image => the image in the info box in the game show page
+# also the little game tiles on the store home page
+# 460 x 215
+
+# small_image => search and cart
+# 231 x 87
+
+
 fallout_4_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-main.jpg"
 fallout_4_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-banner.jpg"
+fallout_4_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-small.jpg"
 fallout_4_image_urls = [
   "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-1.jpg",
-  "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-2.jpg ",
   "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-3.jpg",
   "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-4.jpg",
   "https://solar-powered.s3.amazonaws.com/game-images/fallout-4/fallout-4-5.jpg",
@@ -14,6 +26,7 @@ fallout_4_image_urls = [
 
 rimworld_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-main.jpg"
 rimworld_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-banner.jpg"
+rimworld_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-small.jpg"
 rimworld_image_urls = [
   "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-1.jpg",
   "https://solar-powered.s3.amazonaws.com/game-images/rimworld/rimworld-2.jpg",
@@ -28,6 +41,7 @@ rimworld_image_urls = [
 
 csgo_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-main.jpg"
 csgo_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-banner.jpg"
+csgo_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-small.jpg"
 csgo_image_urls = [
   "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-1.jpg",
   "https://solar-powered.s3.amazonaws.com/game-images/csgo/csgo-2.jpg",
@@ -41,6 +55,7 @@ csgo_image_urls = [
 
 space_engineers_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-main.jpg"
 space_engineers_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-banner.jpg"
+space_engineers_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-small.jpg"
 space_engineers_image_urls = [
   "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-1.jpg",
   "https://solar-powered.s3.amazonaws.com/game-images/space-engineers/space-engineers-2.jpg",
@@ -56,6 +71,7 @@ space_engineers_image_urls = [
 
 project_zomboid_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-main.jpg"
 project_zomboid_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-banner.jpg"
+project_zomboid_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-small.jpg"
 project_zomboid_image_urls = [
   "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-1.jpg",
   "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-2.jpg",
@@ -71,10 +87,10 @@ project_zomboid_image_urls = [
 
 ApplicationRecord.transaction do 
   puts "Destroying tables..."
-  User.destroy_all
-  Game.destroy_all
   CartItem.destroy_all
   LibraryItem.destroy_all
+  User.destroy_all
+  Game.destroy_all
 
   puts "Resetting primary keys..."
   ApplicationRecord.connection.reset_pk_sequence!('users')
@@ -83,27 +99,27 @@ ApplicationRecord.transaction do
   ApplicationRecord.connection.reset_pk_sequence!('library_items')
 
   puts "Creating users..."
-  User.create!(
+  ford = User.create!(
     username: 'ford', 
     display_name: 'ford',
     email: 'fred.chien3@gmail.com', 
     password: 'password'
   )
 
-  User.create!(
+  gaben = User.create!(
     username: 'gaben', 
     display_name: 'gaben',
     email: 'gaben@valvesoftware.com', 
     password: 'MoolyFTW'
   )
 
-  # 10.times do 
-  #   User.create!({
-  #     username: Faker::Internet.unique.username(specifier: 3),
-  #     email: Faker::Internet.unique.email,
-  #     password: 'password'
-  #   }) 
-  # end
+  3.times do 
+    User.create!({
+      username: Faker::Internet.unique.username(specifier: 3),
+      email: Faker::Internet.unique.email,
+      password: 'password'
+    }) 
+  end
 
   puts "Creating games..."
   fallout_4 = Game.create!( # Fallout 4
@@ -133,6 +149,7 @@ ApplicationRecord.transaction do
     publisher: 'Bethesda Softworks',
     main_image_url: fallout_4_main_image_url,
     banner_image_url: fallout_4_banner_image_url,
+    small_image_url: fallout_4_small_image_url,
     image_urls: fallout_4_image_urls
   )
 
@@ -186,6 +203,7 @@ ApplicationRecord.transaction do
     publisher: 'Ludeon Studios',
     main_image_url: rimworld_main_image_url,
     banner_image_url: rimworld_banner_image_url,
+    small_image_url: rimworld_small_image_url,
     image_urls: rimworld_image_urls
   )
 
@@ -204,6 +222,7 @@ ApplicationRecord.transaction do
     publisher: 'Valve',
     main_image_url: csgo_main_image_url,
     banner_image_url: csgo_banner_image_url,
+    small_image_url: csgo_small_image_url,
     image_urls: csgo_image_urls
   )
 
@@ -299,6 +318,7 @@ ApplicationRecord.transaction do
     publisher: 'Keen Software House',
     main_image_url: space_engineers_main_image_url,
     banner_image_url: space_engineers_banner_image_url,
+    small_image_url: space_engineers_small_image_url,
     image_urls: space_engineers_image_urls
   )
 
@@ -342,8 +362,14 @@ ApplicationRecord.transaction do
     publisher: 'The Indie Stone',
     main_image_url: project_zomboid_main_image_url,
     banner_image_url: project_zomboid_banner_image_url,
+    small_image_url: project_zomboid_banner_image_url,
     image_urls: project_zomboid_image_urls
   )
 
+  puts "Adding games to ford and gaben's cart..."
+  CartItem.create!(user: ford, game: rimworld)
+  CartItem.create!(user: ford, game: space_engineers)
+  CartItem.create!(user: gaben, game: csgo)
+  
   puts "Done!"
 end

@@ -1,14 +1,21 @@
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 import ProfileButton from "./ProfileButton";
 import './Navigation.css'
 import coberHappy from './cober_happy.jpeg'
+import { fetchCartItems } from "../../store/cartItems";
 
 export default function Navigation() {
+  const dispatch = useDispatch();
   const stateSession = useSelector(state => state.session);
   let currentUser;
   if (stateSession) currentUser = stateSession.user;
-
+    
+  useEffect(() => {
+    if (currentUser) dispatch(fetchCartItems());
+  }, [dispatch, currentUser])
+  
   const centerCluster = (
       <div className="center-cluster">
         <Link to="/">Store</Link>

@@ -136,6 +136,7 @@
 .continue-shopping {
   height: 30px;
   font-family: 'Motiva Sans 400', sans-serif;
+  text-decoration: none;
 }
 
 .cart-remove { 
