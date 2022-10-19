@@ -14,7 +14,7 @@ import * as userActions from './store/users'
 
 const store = configureStore();
 
-if (process.env.NODE_ENV !== 'production') {
+// if (process.env.NODE_ENV !== 'production') {
   window.store = store;
   window.csrfFetch = csrfFetch;
   window.sessionActions = sessionActions;
@@ -22,7 +22,7 @@ if (process.env.NODE_ENV !== 'production') {
   window.cartItemActions = cartItemActions;
   window.libraryItemActions = libraryItemActions;
   window.userActions = userActions;
-}
+// }
 
 function Root() {
   return (

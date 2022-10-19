@@ -18,7 +18,9 @@ export default function CartItem({ cartItem }) {
 
   return (
     <div className="cart-item-wrapper">
-      <Link to={'games/' + game.id}><img src={game.smallImageUrl} alt={game.title + 'small image'} /></Link>
+      <Link to={'games/' + game.id}>
+        <img src={game.smallImageUrl} alt={game.title + ' small image'} />
+      </Link>
       <div>
           <Link to={'games/' + game.id}>{game.title}</Link>
         <div className="price-and-remove">

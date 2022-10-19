@@ -88,6 +88,83 @@ project_zomboid_image_urls = [
   "https://solar-powered.s3.amazonaws.com/game-images/project-zomboid/project-zomboid-10.jpg"
 ]
 
+tf2_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-main.jpg"
+tf2_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-banner.jpg"
+tf2_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-small.jpg"
+tf2_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-8.jpg"
+]
+
+pubg_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/pubg/pubg-main.jpg"
+pubg_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/pubg/pubg-banner.jpg"
+pubg_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/pubg/pubg-small.jpg"
+pubg_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/pubg/pubg-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/pubg/pubg-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/pubg/pubg-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/pubg/pubg-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/pubg/pubg-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/pubg/pubg-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/pubg/pubg-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/pubg/pubg-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/pubg/pubg-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/pubg/pubg-10.jpg"
+]
+
+bannerlord_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/bannerlord/bannerlord-main.jpg"
+bannerlord_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/bannerlord/bannerlord-banner.jpg"
+bannerlord_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/bannerlord/bannerlord-small.jpg"
+bannerlord_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/bannerlord/bannerlord-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/bannerlord/bannerlord-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/bannerlord/bannerlord-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/bannerlord/bannerlord-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/bannerlord/bannerlord-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/bannerlord/bannerlord-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/bannerlord/bannerlord-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/bannerlord/bannerlord-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/bannerlord/bannerlord-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/bannerlord/bannerlord-10.jpg"
+]
+
+kenshi_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/kenshi/kenshi-main.jpg"
+kenshi_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/kenshi/kenshi-banner.jpg"
+kenshi_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/kenshi/kenshi-small.jpg"
+kenshi_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/kenshi/kenshi-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kenshi/kenshi-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kenshi/kenshi-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kenshi/kenshi-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kenshi/kenshi-5.jpg"
+]
+
+witcher3_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-main.jpg"
+witcher3_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-banner.jpg"
+witcher3_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-small.jpg"
+witcher3_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-11.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-12.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-13.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-14.jpg"
+]
+
 ApplicationRecord.transaction do 
   puts "Destroying tables..."
   CartItem.destroy_all
@@ -209,7 +286,6 @@ ApplicationRecord.transaction do
     small_image_url: rimworld_small_image_url,
     image_urls: rimworld_image_urls
   )
-
 
   csgo = Game.create!( # CS:GO
     title: 'Counter-Strike: Global Offensive',
@@ -369,10 +445,211 @@ ApplicationRecord.transaction do
     image_urls: project_zomboid_image_urls
   )
 
-  puts "Adding games to ford and gaben's cart..."
-  CartItem.create!(user: ford, game: rimworld)
-  CartItem.create!(user: ford, game: space_engineers)
+  tf2 = Game.create!(
+    title: 'Team Fortress 2',
+    price: '0',
+    release_date: Date.parse('Oct 10, 2007'),
+    short_description: "Nine distinct classes provide a broad range of tactical abilities and personalities. Constantly updated with new game modes, maps, equipment and, most importantly, hats!",
+    long_description: "\"The most fun you can have online\" - PC Gamer
+    Is now FREE!
+    There’s no catch! Play as much as you want, as long as you like!
+    
+    The most highly-rated free game of all time!
+    One of the most popular online action games of all time, Team Fortress 2 delivers constant free updates—new game modes, maps, equipment and, most importantly, hats. Nine distinct classes provide a broad range of tactical abilities and personalities, and lend themselves to a variety of player skills.
+    
+    New to TF? Don’t sweat it!
+    No matter what your style and experience, we’ve got a character for you. Detailed training and offline practice modes will help you hone your skills before jumping into one of TF2’s many game modes, including Capture the Flag, Control Point, Payload, Arena, King of the Hill and more.
+    
+    Make a character your own!
+    There are hundreds of weapons, hats and more to collect, craft, buy and trade. Tweak your favorite class to suit your gameplay style and personal taste. You don’t need to pay to win—virtually all of the items in the Mann Co. Store can also be found in-game.",
+    developer: 'Valve',
+    publisher: 'Valve',
+    main_image_url: tf2_main_image_url,
+    banner_image_url: tf2_banner_image_url,
+    small_image_url: tf2_banner_image_url,
+    image_urls: tf2_image_urls
+  )
+
+  pubg = Game.create!(
+    title: 'PUBG: BATTLEGROUNDS',
+    price: '0',
+    release_date: Date.parse('Oct 10, 2007'),
+    short_description: "Play PUBG: BATTLEGROUNDS for free. Land on strategic locations, loot weapons and supplies, and survive to become the last team standing across various, diverse Battlegrounds. Squad up and join the Battlegrounds for the original Battle Royale experience that only PUBG: BATTLEGROUNDS can offer.",
+    long_description: "LAND, LOOT, SURVIVE!
+    Play PUBG: BATTLEGROUNDS for free.
+    Land on strategic locations, loot weapons and supplies, and survive to become the last team standing across various, diverse Battlegrounds.
+    Squad up and join the Battlegrounds for the original Battle Royale experience that only PUBG: BATTLEGROUNDS can offer.
+    
+    This content download will also provide access to the BATTLEGROUNDS Test Server, which requires a separate download to play. 
+    Optional in-game purchases available.",
+    developer: 'KRAFTON, Inc.',
+    publisher: 'KRAFTON, Inc.',
+    main_image_url: pubg_main_image_url,
+    banner_image_url: pubg_banner_image_url,
+    small_image_url: pubg_banner_image_url,
+    image_urls: pubg_image_urls
+  )
+
+  bannerlord = Game.create!(
+    title: 'Mount & Blade II: Bannerlord',
+    price: '49.99',
+    release_date: Date.parse('Mar 30, 2020'),
+    short_description: "The horns sound, the ravens gather. An empire is torn by civil war. Beyond its borders, new kingdoms rise. Gird on your sword, don your armour, summon your followers and ride forth to win glory on the battlefields of Calradia. Establish your hegemony and create a new world out of the ashes of the old.",
+    long_description: "The horns sound, the ravens gather. An empire is torn by civil war. Beyond its borders, new kingdoms rise. Gird on your sword, don your armour, summon your followers and ride forth to win glory on the battlefields of Calradia. Establish your hegemony and create a new world out of the ashes of the old.
+    
+    Mount & Blade II: Bannerlord is the eagerly awaited sequel to the acclaimed medieval combat simulator and role-playing game Mount & Blade: Warband. Set 200 years before, it expands both the detailed fighting system and the world of Calradia. Bombard mountain fastnesses with siege engines, establish secret criminal empires in the back alleys of cities, or charge into the thick of chaotic battles in your quest for power.
+    
+    Strategy / Action RPG
+    Explore, raid and conquer your way across the vast continent of Calradia, making friends and enemies along the way. Raise your own army and lead it into battle, commanding and fighting alongside your troops in the thick of the action.
+    
+    Singleplayer Sandbox Campaign
+    Play the game the way you want to play it! Plot your own path to power in a dynamic sandbox adventure where no two playthroughs are the same.
+    
+    Extensive Character Creation and Progression Systems
+    Create and develop your own character to match your playstyle. Progress skills by performing actions as you gain access to a selection of perks that represent your mastery of a talent.
+    
+    Realistic Economy
+    See the availability of goods ebb and flow in a simulated feudal economy, where the price of everything from incense to warhorses fluctuates with supply and demand. Turn anarchy to your advantage by being the first to bring grain to a starving town after a siege or reopening a bandit-plagued caravan route.
+    
+    Multiplayer Game Modes
+    Put your tactical prowess and combat skills to the test against players from all over the world in a variety of different multiplayer game modes, ranging from small-scale skirmishes up to huge and epic sieges with hundreds of players.
+    
+    Skill-Based Directional Combat System
+    Vanquish your foes using the game’s deep and intuitive combat system that is easy to learn but difficult to master.
+    
+    Breathtaking Battles
+    Take to the field of battle and experience the brutality of medieval combat in first or third person perspective with hundreds of on-screen units, each with their own detailed AI.
+    
+    Extensive Modding Capabilities
+    Customise the game to experience an entirely different adventure of your own creation. The engine and tools used to develop Mount & Blade II: Bannerlord are being made available to the community, so that modders can re-interpret Calradia or create their own worlds!",
+    developer: 'TaleWorlds Entertainment',
+    publisher: 'TaleWorlds Entertainment',
+    main_image_url: bannerlord_main_image_url,
+    banner_image_url: bannerlord_banner_image_url,
+    small_image_url: bannerlord_banner_image_url,
+    image_urls: bannerlord_image_urls
+  )
+
+  kenshi = Game.create!(
+    title: 'Kenshi',
+    price: '29.99',
+    release_date: Date.parse('Dec 6, 2018'),
+    short_description: "A free-roaming squad based RPG. Focusing on open-ended sandbox gameplay features rather than a linear story. Be a trader, a thief, a rebel, a warlord, an adventurer, a farmer, a slave, or just food for the cannibals. Train your men up from puny victims to master warriors.",
+    long_description: "A free-roaming squad based RPG focusing on open-ended sandbox gameplay features rather than a linear story. Be a trader, a thief, a rebel, a warlord, an adventurer, a farmer, a slave, or just food for the cannibals.
+
+    Research new equipment and craft new gear. Purchase and upgrade your own buildings to use as safe fortified havens when things go bad, or use them to start up a business. Aid or oppose the various factions in the world while striving for the strength and wealth necessary to simply survive in the harsh desert. Train your men up from puny victims to master warriors. Carry your wounded squad mates to safety and get them all home alive.
+    FEATURES
+    
+    Freeform gameplay in a seamless game world in the largest single-player RPG world since Daggerfall, stretching over 870 square kilometers. The game will never seek to limit you or restrict your personal play style.
+    
+    Custom design as many characters as you want and build up a whole squad to fight for you. Characters will grow and become stronger with experience, not just in their stats but their appearance too.
+    
+    Build a base where you can research new technologies, upgrade your defences and craft new gear.
+    
+    Original take on the RTS-RPG hybrid genre. No \"hero\" characters with artificially stronger stats than everybody else- Every character and NPC you meet is potentially an equal, and has a name, a life.
+    
+    You are not the chosen one. You're not great and powerful. You don't have more 'hitpoints' than everyone else. You are not the center of the universe, and you are not special. Unless you work for it.
+    
+    
+    Purchase and upgrade your own buildings to use as safe fortified havens when things go bad, or use them to start up a business.
+    
+    
+    Variation and possibilities of gameplay. Be good, be evil, be a businessman, be a thief, live in a town, live in the desert, travel alone, travel in hordes, build a fortress, raze a city. Devote yourself to freeing slaves, or maybe end up a slave yourself.
+    
+    
+    Dynamic, ever changing world. Support or hinder whoever you wish, or keep to yourself, the world won't stop moving. This is not just a \"game\", you are living and surviving in a simulated world.
+    
+    
+    Get captured by cannibals and eaten alive, or sold off by slavers and forced to work in the mines. These are not scripted events, just a regular part of this chaotic world that ruins your life by chance. Anything can happen, yet anything can be overcome if you have the strength.
+    
+    
+    Absolutely no Level-scaling. The world does not level up along with you, and the shops don't change their inventory to only items matching your level. At the start of the game almost everyone will be stronger than you, and survival will always be a struggle. The game won't hold your hand or help you when you're down.
+    
+    
+    Realistic medical system that affects gameplay. A character with a wounded leg will limp or crawl and slow the party down, wounded arms means you must use your sword one-handed or not at all. Severe injuries will result in amputees needing robotic limb replacements. Blood loss means you can pass out, and the blood will attract predators. A character’s stats are affected by equipment, encumbrance, blood loss, injuries and starvation.
+    
+    
+    Intelligent AI that allows for characters to reason and work towards long-term goals and desires. Squads work together and carry their wounded to safety. Characters can be setup to take care of micromanagement for you and run production in your base.
+    
+    
+    Aid or oppose the various factions in the world while striving for the strength and wealth necessary to simply survive in the harsh environment.
+    
+    
+    Independently developed with no design influences, or alterations dictated by men in gray suits who have never played a game before in their lives.
+    
+    
+    Original game world. There are no fantasy-knock-off cliches. No magic.",
+    developer: 'Lo-Fi Games',
+    publisher: 'Lo-Fi Games',
+    main_image_url: kenshi_main_image_url,
+    banner_image_url: kenshi_banner_image_url,
+    small_image_url: kenshi_banner_image_url,
+    image_urls: kenshi_image_urls
+  )
+
+  witcher3 = Game.create!(
+    title: 'The Witcher® 3: Wild Hunt',
+    price: '39.99',
+    release_date: Date.parse('May 18, 2015'),
+    short_description: "As war rages on throughout the Northern Realms, you take on the greatest contract of your life — tracking down the Child of Prophecy, a living weapon that can alter the shape of the world.",
+    long_description: "The Witcher: Wild Hunt is a story-driven open world RPG set in a visually stunning fantasy universe full of meaningful choices and impactful consequences. In The Witcher, you play as professional monster hunter Geralt of Rivia tasked with finding a child of prophecy in a vast open world rich with merchant cities, pirate islands, dangerous mountain passes, and forgotten caverns to explore.
+    KEY FEATURES
+    PLAY AS A HIGHLY TRAINED MONSTER SLAYER FOR HIRE
+    Trained from early childhood and mutated to gain superhuman skills, strength and reflexes, witchers are a counterbalance to the monster-infested world in which they live.
+    
+    Gruesomely destroy foes as a professional monster hunter armed with a range of upgradeable weapons, mutating potions and combat magic.
+    Hunt down a wide range of exotic monsters — from savage beasts prowling the mountain passes, to cunning supernatural predators lurking in the shadows of densely populated towns.
+    Invest your rewards to upgrade your weaponry and buy custom armour, or spend them away in horse races, card games, fist fighting, and other pleasures the night brings.
+    
+    
+    EXPLORE A MORALLY INDIFFERENT FANTASY OPEN WORLD
+    Built for endless adventure, the massive open world of The Witcher sets new standards in terms of size, depth and complexity.
+    
+    Traverse a fantastical open world: explore forgotten ruins, caves and shipwrecks, trade with merchants and dwarven smiths in cities, and hunt across the open plains, mountains and seas.
+    Deal with treasonous generals, devious witches and corrupt royalty to provide dark and dangerous services.
+    Make choices that go beyond good & evil, and face their far-reaching consequences.
+    
+    
+    CHASE DOWN THE CHILD OF PROPHECY
+    Take on the most important contract to track down the child of prophecy, a key to save or destroy this world.
+    
+    In times of war, chase down the child of prophecy, a living weapon foretold by ancient elven legends.
+    Struggle against ferocious rulers, spirits of the wilds and even a threat from beyond the veil – all hell-bent on controlling this world.
+    Define your destiny in a world that may not be worth saving.
+    
+    
+    FULLY REALIZED NEXT GENERATION
+    Built exclusively for next generation hardware, the REDengine 3 renders the world of The Witcher visually nuanced and organic, a real true to life fantasy.
+    Dynamic weather systems and day/night cycles affect how the citizens of the towns and the monsters of the wilds behave.
+    Rich with storyline choices in both main and subplots, this grand open world is influenced by the player unlike ever before.",
+    developer: 'CD PROJEKT RED',
+    publisher: 'CD PROJEKT RED',
+    main_image_url: witcher3_main_image_url,
+    banner_image_url: witcher3_banner_image_url,
+    small_image_url: witcher3_banner_image_url,
+    image_urls: witcher3_image_urls
+  )
+
+  # SAMPLEGAME = Game.create!(
+  #   title: '',
+  #   price: '',
+  #   release_date: Date.parse(),
+  #   short_description: "
+  #   ",
+  #   long_description: "
+  #   ",
+  #   developer: '',
+  #   publisher: '',
+  #   main_image_url: SAMPLE_main_image_url,
+  #   banner_image_url: SAMPLE_banner_image_url,
+  #   small_image_url: SAMPLE_banner_image_url,
+  #   image_urls: SAMPLE_image_urls
+  # )
+
+  puts "Adding games to gaben's cart..."
   CartItem.create!(user: gaben, game: csgo)
+  CartItem.create!(user: gaben, game: bannerlord)
+  CartItem.create!(user: gaben, game: witcher3)
   
   puts "Done!"
 end
