@@ -7,26 +7,38 @@ import "./GameShowPage.css";
 import GameShowCarousel from "./GameShowCarousel";
 import { createCartItem } from "../../store/cartItems";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { fetchLibraryItems } from "../../store/libraryItems";
 
 export default function GameShowPage() {
   const dispatch = useDispatch();
   const history = useHistory();
   const gameId = parseInt(useParams().id);
   const game = useSelector(state => state.games[gameId] ? state.games[gameId] : {loading: true});
-  const sessionSLice = useSelector(state => state.session);
+  const sessionSlice = useSelector(state => state.session);
   const cartItemsSlice = useSelector(state => state.cartItems);
   const cartItems = Object.values(cartItemsSlice);
   document.title = game.loading ? "loading..." : game.title + " on Solar";
 
-  const currentUser = sessionSLice.user;
+  const libraryItemsSlice = useSelector(state => state.libraryItems);
+  const currentUserOwnedGamesIds = Object.values(libraryItemsSlice).map(libraryItem => libraryItem.gameId);
+
+  const currentUser = sessionSlice.user;
   const gameAlreadyInCart = cartItems.some(cartItem => cartItem.gameId === gameId);
+  const gameAlreadyInLibrary = currentUserOwnedGamesIds.some(id => id === gameId);
+  
+
   
   useEffect(() => {
     dispatch(fetchGame(gameId));
-  }, [dispatch, gameId])
+    dispatch(fetchLibraryItems(currentUser.id));
+  }, [dispatch, gameId, currentUser.id])
+
+
   
   const handleAddToCart = () => {
-    if (gameAlreadyInCart) {
+    if (gameAlreadyInLibrary) {
+      
+    } else if (gameAlreadyInCart) {
       history.push("/cart");
     } else {
       dispatch(createCartItem(gameId))
@@ -56,7 +68,15 @@ export default function GameShowPage() {
     )
   }
 
-  const addToCartButtonText = gameAlreadyInCart ? "In Cart" : "Add to Cart";
+  let addToCartButtonText;
+  if (gameAlreadyInLibrary) {
+    addToCartButtonText = "In Library";
+  } else if (gameAlreadyInCart) {
+    addToCartButtonText = "In Cart";
+  } else {
+    addToCartButtonText = "Add to Cart";
+  }
+
   
   return (
     <div className="game-show-page">
@@ -112,7 +132,7 @@ export default function GameShowPage() {
             Buy {game.title}
             <div className="buy-box-buttons">
               <p>{game.price === 0 ? "Free to Play" : '$' + game.price}</p>
-              <button onClick={handleAddToCart}>{addToCartButtonText}</button>
+              <button onClick={handleAddToCart} className={'green-buy-button'} disabled={gameAlreadyInLibrary}>{addToCartButtonText}</button>
             </div>
           </div>
         </aside>

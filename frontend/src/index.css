@@ -43,6 +43,23 @@ body {
   color: white;
 }
 
+/* .green-buy-button {
+  
+}
+
+.green-buy-button:hover {
+  
+}
+
+.green-buy-button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.green-buy-button:disabled:hover {
+
+} */
+
 sup {
   font-size: .83em;
   vertical-align: super;

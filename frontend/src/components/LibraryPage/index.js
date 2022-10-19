@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { fetchGame, setGames } from '../../store/games';
+import { setGames } from '../../store/games';
 import { fetchLibraryItems, setLibraryItems } from '../../store/libraryItems';
 import { fetchUser } from '../../store/users';
 import defaultAvatar from "../default_avatar.jpg";
@@ -17,11 +17,7 @@ export default function LibraryPage() {
 
   const libraryItemsSlice = useSelector(state => state.libraryItems);
   const libraryItemsArray = Object.values(libraryItemsSlice);
-  const libraryItemsGameIds = libraryItemsArray.map(libraryItem => libraryItem.gameId);
 
-  // const gamesSlice = useSelector(state => state.games);
-  // const gamesArray = Object.values(gamesSlice);
-  
   const libraryItems = libraryItemsArray.map(libraryItem => {
     return <LibraryItem libraryItem={libraryItem} key={libraryItem.id} />;
   })

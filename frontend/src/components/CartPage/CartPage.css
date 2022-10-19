@@ -87,21 +87,22 @@
 }
 
 .checkout-buttons button {
-  padding: 0 15px;
   color: #D2E885;
-  background-image: linear-gradient(rgb(121, 153, 5) 5%, rgb(83, 105, 4) 95%);
+
+  height: 30px;
+  padding: 0 15px;
+  background-image: linear-gradient(#799905 5%, #536904 95%);
   border: none;
   border-radius: 3px;
-  height: 30px;
   font-family: 'Motiva Sans 400';
   font-size: 15px;
   margin-left: 16px;
 }
 
 .checkout-buttons button:hover {
-  background: linear-gradient( to bottom, rgba(164,208,7,1) 5%, rgba(107,135,5,1) 95%);
-  cursor: pointer;
+  background: linear-gradient( to bottom, #a4d007 5%, #6b8705 95%);
   color: white;
+  cursor: pointer;
 }
 
 .checkout-buttons button:disabled {
@@ -110,7 +111,7 @@
 }
 
 .checkout-buttons button:disabled:hover {
-  background-image: linear-gradient(rgb(121, 153, 5) 5%, rgb(83, 105, 4) 95%);
+  background-image: linear-gradient(#799905 5%, #536904 95%);
   color: #D2E885;
 }
 

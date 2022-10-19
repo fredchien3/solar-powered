@@ -75,7 +75,7 @@ export default function CartPage() {
               </div>
               {selfOrGiftString}
               <div className="checkout-buttons continue-shopping">
-                <button disabled={disablePurchaseForMyself}>Purchase for myself</button>
+                <button className="green-buy-button" disabled={disablePurchaseForMyself}>Purchase for myself</button>
                 <button disabled>Purchase as a gift</button>
               </div>
             </div>

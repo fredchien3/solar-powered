@@ -2,7 +2,6 @@ import csrfFetch from "./csrf";
 
 const SET_LIBRARY_ITEMS = "libraryItems/SET_LIBRARY_ITEM";
 // const ADD_LIBRARY_ITEM = "libraryItems/ADD_LIBRARY_ITEM";
-// const REMOVE_LIBRARY_ITEM = "libraryItems/REMOVE_LIBRARY_ITEM";
 
 export const setLibraryItems = (libraryItems) => {
   return {
@@ -27,14 +26,14 @@ export const fetchLibraryItems = (userId) => async (dispatch) => {
 // export const fetchLibraryItem
 // dispatches addLibraryItem
 
-export const createLibraryItem = (libraryItem) => async (dispatch) => {
-  const res = await csrfFetch('/api/library_items', {
-    method: postMessage,
-    body: JSON.stringify(libraryItem)
-  });
-  const data = await res.json();
-  // dispatch(addLibraryItem)
-}
+// export const createLibraryItem = (libraryItem) => async (dispatch) => {
+//   const res = await csrfFetch('/api/library_items', {
+//     method: postMessage,
+//     body: JSON.stringify(libraryItem)
+//   });
+//   const data = await res.json();
+//   dispatch(addLibraryItem)
+// }
 
 export default function libraryItemsReducer(state = {}, action) {
   switch (action.type) {
