@@ -7,6 +7,7 @@ import SignupFormPage from './components/SignupFormPage';
 import GameShowPage from './components/GameShowPage';
 import CartPage from './components/CartPage';
 import LibraryPage from './components/LibraryPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           </Route>
         </Switch>
       </section>
+      <Footer />
     </>
   );
 }

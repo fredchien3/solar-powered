@@ -25,16 +25,12 @@ export default function GameShowPage() {
   const currentUser = sessionSlice.user || {};
   const gameAlreadyInCart = cartItems.some(cartItem => cartItem.gameId === gameId);
   const gameAlreadyInLibrary = currentUserOwnedGamesIds.some(id => id === gameId);
-  
-
-  
+    
   useEffect(() => {
     dispatch(fetchGame(gameId));
     dispatch(fetchLibraryItems(currentUser.id));
   }, [dispatch, gameId, currentUser.id])
 
-
-  
   const handleAddToCart = () => {
     if (gameAlreadyInLibrary) {
       
@@ -54,10 +50,10 @@ export default function GameShowPage() {
   }
     
   let underMainBox;
-  if (currentUser) {
+  if (currentUser.id) {
     underMainBox = (
       <div className="wishlist-buttons-bar">
-        Add to your wishlist Follow Ignore \/    view your queue
+        Wishlist feature coming soon.
       </div>
     )
   } else {
@@ -77,18 +73,18 @@ export default function GameShowPage() {
     addToCartButtonText = "Add to Cart";
   }
 
-  
   return (
     <div className="game-show-page">
       <div className="game-show-page-dynamic-background"></div>
       <StoreNavbar />
       <header className="game-show-title-wrapper">
         <div>
-          <p>All Games {'>'} {game.title}</p>
+          <p className="game-show-breadcrumbs"><Link to="/store">All Games</Link> {'>'} <Link to={'/games/' + gameId}>{game.title}</Link></p>
           <h1>{game.title}</h1>
         </div>
         <div>
-          <button className="light-blue-button">Community Hub</button>
+          {/* No dead links */}
+          {/* <button className="light-blue-button">Community Hub</button> */}
         </div>
       </header>
       <section className="game-show-main-box-wide-wrapper">

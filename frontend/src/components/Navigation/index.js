@@ -27,13 +27,27 @@ export default function Navigation() {
     setNumCartItems(cartItemsArray.length);
   }, [cartItemsArray])
 
+
+  // Original:
+  // const centerCluster = (
+  //     <div className="center-cluster">
+  //       <Link to="/store">Store</Link>
+  //       <Link to="#">Community</Link>
+  //       {currentUser ? <Link to="#">{currentUser.displayName}</Link> : <></>}
+  //       {currentUser ? <Link to="#">Chat</Link> : <Link to="#">About</Link>}
+  //       <Link to="#">Support</Link>
+  //     </div>
+  // )
+
+  // No dead links:
   const centerCluster = (
       <div className="center-cluster">
         <Link to="/store">Store</Link>
-        <Link to="#">Community</Link>
         {currentUser ? <Link to="#">{currentUser.displayName}</Link> : <></>}
-        {currentUser ? <Link to="#">Chat</Link> : <Link to="#">About</Link>}
-        <Link to="#">Support</Link>
+        <span style={{width: '20px'}} />
+        <a href="https://www.linkedin.com/in/fchien">LinkedIn</a>
+        <a href="https://github.com/fredchien3">GitHub</a>
+        <a href="mailto: fred.chien3@gmail.com">Email</a>
       </div>
   )
 
@@ -62,8 +76,7 @@ export default function Navigation() {
           Install Solar
         </button>
         <div className="login-signup-links">
-          <Link to="/login">login</Link>
-            |  
+          <Link to="/login">login</Link> |  
           <Link to="/signup">signup</Link>
         </div>
       </div>
@@ -78,8 +91,6 @@ export default function Navigation() {
       <div className="header-nav-content">
         <Link to="/" className="logo">
           <i className="fa-solid fa-sun"></i>
-          {/* <i className="fa-solid fa-cloud-sun"></i> */}
-          {/* <i className="fa-solid fa-solar-panel"></i> */}
           <h1>Solar</h1>
         </Link>
         {centerCluster}

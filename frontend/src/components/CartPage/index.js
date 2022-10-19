@@ -65,10 +65,10 @@ export default function CartPage() {
     })
   }
 
-  let selfOrGiftString = <p className="checkout-page-body-p">Purchase as a gift feature coming soon.</p>;
+  // let selfOrGiftString = <p className="checkout-page-body-p">Purchase as a gift feature coming soon.</p>;
   let disablePurchaseForMyself = false;
   if (cartEmpty) {
-    selfOrGiftString = "";
+    // selfOrGiftString = "";
     disablePurchaseForMyself = true;
   }
   
@@ -80,7 +80,7 @@ export default function CartPage() {
         <div className="cart-page-glow-background" />
         <StoreNavbar />
         <header className="cart-page-title-wrapper">
-          <p>All Products {'>'} Your Shopping Cart</p>
+          <span><Link>All Products</Link> {'>'} Your Shopping Cart</span>
           <h1>Your Shopping Cart</h1>
         </header>
         <section className="cart-page-main-column-wrapper">

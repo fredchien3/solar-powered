@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { setGames } from '../../store/games';
 import { fetchLibraryItems, setLibraryItems } from '../../store/libraryItems';
 import { fetchUser } from '../../store/users';
@@ -37,9 +38,9 @@ export default function LibraryPage() {
       <header className="library-header">
         <img src={defaultAvatar} alt="avatar"></img>
         <div>
-          <h1>{user.displayName}</h1>
+          <Link className="link-to-profile" to={'/users/' + user.username + '/games'}>{user.displayName}</Link>
           <span>»</span>
-          <p>Games</p>
+          <Link className="link-to-games" to={'/users/' + user.username + '/games'}>Games</Link>
         </div>
       </header>
       <section className="library-main-column">

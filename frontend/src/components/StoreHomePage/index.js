@@ -17,6 +17,11 @@ export default function StoreHomePage({ error }) {
   
   games = useSelector(state => Object.values(state.games))
   
+  for (let i = games.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [games[i], games[j]] = [games[j], games[i]];
+  }
+  
   let errorMessage;
   if (error) errorMessage = <div class="flash-error">{error}</div>
   
