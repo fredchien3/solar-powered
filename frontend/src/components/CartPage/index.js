@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { deleteCartItem } from "../../store/cartItems";
+import { createLibraryItem } from "../../store/libraryItems";
 import StoreNavbar from "../StoreHomePage/StoreNavbar";
 import CartItem from "./CartItem";
 import "./CartPage.css";
@@ -9,6 +11,7 @@ import "./CartPage.css";
 export default function CartPage() {
   document.title = "Shopping Cart";
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const sessionSlice = useSelector(state => state.session);
   const currentUser = sessionSlice.user || null;
@@ -28,24 +31,39 @@ export default function CartPage() {
   
   const [totalPrice, setTotalPrice] = useState(0);
   
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [])
-
   useEffect(() => {
     const pricesArray = gamesArray.map(game => game.price);
     const reducedPrice = pricesArray.reduce((acc, el) => acc + el, 0);
     setTotalPrice(reducedPrice.toFixed(2));
   }, [gamesArray])
 
+  const handlePurchase = () => {
+    if (cartItems.length > 0) {
+      addCartItemsToLibrary()
+        .then(deleteCurrentUserCartItems())
+        .then(history.push('/users/' + currentUser.username + '/games'))
+        .catch(res => alert(res))
+    }
+  }
+  
   const handleRemoveAll = () => {
     alert('Removing all items from cart!');
     // replace with modal later
+    deleteCurrentUserCartItems();
+  }
+
+  const addCartItemsToLibrary = async () => {
+    Object.values(cartItemsSlice).forEach(cartItem => {
+      const libraryItem = { userId: cartItem.userId, gameId: cartItem.gameId };
+      dispatch(createLibraryItem(libraryItem));
+    })
+  }
+  
+  const deleteCurrentUserCartItems = async () => {
     Object.keys(cartItemsSlice).forEach(cartItemId => {
       dispatch(deleteCartItem(cartItemId));
     })
   }
-
 
   let selfOrGiftString = <p className="checkout-page-body-p">Purchase as a gift feature coming soon.</p>;
   let disablePurchaseForMyself = false;
@@ -73,10 +91,10 @@ export default function CartPage() {
                 <span><h1>Estimated total</h1><sup>1</sup></span>
                 <h1>${totalPrice === 0 ? "0.00" : totalPrice}</h1>
               </div>
-              {selfOrGiftString}
+              {/* {selfOrGiftString} */}
               <div className="checkout-buttons continue-shopping">
-                <button className="green-buy-button" disabled={disablePurchaseForMyself}>Purchase for myself</button>
-                <button disabled>Purchase as a gift</button>
+                <button onClick={handlePurchase} disabled={disablePurchaseForMyself}>Purchase for myself</button>
+                {/* <button disabled>Purchase as a gift</button> */}
               </div>
             </div>
             <div className="sales-tax-disclaimer-wrapper checkout-page-body-p">

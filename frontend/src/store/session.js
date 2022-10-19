@@ -1,5 +1,6 @@
 import { clearCart } from "./cartItems";
 import csrfFetch from "./csrf"
+import { setLibraryItems } from "./libraryItems";
 
 const SET_SESSION_USER = "session/SET_SESSION_USER"
 const REMOVE_SESSION_USER = "session/REMOVE_SESSION_USER"
@@ -60,6 +61,7 @@ export const logout = () => async (dispatch) => {
   dispatch(removeSessionUser());
 
   dispatch(clearCart());
+  dispatch(setLibraryItems({}));
 }
 
 export const restoreSession = () => async (dispatch) => {

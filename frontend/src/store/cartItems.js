@@ -38,9 +38,6 @@ export const fetchCartItems = () => async (dispatch) => {
   dispatch(setCartItems(cartItems));
 }
 
-// export const fetchCartItem
-// dispatches addCartItem
-
 export const createCartItem = (gameId) => async (dispatch) => {
   const res = await csrfFetch('/api/cart_items', {
     method: "POST",

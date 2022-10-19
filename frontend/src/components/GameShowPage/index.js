@@ -132,7 +132,7 @@ export default function GameShowPage() {
             Buy {game.title}
             <div className="buy-box-buttons">
               <p>{game.price === 0 ? "Free to Play" : '$' + game.price}</p>
-              <button onClick={handleAddToCart} className={'green-buy-button'} disabled={gameAlreadyInLibrary}>{addToCartButtonText}</button>
+              <button onClick={handleAddToCart} disabled={gameAlreadyInLibrary}>{addToCartButtonText}</button>
             </div>
           </div>
         </aside>

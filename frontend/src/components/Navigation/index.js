@@ -5,9 +5,11 @@ import ProfileButton from "./ProfileButton";
 import './Navigation.css'
 import defaultAvatar from "../default_avatar.jpg";
 import { fetchCartItems } from "../../store/cartItems";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function Navigation() {
   const dispatch = useDispatch();
+  const location = useLocation();
   const sessionSlice = useSelector(state => state.session);
   const cartItemsSlice = useSelector(state => state.cartItems);
   const cartItemsArray = Object.values(cartItemsSlice);
@@ -68,6 +70,9 @@ export default function Navigation() {
     )
   }
 
+  let cartButton = <Link to="/cart" className="green-cart-link">Cart ({numCartItems})</Link>;
+  if (location.pathname.includes("/users")) cartButton = <></>;
+  
   return (
     <nav className="header-nav">
       <div className="header-nav-content">
@@ -79,7 +84,7 @@ export default function Navigation() {
         </Link>
         {centerCluster}
         {rightCluster}
-        {numCartItems > 0 ? <Link to="/cart" className="green-cart-link">Cart ({numCartItems})</Link> : <></>}
+        {numCartItems > 0 ? cartButton : <></>}
       </div>
     </nav>
   )
