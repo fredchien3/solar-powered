@@ -172,6 +172,10 @@
   font-size: 11px;
   padding: 0 26px;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 .green-cart-link:hover {

@@ -1,3 +1,4 @@
+import { clearCart } from "./cartItems";
 import csrfFetch from "./csrf"
 
 const SET_SESSION_USER = "session/SET_SESSION_USER"
@@ -35,9 +36,9 @@ export const login = (user) => async (dispatch) => {
     method: 'POST',
     body: JSON.stringify({ credential, password })
   });
-  const data = await res.json();
-  storeCurrentUser(data.user);
-  dispatch(setSessionUser(data.user));
+  const userData = await res.json();
+  storeCurrentUser(userData);
+  dispatch(setSessionUser(userData));
 };
 
 export const signup = (user) => async (dispatch) => {
@@ -46,9 +47,9 @@ export const signup = (user) => async (dispatch) => {
     method: 'POST',
     body: JSON.stringify({ username, email, password })
   });
-  const data = await res.json();
-  storeCurrentUser(data.user);
-  dispatch(setSessionUser(data.user));
+  const userData = await res.json();
+  storeCurrentUser(userData);
+  dispatch(setSessionUser(userData));
 }
 
 export const logout = () => async (dispatch) => {
@@ -57,15 +58,17 @@ export const logout = () => async (dispatch) => {
   });
   storeCurrentUser(null);
   dispatch(removeSessionUser());
+
+  dispatch(clearCart());
 }
 
 export const restoreSession = () => async (dispatch) => {
   const res = await csrfFetch('/api/session');
 
   storeCSRFToken(res);
-  const data = await res.json();
-  storeCurrentUser(data.user);
-  dispatch(setSessionUser(data.user));
+  const userData = await res.json();
+  storeCurrentUser(userData);
+  dispatch(setSessionUser(userData));
 };
 
 const initialState = { user: JSON.parse(sessionStorage.getItem('currentUser')) };

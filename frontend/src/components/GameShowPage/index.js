@@ -36,6 +36,7 @@ export default function GameShowPage() {
       .catch(async res => {
         const data = await res.json();
         console.log(data.message);
+        history.push("/login");
       });
     }
   }

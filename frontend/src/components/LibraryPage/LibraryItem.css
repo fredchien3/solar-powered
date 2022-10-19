@@ -1,0 +1,59 @@
+.library-item-wrapper {
+  background: rgba( 0, 0, 0, 0.2 );
+  width: 100%;
+  height: 90px;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 4px;
+  display: flex;
+}
+
+.library-item-wrapper img {
+  width: 184px;
+  height: 69px;
+}
+
+.library-item-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-left: 8px;
+  margin-bottom: 4px;
+}
+
+.library-item-info-wrapper h1 {
+  font-family: 'Motiva Sans 300';
+  font-size: 14px;
+}
+
+.library-item-info-wrapper p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #56707f;
+}
+
+.library-item-info-wrapper a {
+  width: 85px;
+  height: 26px;
+  background-color: rgba( 103, 193, 245, 0.2 );
+  border-radius: 2px;
+  color: #66c0f4;
+  box-sizing: border-box;
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.library-item-info-wrapper a i {
+  margin-right: 6px;
+}
+
+.library-item-info-wrapper a:hover {
+  background-color: rgba( 102, 192, 244, 0.4 );
+  cursor: pointer;
+  color: white;
+}

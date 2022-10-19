@@ -16,7 +16,7 @@
   color: white;
 }
 
-.small-profile-pic-wrapper {
+.small-avatar-wrapper {
   width: 36px;
   height: 36px;
   border: 2px solid #458097;
@@ -27,12 +27,12 @@
   align-items: center;
 }
 
-.small-profile-pic {
+.small-avatar {
   width: 36px;
   height: 36px;
 }
 
-.small-profile-pic:hover {
+.small-avatar:hover {
   cursor: pointer;
 }
 
@@ -49,7 +49,7 @@
   box-shadow: 0 0 12px #000000;
   animation: fadein 2s;
   overflow: hidden;
-  z-index: 2;
+  z-index: 3;
 }
 
 .profile-button-dropdown * {

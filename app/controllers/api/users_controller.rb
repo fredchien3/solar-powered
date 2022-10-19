@@ -5,10 +5,19 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login! @user
-      render :show
+      render :show  # show returns non-normalized, direct user data
     else
       render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
     end
+  end
+
+  def show
+    if params[:user_id]
+      @user = User.find(params[:user_id])
+    else
+      @user = User.find_by(username: params[:username])
+    end
+    render :show # show returns non-normalized, direct user data
   end
 
   private

@@ -1,18 +1,24 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { logout } from "../../store/session";
 import "./ProfileButton.css";
 
 export default function ProfileButton({currentUser}) {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [showMenu, setShowMenu] = useState(false);
 
+  const handleLogout = () => {
+    dispatch(logout()).then(history.push('/store'));
+  }
+  
   const menu = (
     <div className="profile-button-dropdown">
       <Link to="/">View profile</Link>
       <Link to="/">Account details</Link>
-      <button onClick={() => dispatch(logout())}>Logout: <p>{currentUser.displayName}</p></button>
+      <button onClick={handleLogout}>Logout: <p>{currentUser.displayName}</p></button>
       <Link to="/">Preferences</Link>
       <Link to="/">Change language</Link>
     </div>

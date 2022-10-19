@@ -44,8 +44,8 @@ export default function LoginFormPage() {
     setCredential('');
     setPassword('');
     setTimeout(fillCredential, 50);
-    setTimeout(fillPassword, 1800);
-    setTimeout(loginDemoUser, 3000)
+    setTimeout(fillPassword, 1300);
+    setTimeout(loginDemoUser, 2500)
   }
 
   let inputCredential = 'gaben';

@@ -10,6 +10,7 @@ import * as sessionActions from './store/session';
 import * as gameActions from './store/games'
 import * as cartItemActions from './store/cartItems';
 import * as libraryItemActions from './store/libraryItems';
+import * as userActions from './store/users'
 
 const store = configureStore();
 
@@ -20,6 +21,7 @@ if (process.env.NODE_ENV !== 'production') {
   window.gameActions = gameActions;
   window.cartItemActions = cartItemActions;
   window.libraryItemActions = libraryItemActions;
+  window.userActions = userActions;
 }
 
 function Root() {

@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 import ProfileButton from "./ProfileButton";
 import './Navigation.css'
-import coberHappy from './cober_happy.jpeg'
+import defaultAvatar from "../default_avatar.jpg";
+
 import { fetchCartItems } from "../../store/cartItems";
 
 export default function Navigation() {
@@ -47,8 +48,8 @@ export default function Navigation() {
           <i className="fa-solid fa-envelope"></i>
         </button>
         <ProfileButton currentUser={currentUser} />
-        <div className="small-profile-pic-wrapper">
-          <img alt="cober dog" src={coberHappy} className="small-profile-pic"/>
+        <div className="small-avatar-wrapper">
+          <img alt="avatar" src={defaultAvatar} className="small-avatar"/>
         </div>
       </div>
     )
@@ -79,7 +80,7 @@ export default function Navigation() {
         </Link>
         {centerCluster}
         {rightCluster}
-        {numCartItems > 0 ? <button className="green-cart-link">Cart ({numCartItems})</button> : <></>}
+        {numCartItems > 0 ? <Link to="/cart" className="green-cart-link">Cart ({numCartItems})</Link> : <></>}
       </div>
     </nav>
   )

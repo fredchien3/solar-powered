@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { deleteCartItem } from '../../store/cartItems';
-import { removeGame, fetchGame } from '../../store/games';
+import { fetchGame } from '../../store/games';
 import './CartItem.css';
 
 export default function CartItem({ cartItem }) {
