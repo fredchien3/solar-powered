@@ -2,9 +2,9 @@ import csrfFetch from "./csrf";
 
 const SET_LIBRARY_ITEMS = "libraryItems/SET_LIBRARY_ITEM";
 // const ADD_LIBRARY_ITEM = "libraryItems/ADD_LIBRARY_ITEM";
-const REMOVE_LIBRARY_ITEM = "libraryItems/REMOVE_LIBRARY_ITEM";
+// const REMOVE_LIBRARY_ITEM = "libraryItems/REMOVE_LIBRARY_ITEM";
 
-const setLibraryItems = (libraryItems) => {
+export const setLibraryItems = (libraryItems) => {
   return {
     type: SET_LIBRARY_ITEMS,
     payload: libraryItems
@@ -18,8 +18,8 @@ const setLibraryItems = (libraryItems) => {
 //   };
 // }
 
-export const fetchLibraryItems = () => async (dispatch) => {
-  const res = await csrfFetch('/api/library_items');
+export const fetchLibraryItems = (userId) => async (dispatch) => {
+  const res = await csrfFetch('/api/library_items/?user_id=' + userId);
   const libraryItems = await res.json();
   dispatch(setLibraryItems(libraryItems));
 }

@@ -9,20 +9,25 @@ import "./CartPage.css";
 export default function CartPage() {
   document.title = "Shopping Cart";
   const dispatch = useDispatch();
+
   const sessionSlice = useSelector(state => state.session);
   const currentUser = sessionSlice.user || null;
+
   const cartItemsSlice = useSelector(state => state.cartItems);
   const cartItemsArray = Object.values(cartItemsSlice);
   const cartItemsGameIds = cartItemsArray.map(cartItem => cartItem.gameId);
+
   const gamesSlice = useSelector(state => state.games);
   const gamesArray = Object.values(gamesSlice).filter(game => cartItemsGameIds.includes(game.id));
-  const [totalPrice, setTotalPrice] = useState(0);
+
   
   const cartItems = cartItemsArray.map(cartItem => {
     return <CartItem cartItem={cartItem} key={cartItem.id} />;
   });
   const cartEmpty = (cartItems.length === 0);
-
+  
+  const [totalPrice, setTotalPrice] = useState(0);
+  
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, [])

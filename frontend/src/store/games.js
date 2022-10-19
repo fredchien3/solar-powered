@@ -3,7 +3,7 @@ import csrfFetch from "./csrf";
 const SET_GAMES = "games/SET_GAMES";
 const ADD_GAME = "games/ADD_GAME";
 
-const setGames = (games) => { 
+export const setGames = (games) => { 
   return {
     type: SET_GAMES,
     payload: games

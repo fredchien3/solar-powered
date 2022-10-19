@@ -4,7 +4,6 @@ import { Link } from "react-router-dom/cjs/react-router-dom";
 import ProfileButton from "./ProfileButton";
 import './Navigation.css'
 import defaultAvatar from "../default_avatar.jpg";
-
 import { fetchCartItems } from "../../store/cartItems";
 
 export default function Navigation() {
@@ -48,9 +47,9 @@ export default function Navigation() {
           <i className="fa-solid fa-envelope"></i>
         </button>
         <ProfileButton currentUser={currentUser} />
-        <div className="small-avatar-wrapper">
+        <Link to={'/users/' + currentUser.username + '/games'} className="small-avatar-wrapper">
           <img alt="avatar" src={defaultAvatar} className="small-avatar"/>
-        </div>
+        </Link>
       </div>
     )
   } else {

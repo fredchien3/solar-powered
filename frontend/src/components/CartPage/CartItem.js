@@ -9,7 +9,7 @@ export default function CartItem({ cartItem }) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchGame(cartItem.gameId));
-  }, [dispatch, cartItem.gameId])
+  }, [dispatch, cartItem.gameId]);
   const game = useSelector(state => state.games[cartItem.gameId]) || {};
 
   const handleRemove = () => {

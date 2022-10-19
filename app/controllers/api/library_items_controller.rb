@@ -11,7 +11,7 @@ class Api::LibraryItemsController < ApplicationController
   end
 
   def index
-    @library_items = LibraryItem.includes(:user).where(user_id: current_user.id)
+    @library_items = LibraryItem.includes(:user).where(user_id: params[:user_id])
     render 'api/library_items/index'
   end
 
