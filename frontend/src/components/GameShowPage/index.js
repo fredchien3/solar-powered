@@ -22,7 +22,7 @@ export default function GameShowPage() {
   const libraryItemsSlice = useSelector(state => state.libraryItems);
   const currentUserOwnedGamesIds = Object.values(libraryItemsSlice).map(libraryItem => libraryItem.gameId);
 
-  const currentUser = sessionSlice.user;
+  const currentUser = sessionSlice.user || {};
   const gameAlreadyInCart = cartItems.some(cartItem => cartItem.gameId === gameId);
   const gameAlreadyInLibrary = currentUserOwnedGamesIds.some(id => id === gameId);
   

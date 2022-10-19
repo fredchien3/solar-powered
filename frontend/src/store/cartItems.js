@@ -1,9 +1,9 @@
 import csrfFetch from "./csrf";
+import { REMOVE_SESSION_USER } from "./session";
 
 const SET_CART_ITEMS = "cartItems/SET_CART_ITEMS";
 const ADD_CART_ITEM = "cartItems/ADD_CART_ITEM";
 const REMOVE_CART_ITEM = "cartItems/REMOVE_CART_ITEM";
-const CLEAR_CART = "cartItems/CLEAR_CART";
 
 const setCartItems = (cartItems) => {
   return {
@@ -24,12 +24,6 @@ const removeCartItem = (cartItemId) => {
     type: REMOVE_CART_ITEM,
     payload: cartItemId
   };
-}
-
-export const clearCart = () => {
-  return {
-    type: CLEAR_CART
-  }
 }
 
 export const fetchCartItems = () => async (dispatch) => {
@@ -65,7 +59,7 @@ export default function cartItemsReducer(state = {}, action) {
       const newState = {...state};
       delete newState[action.payload];
       return newState;
-    case CLEAR_CART:
+    case REMOVE_SESSION_USER: // when user logs out
       return {};
     default:
       return state;

@@ -441,7 +441,7 @@ ApplicationRecord.transaction do
     publisher: 'The Indie Stone',
     main_image_url: project_zomboid_main_image_url,
     banner_image_url: project_zomboid_banner_image_url,
-    small_image_url: project_zomboid_banner_image_url,
+    small_image_url: project_zomboid_small_image_url,
     image_urls: project_zomboid_image_urls
   )
 
@@ -466,7 +466,7 @@ ApplicationRecord.transaction do
     publisher: 'Valve',
     main_image_url: tf2_main_image_url,
     banner_image_url: tf2_banner_image_url,
-    small_image_url: tf2_banner_image_url,
+    small_image_url: tf2_small_image_url,
     image_urls: tf2_image_urls
   )
 
@@ -486,7 +486,7 @@ ApplicationRecord.transaction do
     publisher: 'KRAFTON, Inc.',
     main_image_url: pubg_main_image_url,
     banner_image_url: pubg_banner_image_url,
-    small_image_url: pubg_banner_image_url,
+    small_image_url: pubg_small_image_url,
     image_urls: pubg_image_urls
   )
 
@@ -526,7 +526,7 @@ ApplicationRecord.transaction do
     publisher: 'TaleWorlds Entertainment',
     main_image_url: bannerlord_main_image_url,
     banner_image_url: bannerlord_banner_image_url,
-    small_image_url: bannerlord_banner_image_url,
+    small_image_url: bannerlord_small_image_url,
     image_urls: bannerlord_image_urls
   )
 
@@ -583,7 +583,7 @@ ApplicationRecord.transaction do
     publisher: 'Lo-Fi Games',
     main_image_url: kenshi_main_image_url,
     banner_image_url: kenshi_banner_image_url,
-    small_image_url: kenshi_banner_image_url,
+    small_image_url: kenshi_small_image_url,
     image_urls: kenshi_image_urls
   )
 
@@ -626,7 +626,7 @@ ApplicationRecord.transaction do
     publisher: 'CD PROJEKT RED',
     main_image_url: witcher3_main_image_url,
     banner_image_url: witcher3_banner_image_url,
-    small_image_url: witcher3_banner_image_url,
+    small_image_url: witcher3_small_image_url,
     image_urls: witcher3_image_urls
   )
 
@@ -634,22 +634,16 @@ ApplicationRecord.transaction do
   #   title: '',
   #   price: '',
   #   release_date: Date.parse(),
-  #   short_description: "
-  #   ",
-  #   long_description: "
-  #   ",
+  #   short_description: """,
+  #   long_description: """,
   #   developer: '',
   #   publisher: '',
-  #   main_image_url: SAMPLE_main_image_url,
-  #   banner_image_url: SAMPLE_banner_image_url,
-  #   small_image_url: SAMPLE_banner_image_url,
-  #   image_urls: SAMPLE_image_urls
+  #   main_image_url: SAMPLEGAME_main_image_url,
+  #   banner_image_url: SAMPLEGAME_banner_image_url,
+  #   small_image_url: SAMPLEGAME_small_image_url,
+  #   image_urls: SAMPLEGAME_image_urls
   # )
 
-  puts "Adding games to gaben's cart..."
-  CartItem.create!(user: gaben, game: csgo)
-  CartItem.create!(user: gaben, game: bannerlord)
-  CartItem.create!(user: gaben, game: witcher3)
   
   puts "Done!"
 end

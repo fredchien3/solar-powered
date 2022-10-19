@@ -12,6 +12,7 @@
 .cart-item-wrapper img {
   width: 120px;
   height: 45px;
+  object-fit: cover;
 }
 
 .cart-item-wrapper > div {
