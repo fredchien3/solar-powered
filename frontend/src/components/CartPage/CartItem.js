@@ -22,7 +22,7 @@ export default function CartItem({ cartItem }) {
         <img src={game.smallImageUrl} alt={game.title + ' small image'} />
       </Link>
       <div>
-          <Link to={'games/' + game.id}>{game.title}</Link>
+        <Link to={'games/' + game.id}>{game.title}</Link>
         <div className="price-and-remove">
           <p className="cart-item-price">{game.price ? '$' + game.price : 'Free'}</p>
           <span onClick={handleRemove} className="cart-remove">Remove</span>

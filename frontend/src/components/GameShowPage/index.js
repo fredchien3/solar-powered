@@ -13,27 +13,38 @@ export default function GameShowPage() {
   const dispatch = useDispatch();
   const history = useHistory();
   const gameId = parseInt(useParams().id);
-  const game = useSelector(state => state.games[gameId] ? state.games[gameId] : {loading: true});
+  
+  const gamesSlice = useSelector(state => state.games);
+  const game = gamesSlice[gameId] || {};
+
+  document.title = game.id ? game.title + " on Solar" : "loading...";
+  
   const sessionSlice = useSelector(state => state.session);
-  const cartItemsSlice = useSelector(state => state.cartItems);
-  const cartItems = Object.values(cartItemsSlice);
-  document.title = game.loading ? "loading..." : game.title + " on Solar";
-
-  const libraryItemsSlice = useSelector(state => state.libraryItems);
-  const currentUserOwnedGamesIds = Object.values(libraryItemsSlice).map(libraryItem => libraryItem.gameId);
-
   const currentUser = sessionSlice.user || {};
-  const gameAlreadyInCart = cartItems.some(cartItem => cartItem.gameId === gameId);
-  const gameAlreadyInLibrary = currentUserOwnedGamesIds.some(id => id === gameId);
-    
+  
+  const cartItemsSlice = useSelector(state => state.cartItems);
+  const cartItemsArray = Object.values(cartItemsSlice);
+  
+  const libraryItemsSlice = useSelector(state => state.libraryItems);
+  const libraryItemsArray = Object.values(libraryItemsSlice);
+  const libraryItemsGameIds = libraryItemsArray.map(libraryItem => libraryItem.gameId);
+  
+  const gameAlreadyInCart = cartItemsArray.some(cartItem => cartItem.gameId === gameId);
+  const gameAlreadyInLibrary = libraryItemsArray.some(libraryItem => libraryItem.gameId === gameId);
+  
   useEffect(() => {
     dispatch(fetchGame(gameId));
     dispatch(fetchLibraryItems(currentUser.id));
   }, [dispatch, gameId, currentUser.id])
 
+  useEffect(() => {
+    const ownedGamesIds = Object.values(libraryItemsSlice).map(libraryItem => libraryItem.gameId);
+      ownedGamesIds.forEach(otherGameId => dispatch(fetchGame(otherGameId)));
+  }, [dispatch, libraryItemsSlice])
+
   const handleAddToCart = () => {
     if (gameAlreadyInLibrary) {
-      
+      // do nothing
     } else if (gameAlreadyInCart) {
       history.push("/cart");
     } else {
@@ -49,30 +60,68 @@ export default function GameShowPage() {
     }
   }
     
-  let underMainBox;
+  let underMainBox = (
+    <div className="wishlist-buttons-bar">
+      <Link to="/login">Sign in</Link> to add this item to your wishlist, follow it, or mark it as ignored
+    </div>
+  );
   if (currentUser.id) {
     underMainBox = (
       <div className="wishlist-buttons-bar">
         Wishlist feature coming soon.
       </div>
     )
-  } else {
-    underMainBox = (
-      <div className="wishlist-buttons-bar">
-        <Link to="/login">Sign in</Link> to add this item to your wishlist, follow it, or mark it as ignored
-      </div>
-    )
   }
 
-  let addToCartButtonText;
+  let addToCartButtonText = "Add to Cart";
   if (gameAlreadyInLibrary) {
     addToCartButtonText = "In Library";
   } else if (gameAlreadyInCart) {
     addToCartButtonText = "In Cart";
-  } else {
-    addToCartButtonText = "Add to Cart";
   }
 
+  const dupGamesSlice = {...gamesSlice};
+  delete dupGamesSlice[gameId];
+  const otherOwnedGames = Object.values(dupGamesSlice).filter(game => libraryItemsGameIds.includes(game.id));
+  // shuffle
+  // for (let i = otherOwnedGames.length - 1; i > 0; i--) {
+  //   const j = Math.floor(Math.random() * (i + 1));
+  //   [otherOwnedGames[i], otherOwnedGames[j]] = [otherOwnedGames[j], otherOwnedGames[i]];
+  // }
+
+  let similarGame1 = otherOwnedGames[0] || {};
+  let similarGame2 = otherOwnedGames[1] || {};
+  let relevantBoxContents = (
+    <div>
+      <p>Sign in to see reasons why you may or may not like this based on your games, friends, and curators you follow.</p>
+      <span className="relevant-login-signup-buttons">
+        <Link to="/login" className="light-blue-button">Log In</Link>
+        <span>or</span>
+        <Link to="/signup" className="light-blue-button">Sign Up</Link>
+      </span>
+    </div>
+  );
+  if (currentUser.id) {  
+    relevantBoxContents = (
+      <div>
+        {similarGame1.id && <div className="relevant-similar-games-tile">
+          <span>
+            <i className="fa-solid fa-check" />
+            Similar to games you've played:
+          </span>
+          <span className="relevant-similar-games-images">
+            {similarGame1.id && <Link to={'/games/' + similarGame1.id}>
+              <img src={similarGame1.smallImageUrl} alt={similarGame1.title + ' small image'} />
+            </Link>}
+            {similarGame2.id && <Link to={'/games/' + similarGame2.id}>
+              <img src={similarGame2.smallImageUrl} alt={similarGame2.title + ' small image'} />
+            </Link>}
+          </span>
+        </div>}
+      </div>
+    );
+  }
+  
   return (
     <div className="game-show-page">
       <div className="game-show-page-dynamic-background"></div>
@@ -137,7 +186,10 @@ export default function GameShowPage() {
           </article>
         </aside>
         <aside className="game-show-main-right">
-  
+          <div className="game-relevant">
+            <h1>Is this game relevant to you?</h1>
+            {relevantBoxContents}
+          </div>
         </aside>
       </section>
     </div>

@@ -30,7 +30,7 @@ export default function Footer() {
         <span>
           <p>Get In Touch</p> |
           <a href="https://www.linkedin.com/in/fchien">
-            <i class="fa-brands fa-linkedin" />
+            <i className="fa-brands fa-linkedin" />
             @fchien
           </a> |
           <a href="https://github.com/fredchien3">
