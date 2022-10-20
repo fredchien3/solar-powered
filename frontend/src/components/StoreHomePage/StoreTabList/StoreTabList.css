@@ -1,5 +1,42 @@
 .store-tab-list-wide-wrapper {
   width: 100%;
-  height: 500px;
-  background-color: #2a475e;
+  height: 771px; 
+  /* HEIGHT */
+  background-image: linear-gradient(rgb(42, 71, 94) 5%, rgba(42, 71, 94, 0) 70%);
+  display: flex;
+  justify-content: center;
+}
+
+.store-tab-list {
+  width: 940px;
+  height: 100%;
+  margin-top: 9px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.store-tab-list-left-col {
+  width: 618px;
+  height: 100%;
+}
+
+.tab-list-see-more-wrapper {
+  width: 100%;
+  height: 36px;
+  background-color: rgb(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: #c6d4df;
+  font-size: 12px;
+}
+
+.store-tab-list-right-col {
+  width: 308px;
+  height: 100%;
+  background-image: linear-gradient(to right, rgb(149, 187, 212) 5%, rgb(133, 155, 172) 95%);
+  position: relative;
 }

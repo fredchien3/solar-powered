@@ -20,13 +20,7 @@ export default function StoreHomePage({ error }) {
 
   useEffect(() => {
     dispatch(fetchGames());
-  }, [dispatch])
-  
-  // shuffle games
-  for (let i = games.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [games[i], games[j]] = [games[j], games[i]];
-  }
+  }, [dispatch]);
   
   let errorMessage;
   if (error) errorMessage = <div class="flash-error">{error}</div>
@@ -40,6 +34,11 @@ export default function StoreHomePage({ error }) {
     </div>
   )
   
+  // shuffle games
+  for (let i = games.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [games[i], games[j]] = [games[j], games[i]];
+  }
   return (
     <div className="store-home-page">
       {errorMessage}
@@ -49,7 +48,7 @@ export default function StoreHomePage({ error }) {
         <FeaturedBox games={games} />
       </div>
       {signInBox}
-      <StoreTabList />
+      <StoreTabList games={games} />
     </div>
   )
 }

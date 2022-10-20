@@ -1,0 +1,44 @@
+.tab-list-item {
+  width: 618px;
+  height: 69px;
+  background-color: rgb(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+  display: flex;
+  border-right: 14px none;
+  transition: color 250ms;
+}
+
+.tab-list-item img {
+  width: 184px;
+  height: 69px;
+}
+
+.tab-list-item div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14px;
+}
+
+.tab-list-item div * {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #c7d5e0;
+}
+
+.tab-list-item div p {
+  color: #acdbf5;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+.tab-list-item.tab-active {
+  background: linear-gradient( to right, #c6e6f8 5%,#95bcd3 95%);
+  cursor: pointer;
+  border-right: 14px solid #95bcd3;
+}
+
+.tab-list-item.tab-active * {
+  color: #263645;
+}
