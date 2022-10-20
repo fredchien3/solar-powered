@@ -80,7 +80,7 @@ export default function CartPage() {
         <div className="cart-page-glow-background" />
         <StoreNavbar />
         <header className="cart-page-title-wrapper">
-          <span><Link>All Products</Link> {'>'} Your Shopping Cart</span>
+          <span><Link to="/store">All Products</Link> {'>'} Your Shopping Cart</span>
           <h1>Your Shopping Cart</h1>
         </header>
         <section className="cart-page-main-column-wrapper">

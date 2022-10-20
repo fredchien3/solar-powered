@@ -1,7 +1,7 @@
 .game-show-page {
   background-color: #1b2838;
   width: 100vw;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -287,6 +287,31 @@
   background: linear-gradient( to right, #75b022 5%, #588a1b 95%);
   color: #d2efa9; 
 }
+
+.about-this-game {
+  width: 98%;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #acb2b8;
+  line-height: 1.5em;
+  white-space: pre-line;
+}
+
+.about-this-game h1 {
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.about-this-game h1::after {
+  content:"";
+  height:1px;
+  background:linear-gradient(to right, #3a6e8b 0%, transparent 100%);
+  width:100%;
+  display:block;
+  margin-top: 4px;
+}
+
 
 .game-show-main-right {
   width: 308px;

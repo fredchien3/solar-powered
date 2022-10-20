@@ -131,9 +131,13 @@ export default function GameShowPage() {
               <button onClick={handleAddToCart} disabled={gameAlreadyInLibrary}>{addToCartButtonText}</button>
             </div>
           </div>
+          <article className="about-this-game">
+            <h1>About this game</h1>
+            {game.longDescription}
+          </article>
         </aside>
         <aside className="game-show-main-right">
-
+  
         </aside>
       </section>
     </div>
