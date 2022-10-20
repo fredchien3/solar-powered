@@ -39,16 +39,18 @@ export default function StoreHomePage({ error }) {
     const j = Math.floor(Math.random() * (i + 1));
     [games[i], games[j]] = [games[j], games[i]];
   }
+  const tablistGames = games.slice(0, 10);
+  const featuredGames = games.slice(10, games.length);
   return (
     <div className="store-home-page">
       {errorMessage}
       <StoreNavbar />
       <div className="store-featured-box-wide-wrapper">
         <StoreSidebar />
-        <FeaturedBox games={games} />
+        <FeaturedBox games={featuredGames} />
       </div>
       {signInBox}
-      <StoreTabList games={games} />
+      <StoreTabList games={tablistGames} />
     </div>
   )
 }

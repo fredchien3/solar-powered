@@ -145,7 +145,8 @@ export default function GameShowPage() {
             <table className="game-info-table">
               <tbody>
                 <tr className="review-summary">
-                  <th>All Reviews:</th><td>Very Positive<p>(1,000)</p></td>
+                  {/* <th>All Reviews:</th><td>Very Positive<p>(1,000)</p></td> */}
+                  <th>All Reviews:</th><td className="no-user-reviews">No user reviews</td>
                 </tr>
                 <tr className="release-date-row">
                   <th>Release Date:</th><td>{game.releaseDate}</td>

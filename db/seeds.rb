@@ -165,46 +165,132 @@ witcher3_image_urls = [
   "https://solar-powered.s3.amazonaws.com/game-images/witcher3/witcher3-14.jpg"
 ]
 
+acodyssey_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/acodyssey/acodyssey-main.jpg"
+acodyssey_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/acodyssey/acodyssey-banner.jpg"
+acodyssey_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/acodyssey/acodyssey-small.jpg"
+acodyssey_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/acodyssey/acodyssey-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/acodyssey/acodyssey-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/acodyssey/acodyssey-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/acodyssey/acodyssey-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/acodyssey/acodyssey-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/acodyssey/acodyssey-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/acodyssey/acodyssey-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/acodyssey/acodyssey-8.jpg"
+]
+
+dayz_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-main.jpg"
+dayz_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-banner.jpg"
+dayz_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-small.jpg"
+dayz_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-11.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/dayz/dayz-12.jpg"
+]
+
+stardew_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-main.jpg"
+stardew_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-banner.jpg"
+stardew_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-small.jpg"
+stardew_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-11.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-12.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-13.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-14.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-15.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/stardew/stardew-16.jpg"
+]
+
+sevendaystodie_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/7daystodie/7daystodie-main.jpg"
+sevendaystodie_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/7daystodie/7daystodie-banner.jpg"
+sevendaystodie_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/7daystodie/7daystodie-small.jpg"
+sevendaystodie_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/7daystodie/7daystodie-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/7daystodie/7daystodie-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/7daystodie/7daystodie-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/7daystodie/7daystodie-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/7daystodie/7daystodie-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/7daystodie/7daystodie-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/7daystodie/7daystodie-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/7daystodie/7daystodie-8.jpg"
+]
+
+falloutnv_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-main.jpg"
+falloutnv_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-banner.jpg"
+falloutnv_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-small.jpg"
+falloutnv_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-11.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-12.jpg"
+]
+
 ApplicationRecord.transaction do 
   puts "Destroying tables..."
   CartItem.destroy_all
   LibraryItem.destroy_all
-  User.destroy_all
   Game.destroy_all
+  # User.destroy_all
 
   puts "Resetting primary keys..."
-  ApplicationRecord.connection.reset_pk_sequence!('users')
-  ApplicationRecord.connection.reset_pk_sequence!('games')
   ApplicationRecord.connection.reset_pk_sequence!('cart_items')
   ApplicationRecord.connection.reset_pk_sequence!('library_items')
+  ApplicationRecord.connection.reset_pk_sequence!('games')
+  # ApplicationRecord.connection.reset_pk_sequence!('users')
 
-  puts "Creating users..."
-  ford = User.create!(
-    username: 'ford', 
-    display_name: 'ford',
-    email: 'fred.chien3@gmail.com', 
-    password: 'password'
-  )
+  # puts "Creating users..."
+  # ford = User.create!(
+  #   username: 'ford', 
+  #   display_name: 'ford',
+  #   email: 'fred.chien3@gmail.com', 
+  #   password: 'password'
+  # )
 
-  gaben = User.create!(
-    username: 'gaben', 
-    display_name: 'gaben',
-    email: 'gaben@valvesoftware.com', 
-    password: 'MoolyFTW'
-  )
+  # gaben = User.create!(
+  #   username: 'gaben', 
+  #   display_name: 'gaben',
+  #   email: 'gaben@valvesoftware.com', 
+  #   password: 'MoolyFTW'
+  # )
 
-  3.times do 
-    User.create!({
-      username: Faker::Internet.unique.username(specifier: 3),
-      email: Faker::Internet.unique.email,
-      password: 'password'
-    }) 
-  end
+  # 3.times do 
+  #   User.create!({
+  #     username: Faker::Internet.unique.username(specifier: 3),
+  #     email: Faker::Internet.unique.email,
+  #     password: 'password'
+  #   }) 
+  # end
 
   puts "Creating games..."
   fallout_4 = Game.create!( # Fallout 4
     title: 'Fallout 4',
-    price: '59.99',
+    price: 59.99,
     release_date: Date.parse('Nov 10, 2015'),
     short_description: "Bethesda Game Studios, the award-winning creators of Fallout 3 and The Elder Scrolls V: Skyrim, welcome you to the world of Fallout 4 – their most ambitious game ever, and the next generation of open-world gaming.",
     long_description: "Bethesda Game Studios, the award-winning creators of Fallout 3 and The Elder Scrolls V: Skyrim, welcome you to the world of Fallout 4 – their most ambitious game ever, and the next generation of open-world gaming.
@@ -235,7 +321,7 @@ ApplicationRecord.transaction do
 
   rimworld = Game.create!( # RimWorld
     title: 'RimWorld',
-    price: '34.99',
+    price: 34.99,
     release_date: Date.parse('Oct 17, 2018'),
     short_description: "A sci-fi colony sim driven by an intelligent AI storyteller. Generates stories by simulating psychology, ecology, gunplay, melee combat, climate, biomes, diplomacy, interpersonal relationships, art, medicine, trade, and more.",
     long_description: "RimWorld is a sci-fi colony sim driven by an intelligent AI storyteller. Inspired by Dwarf Fortress, Firefly, and Dune.
@@ -289,7 +375,7 @@ ApplicationRecord.transaction do
 
   csgo = Game.create!( # CS:GO
     title: 'Counter-Strike: Global Offensive',
-    price: '0',
+    price: 0,
     release_date: Date.parse('Aug 21, 2012'),
     short_description: "Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game modes, and delivers updated versions of the classic CS content (de_dust2, etc.).",
     long_description: "Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago.
@@ -307,7 +393,7 @@ ApplicationRecord.transaction do
 
   space_engineers = Game.create!( # Space Engineers
     title: 'Space Engineers',
-    price: '19.99',
+    price: 19.99,
     release_date: Date.parse('Feb 28, 2019'),
     short_description: "Space Engineers is a sandbox game about engineering, construction, exploration and survival in space and on planets. Players build space ships, space stations, planetary outposts of various sizes and uses, pilot ships and travel through space to explore planets and gather resources to survive.",
     long_description: "Space Engineers is an open world sandbox game defined by creativity and exploration.
@@ -403,7 +489,7 @@ ApplicationRecord.transaction do
 
   project_zomboid = Game.create!( # Project Zomboid
     title: 'Project Zomboid',
-    price: '19.99',
+    price: 19.99,
     release_date: Date.parse('Nov 8, 2013'),
     short_description: "Project Zomboid is the ultimate in zombie survival. Alone or in MP: you loot, build, craft, fight, farm and fish in a struggle to survive. A hardcore RPG skillset, a vast map, massively customisable sandbox and a cute tutorial raccoon await the unwary. So how will you die? All it takes is a bite..",
     long_description: "Project Zomboid is an open-ended zombie-infested sandbox. It asks one simple question – how will you die? 
@@ -447,7 +533,7 @@ ApplicationRecord.transaction do
 
   tf2 = Game.create!(
     title: 'Team Fortress 2',
-    price: '0',
+    price: 0,
     release_date: Date.parse('Oct 10, 2007'),
     short_description: "Nine distinct classes provide a broad range of tactical abilities and personalities. Constantly updated with new game modes, maps, equipment and, most importantly, hats!",
     long_description: "\"The most fun you can have online\" - PC Gamer
@@ -472,7 +558,7 @@ ApplicationRecord.transaction do
 
   pubg = Game.create!(
     title: 'PUBG: BATTLEGROUNDS',
-    price: '0',
+    price: 0,
     release_date: Date.parse('Oct 10, 2007'),
     short_description: "Play PUBG: BATTLEGROUNDS for free. Land on strategic locations, loot weapons and supplies, and survive to become the last team standing across various, diverse Battlegrounds. Squad up and join the Battlegrounds for the original Battle Royale experience that only PUBG: BATTLEGROUNDS can offer.",
     long_description: "LAND, LOOT, SURVIVE!
@@ -492,7 +578,7 @@ ApplicationRecord.transaction do
 
   bannerlord = Game.create!(
     title: 'Mount & Blade II: Bannerlord',
-    price: '49.99',
+    price: 49.99,
     release_date: Date.parse('Mar 30, 2020'),
     short_description: "The horns sound, the ravens gather. An empire is torn by civil war. Beyond its borders, new kingdoms rise. Gird on your sword, don your armour, summon your followers and ride forth to win glory on the battlefields of Calradia. Establish your hegemony and create a new world out of the ashes of the old.",
     long_description: "The horns sound, the ravens gather. An empire is torn by civil war. Beyond its borders, new kingdoms rise. Gird on your sword, don your armour, summon your followers and ride forth to win glory on the battlefields of Calradia. Establish your hegemony and create a new world out of the ashes of the old.
@@ -532,7 +618,7 @@ ApplicationRecord.transaction do
 
   kenshi = Game.create!(
     title: 'Kenshi',
-    price: '29.99',
+    price: 29.99,
     release_date: Date.parse('Dec 6, 2018'),
     short_description: "A free-roaming squad based RPG. Focusing on open-ended sandbox gameplay features rather than a linear story. Be a trader, a thief, a rebel, a warlord, an adventurer, a farmer, a slave, or just food for the cannibals. Train your men up from puny victims to master warriors.",
     long_description: "A free-roaming squad based RPG focusing on open-ended sandbox gameplay features rather than a linear story. Be a trader, a thief, a rebel, a warlord, an adventurer, a farmer, a slave, or just food for the cannibals.
@@ -589,7 +675,7 @@ ApplicationRecord.transaction do
 
   witcher3 = Game.create!(
     title: 'The Witcher® 3: Wild Hunt',
-    price: '39.99',
+    price: 39.99,
     release_date: Date.parse('May 18, 2015'),
     short_description: "As war rages on throughout the Northern Realms, you take on the greatest contract of your life — tracking down the Child of Prophecy, a living weapon that can alter the shape of the world.",
     long_description: "The Witcher: Wild Hunt is a story-driven open world RPG set in a visually stunning fantasy universe full of meaningful choices and impactful consequences. In The Witcher, you play as professional monster hunter Geralt of Rivia tasked with finding a child of prophecy in a vast open world rich with merchant cities, pirate islands, dangerous mountain passes, and forgotten caverns to explore.
@@ -630,12 +716,191 @@ ApplicationRecord.transaction do
     image_urls: witcher3_image_urls
   )
 
+  acodyssey = Game.create!(
+    title: 'Assassin\'s Creed® Odyssey',
+    price: 59.99,
+    release_date: Date.parse('Oct 5, 2018'),
+    short_description: "Choose your fate in Assassin's Creed® Odyssey. From outcast to living legend, embark on an odyssey to uncover the secrets of your past and change the fate of Ancient Greece.",
+    long_description: "Choose your fate in Assassin's Creed® Odyssey.
+    From outcast to living legend, embark on an odyssey to uncover the secrets of your past and change the fate of Ancient Greece.
+    
+    TRAVEL TO ANCIENT GREECE
+    From lush vibrant forests to volcanic islands and bustling cities, start a journey of exploration and encounters in a war torn world shaped by gods and men.
+    
+    FORGE YOUR LEGEND
+    Your decisions will impact how your odyssey unfolds. Play through multiple endings thanks to the new dialogue system and the choices you make. Customize your gear, ship, and special abilities to become a legend.
+    
+    FIGHT ON A NEW SCALE
+    Demonstrate your warrior's abilities in large scale epic battles between Athens and Sparta featuring hundreds of soldiers, or ram and cleave your way through entire fleets in naval battles across the Aegean Sea.
+    
+    GAZE IN WONDER
+    Experience the action in a whole new light with Tobii Eye Tracking. The Extended View feature gives you a broader perspective of the environment, and the Dynamic Light and Sun Effects immerse you in the sandy dunes according to where you set your sights. Tagging, aiming and locking on your targets becomes a lot more natural when you can do it by looking at them. Let your vision lead the way and enhance your gameplay.
+    Visit the Tobii website to check the list of compatible devices.
+    -----
+    Additional notes:
+    Eye tracking features available with Tobii Eye Tracking.",
+    developer: 'Ubisoft',
+    publisher: 'Ubisoft',
+    main_image_url: acodyssey_main_image_url,
+    banner_image_url: acodyssey_banner_image_url,
+    small_image_url: acodyssey_small_image_url,
+    image_urls: acodyssey_image_urls
+  )
+
+  dayz = Game.create!(
+    title: 'DayZ',
+    price: 44.99,
+    release_date: Date.parse('Dec 13, 2018'),
+    short_description: "How long can you survive a post-apocalyptic world? A land overrun with an infected \"zombie\" population, where you compete with other survivors for limited resources. Will you team up with strangers and stay strong together? Or play as a lone wolf to avoid betrayal? This is DayZ – this is your story.",
+    long_description: "This is your Story
+    There are no map markers, daily quests, or scoreboards to help you create your story. There is only Chernarus – 230 square kilometers of post-Soviet country that was struck by an unknown virus, which turned the majority of its population into raging infected.
+    
+    Your task? To survive the collapse of civilization for as long as you possibly can. Keep in mind that death is permanent in unforgiving Chernarus. All you’ll have when you start over again are the memories of your final mistake.
+    
+    
+    Meet Others
+    Up to 60 players are struggling to survive by any means necessary at any given time. Make friends, kill on sight, build a base, or risk being betrayed over a can of tasty beans. Use VOIP to interact with other players however you see fit. Every encounter is meaningful when your life is always on the line. Be wary. Stay alert. Trust no one.
+    
+    
+    Survive Chernarus
+    The infected aren’t the only ones you need to worry about – there’s also the wildlife and elements. Evade packs of wolves and frenzied bears, find shelter from the punishing rain, search for light in the darkness of night. You’ll also need to master complex survival mechanics concerning your hunger, thirst, body temperature, and more.
+    
+    
+    Loot Up
+    Always make sure your gear is ready. Patch up damaged clothes, craft improvised items, and head out to deceptively dead cities to scavenge for valuable resources. Fix a car and hide it in your secret base under a cover of well-placed traps. Step into contaminated zones if you dare and keep your eyes peeled for precious loot. Don’t forget that you won’t get far without a full hazard suit and gas mask.
+    
+    
+    Take your Shot
+    Intense PvP action can break out anywhere at any time, especially in hotspots like abandoned military bases, where heart-pounding firefights are all the rage. Some survivors want your loot, others are simply hunting for sport. Then there are those who are afraid you’ll shoot first. Learn how to fight and know when the time has come to swallow your pride and flee. One bullet can change absolutely everything. Always watch your back.
+    
+    
+    Install Mods
+    Head on over to the Steam Workshop and find a customized server that fits. Join an active community of like-minded players and modify your DayZ experience to suit your taste. Browse thousands of fan-made features, maps, and guns – all of which are easily managed directly from the game launcher.",
+    developer: 'Bohemia Interactive',
+    publisher: 'Bohemia Interactive',
+    main_image_url: dayz_main_image_url,
+    banner_image_url: dayz_banner_image_url,
+    small_image_url: dayz_small_image_url,
+    image_urls: dayz_image_urls
+  )
+
+  stardew = Game.create!(
+    title: 'Stardew Valley',
+    price: 14.99,
+    release_date: Date.parse('Feb 26, 2016'),
+    short_description: "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
+    long_description: "Stardew Valley is an open-ended country-life RPG!
+
+    You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won't be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town's most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness!
+    
+    Features
+    Turn your overgrown field into a lively farm! Raise animals, grow crops, start an orchard, craft useful machines, and more! You'll have plenty of space to create the farm of your dreams.
+    
+    4 Player Farming! Invite 1-3 players to join you in the valley online! Players can work together to build a thriving farm, share resources, and improve the local community. As more hands are better than one, players have the option to scale profit margin on produce sold for a more challenging experience.
+    
+    Improve your skills over time. As you make your way from a struggling greenhorn to a master farmer, you'll level up in 5 different areas: farming, mining, combat, fishing, and foraging. As you progress, you'll learn new cooking and crafting recipes, unlock new areas to explore, and customize your skills by choosing from a variety of professions.
+    
+    Become part of the local community. With over 30 unique characters living in Stardew Valley, you won't have a problem finding new friends! Each person has their own daily schedule, birthday, unique mini-cutscenes, and new things to say throughout the week and year. As you make friends with them, they will open up to you, ask you for help with their personal troubles, or tell you their secrets! Take part in seasonal festivals such as the luau, haunted maze, and feast of the winter star.
+    
+    Explore a vast, mysterious cave. As you travel deeper underground, you'll encounter new and dangerous monsters, powerful weapons, new environments, valuable gemstones, raw materials for crafting and upgrading tools, and mysteries to be uncovered.
+    
+    Breathe new life into the valley. Since JojaMart opened, the old way of life in Stardew Valley has changed. Much of the town's infrastructure has fallen into disrepair. Help restore Stardew Valley to it's former glory by repairing the old community center, or take the alternate route and join forces with Joja Corporation.
+    
+    Court and marry a partner to share your life on the farm with. There are 12 available bachelors and bachelorettes to woo, each with unique character progression cutscenes. Once married, your partner will live on the farm with you. Who knows, maybe you'll have kids and start a family?
+    
+    Spend a relaxing afternoon at one of the local fishing spots. The waters are teeming with seasonal varieties of delicious fish. Craft bait, bobbers, and crab pots to help you in your journey toward catching every fish and becoming a local legend!
+    
+    Donate artifacts and minerals to the local museum.
+    
+    Cook delicious meals and craft useful items to help you out. With over 100 cooking and crafting recipes, you'll have a wide variety of items to create. Some dishes you cook will even give you temporary boosts to skills, running speed, or combat prowess. Craft useful objects like scarecrows, oil makers, furnaces, or even the rare and expensive crystalarium.
+    
+    Customize the appearance of your character and house. With hundreds of decorative items to choose from, you'll have no trouble creating the home of your dreams!
+    
+    Xbox controller support (with rumble)! (Keyboard still required for text input)
+    
+    Over two hours of original music.",
+    developer: 'ConcernedApe',
+    publisher: 'ConcernedApe',
+    main_image_url: stardew_main_image_url,
+    banner_image_url: stardew_banner_image_url,
+    small_image_url: stardew_small_image_url,
+    image_urls: stardew_image_urls
+  )
+
+  sevendaystodie = Game.create!(
+    title: '7 Days to Die',
+    price: 24.99,
+    release_date: Date.parse('Dec 13, 2013'),
+    short_description: "7 Days to Die is an open-world game that is a unique combination of first-person shooter, survival horror, tower defense, and role-playing games. Play the definitive zombie survival sandbox RPG that came first. Navezgane awaits!",
+    long_description: "HOW LONG WILL YOU SURVIVE?
+    With over 14 million copies sold, 7 Days has defined the survival genre, with unrivaled crafting and world-building content. Set in a brutally unforgiving post-apocalyptic world overrun by the undead, 7 Days is an open-world game that is a unique combination of first-person shooter, survival horror, tower defense, and role-playing games. It presents combat, crafting, looting, mining, exploration, and character growth, in a way that has seen a rapturous response from fans worldwide. Play the definitive zombie survival sandbox RPG that came first. Navezgane awaits!
+    GAME FEATURES
+    Explore - Huge, unique and rich environments, offering the freedom to play the game any way you want, featuring 5 unique biomes and worlds up to 100 square kilometers in size.
+    Craft – Handcraft and repair weapons, clothes, armor, tools, vehicles, and more with over 500 recipes. Learn more powerful recipes by finding schematics.
+    Build – Design your fort to include traps, electric power, auto turrets, automated doors, gadgets and defensive positions to survive the undead in a fully destructible and moldable world.
+    Cooperate or Compete – Work together to build settlements or against each other raiding other player’s bases, it’s really up to you in a wasteland where zombies and outlaws rule the land.
+    Create – Unleash your creativity with access to over 800 in-game items, and over 1,300 unique building blocks and a painting system that offers infinite possibilities.
+    Improve – Increase your skills with a multitude of perks under 5 main attributes. Gain additional skills by reading over 100 books. 7 Days to Die is the only true survival RPG.
+    Choose – Play the campaign world, or dive back in a randomly-generated world with cities, towns, lakes, mountains, valleys, roads, caves and over 550 unique locations.
+    Combat – Encounter nearly 60 unique zombie archetypes including special infected with unique behaviors and attacks progressing in difficulty to provide an infinite challenge.
+    Survive – Experience real hardcore survival mechanics with nearly 50 buffs, boosts and ailments that will impact the gameplay in ways that can both challenge and aid in your survival.
+    Destroy – Buildings and terrain formations can collapse under their own weight from structural damage or poor building design with real structural stability.
+    Loot – Scavenge the world for the best weapons, tools, and armor with 6 quality ranges providing thousands of permutations. Augment items with a multitude of mods.
+    Quest – Meet several Trader NPCs who buy and sell goods and offer quest jobs for rewards. Enjoy many unique quest types supported by over 550 locations.
+    Customize – Create your own character and customize your character further in-game with a huge selection of clothing and armor you can craft or loot in the world.
+    Drive – Enjoy the badass vehicle system where you find all the parts, learn the recipes, craft and customize your own bicycle, minibike, motorcycle, 4x4 or gyrocopters and ride with friends.
+    Farm or Hunt – Plant and grow gardens for sustainable resources or head out into the wilderness and hunt over a dozen unique wild animals.",
+    developer: 'The Fun Pimps',
+    publisher: 'The Fun Pimps Entertainment LLC',
+    main_image_url: sevendaystodie_main_image_url,
+    banner_image_url: sevendaystodie_banner_image_url,
+    small_image_url: sevendaystodie_small_image_url,
+    image_urls: sevendaystodie_image_urls
+  )
+
+  falloutnv = Game.create!(
+    title: 'Fallout: New Vegas',
+    price: 9.99,
+    release_date: Date.parse('Oct 19, 2010'),
+    short_description: "Welcome to Vegas. New Vegas. Enjoy your stay!",
+    long_description: "Welcome to Vegas. New Vegas.
+    It’s the kind of town where you dig your own grave prior to being shot in the head and left for dead…and that’s before things really get ugly. It’s a town of dreamers and desperados being torn apart by warring factions vying for complete control of this desert oasis. It’s a place where the right kind of person with the right kind of weaponry can really make a name for themselves, and make more than an enemy or two along the way.
+    As you battle your way across the heat-blasted Mojave Wasteland, the colossal Hoover Dam, and the neon drenched Vegas Strip, you’ll be introduced to a colorful cast of characters, power-hungry factions, special weapons, mutated creatures and much more. Choose sides in the upcoming war or declare “winner takes all” and crown yourself the King of New Vegas in this follow-up to the 2008 videogame of the year, Fallout 3.
+    Enjoy your stay.
+    Key Features
+    Feel the Heat in New Vegas! Not even nuclear fallout could slow the hustle of Sin City. Explore the vast expanses of the desert wastelands – from the small towns dotting the Mojave Wasteland to the bright lights of the New Vegas strip. See the Great Southwest as could only be imagined in Fallout.
+    Feuding Factions, Colorful Characters and a Host of Hostiles! A war is brewing between rival factions with consequences that will change the lives of all the inhabitants of New Vegas. The choices you make will bring you into contact with countless characters, creatures, allies, and foes, and determine the final explosive outcome of this epic power struggle.
+    New Systems! Enjoy new additions to Fallout: New Vegas such as a Companion Wheel that streamlines directing your companions, a Reputation System that tracks the consequences of your actions, and the aptly titled Hardcore Mode to separate the meek from the mighty. Special melee combat moves have been added to bring new meaning to the phrase “up close and personal”. Use V.A.T.S. to pause time in combat, target specific enemy body parts and queue up attacks, or get right to the action using the finely-tuned real-time combat mechanics.
+    An Arsenal of Shiny New Guns! With double the amount of weapons found in Fallout 3, you’ll have more than enough new and exciting ways to deal with the threats of the wasteland and the locals. In addition, Vault-Tec engineers have devised a new weapons configuration system that lets you tinker with your toys and see the modifications you make in real time.
+    Let it Ride! In a huge, open world with unlimited options you can see the sights, choose sides, or go it alone. Peacemaker or Hard Case, House Rules, or the Wild Card - it’s all in how you play the game.",
+    developer: 'Obsidian Entertainment',
+    publisher: 'Bethesda Softworks',
+    main_image_url: falloutnv_main_image_url,
+    banner_image_url: falloutnv_banner_image_url,
+    small_image_url: falloutnv_small_image_url,
+    image_urls: falloutnv_image_urls
+  )
+
   # SAMPLEGAME = Game.create!(
   #   title: '',
-  #   price: '',
-  #   release_date: Date.parse(),
-  #   short_description: """,
-  #   long_description: """,
+  #   price: ,
+  #   release_date: Date.parse(''),
+  #   short_description: "",
+  #   long_description: "",
+  #   developer: '',
+  #   publisher: '',
+  #   main_image_url: SAMPLEGAME_main_image_url,
+  #   banner_image_url: SAMPLEGAME_banner_image_url,
+  #   small_image_url: SAMPLEGAME_small_image_url,
+  #   image_urls: SAMPLEGAME_image_urls
+  # )
+
+  # SAMPLEGAME = Game.create!(
+  #   title: '',
+  #   price: ,
+  #   release_date: Date.parse(''),
+  #   short_description: "",
+  #   long_description: "",
   #   developer: '',
   #   publisher: '',
   #   main_image_url: SAMPLEGAME_main_image_url,
