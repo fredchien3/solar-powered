@@ -4,7 +4,7 @@ import { Redirect, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { deleteCartItem } from "../../store/cartItems";
 import { createLibraryItem } from "../../store/libraryItems";
-import StoreNavbar from "../StoreHomePage/StoreNavbar";
+import StoreNavbar from "../StoreHomePage/StoreNavbar/StoreNavbar";
 import CartItem from "./CartItem";
 import "./CartPage.css";
 
@@ -93,8 +93,8 @@ export default function CartPage() {
               </div>
               {/* {selfOrGiftString} */}
               <div className="checkout-buttons continue-shopping">
-                <button onClick={handlePurchase} disabled={disablePurchaseForMyself}>Purchase for myself</button>
-                {/* <button disabled>Purchase as a gift</button> */}
+                <button className="green-button" onClick={handlePurchase} disabled={disablePurchaseForMyself}>Purchase for myself</button>
+                {/* <buttonclassName="green-button" disabled>Purchase as a gift</button> */}
               </div>
             </div>
             <div className="sales-tax-disclaimer-wrapper checkout-page-body-p">

@@ -7,17 +7,6 @@
   align-items: center;
 }
 
-.store-home-page aside { /* StoreSidebar */
-  width: 210px;
-  height: 500px;
-  /* height: 1086px; */
-  margin-right: 24px;
-  /* background-color: rgba(0, 0, 0, 0.25); */
-  position: absolute;
-  top: -65px;
-  left: 58px;
-}
-
 .store-featured-box-wide-wrapper {
   background: url(https://store.akamai.steamstatic.com/public/images/v6/home/cluster_bg.png?v=1) center bottom no-repeat transparent;
   width: 100%;
@@ -27,6 +16,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  margin-bottom: 70px;
 }
 
 .store-home-button {
@@ -65,4 +55,31 @@
 
 .button-right:hover {
   background-image: linear-gradient(to right, rgba(171, 218, 244, 0) 5%, rgba(171, 218, 244, 0.3) 95%);
+}
+
+.store-sign-in-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 908px;
+  height: 130px;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 80px;
+  font-size: 15px;
+  color: #8f98a0;
+}
+
+.store-sign-in-box > span > a {
+  color: white;
+}
+
+.store-sign-in-box > span > a:hover {
+  color: white;
+  color: #66c0f4;
+}
+
+.store-sign-in-box > a {
+  border-top: 1px solid #a4d007;
 }

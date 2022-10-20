@@ -96,34 +96,7 @@
   justify-content: flex-end;
 }
 
-.checkout-buttons button {
-  color: #D2E885;
-
-  height: 30px;
-  padding: 0 15px;
-  background-image: linear-gradient(#799905 5%, #536904 95%);
-  border: none;
-  border-radius: 3px;
-  font-family: 'Motiva Sans 400';
-  font-size: 15px;
-  margin-left: 16px;
-}
-
-.checkout-buttons button:hover {
-  background: linear-gradient( to bottom, #a4d007 5%, #6b8705 95%);
-  color: white;
-  cursor: pointer;
-}
-
-.checkout-buttons button:disabled {
-  opacity: 0.45;
-  cursor: default;
-}
-
-.checkout-buttons button:disabled:hover {
-  background-image: linear-gradient(#799905 5%, #536904 95%);
-  color: #D2E885;
-}
+/* Cart checkout button refactored to index as .green-button */
 
 .sales-tax-disclaimer-wrapper {
   display: flex;

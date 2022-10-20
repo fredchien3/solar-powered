@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { fetchGame } from "../../store/games";
-import StoreNavbar from "../StoreHomePage/StoreNavbar";
+import StoreNavbar from "../StoreHomePage/StoreNavbar/StoreNavbar";
 import "./GameShowPage.css";
 import GameShowCarousel from "./GameShowCarousel";
 import { createCartItem } from "../../store/cartItems";
@@ -177,7 +177,7 @@ export default function GameShowPage() {
             Buy {game.title}
             <div className="buy-box-buttons">
               <p>{game.price === 0 ? "Free to Play" : '$' + game.price}</p>
-              <button onClick={handleAddToCart} disabled={gameAlreadyInLibrary}>{addToCartButtonText}</button>
+              <button className="add-to-cart-button" onClick={handleAddToCart} disabled={gameAlreadyInLibrary}>{addToCartButtonText}</button>
             </div>
           </div>
           <article className="about-this-game">
