@@ -7,7 +7,9 @@
 .game-show-carousel-slides-wrapper {
   width: 100%;
   height: 337px;
-  background-color: rgba(255, 255, 255, 0.123);
+  background-color: black;
+  display: flex;
+  justify-content: center;
 }
 
 .game-show-carousel-image {
@@ -44,7 +46,7 @@
   border: 2px solid white;
 }
 
-.game-show-carousel-image:hover, .game-show-carousel-thumb:hover {
+.game-show-carousel-slides-wrapper:hover, .game-show-carousel-thumb:hover {
    cursor: pointer;
 }
 

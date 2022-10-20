@@ -251,6 +251,235 @@ falloutnv_image_urls = [
   "https://solar-powered.s3.amazonaws.com/game-images/falloutnv/falloutnv-12.jpg"
 ]
 
+valheim_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-main.jpg"
+valheim_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-banner.jpg"
+valheim_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-small.jpg"
+valheim_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-11.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-12.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-13.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-14.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-15.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-16.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-17.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/valheim/valheim-18.jpg"
+]
+
+civ5_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/civ5/civ5-main.jpg"
+civ5_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/civ5/civ5-banner.jpg"
+civ5_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/civ5/civ5-small.jpg"
+civ5_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/civ5/civ5-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/civ5/civ5-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/civ5/civ5-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/civ5/civ5-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/civ5/civ5-5.jpg"
+]
+
+seaofthieves_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-main.jpg"
+seaofthieves_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-banner.jpg"
+seaofthieves_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-small.jpg"
+seaofthieves_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-11.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/seaofthieves/seaofthieves-12.jpg"
+]
+
+rust_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-main.jpg"
+rust_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-banner.jpg"
+rust_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-small.jpg"
+rust_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-11.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-12.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-13.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-14.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-15.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-16.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-17.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-18.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-19.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-20.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-21.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-22.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-23.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rust/rust-24.jpg"
+]
+
+planetside2_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-main.jpg"
+planetside2_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-banner.jpg"
+planetside2_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-small.jpg"
+planetside2_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-11.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-12.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-13.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-14.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-15.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-16.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-17.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/planetside2/planetside2-18.jpg"
+]
+
+rs6siege_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-main.jpg"
+rs6siege_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-banner.jpg"
+rs6siege_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-small.jpg"
+rs6siege_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-11.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-12.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-13.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-14.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-15.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-16.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/rs6siege/rs6siege-17.jpg"
+]
+
+terraria_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-main.jpg"
+terraria_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-banner.jpg"
+terraria_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-small.jpg"
+terraria_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-11.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-12.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-13.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-14.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-15.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-16.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-17.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-18.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/terraria/terraria-19.jpg"
+]
+
+theforest_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-main.jpg"
+theforest_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-banner.jpg"
+theforest_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-small.jpg"
+theforest_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-11.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-12.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-13.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-14.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-15.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/theforest/theforest-16.jpg"
+]
+
+kcdeliverance_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-main.jpg"
+kcdeliverance_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-banner.jpg"
+kcdeliverance_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-small.jpg"
+kcdeliverance_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-11.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-12.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-13.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-14.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-15.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-16.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-17.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-18.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-19.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-20.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-21.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-22.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/kcdeliverance/kcdeliverance-23.jpg"
+]
+
+cyberpunk2077_main_image_url = "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-main.jpg"
+cyberpunk2077_banner_image_url = "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-banner.jpg"
+cyberpunk2077_small_image_url = "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-small.jpg"
+cyberpunk2077_image_urls = [
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-1.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-2.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-3.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-4.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-5.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-6.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-7.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-8.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-9.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-10.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-11.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-12.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-13.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-14.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-15.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-16.jpg",
+  "https://solar-powered.s3.amazonaws.com/game-images/cyberpunk2077/cyberpunk2077-17.jpg"
+]
+
 ApplicationRecord.transaction do 
   puts "Destroying tables..."
   CartItem.destroy_all
@@ -881,22 +1110,329 @@ ApplicationRecord.transaction do
     image_urls: falloutnv_image_urls
   )
 
-  # SAMPLEGAME = Game.create!(
-  #   title: '',
-  #   price: ,
-  #   release_date: Date.parse(''),
-  #   short_description: "",
-  #   long_description: "",
-  #   developer: '',
-  #   publisher: '',
-  #   main_image_url: SAMPLEGAME_main_image_url,
-  #   banner_image_url: SAMPLEGAME_banner_image_url,
-  #   small_image_url: SAMPLEGAME_small_image_url,
-  #   image_urls: SAMPLEGAME_image_urls
-  # )
+  valheim = Game.create!(
+    title: 'Valheim',
+    price: 19.99,
+    release_date: Date.parse('Feb 2, 2021'),
+    short_description: "A brutal exploration and survival game for 1-10 players, set in a procedurally-generated purgatory inspired by viking culture. Battle, build, and conquer your way to a saga worthy of Odin’s patronage!",
+    long_description: "Valheim is a brutal exploration and survival game for 1-10 players set in a procedurally-generated world inspired by Norse mythology. Craft powerful weapons, construct longhouses, and slay mighty foes to prove yourself to Odin!
+
+
+    EXPLORE THE TENTH WORLD
+    Explore a world shrouded in mystery. Discover distinct environments with unique enemies to battle, resources to gather and secrets to uncover! Be a viking, sail the open seas in search of lands unknown, and fight bloodthirsty monsters.
+    
+    
+    BUILD MIGHTY HALLS
+    Raise viking longhouses and build bases that offer reprieve from the dangers ahead. Customise buildings, both inside and out, with a detailed building system. Progress through building tiers to upgrade, expand and defend your base.
+    
+    
+    GATHER, CRAFT AND SURVIVE
+    Struggle to survive as you gather materials and craft weapons, armor, tools, ships, and defenses. Decorate your hearths and sharpen your blades, grow crops and vegetables, prepare food, brew meads and potions, and progress as you defeat more difficult bosses and discover new recipes and blueprints.
+    
+    KEY FEATURES:
+    Massive procedurally-generated world where every biome is immersive and distinct, with unique enemies, resources and crafting recipes to discover.
+    Play alone or with up to 10 players on player-hosted dedicated servers and experience unlimited world creation and enemies that scale in difficulty.
+    Staminabased combat that rewards preparation and skill. Utilize weapon types with unique attacks, different blocking styles, ranged combat, dodges and parries to fight your enemies.
+    Rewarding food system where you cannot starve and are not punished for not eating, instead you gain health, stamina and regeneration buffs depending on what foods you consume.
+    Intuitive crafting where recipes are discovered as you explore the world, and pick up new resources and ingredients.
+    Flexible building system that takes structural integrity and ventilation into account. Build a small shelter or an entire village, make outposts or claim abandoned buildings as your own. Then customize to your liking.
+    Sail boats and ships to reach distant lands and explore the sea that offers riches to claim and monsters to fight.
+    Epic boss fights that will test even the best prepared vikings and offer rewards that help you on your journey.
+    
+    Community-translated languages:
+    In addition to the officially supported languages, Valheim has several community-translated languages. As the name would suggest these are all translated by fans and members of the community, and is an ongoing process. We can't guarantee the quality nor completeness of any specific translation effort.",
+    developer: 'Iron Gate AB',
+    publisher: 'Coffee Stain Publishing',
+    main_image_url: valheim_main_image_url,
+    banner_image_url: valheim_banner_image_url,
+    small_image_url: valheim_small_image_url,
+    image_urls: valheim_image_urls
+  )
+
+  civ5 = Game.create!(
+    title: "Sid Meier's Civilization® V",
+    price: 29.99,
+    release_date: Date.parse('Sep 21, 2010'),
+    short_description: "Create, discover, and download new player-created maps, scenarios, interfaces, and more!",
+    long_description: "The Flagship Turn-Based Strategy Game Returns
+
+    Become Ruler of the World by establishing and leading a civilization from the dawn of man into the space age: Wage war, conduct diplomacy, discover new technologies, go head-to-head with some of history’s greatest leaders and build the most powerful empire the world has ever known.
+    
+    INVITING PRESENTATION: Jump right in and play at your own pace with an intuitive interface that eases new players into the game. Veterans will appreciate the depth, detail and control that are highlights of the series.
+    BELIEVABLE WORLD: Ultra realistic graphics showcase lush landscapes for you to explore, battle over and claim as your own.
+    COMMUNITY & MULTIPLAYER: Compete with players all over the world or locally in LAN matches, mod* the game in unprecedented ways, and install mods directly from an in-game community hub without ever leaving the game.
+    WIDE SYSTEM COMPATIBILITY: Civilization V operates on many different systems, from high end desktops to many laptops.
+    ALL NEW FEATURES: A new hex-based gameplay grid opens up exciting new combat and build strategies. City States become a new resource in your diplomatic battleground. An improved diplomacy system allows you to negotiate with fully interactive leaders.
+    
+    *Modding SDK available as a free download.
+    
+    Note: The Mac and Linux + SteamOS versions of Sid Meier's Civilization V are available in English, French, Italian, German and Spanish only.",
+    developer: 'Firaxis Games',
+    publisher: '2K',
+    main_image_url: civ5_main_image_url,
+    banner_image_url: civ5_banner_image_url,
+    small_image_url: civ5_small_image_url,
+    image_urls: civ5_image_urls
+  )
+
+  seaofthieves = Game.create!(
+    title: "Sea of Thieves",
+    price: 39.99,
+    release_date: Date.parse('Jun 3, 2020'),
+    short_description: "Sea of Thieves offers the essential pirate experience, from sailing and fighting to exploring and looting – everything you need to live the pirate life and become a legend in your own right. With no set roles, you have complete freedom to approach the world, and other players, however you choose.",
+    long_description: "About the Game
+    Sea of Thieves offers the essential pirate experience, from sailing and fighting to exploring and looting – everything you need to live the pirate life and become a legend in your own right. With no set roles, you have complete freedom to approach the world, and other players, however you choose.
+    
+    Whether you’re voyaging as a group or sailing solo, you’re bound to encounter other crews in this shared world adventure – but will they be friends or foes, and how will you respond?
+    
+    A Vast Open World
+    Explore a vast open world filled with unspoiled islands and underwater kingdoms. Take on quests to hunt for lost loot, forge a reputation with the Trading Companies and battle foes from Phantoms and Ocean Crawlers to Megalodons and the mighty Kraken. Try your hand at fishing, make maps to your own buried treasure or choose from hundreds of other optional goals and side-quests!
+    
+    Sea of Thieves: A Pirate’s Life
+    Play the Tall Tales to experience Sea of Thieves’ unique narrative-driven campaigns, and join forces with Captain Jack Sparrow in Sea of Thieves: A Pirate’s Life, an acclaimed original story that brings Disney’s Pirates of the Caribbean sailing into Sea of Thieves. These immersive and cinematic quests provide around 30 hours of the ultimate pirate adventure.
+    
+    A Game That’s Always Growing
+    With each Season bringing in new game features every three months alongside regular in-game Events and new narrative Adventures, Sea of Thieves is a service-based game that’s still growing and evolving. Check back regularly to see what free content has been newly added, and see how far you can climb through each Season’s 100 levels of Renown to earn special rewards.
+    
+    Become Legend
+    On your journey to become a Pirate Legend you’ll amass loot, build a reputation and define a unique personal style with your hard-earned rewards. Adventurer. Explorer. Conqueror. What will your legend be?",
+    developer: 'Rare Ltd',
+    publisher: 'Xbox Game Studios',
+    main_image_url: seaofthieves_main_image_url,
+    banner_image_url: seaofthieves_banner_image_url,
+    small_image_url: seaofthieves_small_image_url,
+    image_urls: seaofthieves_image_urls
+  )
+
+  rust = Game.create!(
+    title: "Rust",
+    price: 39.99,
+    release_date: Date.parse('Feb 8, 2018'),
+    short_description: "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other survivors. Do whatever it takes to last another night.",
+    long_description: "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other survivors. Do whatever it takes to last another night.
+
+    Rust is in its 8th year and has now had over 300 content updates, with a guaranteed content patch every month. From regular balance fixes and improvements to AI and graphics updates to adding content like new maps, musical instruments, trains and drones, as well as regular seasons and events, there’s always something interesting or dangerous (or both) happening on the island. Updates to the game include:
+    
+    Procedurally generated worlds with map editor support
+    Host your own servers and with server-side modding support
+    Vehicles: horses, modular cars, hot air balloons, helicopters, trains and more
+    Complex electrical systems
+    Farming
+    New enemies, wildlife and factions
+    New monuments and areas to explore
+    Gestures and contact system
+    Musical instruments
+    Large train network
+    Huge recent graphics overhaul
+    ..and more
+    EXPLORE
+    
+    You wake naked on a mysterious island armed only with a rock and a torch. You’ll need to brave natural dangers (from heat and cold to thirst and starvation), build a shelter, eat (or be eaten), scavenge materials. Explore the island, its abandoned settlements, mysterious monuments and the factions that occupy them. But, above all, watch out for other survivors...
+    BUILD
+    
+    Design and build bases to defend your territory or control the resources of the island. Research the tech tree, grow farms, command electricity, commandeer vehicles from horses to cars to boats to helicopters. Whatever it takes to get ahead.
+    SURVIVE
+    
+    There are no rules in Rust but the ones you make for yourself. Craft tools, armor and weapons to defend yourself. Cooperate with friends and allies and build a town together. Explore the island and what’s happening in it. Trade with other players. Or prey on them, raiding their bases and taking their hard-won goods.",
+    developer: 'Facepunch Studios',
+    publisher: 'Facepunch Studios',
+    main_image_url: rust_main_image_url,
+    banner_image_url: rust_banner_image_url,
+    small_image_url: rust_small_image_url,
+    image_urls: rust_image_urls
+  )
+
+  planetside2 = Game.create!(
+    title: "PlanetSide 2",
+    price: 0,
+    release_date: Date.parse('Nov 20, 2012'),
+    short_description: "PlanetSide 2 is an all-out planetary war, where thousands of players battle as one across enormous continents. Utilize infantry, ground and air vehicles, and teamwork to destroy your enemies in this revolutionary first-person shooter on a massive scale.",
+    long_description: "PlanetSide 2 is a free-to-play, massively multiplayer online first person shooter (MMOFPS).
+
+    Empires and their soldiers battle in an all-out planetary war on a scale never before seen, in stunning, breathtaking detail. PlanetSide 2 battles persist and the war never ends, offering constant challenges of individual skill, team grit, and empire-wide coordination. Take up arms and drop into intense infantry, vehicle, and air combat.
+    
+    Players come together in enormous battles across four massive continents to win control of critical territories, gaining key resources for their empire. With an extensive skill tree and class-based system, players can customize their soldier, weapons, and vehicles to match their playstyle and meet the needs of their squads, outfits, and empires. In the world of PlanetSide 2, every soldier makes a difference.
+    THREE WARRING EMPIRES
+    Players will choose to align with one of three empires: the militaristic, authoritarian Terran Republic; the rebellious, freedom-fighting New Conglomerate; or the technocratic, alien-influenced Vanu Sovereignty. Each empire has access to empire-specific weapons, attachments, vehicles, abilities, and more.
+    
+    
+    MASSIVE WARFARE
+    Battles take place not between dozens of soldiers, but between hundreds. They fight on foot. They pile into vehicles. They take to the skies in devastating aircraft. Each battleground holds valuable resources and strategic positions, and the empire that can conquer and hold these territories will be rewarded with the resources and the means to achieve victory.
+    ENORMOUS MAPS
+    PlanetSide 2 features four incredible and diverse continent maps with dozens of square kilometers of seamless gameplay space, every inch of which is hand-crafted and contestable. Whether in open fields, barren desert, in armed and armored bases, or in the skies, victory will rely on knowing your surroundings.
+    
+    
+    PERSISTENCE THAT PAYS
+    In PlanetSide 2 the war isn’t won by a single base capture. The core gameplay of PlanetSide 2 is about holding crucial territories and controlling resources. Working strategically as a team to secure tactical positions has long-lasting effects that can shift the tide of battle.
+    CLASS-BASED COMBAT
+    Players can build their soldier to match wants and their allies' needs. Six distinct classes provide a wealth of squad options and combat tactics. Grow your soldier over time as you master each combat role, weapon, and vehicle, laterally unlocking hundreds of weapons, attachments, gear, skills, vehicles, and more.
+    
+    
+    Heavy Assault: Rush into the battle guns blazing. You are the dedicated foot soldier of Auraxis.
+    
+    Light Assault: Go where the Heavies can’t with your short-burst jetpack. Pick a high spot, throw a grenade, and out maneuver your foes!
+    
+    Combat Medic: Keep your fellow soldiers alive and in fighting shape. You are the beating heart of any squad.
+    
+    Infiltrator: Stay silent. Stay invisible. You are death from the shadows, whether with a knife from behind or a single shot from a sniper's nest. You are the enemy's constant fear.
+    
+    Engineer: Deploy crucial equipment. Resupply your allies. Fix the thing, then fix it again. You keep the machines running, the tanks firing, and the war effort moving forward.
+    
+    MAX: Step into your Mechanized Assault Exo-Suit (MAX). Cannons for hands, armor for flesh, and a disposition to match, you are a walking mass of nigh unstoppable death.
+    OUTFIT TEAMWORK
+    Join or form your own Outfit, a like-minded group of soldiers who train together day in and day out. Whether a small rapid response team or a massive clan, Outfits are vital to each empire's strategic organization.
+    
+    
+    VEHICLES & WEAPONS
+    Train and equip your soldier how you want, with a huge array of weapons and vehicles which can be extensively customized by preference or purpose, using attachments, upgrades, and add-ons earned in the war.
+    PLAY FOR FREE",
+    developer: 'Rogue Planet Games',
+    publisher: 'Daybreak Game Company',
+    main_image_url: planetside2_main_image_url,
+    banner_image_url: planetside2_banner_image_url,
+    small_image_url: planetside2_small_image_url,
+    image_urls: planetside2_image_urls
+  )
+
+  rs6siege = Game.create!(
+    title: "Tom Clancy's Rainbow Six® Siege",
+    price: 19.99,
+    release_date: Date.parse('Dec 1, 2015'),
+    short_description: "Tom Clancy's Rainbow Six Siege is the latest installment of the acclaimed first-person shooter franchise developed by the renowned Ubisoft Montreal studio.",
+    long_description: "Master the art of destruction and gadgetry in Tom Clancy’s Rainbow Six Siege. Face intense close quarters combat, high lethality, tactical decision making, team play and explosive action within every moment. Experience a new era of fierce firefights and expert strategy born from the rich legacy of past Tom Clancy's Rainbow Six games.
+
+
+    Engage in a brand-new style of assault using an unrivaled level of destruction and gadgetry.
+    On defense, coordinate with your team to transform your environments into strongholds. Trap, fortify and create defensive systems to prevent being breached by the enemy.
+    On attack, lead your team through narrow corridors, barricaded doorways and reinforced walls. Combine tactical maps, observation drones, rappelling and more to plan, attack and defuse every situation.
+    
+    
+    Choose from dozens of highly trained, Special Forces operators from around the world. Deploy the latest technology to track enemy movement. Shatter walls to open new lines of fire. Breach ceilings and floors to create new access points. Employ every weapon and gadget from your deadly arsenal to locate, manipulate and destroy your enemies and the environment around them.
+    
+    
+    Experience new strategies and tactics as Rainbow Six Siege evolves over time. Change the rules of Siege with every update that includes new operators, weapons, gadgets and maps. Evolve alongside the ever-changing landscape with your friends and become the most experienced and dangerous operators out there.
+    
+    
+    Compete against others from around the world in ranked match play. Grab your best squad and join the competitive community in weekly tournaments or watch the best professional teams battle it out in the Rainbow Six Siege Pro League.",
+    developer: 'Ubisoft Montreal',
+    publisher: 'Ubisoft',
+    main_image_url: rs6siege_main_image_url,
+    banner_image_url: rs6siege_banner_image_url,
+    small_image_url: rs6siege_small_image_url,
+    image_urls: rs6siege_image_urls
+  )
+
+  terraria = Game.create!(
+    title: "Terraria",
+    price: 9.99,
+    release_date: Date.parse('May 16, 2011'),
+    short_description: "Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!",
+    long_description: "Dig, Fight, Explore, Build: The very world is at your fingertips as you fight for survival, fortune, and glory. Will you delve deep into cavernous expanses in search of treasure and raw materials with which to craft ever-evolving gear, machinery, and aesthetics? Perhaps you will choose instead to seek out ever-greater foes to test your mettle in combat? Maybe you will decide to construct your own city to house the host of mysterious allies you may encounter along your travels?
+
+    In the World of Terraria, the choice is yours!
+    
+    Blending elements of classic action games with the freedom of sandbox-style creativity, Terraria is a unique gaming experience where both the journey and the destination are completely in the player’s control. The Terraria adventure is truly as unique as the players themselves!
+    
+    Are you up for the monumental task of exploring, creating, and defending a world of your own?
+    
+    Key features:
+    Sandbox Play
+    Randomly generated worlds
+    Free Content Updates",
+    developer: 'Re-Logic',
+    publisher: 'Re-Logic',
+    main_image_url: terraria_main_image_url,
+    banner_image_url: terraria_banner_image_url,
+    small_image_url: terraria_small_image_url,
+    image_urls: terraria_image_urls
+  )
+
+  theforest = Game.create!(
+    title: "The Forest",
+    price: 19.99,
+    release_date: Date.parse('Apr 30, 2018'),
+    short_description: "As the lone survivor of a passenger jet crash, you find yourself in a mysterious forest battling to stay alive against a society of cannibalistic mutants. Build, explore, survive in this terrifying first person survival horror simulator.",
+    long_description: "As the lone survivor of a passenger jet crash, you find yourself in a mysterious forest battling to stay alive against a society of cannibalistic mutants.
+
+    Build, explore, survive in this terrifying first person survival horror simulator.
+    Key features
+    Enter a living, breathing world, where every tree and plant can be chopped down. Below ground explore a vast network of caves and underground lakes.
+    
+    Chop down trees to build a camp, or start a fire to keep warm. Scavenge food to keep yourself from starving.
+    Build a small shelter or a large ocean side fortress. Lay traps and defences to keep a safe perimeter.
+    Explore and build during the day. Defend your base at night. Craft weapons and tools. Bunker down during the evening or bring the fight directly to the enemy.
+    Defend yourself against a clan of genetic mutant enemies that have beliefs, families, morals and that appear almost human.
+    Use stealth to evade enemies, or engage them directly with crude weapons built from sticks and stones.",
+    developer: 'Endnight Games Ltd',
+    publisher: 'Endnight Games Ltd',
+    main_image_url: theforest_main_image_url,
+    banner_image_url: theforest_banner_image_url,
+    small_image_url: theforest_small_image_url,
+    image_urls: theforest_image_urls
+  )
+
+  kcdeliverance = Game.create!(
+    title: "Kingdom Come: Deliverance",
+    price: 29.99,
+    release_date: Date.parse('Feb 13, 2018'),
+    short_description: "Story-driven open-world RPG that immerses you in an epic adventure in the Holy Roman Empire. Avenge your parents' death as you battle invading forces, go on game-changing quests, and make influential choices. Explore castles, forests, villages and other realistic settings in medieval Bohemia!",
+    long_description: "Game:
+    You're Henry, the son of a blacksmith. Thrust into a raging civil war, you watch helplessly as invaders storm your village and slaughter your friends and family. Narrowly escaping the brutal attack, you grab your sword to fight back. Avenge the death of your parents and help repel the invading forces!
+    Story:
+    Bohemia – located in the heart of Europe, the region is rich in culture, silver, and sprawling castles. The death of its beloved ruler, Emperor Charles IV, has plunged the kingdom into dark times: war, corruption, and discord are tearing this jewel of the Holy Roman Empire apart.
+    One of Charles' sons, Wenceslas, has inherited the crown. Unlike his father, Wenceslas is a naive, self-indulgent, unambitious monarch. His half-brother and King of Hungary, Sigismund the Red Fox, senses weakness in Wenceslas. Feigning good will, Sigismund travels to Bohemia and kidnaps his half-brother. With no king on the throne, Sigismund is now free to plunder Bohemia and seize its riches.
+    
+    In the midst of this chaos, you're Henry, the son of a blacksmith. Your peaceful life is shattered when a mercenary raid, ordered by King Sigismund himself, burns your village to the ground. By bittersweet fortune, you are one of the few survivors of this massacre.
+    
+    Without a home, family, or future you end up in the service of Lord Radzig Kobyla, who is forming a resistance against the invasion. Fate drags you into this bloody conflict and shoves you into a raging civil war, where you help fight for the future of Bohemia.
+    Features:
+    Massive realistic open world: Majestic castles, vast fields, all rendered in stunning high-end graphics.
+    Non-linear story: Solve quests in multiple ways, then face the consequences of your decisions.
+    Challenging combat: Distance, stealth, or melee. Choose your weapons and execute dozens of unique combos in battles that are as thrilling as they are merciless.
+    Character development: Improve your skills, earn new perks, and forge and upgrade your equipment.
+    Dynamic world: Your actions influence the reactions of the people around you. Fight, steal, seduce, threaten, persuade, or bribe. It’s all up to you.
+    Historical accuracy: Meet real historical characters and experience the genuine look and feel of medieval Bohemia.",
+    developer: 'Warhorse Studios',
+    publisher: 'Warhorse Studios, Prime Matter',
+    main_image_url: kcdeliverance_main_image_url,
+    banner_image_url: kcdeliverance_banner_image_url,
+    small_image_url: kcdeliverance_small_image_url,
+    image_urls: kcdeliverance_image_urls
+  )
+
+  cyberpunk2077 = Game.create!(
+    title: "Cyberpunk 2077",
+    price: 59.99,
+    release_date: Date.parse('Dec 9, 2020'),
+    short_description: "Cyberpunk 2077 is an open-world, action-adventure RPG set in the dark future of Night City — a dangerous megalopolis obsessed with power, glamor, and ceaseless body modification.",
+    long_description: "Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary wrapped up in a do-or-die fight for survival. Improved and featuring all-new free additional content, customize your character and playstyle as you take on jobs, build a reputation, and unlock upgrades. The relationships you forge and the choices you make will shape the story and the world around you. Legends are made here. What will yours be?
+
+    CREATE YOUR OWN CYBERPUNK
+    Become an urban outlaw equipped with cybernetic enhancements and build your legend on the streets of Night City.
+    
+    EXPLORE THE CITY OF THE FUTURE
+    Night City is packed to the brim with things to do, places to see, and people to meet. And it’s up to you where to go, when to go, and how to get there.
+    
+    BUILD YOUR LEGEND
+    Go on daring adventures and build relationships with unforgettable characters whose fates are shaped by the choices you make.
+    
+    EQUIPPED WITH IMPROVEMENTS
+    Experience Cyberpunk 2077 with a host of changes and improvements to gameplay and economy, the city, map usage, and more.
+    
+    INCLUDES FREE ADDITIONAL CONTENT
+    Get your hands on a haul of free items including new guns and melee weapons, as well as extra customization options and more.
+    
+    GO TO CYBERPUNK.NET",
+    developer: 'CD PROJEKT RED',
+    publisher: 'CD PROJEKT RED',
+    main_image_url: cyberpunk2077_main_image_url,
+    banner_image_url: cyberpunk2077_banner_image_url,
+    small_image_url: cyberpunk2077_small_image_url,
+    image_urls: cyberpunk2077_image_urls
+  )
 
   # SAMPLEGAME = Game.create!(
-  #   title: '',
+  #   title: "",
   #   price: ,
   #   release_date: Date.parse(''),
   #   short_description: "",
