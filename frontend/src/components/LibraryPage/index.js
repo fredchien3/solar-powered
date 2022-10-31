@@ -14,33 +14,27 @@ export default function LibraryPage() {
   const { username } = useParams();
 
   const usersSlice = useSelector(state => state.users);
-  const user = Object.values(usersSlice)[0] || {};
+  const libraryUser = Object.values(usersSlice).find(user => user.username === username) || {};
 
   const libraryItemsSlice = useSelector(state => state.libraryItems);
   const libraryItemsArray = Object.values(libraryItemsSlice);
-
   const libraryItems = libraryItemsArray.map(libraryItem => {
-    return <LibraryItem libraryItem={libraryItem} key={libraryItem.id} />;
+    return <LibraryItem game={libraryItem.game} key={libraryItem.id} />;
   })
   
   useEffect(() => {
-    dispatch(fetchUser(username));
-    dispatch(setLibraryItems({}));
-    dispatch(setGames({}));
-  }, [dispatch, username])
-
-  useEffect(() => {
-    dispatch(fetchLibraryItems(user.id));
-  }, [dispatch, user.id])
+    dispatch(fetchUser(username))
+      .then(user => dispatch(fetchLibraryItems(user.id)));
+  }, [dispatch])
 
   return (
     <div className="library-page">
       <header className="library-header">
         <img src={defaultAvatar} alt="avatar"></img>
         <div>
-          <Link className="link-to-profile" to={'/users/' + user.username + '/games'}>{user.displayName}</Link>
+          <Link className="link-to-profile" to={'/users/' + libraryUser.username + '/games'}>{libraryUser.displayName}</Link>
           <span>»</span>
-          <Link className="link-to-games" to={'/users/' + user.username + '/games'}>Games</Link>
+          <Link className="link-to-games" to={'/users/' + libraryUser.username + '/games'}>Games</Link>
         </div>
       </header>
       <section className="library-main-column">

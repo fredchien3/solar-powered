@@ -1,16 +1,7 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-import { fetchGame } from '../../store/games';
 import './LibraryItem.css';
 
-export default function LibraryItem({ libraryItem }) {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchGame(libraryItem.gameId));
-  }, [dispatch, libraryItem.gameId]);
-  const game = useSelector(state => state.games[libraryItem.gameId]) || {};
-  
+export default function LibraryItem({ game }) {
   return (
     <div className="library-item-wrapper">
       <img src={game.smallImageUrl} alt={game.title + " small image"} />

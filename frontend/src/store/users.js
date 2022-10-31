@@ -40,6 +40,7 @@ export const fetchUser = (userParam) => async (dispatch) => {
   }
   const userData = await res.json();
   dispatch(setUser(userData));
+  return userData;
 }
 
 export default function usersReducer(state = {}, action) {
