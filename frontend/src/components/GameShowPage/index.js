@@ -19,28 +19,25 @@ export default function GameShowPage() {
 
   document.title = game.id ? game.title + " on Solar" : "loading...";
   
-  const sessionSlice = useSelector(state => state.session);
-  const currentUser = sessionSlice.user || {};
+  const currentUser = useSelector(state => state.session.user) || {};
   
   const cartItemsSlice = useSelector(state => state.cartItems);
   const cartItemsArray = Object.values(cartItemsSlice);
-  
+
   const libraryItemsSlice = useSelector(state => state.libraryItems);
   const libraryItemsArray = Object.values(libraryItemsSlice);
-  const libraryItemsGameIds = libraryItemsArray.map(libraryItem => libraryItem.gameId);
+  const ownedGames = libraryItemsArray.map(libraryItem => libraryItem.game);
   
-  const gameAlreadyInCart = cartItemsArray.some(cartItem => cartItem.gameId === gameId);
-  const gameAlreadyInLibrary = libraryItemsArray.some(libraryItem => libraryItem.gameId === gameId);
+  const gameAlreadyInCart = cartItemsArray.some(cartItem => cartItem.game.id === gameId);
+  const gameAlreadyInLibrary = libraryItemsArray.some(libraryItem => libraryItem.game.id === gameId);
   
   useEffect(() => {
-    dispatch(fetchGame(gameId));
-    dispatch(fetchLibraryItems(currentUser.id));
-  }, [dispatch, gameId, currentUser.id])
+    if (!gamesSlice[gameId]) dispatch(fetchGame(gameId));
+  }, [dispatch, gameId]);
 
   useEffect(() => {
-    const ownedGamesIds = Object.values(libraryItemsSlice).map(libraryItem => libraryItem.gameId);
-      ownedGamesIds.forEach(otherGameId => dispatch(fetchGame(otherGameId)));
-  }, [dispatch, libraryItemsSlice])
+    if (libraryItemsArray.length === 0) dispatch(fetchLibraryItems(currentUser.id));
+  }, [libraryItemsArray.length, currentUser.id, dispatch]);
 
   const handleAddToCart = () => {
     if (gameAlreadyInLibrary) {
@@ -79,15 +76,13 @@ export default function GameShowPage() {
   } else if (gameAlreadyInCart) {
     addToCartButtonText = "In Cart";
   }
+  const otherOwnedGames = ownedGames.filter(game => game.id !== gameId);
 
-  const dupGamesSlice = {...gamesSlice};
-  delete dupGamesSlice[gameId];
-  const otherOwnedGames = Object.values(dupGamesSlice).filter(game => libraryItemsGameIds.includes(game.id));
   // shuffle
-  // for (let i = otherOwnedGames.length - 1; i > 0; i--) {
-  //   const j = Math.floor(Math.random() * (i + 1));
-  //   [otherOwnedGames[i], otherOwnedGames[j]] = [otherOwnedGames[j], otherOwnedGames[i]];
-  // }
+  for (let i = otherOwnedGames.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [otherOwnedGames[i], otherOwnedGames[j]] = [otherOwnedGames[j], otherOwnedGames[i]];
+  }
 
   let similarGame1 = otherOwnedGames[0] || {};
   let similarGame2 = otherOwnedGames[1] || {};
