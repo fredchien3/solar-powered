@@ -34,7 +34,7 @@ export default function GameShowPage() {
   
   useEffect(() => {
     if (!gamesSlice[gameId]) dispatch(fetchGame(gameId));
-  }, [dispatch, gameId]);
+  }, [dispatch, gamesSlice, gameId]);
 
   useEffect(() => {
     if (libraryItemsArray.length === 0) dispatch(fetchLibraryItems(currentUser.id));

@@ -3,7 +3,8 @@ import './TabListInfo.css';
 export default function TabListInfo({ game, active }) {
   const images = [];
   for (let i = 0; i < 4; i++) {
-    images.push(<img src={game.imageUrls[i]} alt={game.title + ' panel ' + (i + 1)} key={i} />);
+    const url = game.imageUrls[i];
+    images.push(<img src={url} alt={game.title + ' panel ' + (i + 1)} key={url} />);
   }
   return (
     <div className={active ? "tab-list-info tab-active" : "tab-list-info "}>

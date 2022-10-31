@@ -39,8 +39,10 @@ export default function StoreHomePage({ error }) {
     const j = Math.floor(Math.random() * (i + 1));
     [games[i], games[j]] = [games[j], games[i]];
   }
+
   const tablistGames = games.slice(0, 10);
   const featuredGames = games.slice(10, games.length);
+  
   return (
     <div className="store-home-page">
       {errorMessage}

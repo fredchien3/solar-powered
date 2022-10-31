@@ -21,10 +21,9 @@ export default function FeaturedSlide({ game, show }) {
   const screenshotDivs = [];
   for (let i = 0; i < 4; i++) {
     const url = game.imageUrls[i];
-
     featuredImages.push(
       <img 
-        key={i} 
+        key={url} 
         src={url} 
         alt={game.title + ' featured #' + (i+1)}
         className={url === displayUrl ? "featured-image-show" : "featured-image-hide"}
@@ -36,7 +35,7 @@ export default function FeaturedSlide({ game, show }) {
       className="featured-screenshot-div" 
       onMouseEnter={handleMouseEnter} 
       onMouseLeave={handleMouseLeave} 
-      key={i}>
+      key={url}>
         <img src={url} alt={game.title + ' screenshot #' + (i+1)} />
     </div>
     );

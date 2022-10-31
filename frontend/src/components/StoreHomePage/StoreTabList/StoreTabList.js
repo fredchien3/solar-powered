@@ -16,16 +16,15 @@ export default function StoreTabList({ games }) {
   if (games.length > 0) {
     for (let i = 0; i < 10; i++) {
       const game = games[i];
-      if (game) tabListItems.push(
-        <div onMouseEnter={handleMouseEnter} id={i}>
+      tabListItems.push(
+        <div onMouseEnter={handleMouseEnter} id={i} key={game.id}>
           <TabListItem
-            game={game} 
-            key={game.id} 
+            game={game}
             active={index === i} 
           />
         </div>
       );
-      if (game) tabFullInfoPanels.push(
+      tabFullInfoPanels.push(
         <TabListInfo 
           game={game} 
           key={game.id} 

@@ -21,7 +21,7 @@ export default function GameShowCarousel({ game }) {
       src={url}
       className={index === i ? "game-show-carousel-image show-image-selected" : "game-show-carousel-image"}
       alt={game.title + ' image #' + (i+1)}
-      key={i}
+      key={url}
     />
   })
   
@@ -31,7 +31,7 @@ export default function GameShowCarousel({ game }) {
       className={index === i ? "game-show-carousel-thumb show-thumb-selected" : "game-show-carousel-thumb"}
       alt={game.title + ' thumbnail #' + (i+1)}
       onClick={() => setIndex(i)}
-      key={i}
+      key={url}
     />
   })
   
