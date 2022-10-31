@@ -43,7 +43,7 @@ export default function Navigation() {
   const centerCluster = (
       <div className="center-cluster">
         <Link to="/store">Store</Link>
-        {currentUser ? <Link to="#">{currentUser.displayName}</Link> : <></>}
+        {currentUser ? <Link to={`/users/${currentUser.username}/games`}>{currentUser.displayName}</Link> : <></>}
         <span style={{width: '20px'}} />
         <a href="https://www.linkedin.com/in/fchien">LinkedIn</a>
         <a href="https://github.com/fredchien3">GitHub</a>
