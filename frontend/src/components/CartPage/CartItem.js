@@ -1,16 +1,11 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { deleteCartItem } from '../../store/cartItems';
-import { fetchGame } from '../../store/games';
 import './CartItem.css';
 
 export default function CartItem({ cartItem }) {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchGame(cartItem.gameId));
-  }, [dispatch, cartItem.gameId]);
-  const game = useSelector(state => state.games[cartItem.gameId]) || {};
+  const game = cartItem.game;
 
   const handleRemove = () => {
     dispatch(deleteCartItem(cartItem.id));

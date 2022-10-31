@@ -11,7 +11,7 @@ class Api::CartItemsController < ApplicationController
   end
 
   def index
-    @cart_items = CartItem.includes(:user).where(user_id: current_user.id)
+    @cart_items = CartItem.includes(:game, :user).where(user_id: current_user.id)
     render 'api/cart_items/index'
   end
 

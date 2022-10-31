@@ -18,11 +18,7 @@ export default function CartPage() {
 
   const cartItemsSlice = useSelector(state => state.cartItems);
   const cartItemsArray = Object.values(cartItemsSlice);
-  const cartItemsGameIds = cartItemsArray.map(cartItem => cartItem.gameId);
-
-  const gamesSlice = useSelector(state => state.games);
-  const gamesArray = Object.values(gamesSlice).filter(game => cartItemsGameIds.includes(game.id));
-
+  const gamesArray = cartItemsArray.map(cartItem => cartItem.game);
   
   const cartItems = cartItemsArray.map(cartItem => {
     return <CartItem cartItem={cartItem} key={cartItem.id} />;
@@ -54,7 +50,7 @@ export default function CartPage() {
 
   const addCartItemsToLibrary = async () => {
     Object.values(cartItemsSlice).forEach(cartItem => {
-      const libraryItem = { userId: cartItem.userId, gameId: cartItem.gameId };
+      const libraryItem = { userId: cartItem.userId, gameId: cartItem.game.id };
       dispatch(createLibraryItem(libraryItem));
     })
   }
