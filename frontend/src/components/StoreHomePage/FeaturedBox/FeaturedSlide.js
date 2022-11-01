@@ -5,17 +5,11 @@ export default function FeaturedSlide({ game, show }) {
   const history = useHistory();
   const [displayUrl, setDisplayUrl] = useState(game.mainImageUrl);
 
-  const handleMouseEnter = (e) => {
-    setDisplayUrl(e.target.src);
-  }
+  const handleMouseEnter = (e) => {setDisplayUrl(e.target.src)};
 
-  const handleMouseLeave = () => {
-    setDisplayUrl(game.mainImageUrl);
-  }
+  const handleMouseLeave = () => {setDisplayUrl(game.mainImageUrl)};
 
-  const goToShowPage = () => {
-    history.push('/games/' + game.id);
-  }
+  const goToShowPage = () => {history.push('/games/' + game.id)};
   
   const featuredImages = [];  
   const screenshotDivs = [];
@@ -31,13 +25,13 @@ export default function FeaturedSlide({ game, show }) {
     );
     
     screenshotDivs.push(
-    <div 
-      className="featured-screenshot-div" 
-      onMouseEnter={handleMouseEnter} 
-      onMouseLeave={handleMouseLeave} 
-      key={url}>
-        <img src={url} alt={game.title + ' screenshot #' + (i+1)} />
-    </div>
+      <div 
+        className="featured-screenshot-div" 
+        onMouseEnter={handleMouseEnter} 
+        onMouseLeave={handleMouseLeave} 
+        key={url}>
+          <img src={url} alt={game.title + ' screenshot #' + (i+1)} />
+      </div>
     );
   }
 
