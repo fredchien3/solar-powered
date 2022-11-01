@@ -6,7 +6,7 @@ _The ultimate destination for viewing, purchasing, and reviewing games._
 
 
 
-Solar [(live link🚀)](https://solar-powered.herokuapp.com/) is an admiring tribute to the platform Steam, and to the joy and friendships that I gained through it.
+Solar [(live link🚀)](https://solar-powered.herokuapp.com/) is an admiring tribute to the platform Steam, and to the joy and friendships that it introduced to my life.
 
 The full name "Solar Powered" is a parallel to Steam's [steampowered.com](https://store.steampowered.com/).
 
