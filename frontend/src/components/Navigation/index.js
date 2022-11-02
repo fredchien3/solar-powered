@@ -10,11 +10,16 @@ import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 export default function Navigation() {
   const dispatch = useDispatch();
   const location = useLocation();
+
   const sessionSlice = useSelector(state => state.session);
+  
   const cartItemsSlice = useSelector(state => state.cartItems);
   const cartItemsArray = Object.values(cartItemsSlice);
 
+  const wishlistItemsArray = [null, null];
+  
   const [numCartItems, setNumCartItems] = useState(cartItemsArray.length);
+  const [numWishlistItems, setNumWishlistItems] = useState(wishlistItemsArray.length);
 
   let currentUser;
   if (sessionSlice) currentUser = sessionSlice.user;
@@ -26,7 +31,6 @@ export default function Navigation() {
   useEffect(() => {
     setNumCartItems(cartItemsArray.length);
   }, [cartItemsArray])
-
 
   // Original:
   // const centerCluster = (
@@ -83,8 +87,19 @@ export default function Navigation() {
     )
   }
 
-  let cartButton = <Link to="/cart" className="green-cart-link">Cart ({numCartItems})</Link>;
-  if (location.pathname.includes("/users")) cartButton = <></>;
+  let wishlistButton = <Link to="/wishlist" className="silver-wishlist-link">
+    Wishlist ({numWishlistItems})
+  </Link>
+
+
+  let cartButton = <Link to="/cart" className="green-cart-link">
+    Cart ({numCartItems})
+  </Link>;
+
+  if (location.pathname.includes("/users")) {
+    cartButton = <></>;
+    wishlistButton = <></>;
+  }
   
   return (
     <nav className="header-nav">
@@ -95,7 +110,10 @@ export default function Navigation() {
         </Link>
         {centerCluster}
         {rightCluster}
-        {numCartItems > 0 ? cartButton : <></>}
+        <div className="wishlist-and-cart-wrapper">
+          {numWishlistItems > 0 ? wishlistButton : <></>}
+          {numCartItems > 0 ? cartButton : <></>}
+        </div>
       </div>
     </nav>
   )

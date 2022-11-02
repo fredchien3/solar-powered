@@ -157,25 +157,45 @@
   background-color: #575451;
 }
 
-.green-cart-link {
+.wishlist-and-cart-wrapper {
+  display: flex;
+  position: absolute;
+  right: -8px;
+  bottom: -28px;
+
+}
+
+.wishlist-and-cart-wrapper a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 20px;
   border: none;
   border-radius: 1px;
-  position: absolute;
-  right: -10px;
-  bottom: -28px;
-  color: #a4d007;
-  box-shadow: 0 0 4px #000;
-  background-color: rgba( 164, 208, 7, 0.4 );
+  box-shadow: 0 0 3px #000;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   padding: 0 26px;
   z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
+  margin-left: 1px;
+}
+
+.silver-wishlist-link {
+  background-image: url(https://store.cloudflare.steamstatic.com/public/images/v6/storemenu/background_wishlist.jpg);
+  color: white;
+  background-color: rgba( 255, 255, 255, 0.4 );
+}
+
+.silver-wishlist-link:hover {
+  color: #111111;
+  background: linear-gradient(135deg, #ffffff 0%,#919aa3 100%);
+}
+
+.green-cart-link {
+  color: #a4d007;
+  background-color: rgba( 164, 208, 7, 0.4 );
 }
 
 .green-cart-link:hover {
