@@ -9,6 +9,7 @@ import { createCartItem } from "../../store/cartItems";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { fetchLibraryItems } from "../../store/libraryItems";
 import RelevantBox from "./RelevantBox/RelevantBox";
+import { prettifyDate } from "../../helpers";
 
 export default function GameShowPage() {
   const dispatch = useDispatch();
@@ -106,7 +107,7 @@ export default function GameShowPage() {
                   <th>All Reviews:</th><td className="no-user-reviews">No user reviews</td>
                 </tr>
                 <tr className="release-date-row">
-                  <th>Release Date:</th><td>{game.releaseDate}</td>
+                  <th>Release Date:</th><td>{prettifyDate(game.releaseDate)}</td>
                 </tr>
                 <tr>
                   <th>Developer:</th><td className="developer-publisher">{game.developer}</td>

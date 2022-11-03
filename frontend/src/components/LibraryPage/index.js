@@ -14,7 +14,7 @@ export default function LibraryPage() {
   
   const usersSlice = useSelector(state => state.users);
   const libraryUser = Object.values(usersSlice).find(user => user.username === username) || {};
-  document.title = `Solar Community :: ${libraryUser.displayName ? libraryUser.displayName : "loading..."} :: Games`;
+  document.title = libraryUser.displayName ? `Solar Community :: ${libraryUser.displayName} :: Games` : "loading...";
 
   const libraryItemsSlice = useSelector(state => state.libraryItems);
   const libraryItemsArray = Object.values(libraryItemsSlice);

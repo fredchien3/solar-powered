@@ -12,6 +12,7 @@ export default function Navigation() {
   const location = useLocation();
 
   const sessionSlice = useSelector(state => state.session);
+  const currentUser = sessionSlice.user;
   
   const cartItemsSlice = useSelector(state => state.cartItems);
   const cartItemsArray = Object.values(cartItemsSlice);
@@ -21,8 +22,6 @@ export default function Navigation() {
   const [numCartItems, setNumCartItems] = useState(cartItemsArray.length);
   const [numWishlistItems, setNumWishlistItems] = useState(wishlistItemsArray.length);
 
-  let currentUser;
-  if (sessionSlice) currentUser = sessionSlice.user;
     
   useEffect(() => {
     if (currentUser) dispatch(fetchCartItems());
@@ -87,19 +86,20 @@ export default function Navigation() {
     )
   }
 
-  let wishlistButton = <Link to="/wishlist" className="silver-wishlist-link">
+  let wishlistButton = <Link to={`/users/${currentUser?.username}/wishlist`} className="silver-wishlist-link">
     Wishlist ({numWishlistItems})
   </Link>
-
 
   let cartButton = <Link to="/cart" className="green-cart-link">
     Cart ({numCartItems})
   </Link>;
 
-  if (location.pathname.includes("/users")) {
+  if (location.pathname.includes("/users/") && location.pathname.includes("/games")) {
     cartButton = <></>;
     wishlistButton = <></>;
   }
+  
+  if (location.pathname.includes("/"))
   
   return (
     <nav className="header-nav">
@@ -110,10 +110,10 @@ export default function Navigation() {
         </Link>
         {centerCluster}
         {rightCluster}
-        <div className="wishlist-and-cart-wrapper">
+        {currentUser && <div className="wishlist-and-cart-wrapper">
           {numWishlistItems > 0 ? wishlistButton : <></>}
           {numCartItems > 0 ? cartButton : <></>}
-        </div>
+        </div>}
       </div>
     </nav>
   )
