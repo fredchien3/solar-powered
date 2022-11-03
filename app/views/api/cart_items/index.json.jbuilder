@@ -1,5 +1,4 @@
 @cart_items.each do |cart_item|
-
   json.cart_items do
     json.set! cart_item.id do
       json.partial! 'cart_item', cart_item: cart_item

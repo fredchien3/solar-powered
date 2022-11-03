@@ -18,8 +18,11 @@ export default function LibraryPage() {
 
   const libraryItemsSlice = useSelector(state => state.libraryItems);
   const libraryItemsArray = Object.values(libraryItemsSlice);
-  const libraryItems = libraryItemsArray.map(libraryItem => {
-    return <LibraryItem game={libraryItem.game} key={libraryItem.id} />;
+  const gamesSlice = useSelector(state => state.games);
+  const gamesArray = libraryItemsArray.map(libraryItem => gamesSlice[libraryItem.gameId]);
+  
+  const libraryItems = gamesArray.map(game => {
+    if (game) return <LibraryItem game={game} key={game.id} />;
   })
   
   useEffect(() => {

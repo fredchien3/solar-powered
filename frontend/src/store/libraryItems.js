@@ -1,4 +1,5 @@
 import csrfFetch from "./csrf";
+import { setGames } from "./games";
 import { REMOVE_SESSION_USER } from "./session";
 
 const SET_LIBRARY_ITEMS = "libraryItems/SET_LIBRARY_ITEM";
@@ -13,8 +14,9 @@ export const setLibraryItems = (libraryItems) => {
 
 export const fetchLibraryItems = (userId) => async (dispatch) => {
   const res = await csrfFetch('/api/library_items/?user_id=' + userId);
-  const libraryItems = await res.json();
-  dispatch(setLibraryItems(libraryItems));
+  const data = await res.json();
+  dispatch(setLibraryItems(data.libraryItems));
+  dispatch(setGames(data.games))
 }
 
 export const createLibraryItem = (libraryItem) => async (dispatch) => {

@@ -18,7 +18,9 @@ export default function CartPage() {
 
   const cartItemsSlice = useSelector(state => state.cartItems);
   const cartItemsArray = Object.values(cartItemsSlice);
-  const gamesArray = cartItemsArray.map(cartItem => cartItem.game);
+
+  const gamesSlice = useSelector(state => state.games);
+  const gamesArray = cartItemsArray.map(cartItem => gamesSlice[cartItem.gameId]);
   const cartItems = cartItemsArray.map(cartItem => {
     return <CartItem cartItem={cartItem} key={cartItem.id} />;
   });
@@ -26,11 +28,11 @@ export default function CartPage() {
   
   const [totalPrice, setTotalPrice] = useState(0);
   
-  // useEffect(() => {
-  //   const pricesArray = gamesArray.map(game => game.price);
-  //   const reducedPrice = pricesArray.reduce((acc, el) => acc + el, 0);
-  //   setTotalPrice(reducedPrice.toFixed(2));
-  // }, [gamesArray])
+  useEffect(() => {
+    const pricesArray = gamesArray.map(game => game ? game.price : 0);
+    const reducedPrice = pricesArray.reduce((acc, el) => acc + el, 0);
+    setTotalPrice(reducedPrice.toFixed(2));
+  }, [gamesArray])
 
   const handlePurchase = () => {
     if (cartItems.length > 0) {
