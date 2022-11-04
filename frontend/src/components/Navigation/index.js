@@ -22,7 +22,6 @@ export default function Navigation() {
   const [numCartItems, setNumCartItems] = useState(cartItemsArray.length);
   const [numWishlistItems, setNumWishlistItems] = useState(wishlistItemsArray.length);
 
-    
   useEffect(() => {
     if (currentUser) dispatch(fetchCartItems());
   }, [dispatch, currentUser])
@@ -46,10 +45,11 @@ export default function Navigation() {
   const centerCluster = (
       <div className="center-cluster">
         <Link to="/store">Store</Link>
+        <span style={{width: '30px'}}></span>
+        <a href="https://fredchien.com/">Personal Site</a>
         {currentUser ? <Link to={`/users/${currentUser.username}/games`}>{currentUser.displayName}</Link> : <></>}
-        <span style={{width: '20px'}} />
-        <a href="https://www.linkedin.com/in/fchien">LinkedIn</a>
-        <a href="https://github.com/fredchien3">GitHub</a>
+        <a href="https://www.linkedin.com/in/fchien/">LinkedIn</a>
+        <a href="https://angel.co/u/fred-chien">AngelList</a>
         <a href="mailto: fred.chien3@gmail.com">Email</a>
       </div>
   )
