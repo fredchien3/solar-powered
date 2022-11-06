@@ -52,7 +52,7 @@ export default function CartPage() {
   const addCartItemsToLibrary = async () => {
     cartItemsArray.forEach(cartItem => {
       console.log(cartItem);
-      const libraryItem = { userId: cartItem.userId, gameId: cartItem.game.id };
+      const libraryItem = { userId: cartItem.userId, gameId: cartItem.gameId };
       dispatch(createLibraryItem(libraryItem));
     })
   }

@@ -2,12 +2,20 @@ import csrfFetch from "./csrf";
 
 const SET_GAMES = "games/SET_GAMES";
 const ADD_GAME = "games/ADD_GAME";
+const ADD_GAMES = "games/ADD_GAMES";
 
 export const setGames = (games) => { 
   return {
     type: SET_GAMES,
     payload: games
   };
+}
+
+export const addGames = (games) => {
+  return {
+    type: ADD_GAMES,
+    payload: games
+  }
 }
 
 const addGame = (game) => { 
@@ -33,6 +41,8 @@ export default function gamesReducer(state = {}, action) {
   switch (action.type) {
     case SET_GAMES:
       return action.payload;
+    case ADD_GAMES:
+      return {...state, ...action.payload}
     case ADD_GAME:
       const game = action.payload;
       return {...state, ...game};

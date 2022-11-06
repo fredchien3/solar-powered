@@ -1,13 +1,18 @@
-@library_items.each do |library_item|
-  json.library_items do
-    json.set! library_item.id do
-      json.partial! 'library_item', library_item: library_item
+if @library_items.length > 0
+  @library_items.each do |library_item|
+    json.library_items do
+      json.set! library_item.id do
+        json.partial! 'library_item', library_item: library_item
+      end
     end
-  end
 
-  json.games do
-    json.set! library_item.game.id do
-      json.partial! 'api/games/game', game: library_item.game
+    json.games do
+      json.set! library_item.game.id do
+        json.partial! 'api/games/game', game: library_item.game
+      end
     end
   end
+else
+  json.library_items({})
+  json.games({})
 end

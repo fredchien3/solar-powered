@@ -1,5 +1,5 @@
 import csrfFetch from "./csrf";
-import { setGames } from "./games";
+import { addGames } from "./games";
 import { REMOVE_SESSION_USER } from "./session";
 
 const SET_CART_ITEMS = "cartItems/SET_CART_ITEMS";
@@ -31,7 +31,7 @@ export const fetchCartItems = () => async (dispatch) => {
   const res = await csrfFetch('/api/cart_items');
   const data = await res.json();
   dispatch(setCartItems(data.cartItems));
-  dispatch(setGames(data.games));
+  dispatch(addGames(data.games));
 }
 
 export const createCartItem = (gameId) => async (dispatch) => {

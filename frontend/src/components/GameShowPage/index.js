@@ -28,13 +28,13 @@ export default function GameShowPage() {
 
   const libraryItemsSlice = useSelector(state => state.libraryItems);
   const libraryItemsArray = Object.values(libraryItemsSlice);
-  const ownedGames = libraryItemsArray.map(libraryItem => libraryItem.game);
+  const ownedGames = libraryItemsArray.map(libraryItem => gamesSlice[libraryItem.gameId]);
   
-  const gameAlreadyInCart = cartItemsArray.some(cartItem => cartItem.game.id === gameId);
-  const gameAlreadyInLibrary = libraryItemsArray.some(libraryItem => libraryItem.game.id === gameId);
+  const gameAlreadyInCart = cartItemsArray.some(cartItem => cartItem.gameId === gameId);
+  const gameAlreadyInLibrary = libraryItemsArray.some(libraryItem => libraryItem.gameId === gameId);
   
   useEffect(() => {
-    if (!gamesSlice[gameId]) dispatch(fetchGame(gameId));
+    if (!game.id) dispatch(fetchGame(gameId));
   }, [dispatch, gamesSlice, gameId]);
 
   useEffect(() => {
@@ -78,7 +78,7 @@ export default function GameShowPage() {
   } else if (gameAlreadyInCart) {
     addToCartButtonText = "In Cart";
   }
-  const otherOwnedGames = ownedGames.filter(game => game.id !== gameId);
+  const otherOwnedGames = ownedGames.filter(game => game?.id !== gameId);
   
   return (
     <div className="game-show-page">
