@@ -28,7 +28,7 @@ const removeWishlistItem = (wishlistItemId) => {
 }
 
 export const fetchWishlistItems = (userId) => async (dispatch) => {
-  const res = await csrfFetch('/api/wishlist_items/?user_=' + userId);
+  const res = await csrfFetch('/api/wishlist_items/?user_id=' + userId);
   const data = await res.json();
   dispatch(setWishlistItems(data.wishlistItems));
   dispatch(addGames(data.games));

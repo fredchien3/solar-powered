@@ -19,4 +19,5 @@ class Api::WishlistItemsController < ApplicationController
     @wishlist_item = WishlistItem.find(params[:id])
     @wishlist_item.destroy if @wishlist_items
     render json: { message: 'success' }
+  end
 end

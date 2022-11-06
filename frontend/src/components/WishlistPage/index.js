@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { fetchUser } from "../../store/users";
+import { fetchWishlistItems } from "../../store/wishlistItems";
 import defaultAvatar from "../default_avatar.jpg";
 import WishlistItem from "./WishlistItem";
 import "./WishlistPage.css";
@@ -16,7 +17,7 @@ export default function WishlistPage() {
 
   useEffect(() => {
     dispatch(fetchUser(username))
-      // .then(user => )
+      .then(user => dispatch(fetchWishlistItems(user.id)));
   }, [dispatch, username])
 
 
