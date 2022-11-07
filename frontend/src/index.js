@@ -10,8 +10,9 @@ import * as sessionActions from './store/session';
 import * as gameActions from './store/games'
 import * as cartItemActions from './store/cartItems';
 import * as libraryItemActions from './store/libraryItems';
-import * as userActions from './store/users'
-import * as wishlistItemActions from './store/wishlistItems'
+import * as userActions from './store/users';
+import * as wishlistItemActions from './store/wishlistItems';
+import * as reviewActions from './store/reviews';
 
 const store = configureStore();
 
@@ -24,6 +25,7 @@ if (process.env.NODE_ENV !== 'production') {
   window.libraryItemActions = libraryItemActions;
   window.userActions = userActions;
   window.wishlistItemActions = wishlistItemActions;
+  window.reviewActions = reviewActions;
 }
 
 function Root() {
