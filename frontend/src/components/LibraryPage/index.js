@@ -12,23 +12,50 @@ export default function LibraryPage() {
   const dispatch = useDispatch();
   const { username } = useParams();
   
-  const usersSlice = useSelector(state => state.users);
-  const libraryUser = Object.values(usersSlice).find(user => user.username === username) || {};
-  document.title = libraryUser.displayName ? `Solar Community :: ${libraryUser.displayName} :: Games` : "loading...";
-
-  const libraryItemsSlice = useSelector(state => state.libraryItems);
-  const libraryItemsArray = Object.values(libraryItemsSlice);
-  const gamesSlice = useSelector(state => state.games);
-  const gamesArray = libraryItemsArray.map(libraryItem => gamesSlice[libraryItem.gameId]);
+  const currentUser = useSelector(state => state.session.user);
   
-  const libraryItems = gamesArray.map(game => {
-    if (game) return <LibraryItem game={game} key={game.id} />;
-  })
+  const viewingOwnLibrary = currentUser.username === username;
+
+  const userArray = useSelector(state => Object.values(state.users));
+
+  let libraryUser;
+  if (viewingOwnLibrary) {
+    libraryUser = currentUser;
+  } else {
+    libraryUser = userArray.find(user => user.username === username) || {};
+  }
+
+  document.title = libraryUser.displayName ? `Solar Community :: ${libraryUser.displayName} :: Games` : "loading...";
   
   useEffect(() => {
     dispatch(fetchUser(username))
-      .then(user => dispatch(fetchLibraryItems(user.id)));
-  }, [dispatch, username])
+      .then(user => {
+        dispatch(fetchLibraryItems(user.id, !viewingOwnLibrary))
+      });
+  }, [dispatch, currentUser.id, username, viewingOwnLibrary])
+
+  // const libraryItemsSlice = useSelector(state => state.libraryItems);
+  // const libraryItemsArray = Object.values(libraryItemsSlice);
+  // const gamesSlice = useSelector(state => state.games);
+  // const gamesArray = libraryItemsArray.map(libraryItem => gamesSlice[libraryItem.gameId]);
+  
+  // const libraryItems = gamesArray.map(game => {
+  //   if (game) return <LibraryItem game={game} key={game.id} />;
+  // })
+
+  const libraryItems = useSelector(state => {
+    let libraryItemsArray;
+    if (viewingOwnLibrary) {
+      libraryItemsArray = Object.values(state.libraryItems.currentUser);
+    } else {
+      libraryItemsArray = Object.values(state.libraryItems.otherUser);
+    }
+    const gamesArray = libraryItemsArray.map(libraryItem => state.games[libraryItem.gameId]);
+    return gamesArray.map(game => {
+      return game ? <LibraryItem game={game} key={game.id} /> : <></>;
+    })
+  })
+
 
   return (
     <div className="library-page">

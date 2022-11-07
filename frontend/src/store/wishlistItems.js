@@ -6,7 +6,7 @@ export const SET_OTHER_WISHLIST = "wishlistItems/SET_OTHER_WISHLIST"
 const ADD_WISHLIST_ITEM = "wishlistItems/ADD_WISHLIST_ITEM";
 const REMOVE_WISHLIST_ITEM = "wishlistItems/REMOVE_WISHLIST_ITEM";
 
-const setWishlistItems = (payload, visiting = false) => {
+const setWishlistItems = (payload, visiting) => {
   const type = visiting ? SET_OTHER_WISHLIST : SET_WISHLIST_ITEMS;
   return {
     type,
