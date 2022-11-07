@@ -1,12 +1,20 @@
+import { useMemo } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "./RelevantBox.css";
 
-export default function RelevantBox({ currentUser, otherOwnedGames }) {
+export default function RelevantBox({ currentUser, gameId }) {
+  const otherOwnedGames = useSelector(state => {
+    const libraryItemsArray = Object.values(state.libraryItems);
+    const ownedGames = libraryItemsArray.map(libraryItem => state.games[libraryItem.gameId]);
+    return ownedGames.filter(game => game?.id !== gameId);
+  });
+
   // shuffle
-  for (let i = otherOwnedGames.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [otherOwnedGames[i], otherOwnedGames[j]] = [otherOwnedGames[j], otherOwnedGames[i]];
-  }
+  // for (let i = otherOwnedGames.length - 1; i > 0; i--) {
+  //   const j = Math.floor(Math.random() * (i + 1));
+  //   [otherOwnedGames[i], otherOwnedGames[j]] = [otherOwnedGames[j], otherOwnedGames[i]];
+  // }
 
   let similarGame1 = otherOwnedGames[0] || {};
   let similarGame2 = otherOwnedGames[1] || {};
