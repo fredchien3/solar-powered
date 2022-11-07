@@ -10,7 +10,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { fetchLibraryItems } from "../../store/libraryItems";
 import RelevantBox from "./RelevantBox/RelevantBox";
 import { prettifyDate } from "../../helpers";
-import { createWishlistItem } from "../../store/wishlistItems";
+import { createWishlistItem, deleteWishlistItem } from "../../store/wishlistItems";
 
 export default function GameShowPage() {
   const dispatch = useDispatch();
@@ -31,7 +31,11 @@ export default function GameShowPage() {
   
   const gameAlreadyInCart = cartItemsArray.some(cartItem => cartItem.gameId === gameId);
   const gameAlreadyInLibrary = libraryItemsArray.some(libraryItem => libraryItem.gameId === gameId);
-  // const gameAlreadyInWishlist = useSelector(state => Object.values(state.wishlistItems)).some(wishlistItem => wishlistItem.gameId === gameId);
+  const gameAlreadyInWishlist = useSelector(state => {
+    return Object.values(state.wishlistItems.currentUser)
+      .find(wishlistItem => wishlistItem.gameId === gameId)
+      ?.id
+  });
   
   useEffect(() => {
     if (!game.id) dispatch(fetchGame(gameId));
@@ -42,17 +46,18 @@ export default function GameShowPage() {
   }, [libraryItemsArray.length, currentUser.id, dispatch]);
 
   const handleAddToWishlist = () => {
-    if (true) { // game is not in wishlist
-      dispatch(createWishlistItem({userId: currentUser.id, gameId: gameId}))
-    } else { // game is in wishlist
-
+    if (gameAlreadyInWishlist) { // game is in wishlist
+      dispatch(deleteWishlistItem(gameAlreadyInWishlist));
+    } else { // game is not in wishlist
+      dispatch(createWishlistItem({userId: currentUser.id, gameId: gameId}));
     }
   }
   
   const handleAddToCart = () => {
-    if (gameAlreadyInLibrary) {
-      // do nothing
-    } else if (gameAlreadyInCart) {
+    // if (gameAlreadyInLibrary) {
+    //   // do nothing
+    // } else 
+    if (gameAlreadyInCart) {
       history.push("/cart");
     } else {
       dispatch(createCartItem(gameId))
@@ -67,6 +72,16 @@ export default function GameShowPage() {
     }
   }
     
+  let addToCartButtonText = "Add to Cart";
+  let wishlistButtonText = "Add to your wishlist";
+  if (gameAlreadyInLibrary) {
+    addToCartButtonText = "In Library";
+    wishlistButtonText = "In Library";
+  } else if (gameAlreadyInCart) {
+    addToCartButtonText = "In Cart";
+  }
+  if (gameAlreadyInWishlist) wishlistButtonText = "On Wishlist";
+
   let wishlistControls = (
     <div className="wishlist-buttons-bar">
       <Link to="/login">Sign in</Link> to add this item to your wishlist, follow it, or mark it as ignored
@@ -75,16 +90,11 @@ export default function GameShowPage() {
   if (currentUser.id) {
     wishlistControls = (
       <div className="wishlist-buttons-bar">
-        <button className="light-blue-button" onClick={handleAddToWishlist}>Add to your wishlist</button>
+        <button className="light-blue-button" onClick={handleAddToWishlist} disabled={gameAlreadyInLibrary}>
+          {wishlistButtonText}
+        </button>
       </div>
     )
-  }
-
-  let addToCartButtonText = "Add to Cart";
-  if (gameAlreadyInLibrary) {
-    addToCartButtonText = "In Library";
-  } else if (gameAlreadyInCart) {
-    addToCartButtonText = "In Cart";
   }
   
   const otherOwnedGames = ownedGames.filter(game => game?.id !== gameId);

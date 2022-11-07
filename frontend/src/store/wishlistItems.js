@@ -62,7 +62,7 @@ export default function wishlistItemsReducer(state = initialState, action) {
       return newState;
     case ADD_WISHLIST_ITEM:
       const wishlistItem = action.payload;
-      newState.currentUser = {...newState.currentUser, wishlistItem};
+      newState.currentUser = {...newState.currentUser, ...wishlistItem};
       return newState;
     case REMOVE_WISHLIST_ITEM:
       delete newState.currentUser[action.payload];
