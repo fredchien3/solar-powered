@@ -22,7 +22,7 @@ export default function GameShowPage() {
 
   document.title = game.id ? game.title + " on Solar" : "loading...";
   
-  const libraryItemsArray = useSelector(state => Object.values(state.libraryItems));
+  const libraryItemsArray = useSelector(state => Object.values(state.libraryItems.currentUser));
 
   const gameAlreadyInLibrary = libraryItemsArray.some(libraryItem => libraryItem.gameId === gameId);
   

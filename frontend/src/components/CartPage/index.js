@@ -13,26 +13,20 @@ export default function CartPage() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const sessionSlice = useSelector(state => state.session);
-  const currentUser = sessionSlice.user || null;
+  const currentUser = useSelector(state => state.session.user);
 
-  const cartItemsSlice = useSelector(state => state.cartItems);
-  const cartItemsArray = Object.values(cartItemsSlice);
+  const cartItemsArray = useSelector(state => Object.values(state.cartItems));
 
-  const gamesSlice = useSelector(state => state.games);
-  const gamesArray = cartItemsArray.map(cartItem => gamesSlice[cartItem.gameId]);
   const cartItems = cartItemsArray.map(cartItem => {
     return <CartItem cartItem={cartItem} key={cartItem.id} />;
   });
   const cartEmpty = (cartItems.length === 0);
   
-  const [totalPrice, setTotalPrice] = useState(0);
-  
-  useEffect(() => {
-    const pricesArray = gamesArray.map(game => game ? game.price : 0);
-    const reducedPrice = pricesArray.reduce((acc, el) => acc + el, 0);
-    setTotalPrice(reducedPrice.toFixed(2));
-  }, [gamesArray])
+  const pricesArray = useSelector(state => {
+    return cartItemsArray.map(cartItem => state.games[cartItem.gameId].price);
+  })
+  const reducedPrice = pricesArray.reduce((acc, el) => acc + el, 0);
+  const totalPrice = reducedPrice.toFixed(2);
 
   const handlePurchase = () => {
     if (cartItems.length > 0) {
@@ -51,7 +45,6 @@ export default function CartPage() {
 
   const addCartItemsToLibrary = async () => {
     cartItemsArray.forEach(cartItem => {
-      console.log(cartItem);
       const libraryItem = { userId: cartItem.userId, gameId: cartItem.gameId };
       dispatch(createLibraryItem(libraryItem));
     })

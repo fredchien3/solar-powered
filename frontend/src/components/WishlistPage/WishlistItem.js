@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { numberifyDate, prettifyDate } from "../../helpers";
 import { deleteWishlistItem } from "../../store/wishlistItems";
+import CartButton from "../GameShowPage/CartButton/CartButton";
 import "./WishlistItem.css";
 
 export default function WishlistItem({ wishlistItem, viewingOwnWishlist }) {
@@ -38,7 +39,7 @@ export default function WishlistItem({ wishlistItem, viewingOwnWishlist }) {
           </div>
           <div className="wishlist-item-purchase">
             <p>{game.price > 0 ? "$" + game.price : "$9.99"}</p>
-            <button className="add-to-cart-button">Add to Cart</button>
+            <CartButton gameId={game.id} />
           </div>
         </div>
         <div className="wishlist-item-info-bottom-row">

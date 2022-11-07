@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { createCartItem } from "../../../store/cartItems";
 
-export default function CartButton({ gameId, gameAlreadyInLibrary }) {
+export default function CartButton({ gameId, gameAlreadyInLibrary = false }) {
   const dispatch = useDispatch();
   const history = useHistory();
   
