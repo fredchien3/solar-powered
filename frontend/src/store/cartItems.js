@@ -1,15 +1,14 @@
 import csrfFetch from "./csrf";
-import { addGames } from "./games";
 import { REMOVE_SESSION_USER } from "./session";
 
-const SET_CART_ITEMS = "cartItems/SET_CART_ITEMS";
+export const SET_CART_ITEMS = "cartItems/SET_CART_ITEMS";
 const ADD_CART_ITEM = "cartItems/ADD_CART_ITEM";
 const REMOVE_CART_ITEM = "cartItems/REMOVE_CART_ITEM";
 
-const setCartItems = (cartItems) => {
+const setCartItems = (payload) => { // and also games
   return {
     type: SET_CART_ITEMS,
-    payload: cartItems
+    payload
   };
 }
 
@@ -30,8 +29,7 @@ const removeCartItem = (cartItemId) => {
 export const fetchCartItems = () => async (dispatch) => {
   const res = await csrfFetch('/api/cart_items');
   const data = await res.json();
-  dispatch(setCartItems(data.cartItems));
-  dispatch(addGames(data.games));
+  dispatch(setCartItems(data));
 }
 
 export const createCartItem = (gameId) => async (dispatch) => {
@@ -53,7 +51,7 @@ export const deleteCartItem = (cartItemId) => async (dispatch) => {
 export default function cartItemsReducer(state = {}, action) {
   switch (action.type) {
     case SET_CART_ITEMS:
-      return action.payload;
+      return action.payload.cartItems;
     case ADD_CART_ITEM:
       const cartItem = action.payload;
       return {...state, ...cartItem};

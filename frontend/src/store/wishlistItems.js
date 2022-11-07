@@ -1,15 +1,14 @@
 import csrfFetch from "./csrf";
-import { addGames } from "./games";
 import { REMOVE_SESSION_USER } from "./session";
 
-const SET_WISHLIST_ITEMS = "wishlistItems/SET_WISHLIST_ITEMS";
+export const SET_WISHLIST_ITEMS = "wishlistItems/SET_WISHLIST_ITEMS";
 const ADD_WISHLIST_ITEM = "wishlistItems/ADD_WISHLIST_ITEM";
 const REMOVE_WISHLIST_ITEM = "wishlistItems/REMOVE_WISHLIST_ITEM";
 
-const setWishlistItems = (wishlistItems) => {
+const setWishlistItems = (payload) => {
   return {
     type: SET_WISHLIST_ITEMS,
-    payload: wishlistItems
+    payload
   };
 }
 
@@ -30,8 +29,7 @@ const removeWishlistItem = (wishlistItemId) => {
 export const fetchWishlistItems = (userId) => async (dispatch) => {
   const res = await csrfFetch('/api/wishlist_items/?user_id=' + userId);
   const data = await res.json();
-  dispatch(setWishlistItems(data.wishlistItems));
-  dispatch(addGames(data.games));
+  dispatch(setWishlistItems(data));
 }
 
 export const createWishlistItem = (wishlistItem) => async (dispatch) => {
@@ -53,7 +51,7 @@ export const deleteWishlistItem = (wishlistItemId) => async (dispatch) => {
 export default function wishlistItemsReducer(state = {}, action) {
   switch (action.type) {
     case SET_WISHLIST_ITEMS:
-      return action.payload;
+      return action.payload.wishlistItems;
     case ADD_WISHLIST_ITEM:
       const wishlistItem = action.payload;
       return {...state, ...wishlistItem};

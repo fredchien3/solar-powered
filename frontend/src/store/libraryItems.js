@@ -1,13 +1,12 @@
 import csrfFetch from "./csrf";
-import { addGames } from "./games";
 import { REMOVE_SESSION_USER } from "./session";
 
-const SET_LIBRARY_ITEMS = "libraryItems/SET_LIBRARY_ITEM";
+export const SET_LIBRARY_ITEMS = "libraryItems/SET_LIBRARY_ITEMS";
 
-export const setLibraryItems = (libraryItems) => {
+export const setLibraryItems = (payload) => {
   return {
     type: SET_LIBRARY_ITEMS,
-    payload: libraryItems
+    payload
   };
 }
 
@@ -15,8 +14,7 @@ export const setLibraryItems = (libraryItems) => {
 export const fetchLibraryItems = (userId) => async (dispatch) => {
   const res = await csrfFetch('/api/library_items/?user_id=' + userId);
   const data = await res.json();
-  dispatch(setLibraryItems(data.libraryItems));
-  dispatch(addGames(data.games))
+  dispatch(setLibraryItems(data));
 }
 
 export const createLibraryItem = (libraryItem) => async (dispatch) => {
@@ -29,7 +27,7 @@ export const createLibraryItem = (libraryItem) => async (dispatch) => {
 export default function libraryItemsReducer(state = {}, action) {
   switch (action.type) {
     case SET_LIBRARY_ITEMS:
-      return action.payload;
+      return action.payload.libraryItems;
     case REMOVE_SESSION_USER: // when user logs out
       return {};
     default:
