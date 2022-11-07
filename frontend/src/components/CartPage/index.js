@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { deleteCartItem } from "../../store/cartItems";
+import { deleteAllCartItems } from "../../store/cartItems";
 import { createLibraryItem } from "../../store/libraryItems";
 import StoreNavbar from "../StoreHomePage/StoreNavbar/StoreNavbar";
 import CartItem from "./CartItem";
@@ -37,7 +37,7 @@ export default function CartPage() {
   const handlePurchase = () => {
     if (cartItems.length > 0) {
       addCartItemsToLibrary()
-        .then(deleteCurrentUserCartItems())
+        .then(dispatch(deleteAllCartItems()))
         .then(history.push('/users/' + currentUser.username + '/games'))
         .catch(res => alert(res))
     }
@@ -46,7 +46,7 @@ export default function CartPage() {
   const handleRemoveAll = () => {
     alert('Removing all items from cart!');
     // replace with modal later
-    deleteCurrentUserCartItems();
+    dispatch(deleteAllCartItems());
   }
 
   const addCartItemsToLibrary = async () => {
@@ -54,12 +54,6 @@ export default function CartPage() {
       console.log(cartItem);
       const libraryItem = { userId: cartItem.userId, gameId: cartItem.gameId };
       dispatch(createLibraryItem(libraryItem));
-    })
-  }
-  
-  const deleteCurrentUserCartItems = async () => {
-    Object.keys(cartItemsSlice).forEach(cartItemId => {
-      dispatch(deleteCartItem(cartItemId));
     })
   }
 

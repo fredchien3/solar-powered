@@ -34,15 +34,6 @@ export default function LibraryPage() {
       });
   }, [dispatch, currentUser.id, username, viewingOwnLibrary])
 
-  // const libraryItemsSlice = useSelector(state => state.libraryItems);
-  // const libraryItemsArray = Object.values(libraryItemsSlice);
-  // const gamesSlice = useSelector(state => state.games);
-  // const gamesArray = libraryItemsArray.map(libraryItem => gamesSlice[libraryItem.gameId]);
-  
-  // const libraryItems = gamesArray.map(game => {
-  //   if (game) return <LibraryItem game={game} key={game.id} />;
-  // })
-
   const libraryItems = useSelector(state => {
     let libraryItemsArray;
     if (viewingOwnLibrary) {

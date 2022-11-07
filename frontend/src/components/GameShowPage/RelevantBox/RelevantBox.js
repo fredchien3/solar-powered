@@ -4,7 +4,7 @@ import "./RelevantBox.css";
 
 export default function RelevantBox({ currentUser, gameId }) {
   const otherOwnedGames = useSelector(state => {
-    const libraryItemsArray = Object.values(state.libraryItems);
+    const libraryItemsArray = Object.values(state.libraryItems.currentUser);
     const ownedGames = libraryItemsArray.map(libraryItem => state.games[libraryItem.gameId]);
     return ownedGames.filter(game => game?.id !== gameId);
   });
