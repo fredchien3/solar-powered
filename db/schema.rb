@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_06_151731) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_07_162734) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,8 +43,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_06_151731) do
   end
 
   create_table "cart_items", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "game_id"
+    t.bigint "user_id", null: false
+    t.bigint "game_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["game_id"], name: "index_cart_items_on_game_id"
@@ -72,13 +72,25 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_06_151731) do
   end
 
   create_table "library_items", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "game_id"
+    t.bigint "user_id", null: false
+    t.bigint "game_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["game_id"], name: "index_library_items_on_game_id"
     t.index ["user_id", "game_id"], name: "index_library_items_on_user_id_and_game_id", unique: true
     t.index ["user_id"], name: "index_library_items_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "author_id", null: false
+    t.bigint "game_id", null: false
+    t.text "body", null: false
+    t.boolean "recommended", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id", "game_id"], name: "index_reviews_on_author_id_and_game_id", unique: true
+    t.index ["author_id"], name: "index_reviews_on_author_id"
+    t.index ["game_id"], name: "index_reviews_on_game_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -96,8 +108,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_06_151731) do
   end
 
   create_table "wishlist_items", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "game_id"
+    t.bigint "user_id", null: false
+    t.bigint "game_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["game_id"], name: "index_wishlist_items_on_game_id"
@@ -111,6 +123,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_06_151731) do
   add_foreign_key "cart_items", "users"
   add_foreign_key "library_items", "games"
   add_foreign_key "library_items", "users"
+  add_foreign_key "reviews", "games"
+  add_foreign_key "reviews", "users", column: "author_id"
   add_foreign_key "wishlist_items", "games"
   add_foreign_key "wishlist_items", "users"
 end

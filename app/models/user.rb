@@ -38,6 +38,9 @@ class User < ApplicationRecord
     through: :library_items,
     source: :game
   
+  has_many :reviews,
+    foreign_key: :author_id
+    
   def self.find_by_credentials(credential, password)
     if URI::MailTo::EMAIL_REGEXP.match(credential)
       user = User.find_by(email: credential)
