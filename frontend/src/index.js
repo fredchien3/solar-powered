@@ -11,10 +11,11 @@ import * as gameActions from './store/games'
 import * as cartItemActions from './store/cartItems';
 import * as libraryItemActions from './store/libraryItems';
 import * as userActions from './store/users'
+import * as wishlistItemActions from './store/wishlistItems'
 
 const store = configureStore();
 
-// if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   window.store = store;
   window.csrfFetch = csrfFetch;
   window.sessionActions = sessionActions;
@@ -22,7 +23,8 @@ const store = configureStore();
   window.cartItemActions = cartItemActions;
   window.libraryItemActions = libraryItemActions;
   window.userActions = userActions;
-// }
+  window.wishlistItemActions = wishlistItemActions;
+}
 
 function Root() {
   return (

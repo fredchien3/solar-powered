@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { deleteCartItem } from "../../store/cartItems";
+import { deleteAllCartItems } from "../../store/cartItems";
 import { createLibraryItem } from "../../store/libraryItems";
+import { deleteWishlistItem } from "../../store/wishlistItems";
 import StoreNavbar from "../StoreHomePage/StoreNavbar/StoreNavbar";
 import CartItem from "./CartItem";
 import "./CartPage.css";
@@ -13,30 +14,27 @@ export default function CartPage() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const sessionSlice = useSelector(state => state.session);
-  const currentUser = sessionSlice.user || null;
+  const currentUser = useSelector(state => state.session.user);
 
-  const cartItemsSlice = useSelector(state => state.cartItems);
-  const cartItemsArray = Object.values(cartItemsSlice);
-  const gamesArray = cartItemsArray.map(cartItem => cartItem.game);
-  
+  const cartItemsArray = useSelector(state => Object.values(state.cartItems));
+
   const cartItems = cartItemsArray.map(cartItem => {
     return <CartItem cartItem={cartItem} key={cartItem.id} />;
   });
   const cartEmpty = (cartItems.length === 0);
   
-  const [totalPrice, setTotalPrice] = useState(0);
-  
-  useEffect(() => {
-    const pricesArray = gamesArray.map(game => game.price);
-    const reducedPrice = pricesArray.reduce((acc, el) => acc + el, 0);
-    setTotalPrice(reducedPrice.toFixed(2));
-  }, [gamesArray])
+  const pricesArray = useSelector(state => {
+    return cartItemsArray.map(cartItem => state.games[cartItem.gameId].price);
+  })
+  const reducedPrice = pricesArray.reduce((acc, el) => acc + el, 0);
+  const totalPrice = reducedPrice.toFixed(2);
+
+  const wishlistItemsArray = useSelector(state => Object.values(state.wishlistItems.currentUser));
 
   const handlePurchase = () => {
     if (cartItems.length > 0) {
       addCartItemsToLibrary()
-        .then(deleteCurrentUserCartItems())
+        .then(dispatch(deleteAllCartItems()))
         .then(history.push('/users/' + currentUser.username + '/games'))
         .catch(res => alert(res))
     }
@@ -45,20 +43,15 @@ export default function CartPage() {
   const handleRemoveAll = () => {
     alert('Removing all items from cart!');
     // replace with modal later
-    deleteCurrentUserCartItems();
+    dispatch(deleteAllCartItems());
   }
 
   const addCartItemsToLibrary = async () => {
     cartItemsArray.forEach(cartItem => {
-      console.log(cartItem);
-      const libraryItem = { userId: cartItem.userId, gameId: cartItem.game.id };
+      const libraryItem = { userId: cartItem.userId, gameId: cartItem.gameId };
       dispatch(createLibraryItem(libraryItem));
-    })
-  }
-  
-  const deleteCurrentUserCartItems = async () => {
-    Object.keys(cartItemsSlice).forEach(cartItemId => {
-      dispatch(deleteCartItem(cartItemId));
+      const wishlistItem = wishlistItemsArray.find(wishlistItem => wishlistItem.gameId === cartItem.gameId)
+      if (wishlistItem) dispatch(deleteWishlistItem(wishlistItem.id));
     })
   }
 

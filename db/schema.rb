@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_18_160048) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_06_151731) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -95,10 +95,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_18_160048) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  create_table "wishlist_items", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_wishlist_items_on_game_id"
+    t.index ["user_id", "game_id"], name: "index_wishlist_items_on_user_id_and_game_id", unique: true
+    t.index ["user_id"], name: "index_wishlist_items_on_user_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "cart_items", "games"
   add_foreign_key "cart_items", "users"
   add_foreign_key "library_items", "games"
   add_foreign_key "library_items", "users"
+  add_foreign_key "wishlist_items", "games"
+  add_foreign_key "wishlist_items", "users"
 end

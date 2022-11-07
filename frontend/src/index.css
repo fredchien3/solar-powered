@@ -39,8 +39,18 @@ body {
 
 .light-blue-button:hover {
   cursor: pointer;
-  background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+  background-color: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
   color: white;
+}
+
+.light-blue-button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.light-blue-button:disabled:hover {
+  background-color: rgba( 103, 193, 245, 0.2 );
+  color: #67c1f5;
 }
 
 /* Top-down gradient, like cart checkout and store home page 'sign in' */
@@ -77,6 +87,39 @@ body {
   background-image: linear-gradient(#799905 5%, #536904 95%);
   color: #D2E885;
 }
+
+/* Left-to-right gradient, 'Add to Cart' */
+
+.add-to-cart-button {
+  color: #d2efa9; 
+  
+  height: 30px;
+  padding: 0 15px;
+  background: linear-gradient( to right, #75b022 5%, #588a1b 95%);
+  border: none;
+  border-radius: 2px;
+  font-family: 'Motiva Sans 400';
+  font-size: 15px;
+  margin-right: 1px;
+  text-shadow: 1px 1px 0px rgb(0 0 0 / 30%);
+}
+
+.add-to-cart-button:hover {
+  background: linear-gradient( to right, #8ed629 5%, #6aa621 95%);
+  color: white;
+  cursor: pointer;
+}
+
+.add-to-cart-button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.add-to-cart-button:disabled:hover {
+  background: linear-gradient( to right, #75b022 5%, #588a1b 95%);
+  color: #d2efa9; 
+}
+
 
 sup {
   font-size: .83em;

@@ -16,7 +16,7 @@ export default function StoreTabList({ games }) {
   if (games.length > 0) {
     for (let i = 0; i < 10; i++) {
       const game = games[i];
-      tabListItems.push(
+      if (game) tabListItems.push(
         <div onMouseEnter={handleMouseEnter} id={i} key={game.id}>
           <TabListItem
             game={game}
@@ -24,7 +24,7 @@ export default function StoreTabList({ games }) {
           />
         </div>
       );
-      tabFullInfoPanels.push(
+      if (game) tabFullInfoPanels.push(
         <TabListInfo 
           game={game} 
           key={game.id} 

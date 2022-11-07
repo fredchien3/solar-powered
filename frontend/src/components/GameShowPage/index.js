@@ -5,80 +5,51 @@ import { fetchGame } from "../../store/games";
 import StoreNavbar from "../StoreHomePage/StoreNavbar/StoreNavbar";
 import "./GameShowPage.css";
 import GameShowCarousel from "./GameShowCarousel/GameShowCarousel";
-import { createCartItem } from "../../store/cartItems";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { fetchLibraryItems } from "../../store/libraryItems";
 import RelevantBox from "./RelevantBox/RelevantBox";
+import { prettifyDate } from "../../helpers";
+import WishlistButton from "./WishlistButton/WishlistButton";
+import CartButton from "./CartButton/CartButton";
 
 export default function GameShowPage() {
   const dispatch = useDispatch();
-  const history = useHistory();
+
+  const currentUser = useSelector(state => state.session.user || {}) ;
+
   const gameId = parseInt(useParams().id);
-  
-  const gamesSlice = useSelector(state => state.games);
-  const game = gamesSlice[gameId] || {};
+
+  const game = useSelector(state => state.games[gameId] || {});
 
   document.title = game.id ? game.title + " on Solar" : "loading...";
   
-  const currentUser = useSelector(state => state.session.user) || {};
-  
-  const cartItemsSlice = useSelector(state => state.cartItems);
-  const cartItemsArray = Object.values(cartItemsSlice);
+  const libraryItemsArray = useSelector(state => Object.values(state.libraryItems.currentUser));
 
-  const libraryItemsSlice = useSelector(state => state.libraryItems);
-  const libraryItemsArray = Object.values(libraryItemsSlice);
-  const ownedGames = libraryItemsArray.map(libraryItem => libraryItem.game);
-  
-  const gameAlreadyInCart = cartItemsArray.some(cartItem => cartItem.game.id === gameId);
-  const gameAlreadyInLibrary = libraryItemsArray.some(libraryItem => libraryItem.game.id === gameId);
+  const gameAlreadyInLibrary = libraryItemsArray.some(libraryItem => libraryItem.gameId === gameId);
   
   useEffect(() => {
-    if (!gamesSlice[gameId]) dispatch(fetchGame(gameId));
-  }, [dispatch, gamesSlice, gameId]);
+    if (!game.id) dispatch(fetchGame(gameId));
+  }, [dispatch, game.id, gameId]);
 
   useEffect(() => {
     if (libraryItemsArray.length === 0) dispatch(fetchLibraryItems(currentUser.id));
   }, [libraryItemsArray.length, currentUser.id, dispatch]);
 
-  const handleAddToCart = () => {
-    if (gameAlreadyInLibrary) {
-      // do nothing
-    } else if (gameAlreadyInCart) {
-      history.push("/cart");
-    } else {
-      dispatch(createCartItem(gameId))
-      .then(() => {
-        history.push("/cart");
-      })
-      .catch(async res => {
-        const data = await res.json();
-        console.log(data.message);
-        history.push("/login");
-      });
-    }
-  }
-    
-  let underMainBox = (
+  let wishlistControls = (
     <div className="wishlist-buttons-bar">
-      <Link to="/login">Sign in</Link> to add this item to your wishlist, follow it, or mark it as ignored
+      <Link to="/login">Sign in</Link> to add this item to your wishlist{/* , follow it, or mark it as ignored */}
     </div>
   );
   if (currentUser.id) {
-    underMainBox = (
+    wishlistControls = (
       <div className="wishlist-buttons-bar">
-        Wishlist feature coming soon.
+        <WishlistButton gameId={gameId}
+          currentUser={currentUser}
+          gameAlreadyInLibrary={gameAlreadyInLibrary}
+        />
       </div>
     )
   }
 
-  let addToCartButtonText = "Add to Cart";
-  if (gameAlreadyInLibrary) {
-    addToCartButtonText = "In Library";
-  } else if (gameAlreadyInCart) {
-    addToCartButtonText = "In Cart";
-  }
-  const otherOwnedGames = ownedGames.filter(game => game.id !== gameId);
-  
   return (
     <div className="game-show-page">
       <div className="game-show-page-dynamic-background"></div>
@@ -106,7 +77,7 @@ export default function GameShowPage() {
                   <th>All Reviews:</th><td className="no-user-reviews">No user reviews</td>
                 </tr>
                 <tr className="release-date-row">
-                  <th>Release Date:</th><td>{game.releaseDate}</td>
+                  <th>Release Date:</th><td>{prettifyDate(game.releaseDate)}</td>
                 </tr>
                 <tr>
                   <th>Developer:</th><td className="developer-publisher">{game.developer}</td>
@@ -128,14 +99,17 @@ export default function GameShowPage() {
           </aside>
         </div>
       </section>
-      {underMainBox}
+      {wishlistControls}
       <section className="game-show-main-column-wrapper">
         <aside className="game-show-main-left">
           <div className="buy-box">
             Buy {game.title}
             <div className="buy-box-buttons">
               <p>{game.price === 0 ? "Free to Play" : '$' + game.price}</p>
-              <button className="add-to-cart-button" onClick={handleAddToCart} disabled={gameAlreadyInLibrary}>{addToCartButtonText}</button>
+              <CartButton
+                gameId={gameId}
+                gameAlreadyInLibrary={gameAlreadyInLibrary}
+              />
             </div>
           </div>
           <article className="about-this-game">
@@ -144,7 +118,7 @@ export default function GameShowPage() {
           </article>
         </aside>
         <aside className="game-show-main-right">
-          <RelevantBox currentUser={currentUser} otherOwnedGames={otherOwnedGames} />
+          <RelevantBox currentUser={currentUser} gameId={gameId} />
         </aside>
       </section>
     </div>

@@ -1,20 +1,20 @@
 import csrfFetch from "./csrf";
-import { REMOVE_SESSION_USER } from "./session";
 
-const SET_LIBRARY_ITEMS = "libraryItems/SET_LIBRARY_ITEM";
+export const SET_LIBRARY_ITEMS = "libraryItems/SET_LIBRARY_ITEMS";
+export const SET_OTHER_LIBRARY = "libraryItems/SET_OTHER_LIBRARY";
 
-export const setLibraryItems = (libraryItems) => {
+export const setLibraryItems = (payload, visiting) => {
+  const type = visiting ? SET_OTHER_LIBRARY : SET_LIBRARY_ITEMS;
   return {
-    type: SET_LIBRARY_ITEMS,
-    payload: libraryItems
+    type,
+    payload
   };
 }
 
-
-export const fetchLibraryItems = (userId) => async (dispatch) => {
+export const fetchLibraryItems = (userId, visiting = false) => async (dispatch) => {
   const res = await csrfFetch('/api/library_items/?user_id=' + userId);
-  const libraryItems = await res.json();
-  dispatch(setLibraryItems(libraryItems));
+  const data = await res.json();
+  dispatch(setLibraryItems(data, visiting));
 }
 
 export const createLibraryItem = (libraryItem) => async (dispatch) => {
@@ -24,12 +24,16 @@ export const createLibraryItem = (libraryItem) => async (dispatch) => {
   });
 }
 
-export default function libraryItemsReducer(state = {}, action) {
+const initialState = {currentUser: {}, otherUser: {}}
+export default function libraryItemsReducer(state = initialState, action) {
+  const newState = {...state};
   switch (action.type) {
     case SET_LIBRARY_ITEMS:
-      return action.payload;
-    case REMOVE_SESSION_USER: // when user logs out
-      return {};
+      newState.currentUser = action.payload.libraryItems;
+      return newState;
+    case SET_OTHER_LIBRARY:
+      newState.otherUser = action.payload.libraryItems;
+      return newState;
     default:
       return state;
   }

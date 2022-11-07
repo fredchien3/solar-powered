@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 import ProfileButton from "./ProfileButton";
@@ -6,27 +6,23 @@ import './Navigation.css'
 import defaultAvatar from "../default_avatar.jpg";
 import { fetchCartItems } from "../../store/cartItems";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import { fetchWishlistItems } from "../../store/wishlistItems";
 
 export default function Navigation() {
   const dispatch = useDispatch();
   const location = useLocation();
-  const sessionSlice = useSelector(state => state.session);
-  const cartItemsSlice = useSelector(state => state.cartItems);
-  const cartItemsArray = Object.values(cartItemsSlice);
 
-  const [numCartItems, setNumCartItems] = useState(cartItemsArray.length);
+  const currentUser = useSelector(state => state.session.user);
 
-  let currentUser;
-  if (sessionSlice) currentUser = sessionSlice.user;
-    
+  const numCartItems = useSelector(state => Object.values(state.cartItems)).length;
+  const numCurrentUserWishlistItems = useSelector(state => Object.values(state.wishlistItems.currentUser)).length;
+
   useEffect(() => {
-    if (currentUser) dispatch(fetchCartItems());
+    if (currentUser) {
+      dispatch(fetchCartItems()); // no user ID needed
+      dispatch(fetchWishlistItems(currentUser.id));
+    };
   }, [dispatch, currentUser])
-
-  useEffect(() => {
-    setNumCartItems(cartItemsArray.length);
-  }, [cartItemsArray])
-
 
   // Original:
   // const centerCluster = (
@@ -43,10 +39,11 @@ export default function Navigation() {
   const centerCluster = (
       <div className="center-cluster">
         <Link to="/store">Store</Link>
+        <span style={{width: '30px'}}></span>
+        <a href="https://fredchien.com/">Personal Site</a>
         {currentUser ? <Link to={`/users/${currentUser.username}/games`}>{currentUser.displayName}</Link> : <></>}
-        <span style={{width: '20px'}} />
-        <a href="https://www.linkedin.com/in/fchien">LinkedIn</a>
-        <a href="https://github.com/fredchien3">GitHub</a>
+        <a href="https://www.linkedin.com/in/fchien/">LinkedIn</a>
+        <a href="https://angel.co/u/fred-chien">AngelList</a>
         <a href="mailto: fred.chien3@gmail.com">Email</a>
       </div>
   )
@@ -83,8 +80,20 @@ export default function Navigation() {
     )
   }
 
-  let cartButton = <Link to="/cart" className="green-cart-link">Cart ({numCartItems})</Link>;
-  if (location.pathname.includes("/users")) cartButton = <></>;
+  let wishlistButton = <Link to={`/users/${currentUser?.username}/wishlist`} className="silver-wishlist-link">
+    Wishlist ({numCurrentUserWishlistItems})
+  </Link>
+
+  let cartButton = <Link to="/cart" className="green-cart-link">
+    Cart ({numCartItems})
+  </Link>;
+
+  if (location.pathname.includes("/users/") && location.pathname.includes("/games")) {
+    cartButton = <></>;
+    wishlistButton = <></>;
+  }
+  
+  if (location.pathname.includes("/"))
   
   return (
     <nav className="header-nav">
@@ -95,7 +104,10 @@ export default function Navigation() {
         </Link>
         {centerCluster}
         {rightCluster}
-        {numCartItems > 0 ? cartButton : <></>}
+        {currentUser && <div className="wishlist-and-cart-wrapper">
+          {numCurrentUserWishlistItems > 0 ? wishlistButton : <></>}
+          {numCartItems > 0 ? cartButton : <></>}
+        </div>}
       </div>
     </nav>
   )

@@ -12,20 +12,41 @@ export default function LibraryPage() {
   const dispatch = useDispatch();
   const { username } = useParams();
   
-  const usersSlice = useSelector(state => state.users);
-  const libraryUser = Object.values(usersSlice).find(user => user.username === username) || {};
-  document.title = `Solar Community :: ${libraryUser.displayName ? libraryUser.displayName : "loading..."} :: Games`;
+  const currentUser = useSelector(state => state.session.user || {});
+  
+  const viewingOwnLibrary = currentUser.username === username;
 
-  const libraryItemsSlice = useSelector(state => state.libraryItems);
-  const libraryItemsArray = Object.values(libraryItemsSlice);
-  const libraryItems = libraryItemsArray.map(libraryItem => {
-    return <LibraryItem game={libraryItem.game} key={libraryItem.id} />;
-  })
+  const userArray = useSelector(state => Object.values(state.users));
+
+  let libraryUser;
+  if (viewingOwnLibrary) {
+    libraryUser = currentUser;
+  } else {
+    libraryUser = userArray.find(user => user.username === username) || {};
+  }
+
+  document.title = libraryUser.displayName ? `Solar Community :: ${libraryUser.displayName} :: Games` : "loading...";
   
   useEffect(() => {
     dispatch(fetchUser(username))
-      .then(user => dispatch(fetchLibraryItems(user.id)));
-  }, [dispatch, username])
+      .then(user => {
+        dispatch(fetchLibraryItems(user.id, !viewingOwnLibrary))
+      });
+  }, [dispatch, username, viewingOwnLibrary])
+
+  const libraryItems = useSelector(state => {
+    let libraryItemsArray;
+    if (viewingOwnLibrary) {
+      libraryItemsArray = Object.values(state.libraryItems.currentUser);
+    } else {
+      libraryItemsArray = Object.values(state.libraryItems.otherUser);
+    }
+    const gamesArray = libraryItemsArray.map(libraryItem => state.games[libraryItem.gameId]);
+    return gamesArray.map(game => {
+      return game ? <LibraryItem game={game} key={game.id} /> : <></>;
+    })
+  })
+
 
   return (
     <div className="library-page">

@@ -18,7 +18,7 @@ export default function ProfileButton({currentUser}) {
     <div className="profile-button-dropdown">
       <Link to="/">View profile</Link>
       <Link to="/">Account details</Link>
-      <button onClick={handleLogout}>Logout: <p>{currentUser.displayName}</p></button>
+      <button onClick={handleLogout}>Logout: <p>{currentUser.username}</p></button>
       <Link to="/">Preferences</Link>
       <Link to="/">Change language</Link>
     </div>
