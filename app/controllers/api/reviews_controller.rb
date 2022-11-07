@@ -3,7 +3,7 @@ class Api::ReviewsController < ApplicationController
   
   def index
     @reviews = Review.where(game_id: params[:game_id])
-    render json: @reviews
+    render 'api/reviews/index'
   end
 
   def create
@@ -11,7 +11,7 @@ class Api::ReviewsController < ApplicationController
     @review.game_id = params[:game_id]
     @review.author_id = current_user.id
     if @review.save!
-      render json: @review
+    render 'api/reviews/show'
     else
       render json: { errors: @review.errors.full_messages }, status: :unauthorized
     end
@@ -21,7 +21,7 @@ class Api::ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     @review.assign_attributes(review_params)
     if @review.save!
-      render json: @review
+      render 'api/reviews/show'
     else
       render json: { errors: @review.errors.full_messages }, status: :unauthorized
     end
@@ -30,7 +30,6 @@ class Api::ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy if @review
-    p "okay"
     render json: { message: 'success' } 
   end
 
