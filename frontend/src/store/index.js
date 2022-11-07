@@ -5,13 +5,15 @@ import gamesReducer from './games';
 import cartItemsReducer from './cartItems';
 import libraryItemsReducer from './libraryItems';
 import usersReducer from './users';
+import wishlistItemsReducer from './wishlistItems';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   games: gamesReducer,
   cartItems: cartItemsReducer,
   libraryItems: libraryItemsReducer,
-  users: usersReducer
+  users: usersReducer,
+  wishlistItems: wishlistItemsReducer
 });
 
 let enhancer;
