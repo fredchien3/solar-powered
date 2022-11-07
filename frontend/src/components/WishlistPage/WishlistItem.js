@@ -1,13 +1,15 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { numberifyDate, prettifyDate } from "../../helpers";
+import { deleteWishlistItem } from "../../store/wishlistItems";
 import "./WishlistItem.css";
 
 export default function WishlistItem({ wishlistItem, viewingOwnWishlist }) {
+  const dispatch = useDispatch();
   const game = useSelector(state => state.games[wishlistItem.gameId]) || {};
 
   const handleRemoveWishlistItem = () => {
-    console.log(wishlistItem.id)
+    dispatch(deleteWishlistItem(wishlistItem.id));
   }
 
   let removeButton;

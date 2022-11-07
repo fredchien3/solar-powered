@@ -17,7 +17,7 @@ class Api::WishlistItemsController < ApplicationController
 
   def destroy
     @wishlist_item = WishlistItem.find(params[:id])
-    @wishlist_item.destroy if @wishlist_items
+    @wishlist_item.destroy if @wishlist_item
     render json: { message: 'success' }
   end
 end
