@@ -7,3 +7,13 @@ export const prettifyDate = (dateString) => {
     timeZone:'utc'
   })
 }
+
+export const numberifyDate = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-us', {
+    month: 'numeric',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone:'utc'
+  })
+}

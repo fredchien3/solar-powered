@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 import ProfileButton from "./ProfileButton";
@@ -12,27 +12,17 @@ export default function Navigation() {
   const dispatch = useDispatch();
   const location = useLocation();
 
-  const sessionSlice = useSelector(state => state.session);
-  const currentUser = sessionSlice.user;
-  
-  const cartItemsSlice = useSelector(state => state.cartItems);
-  const cartItemsArray = Object.values(cartItemsSlice);
+  const currentUser = useSelector(state => state.session.user);
 
-  const wishlistItemsArray = [null, null];
-  
-  const [numCartItems, setNumCartItems] = useState(cartItemsArray.length);
-  const [numWishlistItems, setNumWishlistItems] = useState(wishlistItemsArray.length);
+  const numCartItems = useSelector(state => Object.values(state.cartItems)).length;
+  const numCurrentUserWishlistItems = useSelector(state => Object.values(state.wishlistItems.currentUser)).length;
 
   useEffect(() => {
     if (currentUser) {
-      dispatch(fetchCartItems());
-      dispatch(fetchWishlistItems());
+      dispatch(fetchCartItems()); // no user ID needed
+      dispatch(fetchWishlistItems(currentUser.id));
     };
   }, [dispatch, currentUser])
-
-  useEffect(() => {
-    setNumCartItems(cartItemsArray.length);
-  }, [cartItemsArray])
 
   // Original:
   // const centerCluster = (
@@ -91,7 +81,7 @@ export default function Navigation() {
   }
 
   let wishlistButton = <Link to={`/users/${currentUser?.username}/wishlist`} className="silver-wishlist-link">
-    Wishlist ({numWishlistItems})
+    Wishlist ({numCurrentUserWishlistItems})
   </Link>
 
   let cartButton = <Link to="/cart" className="green-cart-link">
@@ -115,7 +105,7 @@ export default function Navigation() {
         {centerCluster}
         {rightCluster}
         {currentUser && <div className="wishlist-and-cart-wrapper">
-          {numWishlistItems > 0 ? wishlistButton : <></>}
+          {numCurrentUserWishlistItems > 0 ? wishlistButton : <></>}
           {numCartItems > 0 ? cartButton : <></>}
         </div>}
       </div>

@@ -1,5 +1,4 @@
 import csrfFetch from "./csrf";
-import { REMOVE_SESSION_USER } from "./session";
 
 export const SET_LIBRARY_ITEMS = "libraryItems/SET_LIBRARY_ITEMS";
 
@@ -27,9 +26,7 @@ export const createLibraryItem = (libraryItem) => async (dispatch) => {
 export default function libraryItemsReducer(state = {}, action) {
   switch (action.type) {
     case SET_LIBRARY_ITEMS:
-      return action.payload.libraryItems;
-    case REMOVE_SESSION_USER: // when user logs out
-      return {};
+      return {...action.payload.libraryItems};
     default:
       return state;
   }

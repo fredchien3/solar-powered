@@ -10,28 +10,53 @@ import "./WishlistPage.css";
 export default function WishlistPage() {
   const dispatch = useDispatch();
   const { username } = useParams();
+  
+  const currentUser = useSelector(state => state.session.user);
 
-  const usersSlice = useSelector(state => state.users);
-  const wishlistUser = Object.values(usersSlice).find(user => user.username === username) || {};
+  const viewingOwnWishlist = currentUser.username === username;
+
+  const userArray = useSelector(state => Object.values(state.users));
+
+  let wishlistUser;
+  if (viewingOwnWishlist) {
+    wishlistUser = currentUser;
+  } else {
+    wishlistUser = userArray.find(user => user.username === username) || {};
+  }
+
   document.title = wishlistUser.displayName ? `${wishlistUser.displayName}'s wishlist` : "loading..."
 
-  useEffect(() => {
-    dispatch(fetchUser(username))
-      .then(user => dispatch(fetchWishlistItems(user.id)));
-  }, [dispatch, username])
 
+  useEffect(() => {
+    if (!viewingOwnWishlist) {
+      dispatch(fetchUser(username))
+       .then(user => dispatch(fetchWishlistItems(user.id, true)));
+    }
+  }, [dispatch, username, viewingOwnWishlist])
+
+  const wishlistItemsArray = useSelector(state => {
+    if (viewingOwnWishlist) {
+      return Object.values(state.wishlistItems.currentUser);
+    } else {
+      return Object.values(state.wishlistItems.otherUser);
+    }
+  });
+
+  const wishlistItems = wishlistItemsArray.map(wishlistItem => {
+    return <WishlistItem wishlistItem={wishlistItem} viewingOwnWishlist={viewingOwnWishlist} key={wishlistItem.id} />
+  });
 
   return (
     <div className="wishlist-page">
       <section className="wishlist-main-column">
         <header>
-          <img src={defaultAvatar} className="wishlist-profile-pic" />
+          <img src={defaultAvatar} className="wishlist-profile-pic" alt="avatar" />
           <h1 className="wishlist-title">{wishlistUser.displayName}'s wishlist</h1> 
         </header>
         {/* <div className="wishlist-control-bar"></div> */}
         <div className="wishlist-divider"></div>
         <article>
-          <WishlistItem />
+          {wishlistItems}
         </article>
       </section>
     </div>

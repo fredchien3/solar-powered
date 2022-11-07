@@ -33,17 +33,16 @@ export default function GameShowPage() {
   const gameAlreadyInLibrary = libraryItemsArray.some(libraryItem => libraryItem.gameId === gameId);
   // const gameAlreadyInWishlist = useSelector(state => Object.values(state.wishlistItems)).some(wishlistItem => wishlistItem.gameId === gameId);
   
-  console.log(game.id)
   useEffect(() => {
     if (!game.id) dispatch(fetchGame(gameId));
-  }, [dispatch, gamesSlice, gameId]);
+  }, [dispatch, game.id, gameId]);
 
   useEffect(() => {
     if (libraryItemsArray.length === 0) dispatch(fetchLibraryItems(currentUser.id));
   }, [libraryItemsArray.length, currentUser.id, dispatch]);
 
   const handleAddToWishlist = () => {
-    if (true) { // game is not in wishilst
+    if (true) { // game is not in wishlist
       dispatch(createWishlistItem({userId: currentUser.id, gameId: gameId}))
     } else { // game is in wishlist
 

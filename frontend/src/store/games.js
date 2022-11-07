@@ -1,7 +1,7 @@
 import { SET_CART_ITEMS } from "./cartItems";
 import csrfFetch from "./csrf";
 import { SET_LIBRARY_ITEMS } from "./libraryItems";
-import { SET_WISHLIST_ITEMS } from "./wishlistItems";
+import { SET_OTHER_WISHLIST, SET_WISHLIST_ITEMS } from "./wishlistItems";
 
 const SET_GAMES = "games/SET_GAMES";
 const ADD_GAME = "games/ADD_GAME";
@@ -54,6 +54,8 @@ export default function gamesReducer(state = {}, action) {
     case SET_LIBRARY_ITEMS:
       return {...state, ...action.payload.games};
     case SET_WISHLIST_ITEMS:
+      return {...state, ...action.payload.games};
+    case SET_OTHER_WISHLIST:
       return {...state, ...action.payload.games};
     default:
       return state;

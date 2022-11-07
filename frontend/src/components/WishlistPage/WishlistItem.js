@@ -1,37 +1,23 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import { prettifyDate } from "../../helpers";
+import { numberifyDate, prettifyDate } from "../../helpers";
 import "./WishlistItem.css";
 
-export default function WishlistItem({ wishlistItem }) {
+export default function WishlistItem({ wishlistItem, viewingOwnWishlist }) {
+  const game = useSelector(state => state.games[wishlistItem.gameId]) || {};
 
+  const handleRemoveWishlistItem = () => {
+    console.log(wishlistItem.id)
+  }
 
-  const game = {
-    id: 6,
-    title: 'Team Fortress 2',
-    price: 0,
-    releaseDate: '2007-10-10',
-    developer: 'Valve',
-    publisher: 'Valve',
-    mainImageUrl: 'https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-main.jpg',
-    bannerImageUrl: 'https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-banner.jpg',
-    smallImageUrl: 'https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-small.jpg',
-    imageUrls: [
-      'https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-1.jpg',
-      'https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-2.jpg',
-      'https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-3.jpg',
-      'https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-4.jpg',
-      'https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-5.jpg',
-      'https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-6.jpg',
-      'https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-7.jpg',
-      'https://solar-powered.s3.amazonaws.com/game-images/tf2/tf2-8.jpg'
-    ]
-  };
-  
-  const removeButton = (
-    <span className="remove-from-wishlist-wrapper">
-      (<span className="remove-from-wishlist">remove</span>)
-    </span>
-  );
+  let removeButton;
+  if (viewingOwnWishlist) {
+    removeButton = (
+      <span className="remove-from-wishlist-wrapper">
+        (<span onClick={handleRemoveWishlistItem} className="remove-from-wishlist">remove</span>)
+      </span>
+    );
+  }
   
   return (
     <div className="wishlist-item-wrapper">
@@ -54,7 +40,7 @@ export default function WishlistItem({ wishlistItem }) {
           </div>
         </div>
         <div className="wishlist-item-info-bottom-row">
-          <p>Added on DATE OF CREATION</p>
+          <p>Added on {numberifyDate(wishlistItem.createdAt)}</p>
           {removeButton}
         </div>
       </div>
