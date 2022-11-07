@@ -6,6 +6,7 @@ import './Navigation.css'
 import defaultAvatar from "../default_avatar.jpg";
 import { fetchCartItems } from "../../store/cartItems";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import { fetchWishlistItems } from "../../store/wishlistItems";
 
 export default function Navigation() {
   const dispatch = useDispatch();
@@ -23,7 +24,10 @@ export default function Navigation() {
   const [numWishlistItems, setNumWishlistItems] = useState(wishlistItemsArray.length);
 
   useEffect(() => {
-    if (currentUser) dispatch(fetchCartItems());
+    if (currentUser) {
+      dispatch(fetchCartItems());
+      dispatch(fetchWishlistItems());
+    };
   }, [dispatch, currentUser])
 
   useEffect(() => {
