@@ -25,7 +25,7 @@ body {
 .light-blue-button {
   height: 32px;
   padding: 0 15px;
-  background-color: rgba( 103, 193, 245, 0.2 );
+  background: rgba( 103, 193, 245, 0.2 );
   border: none;
   color: #67c1f5;
   font-family: Arial, Helvetica, sans-serif;
@@ -39,7 +39,7 @@ body {
 
 .light-blue-button:hover {
   cursor: pointer;
-  background-color: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+  background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
   color: white;
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .light-blue-button:disabled:hover {
-  background-color: rgba( 103, 193, 245, 0.2 );
+  background: rgba( 103, 193, 245, 0.2 );
   color: #67c1f5;
 }
 
@@ -60,7 +60,7 @@ body {
 
   height: 30px;
   padding: 0 15px;
-  background-image: linear-gradient(#799905 5%, #536904 95%);
+  background: linear-gradient(#799905 5%, #536904 95%);
   border: none;
   border-radius: 3px;
   font-family: 'Motiva Sans 400';
@@ -84,7 +84,7 @@ body {
 }
 
 .green-button:disabled:hover {
-  background-image: linear-gradient(#799905 5%, #536904 95%);
+  background: linear-gradient(#799905 5%, #536904 95%);
   color: #D2E885;
 }
 

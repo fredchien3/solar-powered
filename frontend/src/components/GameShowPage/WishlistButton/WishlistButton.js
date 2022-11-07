@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { createWishlistItem, deleteWishlistItem } from "../../../store/wishlistItems";
+import "./WishlistButton.css";
 
 export default function WishlistButton({ gameId, currentUser, gameAlreadyInLibrary }) {
   const dispatch = useDispatch();
@@ -14,7 +15,10 @@ export default function WishlistButton({ gameId, currentUser, gameAlreadyInLibra
   if (gameAlreadyInLibrary) {
     wishlistButtonText = "In Library";
   } else if (gameAlreadyInWishlist) {
-     wishlistButtonText = "On Wishlist";
+     wishlistButtonText = <>
+        <i className="fa-regular fa-square-check" />
+        On Wishlist
+      </>;
   }
 
   const handleAddToWishlist = () => {
@@ -25,9 +29,11 @@ export default function WishlistButton({ gameId, currentUser, gameAlreadyInLibra
     }
   }
 
+  const buttonClass = gameAlreadyInWishlist ? "light-blue-button wishlist-button active" : "light-blue-button wishlist-button"
+  
   return (
     <button
-      className="light-blue-button"
+      className={buttonClass}
       onClick={handleAddToWishlist}
       disabled={gameAlreadyInLibrary}
     >
