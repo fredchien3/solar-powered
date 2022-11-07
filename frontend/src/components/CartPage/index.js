@@ -4,6 +4,7 @@ import { Redirect, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { deleteAllCartItems } from "../../store/cartItems";
 import { createLibraryItem } from "../../store/libraryItems";
+import { deleteWishlistItem } from "../../store/wishlistItems";
 import StoreNavbar from "../StoreHomePage/StoreNavbar/StoreNavbar";
 import CartItem from "./CartItem";
 import "./CartPage.css";
@@ -28,6 +29,8 @@ export default function CartPage() {
   const reducedPrice = pricesArray.reduce((acc, el) => acc + el, 0);
   const totalPrice = reducedPrice.toFixed(2);
 
+  const wishlistItemsArray = useSelector(state => Object.values(state.wishlistItems.currentUser));
+
   const handlePurchase = () => {
     if (cartItems.length > 0) {
       addCartItemsToLibrary()
@@ -47,6 +50,8 @@ export default function CartPage() {
     cartItemsArray.forEach(cartItem => {
       const libraryItem = { userId: cartItem.userId, gameId: cartItem.gameId };
       dispatch(createLibraryItem(libraryItem));
+      const wishlistItem = wishlistItemsArray.find(wishlistItem => wishlistItem.gameId === cartItem.gameId)
+      if (wishlistItem) dispatch(deleteWishlistItem(wishlistItem.id));
     })
   }
 

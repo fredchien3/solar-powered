@@ -12,7 +12,7 @@ export default function LibraryPage() {
   const dispatch = useDispatch();
   const { username } = useParams();
   
-  const currentUser = useSelector(state => state.session.user);
+  const currentUser = useSelector(state => state.session.user || {});
   
   const viewingOwnLibrary = currentUser.username === username;
 
@@ -32,7 +32,7 @@ export default function LibraryPage() {
       .then(user => {
         dispatch(fetchLibraryItems(user.id, !viewingOwnLibrary))
       });
-  }, [dispatch, currentUser.id, username, viewingOwnLibrary])
+  }, [dispatch, username, viewingOwnLibrary])
 
   const libraryItems = useSelector(state => {
     let libraryItemsArray;

@@ -36,7 +36,7 @@ export default function GameShowPage() {
 
   let wishlistControls = (
     <div className="wishlist-buttons-bar">
-      <Link to="/login">Sign in</Link> to add this item to your wishlist, follow it, or mark it as ignored
+      <Link to="/login">Sign in</Link> to add this item to your wishlist{/* , follow it, or mark it as ignored */}
     </div>
   );
   if (currentUser.id) {

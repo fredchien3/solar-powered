@@ -11,7 +11,7 @@ export default function WishlistPage() {
   const dispatch = useDispatch();
   const { username } = useParams();
   
-  const currentUser = useSelector(state => state.session.user);
+  const currentUser = useSelector(state => state.session.user || {});
 
   const viewingOwnWishlist = currentUser.username === username;
 
