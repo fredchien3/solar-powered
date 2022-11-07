@@ -10,6 +10,7 @@ import RelevantBox from "./RelevantBox/RelevantBox";
 import { prettifyDate } from "../../helpers";
 import WishlistButton from "./WishlistButton/WishlistButton";
 import CartButton from "./CartButton/CartButton";
+import ReviewBox from "./ReviewBox/ReviewBox";
 
 export default function GameShowPage() {
   const dispatch = useDispatch();
@@ -100,6 +101,7 @@ export default function GameShowPage() {
         </div>
       </section>
       {wishlistControls}
+      <ReviewBox game={game} currentUser={currentUser} />
       <section className="game-show-main-column-wrapper">
         <aside className="game-show-main-left">
           <div className="buy-box">

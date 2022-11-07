@@ -1,0 +1,87 @@
+.review-form-component {
+  width: 940px;
+  margin-bottom: 70px;
+}
+
+.review-form-component > header {
+  background: linear-gradient(to right, rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%);
+  font-size: 18px;
+  font-family: "Motiva Sans 300", Sans-serif;
+  line-height: 40px;
+  color: #a3cf06;
+  position: relative;
+  padding-left: 78px;
+  box-sizing: border-box;
+  margin-bottom: 1px;
+}
+
+.in-library-flag {
+  position: absolute;
+  background-color: #a3cf06;
+  height: 18px;
+  left: -8px;
+  top: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 2px #000000;
+  padding: 1px 6px 0 6px;
+  box-sizing: border-box;
+}
+
+.in-library-flag > i {
+  margin-right: 4px;
+}
+
+.review-form-main {
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%);
+}
+
+.review-form-main > h1 {
+  font-family: 'Motiva Sans 300', sans-serif;
+  color: #66c0f4;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.review-form-main > p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 17px;
+  color: #8f98a0;
+}
+
+.review-form-main > h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #c6d4df;
+  font-size: 12px;
+  margin-top: 16px;
+}
+
+.review-form-stats {
+  padding-bottom: 16px;
+  border-bottom: 1px solid black;
+  margin-bottom: 16px;
+}
+
+.review-form-wrapper {
+  margin-top: 16px;
+  display: flex;
+  padding-right: 8px;
+}
+
+.review-form-wrapper > a > img {
+  width: 92px;
+  height: 92px;
+  border: 1px solid #53a4c4;
+}
+
+.review-form-wrapper > i {
+  font-size: 30px;
+  margin-right: 16px;
+  color: #62b8ea;
+}
