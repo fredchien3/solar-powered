@@ -15,7 +15,7 @@ export default function ReviewForm() {
             No
           </button>
         </span>
-        <button>Post review</button>
+        <button className="post-review-button">Post review</button>
       </div>
     </div>
   )

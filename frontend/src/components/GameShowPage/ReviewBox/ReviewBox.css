@@ -1,6 +1,6 @@
 .review-form-component {
   width: 940px;
-  margin-bottom: 70px;
+  margin-bottom: 56px;
 }
 
 .review-form-component > header {
@@ -80,8 +80,44 @@
   border: 1px solid #53a4c4;
 }
 
-.review-form-wrapper > i {
-  font-size: 30px;
-  margin-right: 16px;
+/* thumbs up and thumbs down styling */
+.review-form-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin: 8px 0 16px 8px;
+}
+
+.review-form-thumb > i {
+  font-size: 34px;
+}
+
+.review-form-thumb.thumbs-up {
+  background: linear-gradient(#355f7b, #234e6a);
   color: #62b8ea;
+}
+
+.review-form-thumb.thumbs-down {
+  background: linear-gradient(#64343a, #4d1d23);
+  color: #e06363;
+}
+/*  */
+
+.review-form-wrapper > h3 {
+  font-size: 14px;
+  color: #898A8C;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 95%;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.review-form-wrapper > h3 > a {
+  color: white;
+}
+
+.review-form-wrapper > h3 > a:hover {
+  color: #66c0f4;
 }

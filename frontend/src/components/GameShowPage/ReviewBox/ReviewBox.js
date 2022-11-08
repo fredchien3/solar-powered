@@ -3,8 +3,22 @@ import defaultAvatar from "../../default_avatar.jpg";
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import ReviewForm from './ReviewForm';
 
+
+
 export default function ReviewBox({ game, currentUser }) {
-  const useHasAlreadyReviewed = true;
+  const useHasAlreadyReviewed = false;
+
+  const thumbsUp = (
+    <div className="review-form-thumb thumbs-up">
+      <i className="fa-solid fa-flip-horizontal fa-thumbs-up" />
+    </div>
+  )
+  
+  const thumbsDown = (
+    <div className="review-form-thumb thumbs-down">
+      <i className="fa-solid fa-flip-horizontal fa-thumbs-down" />
+    </div>
+  )
 
   let reviewBox = (
     <>
@@ -25,8 +39,8 @@ export default function ReviewBox({ game, currentUser }) {
         <h1>You reviewed this game on October 18, 2018</h1>
         <h2>1 person found your review helpful</h2>
         <div className="review-form-wrapper">
-          <i className="fa-solid fa-flip-horizontal fa-thumbs-up" />
-          <p>Your review is currently marked as publicly visible. You can edit this review, change your rating, and change the visibility setting if you wish. View your review</p>
+          {thumbsUp}
+          <h3>Your review is publicly visible. You can edit this review and change your rating if you wish. <a href="#">View your review</a></h3>
         </div>
       </>
     )
