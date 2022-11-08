@@ -2,7 +2,7 @@ import csrfFetch from "./csrf";
 
 export const SET_REVIEWS = "reviews/SET_REVIEWS";
 const ADD_REVIEW = "reviews/ADD_REVIEW";
-const REMOVE_REVIEW = "reviews/REMOVE_REVIEW";
+// const REMOVE_REVIEW = "reviews/REMOVE_REVIEW";
 
 const setReviews = (payload) => { // and also games
   return {
@@ -11,12 +11,12 @@ const setReviews = (payload) => { // and also games
   };
 }
 
-// const addReview = (review) => {
-//   return {
-//     type: ADD_REVIEW,
-//     payload: review
-//   };
-// }
+const addReview = (review) => {
+  return {
+    type: ADD_REVIEW,
+    payload: review
+  };
+}
 
 // const removeReview = (reviewId) => {
 //   return {
@@ -31,14 +31,14 @@ export const fetchReviews = (gameId) => async (dispatch) => {
   dispatch(setReviews(data));
 }
 
-// export const createReview = (gameId) => async (dispatch) => {
-//   const res = await csrfFetch(`/api/games/${gameId}/reviews`, {
-//     method: "POST",
-//     body: JSON.stringify({gameId: gameId})
-//   });
-//   const data = await res.json();
-//   dispatch(addReview(data));
-// }
+export const createReview = (review) => async (dispatch) => {
+  const res = await csrfFetch(`/api/games/${review.gameId}/reviews`, {
+    method: "POST",
+    body: JSON.stringify(review)
+  });
+  const data = await res.json();
+  dispatch(addReview(data));
+}
 
 // export const deleteReview = (reviewId) => async (dispatch) => {
 //   await csrfFetch(`/api/games/${gameId}/reviews` + reviewId, {
@@ -50,10 +50,9 @@ export const fetchReviews = (gameId) => async (dispatch) => {
 export default function reviewsReducer(state = {}, action) {
   switch (action.type) {
     case SET_REVIEWS:
-      return action.payload.reviews;
-    // case ADD_REVIEW:
-    //   const review = action.payload;
-    //   return {...state, ...review};
+      return action.payload;
+    case ADD_REVIEW:
+      return {...state, ...action.payload};
     // case REMOVE_REVIEW:
     //   const newState = {...state};
     //   delete newState[action.payload];

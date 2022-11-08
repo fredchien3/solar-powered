@@ -17,3 +17,13 @@ export const numberifyDate = (dateString) => {
     timeZone:'utc'
   })
 }
+
+export const longDate = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-us', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone:'utc'
+  })
+}

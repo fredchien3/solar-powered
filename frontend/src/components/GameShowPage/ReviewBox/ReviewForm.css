@@ -13,6 +13,9 @@
   max-width: 800px;
   background-color: #222b35;
   box-sizing: border-box;
+  color: #d6d7d8;
+  padding: 10px 11px;
+  font-family: 'Motiva Sans 400', sans-serif;
 }
 
 .review-form-options {
@@ -27,11 +30,37 @@
 
 .review-form-options-button {
   margin-right: 4px;
+  position: relative;
+  font-family: 'Motiva Sans 400', sans-serif;
 }
 
 .review-form-options-button > i {
   font-size: 18px;
   margin-right: 6px;
+}
+
+.review-form-options-button:disabled {
+  background: rgba( 103, 193, 245, 0.6 );
+  opacity: 1;
+  color: white;
+}
+
+.review-form-options-button:disabled:hover {
+  background: rgba( 103, 193, 245, 0.6 );
+  color: white;
+}
+
+.review-form-options-button:disabled::after {
+  content: '\2713';
+  font-weight: bolder;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  left: 15px;
+}
+
+.review-form-options-button:disabled > i {
+  color: #74a3c0;
 }
 
 .post-review-button {

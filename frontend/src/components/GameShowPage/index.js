@@ -11,6 +11,7 @@ import { prettifyDate } from "../../helpers";
 import WishlistButton from "./WishlistButton/WishlistButton";
 import CartButton from "./CartButton/CartButton";
 import ReviewBox from "./ReviewBox/ReviewBox";
+import { fetchReviews } from "../../store/reviews";
 
 export default function GameShowPage() {
   const dispatch = useDispatch();
@@ -29,12 +30,16 @@ export default function GameShowPage() {
   
   useEffect(() => {
     if (!game.id) dispatch(fetchGame(gameId));
-  }, [dispatch, game.id, gameId]);
+  }, [dispatch, gameId, game.id]);
 
   useEffect(() => {
     if (libraryItemsArray.length === 0) dispatch(fetchLibraryItems(currentUser.id));
   }, [libraryItemsArray.length, currentUser.id, dispatch]);
 
+  useEffect(() => {
+    dispatch(fetchReviews(gameId));
+  }, [gameId])
+  
   let wishlistControls = (
     <div className="wishlist-buttons-bar">
       <Link to="/login">Sign in</Link> to add this item to your wishlist{/* , follow it, or mark it as ignored */}
