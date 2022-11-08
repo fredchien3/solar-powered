@@ -20,6 +20,45 @@
   width: 200px;
   padding: 8px;
   box-sizing: border-box;
+  opacity: 0.6;
+}
+
+.review-tile:hover > .review-tile-left {
+  opacity: 1;
+}
+
+.review-tile-left > header {
+  display: flex;
+}
+
+.review-tile-left > header > img {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #41778f;
+  margin-right: 8px;
+}
+
+.review-tile-left-top-row {
+  display: flex;
+  flex-direction: column;
+}
+
+#review-author-username {
+  font-family: 'Motiva Sans 700' sans-serif;
+  color: #c1dbf4;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.review-tile-left a {
+  color: #c1dbf4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+
+.review-tile-left a:hover {
+  cursor: pointer;
+  color: #67c1f5;
 }
 
 .review-tile-right {
