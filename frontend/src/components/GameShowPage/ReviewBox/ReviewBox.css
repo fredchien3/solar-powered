@@ -103,6 +103,16 @@
   background: linear-gradient(#64343a, #4d1d23);
   color: #e06363;
 }
+
+.review-form-thumb.fourty {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
+.review-form-thumb.fourty > i {
+  font-size: 30px;
+}
 /*  */
 
 .review-form-wrapper > h3 {

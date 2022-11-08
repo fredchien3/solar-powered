@@ -1,11 +1,15 @@
 import { useSelector } from 'react-redux';
 import './ReviewsIndex.css';
+import ReviewTile from './ReviewTile';
 
 export default function ReviewsIndex({ gameId }) {
   const reviews = useSelector(state => {
     return Object.values(state.reviews).filter(review => review.gameId === gameId)
   })
 
+  const reviewTiles = reviews.map(review => {
+    return <ReviewTile review={review} key={review.id} />
+  })
   
   return (
     <section className="reviews-index">
@@ -20,7 +24,7 @@ export default function ReviewsIndex({ gameId }) {
         <section className="reviews-index-column">
           <div className="reviews-index-column-left">
             <h1>Most helpful reviews</h1>
-            
+            {reviewTiles}
           </div>
           {/* <div className="reviews-index-column-right">
             <h1>Recently posted</h1>

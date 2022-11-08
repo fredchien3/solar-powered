@@ -276,6 +276,7 @@
   color: white;
 }
 
+/* Blue line gradient */
 .about-this-game h1::after {
   content:"";
   height:1px;

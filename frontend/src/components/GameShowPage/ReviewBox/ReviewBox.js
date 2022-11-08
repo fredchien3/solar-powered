@@ -5,24 +5,34 @@ import ReviewForm from './ReviewForm';
 import { useSelector } from 'react-redux';
 import { longDate } from '../../../helpers';
 
+export function ThumbsUp({ size }) {
+  size ||= 44;
+  let className = "review-form-thumb thumbs-up";
+  if (size === 40) className += " fourty"
 
+  return (
+    <div className={className}>
+      <i className="fa-solid fa-flip-horizontal fa-thumbs-up" />
+    </div>
+  )
+}
+
+export function ThumbsDown({ size }) {
+  size ||= 44;
+  let className="review-form-thumb thumbs-down";
+  if (size === 40) className += " fourty"
+
+  return (
+    <div className={className}>
+      <i className="fa-solid fa-flip-horizontal fa-thumbs-down" />
+    </div>
+  )
+}
 
 export default function ReviewBox({ game, currentUser }) {
   const userHasAlreadyReviewed = useSelector(state => {
     return Object.values(state.reviews).find(review => review.authorId === currentUser.id)
   });
-  console.log(userHasAlreadyReviewed)
-  const thumbsUp = (
-    <div className="review-form-thumb thumbs-up">
-      <i className="fa-solid fa-flip-horizontal fa-thumbs-up" />
-    </div>
-  )
-  
-  const thumbsDown = (
-    <div className="review-form-thumb thumbs-down">
-      <i className="fa-solid fa-flip-horizontal fa-thumbs-down" />
-    </div>
-  )
 
   let reviewBox = (
     <>
@@ -43,7 +53,7 @@ export default function ReviewBox({ game, currentUser }) {
         <h1>You reviewed this game on {longDate(userHasAlreadyReviewed.createdAt)}</h1>
         {/* <h2>1 person found your review helpful</h2> */}
         <div className="review-form-wrapper">
-          {userHasAlreadyReviewed.recommended ? thumbsUp : thumbsDown}
+          {userHasAlreadyReviewed.recommended ? <ThumbsUp /> : <ThumbsDown />}
           <h3>Your review is publicly visible. You can edit this review and change your rating if you wish. <a href="#">View your review</a></h3>
         </div>
       </>
