@@ -210,11 +210,12 @@
   color: white;
   margin-right: 3px;
 }
+
 .game-show-main-column-wrapper {
   width: 940px;
-  /* height: 200px; */
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .game-show-main-left {

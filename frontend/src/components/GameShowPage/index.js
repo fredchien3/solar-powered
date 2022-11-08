@@ -12,6 +12,7 @@ import WishlistButton from "./WishlistButton/WishlistButton";
 import CartButton from "./CartButton/CartButton";
 import ReviewBox from "./ReviewBox/ReviewBox";
 import { fetchReviews } from "../../store/reviews";
+import ReviewsIndex from "./ReviewsIndex/ReviewsIndex";
 
 export default function GameShowPage() {
   const dispatch = useDispatch();
@@ -128,6 +129,7 @@ export default function GameShowPage() {
           <RelevantBox currentUser={currentUser} gameId={gameId} />
         </aside>
       </section>
+      <ReviewsIndex gameId={gameId} />
     </div>
   )
 }
