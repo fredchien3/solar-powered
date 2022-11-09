@@ -34,7 +34,7 @@ class Game < ApplicationRecord
   has_many :reviews
 
   def average_score
-    num_positive = reviews.count {|review| review.recommended} * 1.0
+    num_positive = reviews.count {|review| review.recommended} * 100.0
     (num_positive / num_reviews)
   end
 

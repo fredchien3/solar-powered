@@ -29,7 +29,7 @@ export const longDate = (dateString) => {
 }
 
 // Original
-// 95 - 99% : Overhwelmingly Positive
+// 95 - 99% : Overwhelmingly Positive
 // 80 - 94% : Very Positive
 // 80 - 99% + few reviews: Positive
 // 70 - 79% : Mostly Positive
@@ -39,13 +39,11 @@ export const longDate = (dateString) => {
 // 0 - 19% : Very Negative
 // 0 - 19% + many reviews: Overwhelmingly Negative
 
-// Simplified
-// 95 - 99% : Overwhelmingly Positive
-// 80 - 94% : Very Positive
+// Few reviews
+// 80 - 99% + few reviews: Positive
 // 70 - 79% : Mostly Positive
 // 40 - 69% : Mixed
-// 20 - 39% : Mostly Negative
-// 0 - 19% : Very Negative
+// 0 - 39% + few reviews: Negative
 
 export const ratingSummary = (averageScore) => {
   switch (true) {
@@ -59,10 +57,8 @@ export const ratingSummary = (averageScore) => {
       return "Mostly Positive";
     case averageScore >= 40:
       return "Mixed";
-    case averageScore >= 20:
-      return "Mostly Negative";
     case averageScore >= 0:
-      return "Very Negative";
+      return "Negative";
     default:
       return "Fred something went wrong";
   }

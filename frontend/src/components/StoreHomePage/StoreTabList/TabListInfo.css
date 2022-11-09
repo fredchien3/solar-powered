@@ -45,9 +45,17 @@
 
 /* user tags row */
 
-.tab-list-info-user-reviews span {
+.tab-list-info-user-reviews > div {
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+}
+
+.no-rating-homepage {
   color: #929396;
+}
+
+.tab-list-info-user-reviews > div > p {
+  margin-left: 4px;
 }
 
 .tab-list-info img {
