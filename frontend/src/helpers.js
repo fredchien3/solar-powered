@@ -28,12 +28,57 @@ export const longDate = (dateString) => {
   })
 }
 
+// Original
 // 95 - 99% : Overhwelmingly Positive
-// 94 - 80% : Very Positive
+// 80 - 94% : Very Positive
 // 80 - 99% + few reviews: Positive
 // 70 - 79% : Mostly Positive
 // 40 - 69% : Mixed
-// 20? - 39% : Mostly Negative
+// 20 - 39% : Mostly Negative
 // 0 - 39% + few reviews: Negative
 // 0 - 19% : Very Negative
 // 0 - 19% + many reviews: Overwhelmingly Negative
+
+// Simplified
+// 95 - 99% : Overwhelmingly Positive
+// 80 - 94% : Very Positive
+// 70 - 79% : Mostly Positive
+// 40 - 69% : Mixed
+// 20 - 39% : Mostly Negative
+// 0 - 19% : Very Negative
+
+export const ratingSummary = (averageScore) => {
+  switch (true) {
+    case averageScore === null:
+      return "No user reviews";
+    case averageScore >= 95:
+      return "Overwhelmingly Positive";
+    case averageScore >= 80:
+      return "Very Positive";
+    case averageScore >= 70:
+      return "Mostly Positive";
+    case averageScore >= 40:
+      return "Mixed";
+    case averageScore >= 20:
+      return "Mostly Negative";
+    case averageScore >= 0:
+      return "Very Negative";
+    default:
+      return "Fred something went wrong";
+  }
+}
+
+export const ratingColor = (averageScore) => {
+  switch (true) {
+    case averageScore === null:
+      return "no-rating";
+    case averageScore >= 70:
+      return "light-blue-rating";
+    case averageScore >= 40:
+      return "mixed-rating";
+    case averageScore >= 0:
+      return "red-rating";
+    default:
+      return "Fred something went wrong";
+  }
+}

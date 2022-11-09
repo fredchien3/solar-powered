@@ -25,7 +25,7 @@ export default function ReviewTile({ review }) {
           {thumb}
           <div className="review-tile-header-summary">
             <h1>Recommended</h1>
-            <span>122.7 hrs on record (61.2 hrs at review time)</span>
+            <span>100 hrs on record (50 hrs at review time)</span>
           </div>
         </header>
         <h1>Posted: {longDate(review.createdAt)}</h1>
@@ -38,8 +38,8 @@ export default function ReviewTile({ review }) {
           <button className="light-blue-button">Award</button>
         </div>
         <div className="review-vote-stats">
-          <p>229 people found this review helpful</p>
-          <p>11 people found this review funny</p>
+          <p>3 people found this review helpful</p>
+          <p>2 people found this review funny</p>
         </div>
       </div>
     </article>

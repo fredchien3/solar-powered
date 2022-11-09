@@ -7,7 +7,7 @@ import "./GameShowPage.css";
 import GameShowCarousel from "./GameShowCarousel/GameShowCarousel";
 import { fetchLibraryItems } from "../../store/libraryItems";
 import RelevantBox from "./RelevantBox/RelevantBox";
-import { prettifyDate } from "../../helpers";
+import { prettifyDate, ratingColor, ratingSummary } from "../../helpers";
 import WishlistButton from "./WishlistButton/WishlistButton";
 import CartButton from "./CartButton/CartButton";
 import ReviewBox from "./ReviewBox/ReviewBox";
@@ -31,11 +31,27 @@ export default function GameShowPage() {
   
   const reviews = useSelector(state => {
     return Object.values(state.reviews).filter(review => review.gameId === gameId)
-  })
+  });
   
-  const reviewsAsBooleans = reviews.map(review => review.recommended);
-  const averageRating = (reviewsAsBooleans.filter(Boolean).length / reviewsAsBooleans.length) * 100;
-  console.log(averageRating + "%")
+  let averageScore;
+  const numReviews = reviews.length;
+  if (numReviews > 0) {
+    const reviewBooleans = reviews.map(review => review.recommended);
+    averageScore = (reviewBooleans.filter(Boolean).length / reviewBooleans.length) * 100;
+  } else {
+    averageScore = null;
+  }
+
+  const ratingSummaryText = ratingSummary(averageScore);
+  const ratingClass = ratingColor(averageScore);
+
+  const allReviewsElement = <a href="#reviews">
+    <span className={ratingClass}>
+      {ratingSummaryText}
+    </span>
+    {numReviews > 0 ? <p>{`(${numReviews})`}</p> : <></>}
+  </a>
+  
   
   useEffect(() => {
     if (!game.id) dispatch(fetchGame(gameId));
@@ -88,8 +104,7 @@ export default function GameShowPage() {
             <table className="game-info-table">
               <tbody>
                 <tr className="review-summary">
-                  {/* <th>All Reviews:</th><td>Very Positive<p>(1,000)</p></td> */}
-                  <th>All Reviews:</th><td className="no-user-reviews">No user reviews</td>
+                  <th>All Reviews:</th><td className="no-user-reviews">{allReviewsElement}</td>
                 </tr>
                 <tr className="release-date-row">
                   <th>Release Date:</th><td>{prettifyDate(game.releaseDate)}</td>
@@ -137,7 +152,11 @@ export default function GameShowPage() {
           <RelevantBox currentUser={currentUser} gameId={gameId} />
         </aside>
       </section>
-      <ReviewsIndex reviews={reviews} />
+      <ReviewsIndex
+        reviews={reviews}
+        ratingSummaryText={ratingSummaryText}
+        ratingClass={ratingClass}
+      />
     </div>
   )
 }

@@ -1,20 +1,19 @@
 import './ReviewsIndex.css';
 import ReviewTile from './ReviewTile';
 
-export default function ReviewsIndex({ reviews }) {
+export default function ReviewsIndex({ reviews, ratingSummaryText, ratingClass }) {
   const reviewTiles = reviews.map(review => {
     return <ReviewTile review={review} key={review.id} />
   })
   
-  const overallReviewScore = reviews.length > 0 ? "Positive" : "None";
   const reviewsSummary = (
-    <h3>
-      {overallReviewScore} <span>({reviews.length} reviews)</span>
+    <h3 className={ratingClass}>
+      {ratingSummaryText} <span>({reviews.length} reviews)</span>
     </h3>
   );
 
   return (
-    <section className="reviews-index">
+    <section className="reviews-index" id="reviews">
       <div className="reviews-index-main-column">
         <header>
           <h1>Customer Reviews</h1>

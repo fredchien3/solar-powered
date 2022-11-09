@@ -1,4 +1,4 @@
-/* TODO Add site wide styles */
+/* Site wide styles */
 @import url('reset.css');
 
 body {
@@ -120,6 +120,21 @@ body {
   color: #d2efa9; 
 }
 
+.no-rating {
+  color: #556772;
+}
+
+.light-blue-rating {
+  color: #66C0F4;
+}
+
+.mixed-rating {
+  color: #B9A074;
+}
+
+.red-rating {
+  color: #A34C25;
+}
 
 sup {
   font-size: .83em;
