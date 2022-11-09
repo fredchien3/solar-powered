@@ -56,6 +56,10 @@ class User < ApplicationRecord
     return self.session_token
   end
   
+  def owns?(game)
+    self.owned_games.include? game
+  end
+  
   private
   def generate_unique_session_token
     while true

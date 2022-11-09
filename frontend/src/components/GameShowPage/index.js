@@ -130,7 +130,11 @@ export default function GameShowPage() {
         </div>
       </section>
       {wishlistControls}
-      <ReviewBox game={game} currentUser={currentUser} />
+      <ReviewBox
+        game={game}
+        currentUser={currentUser}
+        gameAlreadyInLibrary={gameAlreadyInLibrary}
+      />
       <section className="game-show-main-column-wrapper">
         <aside className="game-show-main-left">
           <div className="buy-box">

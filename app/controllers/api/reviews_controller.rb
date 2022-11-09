@@ -10,12 +10,17 @@ class Api::ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.game_id = params[:game_id]
     @review.author_id = current_user.id
-    
-    if @review.save!
-    render 'api/reviews/show'
+    if @review.author.owns?(@review.game)
+      if @review.save!
+        render 'api/reviews/show'
+        else
+          render json: { errors: @review.errors.full_messages }, status: :unauthorized
+        end
     else
-      render json: { errors: @review.errors.full_messages }, status: :unauthorized
+      render json: { errors: ["You must own a game to review it."]}, status: :unauthorized
     end
+    
+
   end
 
   def update

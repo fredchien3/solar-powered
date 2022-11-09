@@ -29,10 +29,12 @@ export function ThumbsDown({ size }) {
   )
 }
 
-export default function ReviewBox({ game, currentUser }) {
+export default function ReviewBox({ game, currentUser, gameAlreadyInLibrary }) {
   const userHasAlreadyReviewed = useSelector(state => {
     return Object.values(state.reviews).find(review => review.authorId === currentUser.id)
   });
+  
+  if (!gameAlreadyInLibrary) return (<></>);
 
   let reviewBox = (
     <>
