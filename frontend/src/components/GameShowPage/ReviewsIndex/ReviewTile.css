@@ -65,10 +65,11 @@
   width: 400px;
   box-sizing: border-box;
   margin-left: 14px;
+  padding-top: 8px;
 }
 
 .review-tile-right > header {
-  margin: 8px 0 13px;
+  margin-bottom: 13px;
   display: block;
   background: rgba( 0, 0, 0, 0.2 );
   display: flex;
@@ -118,18 +119,22 @@
   color: rgb(129, 145, 162, 0.6);
 }
 
-.review-vote-buttons-wrapper {
+.review-controls {
   padding: 10px 0 5px 0;
   display: flex;
 
 }
 
-.review-vote-buttons-wrapper > button {
+.review-controls > button.light-blue-button {
   margin: 0 3px 0 0;
   background: #212c3d;
   padding: 1px 6px;
   height: 20px;
   font-size: 12px;
+}
+
+.review-controls > button.light-blue-button > i {
+  margin-right: 6px;
 }
 
 .review-vote-stats {
@@ -141,4 +146,44 @@
   font-size: 12px;
   color: #647580;
   margin-bottom: 2px;
+}
+
+.review-form-update {
+  margin-right: 8px;
+}
+
+.review-form-update .review-form-text {
+}
+
+.review-form-update .review-form-options {
+  margin-top: 4px;
+}
+
+.review-form-update .review-form-options span {
+  height: 28px;
+}
+
+.review-form-update .review-form-options .post-review-button {
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.review-form-update .review-form-options-button {
+  padding: 0 8px;
+  font-size: 13px;
+  height: 100%;
+}
+
+.review-form-update .review-form-options-button > i {
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+.review-form-update .review-form-options-button:disabled::after {
+  content: '\2713';
+  font-weight: bolder;
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  left: 8px;
 }

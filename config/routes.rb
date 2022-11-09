@@ -5,11 +5,12 @@ Rails.application.routes.draw do
     resource :session, only: [:show, :create, :destroy]
     resources :users, only: [:create, :show]
     resources :games, only: [:index, :show] do
-      resources :reviews, only: [:index, :create, :update, :destroy]
+      resources :reviews, only: [:index, :create]
     end
     resources :cart_items, only: [:create, :index, :destroy]
     resources :library_items, only: [:create, :index]
     resources :wishlist_items, only: [:create, :index, :destroy]
+    resources :reviews, only: [:update, :destroy]
   end
 
   get '*path', to: "static_pages#frontend_index"

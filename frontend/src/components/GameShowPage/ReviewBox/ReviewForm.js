@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createReview } from '../../../store/reviews';
+import { createReview, updateReview } from '../../../store/reviews';
 import './ReviewForm.css';
 
-export default function ReviewForm({ game }) {
+export default function ReviewForm({ game, review, setEditing }) {
   const dispatch = useDispatch();
   
-  const [body, setBody] = useState('');
-  const [recommended, setRecommended] = useState(null);
+  const [body, setBody] = useState(review ? review.body : '');
+  const [recommended, setRecommended] = useState(review ? review.recommended : null);
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,6 +15,10 @@ export default function ReviewForm({ game }) {
       alert('Please describe what you liked or disliked about this game and whether you recommend it to others.\nPlease remember to be polite and follow the Rules and Guidelines.')
     } else if (recommended === null) {
       alert(`Would you recommend ${game.title} to others?`)
+    } else if (review) {
+      const updatedReview = {...review, body, recommended};
+      dispatch(updateReview(updatedReview));
+      setEditing(false);
     } else {
       const newReview = {body, recommended, gameId: game.id};
       dispatch(createReview(newReview));
@@ -22,13 +26,13 @@ export default function ReviewForm({ game }) {
   }
   
   return (
-    <form className="review-form-right" onSubmit={handleSubmit}>
+    <form className={review ? "review-form-update" : "review-form-right"} onSubmit={handleSubmit}>
       <textarea
         className="review-form-text"
         onChange={e => setBody(e.target.value)}
         value={body}
       />
-      <div className='review-form-options'>
+      <div className="review-form-options">
         <span>
           <button
             className="light-blue-button review-form-options-button"
@@ -47,7 +51,7 @@ export default function ReviewForm({ game }) {
             No
           </button>
         </span>
-        <button type="submit" className="post-review-button">Post review</button>
+        <button type="submit" className="post-review-button">{review ? "Save Changes" : "Post review"}</button>
       </div>
     </form>
   )

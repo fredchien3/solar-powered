@@ -10,7 +10,6 @@ class Api::ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.game_id = params[:game_id]
     @review.author_id = current_user.id
-    @author = @review.author
     
     if @review.save!
     render 'api/reviews/show'
@@ -22,6 +21,7 @@ class Api::ReviewsController < ApplicationController
   def update
     @review = Review.find(params[:id])
     @review.assign_attributes(review_params)
+    
     if @review.save!
       render 'api/reviews/show'
     else

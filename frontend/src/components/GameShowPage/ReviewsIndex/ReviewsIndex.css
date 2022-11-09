@@ -11,6 +11,45 @@
   flex-direction: column;
 }
 
+/* Blue line gradient */
+.reviews-index-empty::before {
+  content:"";
+  height:1px;
+  background:linear-gradient(to right, #3a6e8b 0%, transparent 80%);
+  width: 100%;
+  display:block;
+  position: absolute;
+  top: 0;
+}
+
+.reviews-index-empty {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background-color: rgba( 0, 0, 0, 0.2 );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.reviews-index-empty > h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #67c1f5;
+  text-align: center;
+}
+.reviews-index-empty > h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #898A8C;
+  text-align: center;
+  line-height: 18px;
+  margin-top: -8px;
+}
+
 .reviews-index-main-column > header {
   width: 100%;
   padding-bottom: 20px;
