@@ -11,6 +11,13 @@ export default function ReviewsIndex({ gameId }) {
     return <ReviewTile review={review} key={review.id} />
   })
   
+  const overallReviewScore = reviews.length > 0 ? "Positive" : "None";
+  const reviewsSummary = (
+    <h3>
+      {overallReviewScore} <span>({reviews.length} reviews)</span>
+    </h3>
+  );
+
   return (
     <section className="reviews-index">
       <div className="reviews-index-main-column">
@@ -18,7 +25,7 @@ export default function ReviewsIndex({ gameId }) {
           <h1>Customer Reviews</h1>
           <div className="reviews-header-summary">
             <h2>Overall Reviews:</h2>
-            <h3>Overwhelmingly Positive <span>(100 reviews)</span></h3>
+            {reviewsSummary}
           </div>
         </header>
         <section className="reviews-index-column">

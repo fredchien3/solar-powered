@@ -1,4 +1,5 @@
 import csrfFetch from "./csrf";
+import { ADD_REVIEW, SET_REVIEWS } from "./reviews";
 
 // const SET_USERS = "users/SET_USERS";
 const SET_USER = "users/SET_USER";
@@ -54,6 +55,10 @@ export default function usersReducer(state = {}, action) {
     case SET_USER:
       const user = action.payload;
       return {[user.id]: user};
+    case SET_REVIEWS:
+      return action.payload.users;
+    case ADD_REVIEW:
+      return {...state, ...action.payload.user}
     default:
       return state;
   }

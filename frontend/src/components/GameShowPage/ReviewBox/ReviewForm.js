@@ -13,7 +13,7 @@ export default function ReviewForm({ game }) {
     e.preventDefault();
     if (body.length === 0) {
       alert('Please describe what you liked or disliked about this game and whether you recommend it to others.\nPlease remember to be polite and follow the Rules and Guidelines.')
-    } else if (recommended === 0) {
+    } else if (recommended === null) {
       alert(`Would you recommend ${game.title} to others?`)
     } else {
       const newReview = {body, recommended, gameId: game.id};

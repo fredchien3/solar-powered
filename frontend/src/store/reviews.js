@@ -1,7 +1,7 @@
 import csrfFetch from "./csrf";
 
 export const SET_REVIEWS = "reviews/SET_REVIEWS";
-const ADD_REVIEW = "reviews/ADD_REVIEW";
+export const ADD_REVIEW = "reviews/ADD_REVIEW";
 // const REMOVE_REVIEW = "reviews/REMOVE_REVIEW";
 
 const setReviews = (payload) => { // and also games
@@ -11,10 +11,10 @@ const setReviews = (payload) => { // and also games
   };
 }
 
-const addReview = (review) => {
+const addReview = (payload) => {
   return {
     type: ADD_REVIEW,
-    payload: review
+    payload
   };
 }
 
@@ -50,9 +50,9 @@ export const createReview = (review) => async (dispatch) => {
 export default function reviewsReducer(state = {}, action) {
   switch (action.type) {
     case SET_REVIEWS:
-      return action.payload;
+      return action.payload.reviews;
     case ADD_REVIEW:
-      return {...state, ...action.payload};
+      return {...state, ...action.payload.review};
     // case REMOVE_REVIEW:
     //   const newState = {...state};
     //   delete newState[action.payload];

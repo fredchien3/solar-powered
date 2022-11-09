@@ -2,21 +2,23 @@ import { longDate } from '../../../helpers';
 import { ThumbsUp, ThumbsDown } from '../ReviewBox/ReviewBox';
 import './ReviewTile.css';
 import defaultAvatar from '../../default_avatar.jpg';
+import { useSelector } from 'react-redux';
 
 export default function ReviewTile({ review }) {
   const thumb = review.recommended ? <ThumbsUp size={40} /> : <ThumbsDown size={40} />
-  
+  const author = useSelector(state => state.users[review.authorId]);
+
   return (
     <article className="review-tile">
       <div className="review-tile-left">
         <header>
           <img src={defaultAvatar} alt="avatar" />
           <div className="review-tile-left-top-row">
-            <a href="#" id="review-author-username">Username</a>
-            <a href="#">2 products in account</a>
+            <a href={`/users/${author.id}/games`} id="review-author-username">{author.displayName}</a>
+            <a href={`/users/${author.id}/games`}>{author.numOwnedGames} products in account</a>
           </div>
         </header>
-        <a href="#">42 reviews</a>
+        <a href={`/users/${author.id}/games`}>{author.numReviews} reviews</a>
       </div>
       <div className="review-tile-right">
         <header>

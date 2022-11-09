@@ -2,7 +2,7 @@ class Api::ReviewsController < ApplicationController
   before_action :require_logged_in, only: [:create, :update, :destroy]
   
   def index
-    @reviews = Review.where(game_id: params[:game_id])
+    @reviews = Review.includes(:author).where(game_id: params[:game_id])
     render 'api/reviews/index'
   end
 
@@ -10,6 +10,8 @@ class Api::ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.game_id = params[:game_id]
     @review.author_id = current_user.id
+    @author = @review.author
+    
     if @review.save!
     render 'api/reviews/show'
     else
