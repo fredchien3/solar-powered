@@ -49,10 +49,8 @@ export const ratingSummary = (averageScore) => {
   switch (true) {
     case averageScore === null:
       return "No user reviews";
-    case averageScore >= 95:
-      return "Overwhelmingly Positive";
     case averageScore >= 80:
-      return "Very Positive";
+      return "Positive";
     case averageScore >= 70:
       return "Mostly Positive";
     case averageScore >= 40:
