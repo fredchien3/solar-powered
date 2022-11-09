@@ -29,6 +29,14 @@ export default function GameShowPage() {
 
   const gameAlreadyInLibrary = libraryItemsArray.some(libraryItem => libraryItem.gameId === gameId);
   
+  const reviews = useSelector(state => {
+    return Object.values(state.reviews).filter(review => review.gameId === gameId)
+  })
+  
+  const reviewsAsBooleans = reviews.map(review => review.recommended);
+  const averageRating = (reviewsAsBooleans.filter(Boolean).length / reviewsAsBooleans.length) * 100;
+  console.log(averageRating + "%")
+  
   useEffect(() => {
     if (!game.id) dispatch(fetchGame(gameId));
   }, [dispatch, gameId, game.id]);
@@ -39,7 +47,7 @@ export default function GameShowPage() {
 
   useEffect(() => {
     dispatch(fetchReviews(gameId));
-  }, [gameId])
+  }, [dispatch, gameId])
   
   let wishlistControls = (
     <div className="wishlist-buttons-bar">
@@ -129,7 +137,7 @@ export default function GameShowPage() {
           <RelevantBox currentUser={currentUser} gameId={gameId} />
         </aside>
       </section>
-      <ReviewsIndex gameId={gameId} />
+      <ReviewsIndex reviews={reviews} />
     </div>
   )
 }

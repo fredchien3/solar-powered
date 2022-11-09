@@ -27,3 +27,13 @@ export const longDate = (dateString) => {
     timeZone:'utc'
   })
 }
+
+// 95 - 99% : Overhwelmingly Positive
+// 94 - 80% : Very Positive
+// 80 - 99% + few reviews: Positive
+// 70 - 79% : Mostly Positive
+// 40 - 69% : Mixed
+// 20? - 39% : Mostly Negative
+// 0 - 39% + few reviews: Negative
+// 0 - 19% : Very Negative
+// 0 - 19% + many reviews: Overwhelmingly Negative

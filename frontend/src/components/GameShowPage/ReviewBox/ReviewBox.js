@@ -54,7 +54,7 @@ export default function ReviewBox({ game, currentUser }) {
         {/* <h2>1 person found your review helpful</h2> */}
         <div className="review-form-wrapper">
           {userHasAlreadyReviewed.recommended ? <ThumbsUp /> : <ThumbsDown />}
-          <h3>Your review is publicly visible. You can edit this review and change your rating if you wish. <a href="#">View your review</a></h3>
+          <h3>Your review is publicly visible. You can edit this review and change your rating if you wish. <a href={`#review-by-author-${currentUser.id}`}>View your review</a></h3>
         </div>
       </>
     )

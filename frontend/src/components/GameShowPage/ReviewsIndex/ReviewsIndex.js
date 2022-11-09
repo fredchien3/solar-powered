@@ -1,12 +1,7 @@
-import { useSelector } from 'react-redux';
 import './ReviewsIndex.css';
 import ReviewTile from './ReviewTile';
 
-export default function ReviewsIndex({ gameId }) {
-  const reviews = useSelector(state => {
-    return Object.values(state.reviews).filter(review => review.gameId === gameId)
-  })
-
+export default function ReviewsIndex({ reviews }) {
   const reviewTiles = reviews.map(review => {
     return <ReviewTile review={review} key={review.id} />
   })

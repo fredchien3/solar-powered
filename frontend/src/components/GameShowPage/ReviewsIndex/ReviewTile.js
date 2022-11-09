@@ -9,7 +9,7 @@ export default function ReviewTile({ review }) {
   const author = useSelector(state => state.users[review.authorId]);
 
   return (
-    <article className="review-tile">
+    <article className="review-tile" id={`review-by-author-${review.authorId}`}>
       <div className="review-tile-left">
         <header>
           <img src={defaultAvatar} alt="avatar" />
