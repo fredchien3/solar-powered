@@ -14,7 +14,7 @@ export default function ReviewTile({ review }) {
   
   const thumb = review.recommended ? <ThumbsUp size={40} /> : <ThumbsDown size={40} />
   const author = useSelector(state => state.users[review.authorId]);
-  const currentUser = useSelector(state => state.session.user);
+  const currentUser = useSelector(state => state.session.user) || {};
   
   const toggleEditing = () => {
     setEditing(e => !e);
@@ -28,10 +28,18 @@ export default function ReviewTile({ review }) {
     <>
       {/* <h2>Was this review helpful?</h2>
       <div className="review-controls">
-        <button className="light-blue-button">Yes</button>
-        <button className="light-blue-button">No</button>
-        <button className="light-blue-button">Funny</button>
-        <button className="light-blue-button">Award</button>
+        <button className="light-blue-button">
+          <i className="fa-solid fa-flip-horizontal fa-thumbs-up" />
+          Yes
+        </button>
+        <button className="light-blue-button">
+          <i className="fa-solid fa-flip-horizontal fa-thumbs-down" />
+          No
+        </button>
+        <button className="light-blue-button">
+          <i className="fa-regular fa-smile" />
+          Funny
+        </button>
       </div> */}
     </>
   )
