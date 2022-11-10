@@ -26,7 +26,7 @@ export default function ReviewTile({ review }) {
   
   let reviewControls = (
     <>
-      {/* <h2>Was this review helpful?</h2>
+      <h2>Was this review helpful?</h2>
       <div className="review-controls">
         <button className="light-blue-button">
           <i className="fa-solid fa-flip-horizontal fa-thumbs-up" />
@@ -40,7 +40,7 @@ export default function ReviewTile({ review }) {
           <i className="fa-regular fa-smile" />
           Funny
         </button>
-      </div> */}
+      </div>
     </>
   )
   if (review.authorId === currentUser.id) {

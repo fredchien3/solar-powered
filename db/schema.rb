@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_07_162734) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_10_164559) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -81,6 +81,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_07_162734) do
     t.index ["user_id"], name: "index_library_items_on_user_id"
   end
 
+  create_table "review_votes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "review_id", null: false
+    t.string "value", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["review_id"], name: "index_review_votes_on_review_id"
+    t.index ["user_id", "review_id"], name: "index_review_votes_on_user_id_and_review_id", unique: true
+    t.index ["user_id"], name: "index_review_votes_on_user_id"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.bigint "author_id", null: false
     t.bigint "game_id", null: false
@@ -123,6 +134,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_07_162734) do
   add_foreign_key "cart_items", "users"
   add_foreign_key "library_items", "games"
   add_foreign_key "library_items", "users"
+  add_foreign_key "review_votes", "reviews"
+  add_foreign_key "review_votes", "users"
   add_foreign_key "reviews", "games"
   add_foreign_key "reviews", "users", column: "author_id"
   add_foreign_key "wishlist_items", "games"

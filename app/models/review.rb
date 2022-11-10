@@ -19,4 +19,6 @@ class Review < ApplicationRecord
     class_name: :User
 
   belongs_to :game
+
+  has_many :review_votes
 end

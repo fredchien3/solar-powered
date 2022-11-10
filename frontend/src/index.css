@@ -39,7 +39,7 @@ body {
 
 .light-blue-button:hover {
   cursor: pointer;
-  background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+  background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%) !important;
   color: white;
 }
 
