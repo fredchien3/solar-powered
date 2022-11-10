@@ -28,14 +28,18 @@ class User < ApplicationRecord
   
   has_many :cart_items,
     dependent: :destroy
-
-  has_many :games_in_cart,
+  has_many :carted_games,
     through: :cart_items,
     source: :game
   
   has_many :library_items
   has_many :owned_games,
     through: :library_items,
+    source: :game
+
+  has_many :wishlist_items
+  has_many :wishlisted_games,
+    through: :wishlist_items,
     source: :game
   
   has_many :reviews,

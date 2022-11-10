@@ -484,37 +484,35 @@ ApplicationRecord.transaction do
   puts "Destroying tables..."
   CartItem.destroy_all
   LibraryItem.destroy_all
+  WishlistItem.destroy_all
+  ReviewVote.destroy_all
+  Review.destroy_all
   Game.destroy_all
-  # User.destroy_all
+  User.destroy_all
 
   puts "Resetting primary keys..."
   ApplicationRecord.connection.reset_pk_sequence!('cart_items')
   ApplicationRecord.connection.reset_pk_sequence!('library_items')
+  ApplicationRecord.connection.reset_pk_sequence!('wishlist_items')
+  ApplicationRecord.connection.reset_pk_sequence!('review_votes')
+  ApplicationRecord.connection.reset_pk_sequence!('reviews')
   ApplicationRecord.connection.reset_pk_sequence!('games')
-  # ApplicationRecord.connection.reset_pk_sequence!('users')
+  ApplicationRecord.connection.reset_pk_sequence!('users')
 
-  # puts "Creating users..."
-  # ford = User.create!(
-  #   username: 'ford', 
-  #   display_name: 'ford',
-  #   email: 'fred.chien3@gmail.com', 
-  #   password: 'password'
-  # )
+  puts "Creating users..."
+  ford = User.create!(
+    username: 'ford', 
+    display_name: 'ford',
+    email: 'fred.chien3@gmail.com', 
+    password: 'password'
+  )
 
-  # gaben = User.create!(
-  #   username: 'gaben', 
-  #   display_name: 'gaben',
-  #   email: 'gaben@valvesoftware.com', 
-  #   password: 'MoolyFTW'
-  # )
-
-  # 3.times do 
-  #   User.create!({
-  #     username: Faker::Internet.unique.username(specifier: 3),
-  #     email: Faker::Internet.unique.email,
-  #     password: 'password'
-  #   }) 
-  # end
+  gaben = User.create!(
+    username: 'gaben', 
+    display_name: 'gaben',
+    email: 'gaben@valvesoftware.com', 
+    password: 'MoolyFTW'
+  )
 
   puts "Creating games..."
   fallout_4 = Game.create!( # Fallout 4
@@ -1445,6 +1443,10 @@ ApplicationRecord.transaction do
   #   image_urls: SAMPLEGAME_image_urls
   # )
 
+  puts "Adding every game to Ford's library..."
+  (1..Game.count).each do |game_id|
+    LibraryItem.create!(user_id: 1, game_id: game_id)
+  end
   
   puts "Done!"
 end
