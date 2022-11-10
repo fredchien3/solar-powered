@@ -1447,6 +1447,19 @@ ApplicationRecord.transaction do
   (1..Game.count).each do |game_id|
     LibraryItem.create!(user_id: 1, game_id: game_id)
   end
+
+  puts "Adding Ford reviews..."
+  Review.create!(author: ford, game: fallout_4, recommended: true, body: "I love this game! There's nothing better than stomping around in Power Armor and blasting some wasteland creatures. I also really liked the settlement building.")
+  Review.create!(author: ford, game: rimworld, recommended: true, body: "RimWorld? More like war crimes simulator! har har har har har.
+  But for real, this is one of my all time favorite games.")
+  Review.create!(author: ford, game: csgo, recommended: true, body: "I used to play this game so much with my friends. I was always the worst out of all of us, but it was still fun. Rush b no stop!")
+  Review.create!(author: ford, game: space_engineers, recommended: true, body: "This game really makes you feel like a space engineer. You can think of it like Minecraft, but in space, and with a lot more complexity. It's super fun!")
+  Review.create!(author: ford, game: project_zomboid, recommended: true, body: "PZ is super fun, and don't let the graphics fool you - it can get really intense. The sound design really ramps up the apocalyptic zombie feeling, and the long-waited animation update really changed the game for the better.")
+  Review.create!(author: ford, game: pubg, recommended: false, body: "Too many cheaters!!! Also, the movement feels really clunky.")
+  Review.create!(author: ford, game: bannerlord, recommended: false, body: "Don't get me wrong, it's a really really fun game. You can sink countless hours into just riding around the map, fighting huge battles, besieging castles, all of which is awesome. But the game is very much just an unfinished skeleton. Interactions with NPCs are very shallow and after a while the whole thing is very grindey and samey. I hope they keep working on it and really flesh it out.")
+  Review.create!(author: ford, game: kenshi, recommended: true, body: "This game is completely bonkers. It was made by one guy over the course of 12 years. It takes place in this huge, brutal, post-apocalyptic open world with settlement building and really mysterious lore. There are some really awesome locations and funny characters. The fighting and leveling system is also really cool and fun.")
+  Review.create!(author: ford, game: witcher3, recommended: true, body: "What can I say about The Witcher 3 that hasn't already been said? The game is a masterpiece. It took a minute to get used to Geralt's movement and combat, but after I did, I got so immersed in the storytelling and characters.")
+  # Review.create!(author: ford, game: skyrim, recommended: true, body: "I remember 11/11/2011, getting off school and running straight to the game store to pick up my copy of Skyrim. I had watched the trailer a hundred times by that point. It did not disappoint. There is so much to explore and do. The world feels alive and your actions feel impactful. Plus, dragon shouting is such a cool ability.")
   
   puts "Done!"
 end
