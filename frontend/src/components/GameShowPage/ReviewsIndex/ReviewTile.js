@@ -79,11 +79,11 @@ export default function ReviewTile({ review }) {
         <header>
           <img src={defaultAvatar} alt="avatar" />
           <div className="review-tile-left-top-row">
-            <a href={`/users/${author.id}/games`} id="review-author-username">{author.displayName}</a>
-            <a href={`/users/${author.id}/games`}>{author.numOwnedGames} products in account</a>
+            <a href={`/users/${author.username}/games`} id="review-author-username">{author.displayName}</a>
+            <a href={`/users/${author.username}/games`}>{author.numOwnedGames} products in account</a>
           </div>
         </header>
-        <a href={`/users/${author.id}/games`}>{author.numReviews} reviews</a>
+        <a href={`/users/${author.username}/games`}>{author.numReviews} reviews</a>
       </div>
       <div className="review-tile-right">
         {reviewTileRight}
