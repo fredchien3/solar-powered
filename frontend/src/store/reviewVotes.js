@@ -1,5 +1,5 @@
 import csrfFetch from "./csrf";
-import { SET_REVIEWS } from "./reviews";
+import { ADD_REVIEW, SET_REVIEWS } from "./reviews";
 
 const ADD_REVIEW_VOTE = "reviewVotes/ADD_REVIEW_VOTE";
 const REMOVE_REVIEW_VOTE = "reviewVotes/REMOVE_REVIEW_VOTE";
@@ -28,16 +28,19 @@ export const createReviewVote = (reviewVote) => async (dispatch) => {
 }
 
 export const updateReviewVote = (reviewVote) => async (dispatch) => {
+  const updatedVote = {value: reviewVote.value}
   const res = await csrfFetch(`/api/review_votes/${reviewVote.id}`, {
     method: "PUT",
-    body: JSON.stringify(reviewVote)
+    body: JSON.stringify(updatedVote)
   });
   const data = await res.json();
   dispatch(addReviewVote(data));
 }
 
 export const deleteReviewVote = (reviewVoteId) => async (dispatch) => {
-  await csrfFetch(`/api/review_votes/${reviewVoteId}`);
+  await csrfFetch(`/api/review_votes/${reviewVoteId}`, {
+    method: "DELETE"
+  });
   dispatch(removeReviewVote(reviewVoteId));
 }
 

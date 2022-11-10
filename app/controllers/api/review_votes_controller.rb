@@ -1,11 +1,12 @@
 class Api::ReviewVotesController < ApplicationController
   before_action :require_logged_in, only: [:create, :update, :destroy]
+  wrap_parameters include: ReviewVote.attribute_names + ["reviewId"]
 
   def create
     @review_vote = ReviewVote.new(review_vote_params)
-    @review_vote.user = current_user
+    @review_vote.user_id = current_user.id
     if @review_vote.save!
-      render json: { @review_vote.id: @review_vote }
+      render :show
     else
       render json: { errors: @review_vote.errors.full_mesasges }
     end
@@ -16,7 +17,7 @@ class Api::ReviewVotesController < ApplicationController
     @review_vote.assign_attributes(review_vote_params)
     
     if @review_vote.save!
-      render json: { @review_vote.id: @review_vote }
+      render :show
     else
       render json: { errors: @review_vote.errors.full_mesasges }
     end
@@ -24,7 +25,7 @@ class Api::ReviewVotesController < ApplicationController
 
   def destroy
     @review_vote = ReviewVote.find(params[:id])
-    @review_vote.destroy if @review
+    @review_vote.destroy if @review_vote
     render json: { message: 'Success' }
   end
 

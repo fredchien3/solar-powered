@@ -6,15 +6,52 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteReview } from '../../../store/reviews';
 import { useState } from 'react';
 import ReviewForm from '../ReviewBox/ReviewForm';
+import { createReviewVote, deleteReviewVote, updateReviewVote } from '../../../store/reviewVotes';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function ReviewTile({ review }) {
   const dispatch = useDispatch();
+  const history = useHistory();
   
   const [editing, setEditing] = useState(false);
   
   const thumb = review.recommended ? <ThumbsUp size={40} /> : <ThumbsDown size={40} />
   const author = useSelector(state => state.users[review.authorId]);
   const currentUser = useSelector(state => state.session.user) || {};
+  
+  const [helpfulCount, funnyCount] = useSelector(state => {
+    const reviewVotes = Object.values(state.reviewVotes)
+      .filter(reviewVote => reviewVote.reviewId === review.id);
+    let helpfulCount = 0;
+    let funnyCount = 0;
+    reviewVotes.forEach(review => {
+      if (review.value === "yes") helpfulCount += 1;
+      if (review.value === "funny") funnyCount += 1;
+    });
+    return [helpfulCount, funnyCount];
+  })
+  
+  let previousVote = useSelector(state => {
+    return Object.values(state.reviewVotes).find(vote => {
+      return vote.userId === currentUser.id && vote.reviewId === review.id;
+    })
+  }) || {};
+  
+  const handleVote = (value) => {
+    if (currentUser.id) {
+      if (previousVote.id && previousVote.value === value) {
+        dispatch(deleteReviewVote(previousVote.id));
+      } else if (previousVote.id) {
+        const updatedVote = {...previousVote, value}
+        dispatch(updateReviewVote(updatedVote));
+      } else {
+        const newVote = {value, reviewId: review.id};
+        dispatch(createReviewVote(newVote));
+      }
+    } else {
+      history.push('/login');
+    }
+  }
   
   const toggleEditing = () => {
     setEditing(e => !e);
@@ -24,19 +61,32 @@ export default function ReviewTile({ review }) {
     dispatch(deleteReview(review.id));
   }
   
+  const prevYes = previousVote.value === "yes";
+  const prevNo = previousVote.value === "no";
+  const prevFunny = previousVote.value === "funny";
+
   let reviewControls = (
     <>
       <h2>Was this review helpful?</h2>
       <div className="review-controls">
-        <button className="light-blue-button">
+        <button 
+          className={prevYes ? "light-blue-button voted-yes": "light-blue-button"}
+          onClick={() => handleVote("yes")}
+        >
           <i className="fa-solid fa-flip-horizontal fa-thumbs-up" />
           Yes
         </button>
-        <button className="light-blue-button">
+        <button 
+          className={prevNo ? "light-blue-button voted-no": "light-blue-button"}
+          onClick={() => handleVote("no")}
+        >
           <i className="fa-solid fa-flip-horizontal fa-thumbs-down" />
           No
         </button>
-        <button className="light-blue-button">
+        <button 
+          className={prevFunny ? "light-blue-button voted-funny": "light-blue-button"}
+          onClick={() => handleVote("funny")}
+        >
           <i className="fa-regular fa-smile" />
           Funny
         </button>
@@ -81,6 +131,24 @@ export default function ReviewTile({ review }) {
     <ReviewForm review={review} setEditing={setEditing} />
   )
   
+  let helpfulText;
+  if (helpfulCount === 0) {
+    helpfulText = <></>;
+  } else if (helpfulCount === 1) {
+    helpfulText = <p>{helpfulCount} person found this review helpful</p>;
+  } else {
+    helpfulText = <p>{helpfulCount} people found this review helpful</p>;
+  }
+
+  let funnyText;
+  if (funnyCount === 0) {
+    funnyText = <></>;
+  } else if (funnyCount === 1) {
+    funnyText = <p>{funnyCount} person found this review funny</p>;
+  } else {
+    funnyText = <p>{funnyCount} people found this review funny</p>;
+  }
+    
   return (
     <article className="review-tile" id={`review-by-author-${review.authorId}`}>
       <div className="review-tile-left">
@@ -97,8 +165,8 @@ export default function ReviewTile({ review }) {
         {reviewTileRight}
         {reviewControls}
         <div className="review-vote-stats">
-          {/* <p>3 people found this review helpful</p>
-          <p>2 people found this review funny</p> */}
+          {helpfulText}
+          {funnyText}
         </div>
       </div>
     </article>

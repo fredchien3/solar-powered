@@ -137,6 +137,23 @@
   margin-right: 6px;
 }
 
+.voted-yes, .voted-no, .voted-funny {
+  color: white;
+  background: rgba( 103, 193, 245, 0.4 ) !important;
+}
+
+.voted-yes > i {
+  color: #6bb64d;
+}
+
+.voted-no > i {
+  color: #993b3b;
+}
+
+.voted-funny > i {
+  color: #c1be33;
+}
+
 .review-vote-stats {
   margin: 8px 0;
 }
@@ -150,9 +167,6 @@
 
 .review-form-update {
   margin-right: 8px;
-}
-
-.review-form-update .review-form-text {
 }
 
 .review-form-update .review-form-options {

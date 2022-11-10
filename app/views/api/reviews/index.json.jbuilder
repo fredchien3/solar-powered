@@ -18,7 +18,7 @@ if @reviews.length > 0
       json.review_votes do
         review.review_votes.each do |review_vote|
           json.set! review_vote.id do
-            json.extract! review_vote, :id, :user_id, :review_id, :value
+            json.partial! 'api/review_votes/review_vote', review_vote: review_vote
           end
         end
       end
