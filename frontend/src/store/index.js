@@ -7,6 +7,7 @@ import libraryItemsReducer from './libraryItems';
 import usersReducer from './users';
 import wishlistItemsReducer from './wishlistItems';
 import reviewsReducer from './reviews';
+import reviewVotesReducer from './reviewVotes';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
   libraryItems: libraryItemsReducer,
   users: usersReducer,
   wishlistItems: wishlistItemsReducer,
-  reviews: reviewsReducer
+  reviews: reviewsReducer,
+  reviewVotes: reviewVotesReducer
 });
 
 let enhancer;

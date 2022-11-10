@@ -5,7 +5,7 @@ class Api::ReviewVotesController < ApplicationController
     @review_vote = ReviewVote.new(review_vote_params)
     @review_vote.user = current_user
     if @review_vote.save!
-      render json: { message: 'Success' }
+      render json: { @review_vote.id: @review_vote }
     else
       render json: { errors: @review_vote.errors.full_mesasges }
     end
@@ -16,7 +16,7 @@ class Api::ReviewVotesController < ApplicationController
     @review_vote.assign_attributes(review_vote_params)
     
     if @review_vote.save!
-      render json: { message: 'Success' }
+      render json: { @review_vote.id: @review_vote }
     else
       render json: { errors: @review_vote.errors.full_mesasges }
     end

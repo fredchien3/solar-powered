@@ -13,6 +13,7 @@ import * as libraryItemActions from './store/libraryItems';
 import * as userActions from './store/users';
 import * as wishlistItemActions from './store/wishlistItems';
 import * as reviewActions from './store/reviews';
+import * as reviewVoteActions from './store/reviewVotes';
 
 const store = configureStore();
 
@@ -26,6 +27,7 @@ if (process.env.NODE_ENV !== 'production') {
   window.userActions = userActions;
   window.wishlistItemActions = wishlistItemActions;
   window.reviewActions = reviewActions;
+  window.reviewVoteActions = reviewVoteActions;
 }
 
 function Root() {
