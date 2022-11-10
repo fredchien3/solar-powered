@@ -26,13 +26,13 @@ export default function ReviewTile({ review }) {
   
   let reviewControls = (
     <>
-      <h2>Was this review helpful?</h2>
+      {/* <h2>Was this review helpful?</h2>
       <div className="review-controls">
         <button className="light-blue-button">Yes</button>
         <button className="light-blue-button">No</button>
         <button className="light-blue-button">Funny</button>
         <button className="light-blue-button">Award</button>
-      </div>
+      </div> */}
     </>
   )
   if (review.authorId === currentUser.id) {
@@ -89,8 +89,8 @@ export default function ReviewTile({ review }) {
         {reviewTileRight}
         {reviewControls}
         <div className="review-vote-stats">
-          <p>3 people found this review helpful</p>
-          <p>2 people found this review funny</p>
+          {/* <p>3 people found this review helpful</p>
+          <p>2 people found this review funny</p> */}
         </div>
       </div>
     </article>
