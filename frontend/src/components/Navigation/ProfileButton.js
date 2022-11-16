@@ -16,11 +16,11 @@ export default function ProfileButton({currentUser}) {
   
   const menu = (
     <div className="profile-button-dropdown">
-      <Link to="/">View profile</Link>
-      <Link to="/">Account details</Link>
-      <button onClick={handleLogout}>Logout: <p>{currentUser.username}</p></button>
-      <Link to="/">Preferences</Link>
-      <Link to="/">Change language</Link>
+      <Link to={`/users/${currentUser.username}/games`}>View profile</Link>
+      <Link to={`/users/${currentUser.username}/games`}>Account details</Link>
+      <a href="/logout" onClick={handleLogout}>Logout: <p>{currentUser.username}</p></a>
+      <Link to="#">Preferences</Link>
+      <Link to="#">Change language</Link>
     </div>
   )
   

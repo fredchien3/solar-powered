@@ -75,13 +75,15 @@
   color: #57cbde;
   margin-left: 4px;
   padding: 0;
+  display: block;
+  overflow: hidden;
+  margin-bottom: -3px;
+  height: 100%;
+  line-height: 100%;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .profile-button-dropdown p:hover {
   color: #57cbde;
-}
-
-.profile-button-dropdown > :last-child {
-  cursor: default
 }

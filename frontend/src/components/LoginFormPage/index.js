@@ -44,16 +44,16 @@ export default function LoginFormPage() {
     setCredential('');
     setPassword('');
     setTimeout(fillCredential, 50);
-    setTimeout(fillPassword, 1300);
-    setTimeout(loginDemoUser, 2500)
+    setTimeout(fillPassword, 1400);
+    setTimeout(loginDemoUser, 3000)
   }
 
-  let inputCredential = 'gaben';
+  let inputCredential = 'gabelogannewell';
   const fillCredential = () => {
     for (let i = 0; i < inputCredential.length; i++) {
       setTimeout(() => {
         setCredential(c => c + inputCredential[i]);
-      }, i * 150)
+      }, i * 90)
     }
   }
   

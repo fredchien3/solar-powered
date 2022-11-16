@@ -24,27 +24,25 @@ export default function Navigation() {
     };
   }, [dispatch, currentUser])
 
-  // Original:
-  // const centerCluster = (
-  //     <div className="center-cluster">
-  //       <Link to="/store">Store</Link>
-  //       <Link to="#">Community</Link>
-  //       {currentUser ? <Link to="#">{currentUser.displayName}</Link> : <></>}
-  //       {currentUser ? <Link to="#">Chat</Link> : <Link to="#">About</Link>}
-  //       <Link to="#">Support</Link>
-  //     </div>
-  // )
-
-  // No dead links:
   const centerCluster = (
       <div className="center-cluster">
         <Link to="/store">Store</Link>
-        <span style={{width: '30px'}}></span>
-        <a href="https://fredchien.com/">Personal Site</a>
+        <a href="https://github.com/fredchien3/solar-powered/"
+          target="_blank"
+          rel="noreferrer">
+          Community
+        </a>
         {currentUser ? <Link to={`/users/${currentUser.username}/games`}>{currentUser.displayName}</Link> : <></>}
-        <a href="https://www.linkedin.com/in/fchien/">LinkedIn</a>
-        <a href="https://angel.co/u/fred-chien">AngelList</a>
-        <a href="mailto: fred.chien3@gmail.com">Email</a>
+        <a href="https://fredchien.com/"
+          target="_blank"
+          rel="noreferrer">
+          {currentUser ? "Chat" : "About"}
+        </a>
+        <a href="mailto: fred.chien3@gmail.com"
+          target="_blank"
+          rel="noreferrer">
+          Support
+        </a>
       </div>
   )
 

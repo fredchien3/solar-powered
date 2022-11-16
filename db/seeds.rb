@@ -502,13 +502,13 @@ ApplicationRecord.transaction do
   puts "Creating users..."
   ford = User.create!(
     username: 'ford', 
-    display_name: 'ford',
+    display_name: 'Fred',
     email: 'fred.chien3@gmail.com', 
     password: 'password'
   )
 
   gaben = User.create!(
-    username: 'gaben', 
+    username: 'gabelogannewell', 
     display_name: 'gaben',
     email: 'gaben@valvesoftware.com', 
     password: 'MoolyFTW'
