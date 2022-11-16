@@ -12,7 +12,7 @@ json.user do
   end
 end
 
-if review.review_votes.length > 0
+if @review.review_votes.length > 0
   json.review_votes do
     json.set! review.id do
       review.review_votes.each do |review_vote|

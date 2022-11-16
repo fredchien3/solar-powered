@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import { numberifyDate, prettifyDate } from "../../helpers";
+import { numberifyDate, prettifyDate, ratingColor, ratingSummary } from "../../helpers";
 import { deleteWishlistItem } from "../../store/wishlistItems";
 import CartButton from "../GameShowPage/CartButton/CartButton";
 import "./WishlistItem.css";
@@ -33,7 +33,7 @@ export default function WishlistItem({ wishlistItem, viewingOwnWishlist }) {
 
           <div className="wishlist-item-grid">
             <div className="wishlist-item-grid-item">Overall reviews:</div>
-            <div className="wishlist-item-grid-item">None</div>
+            <div className={"wishlist-item-grid-item " + ratingColor(game.averageScore)}>{ratingSummary(game.averageScore)}</div>
             <div className="wishlist-item-grid-item">Release date:</div>
             <div className="wishlist-item-grid-item">{prettifyDate(game.releaseDate)}</div>
           </div>
