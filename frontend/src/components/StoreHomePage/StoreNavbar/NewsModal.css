@@ -1,0 +1,100 @@
+.news-wrapper {
+  width: 706px;
+  height: 830px;
+  background: radial-gradient(circle at top left, #343941, #25282e 50%);
+  color: white;
+  position: relative;
+}
+
+.x-news-modal {
+  background: none;
+  border: none;
+  color: #788a92;
+  font-size: 16px;
+  position: absolute;
+  top: 3px;
+  right: 2px;
+}
+
+.x-news-modal:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.news-content {
+  background: linear-gradient(to bottom, #2a303c, #222631);
+  width: 690px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 32px;
+  bottom: 64px;
+  margin: 0 auto;
+  overflow: scroll;
+}
+
+.news-article {
+  /* background-color: rgba(255, 255, 0, 0.2); */
+  /* border: 1px solid white; */
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-article > span {
+  margin-bottom: 12px;
+}
+
+.news-article > span h3 {
+  display: inline;
+  margin-right: 6px;
+  font-size: 12px;
+  color: #868f98;
+}
+
+.news-article > h1 {
+  font-size: 24px;
+  line-height: 36px;
+  color: #eaeaeb;
+  font-family: 'Motiva Sans 100', sans-serif;
+  margin-bottom: 24px;
+}
+
+.news-article > p {
+  font-size: 14px;
+  color: #cfd2d3;
+  line-height: 19px;
+  margin-bottom: 12px;
+}
+
+#news-text {
+  font-family: 'Motiva Sans 500', sans-serif;
+  color: #289cff;
+}
+
+#posted-text {
+  font-family: 'Motiva Sans 100', sans-serif;
+  color: #b1b4b9;
+  letter-spacing: 1px;
+}
+
+.close-news-modal {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  font-family: 'Motiva Sans 400';
+  border: none;
+  background-color: #3d4450;
+  color: #dee2e5;
+  padding: 8px 10px;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+.close-news-modal:hover {
+  cursor: pointer;
+  background-color: #464d58;
+  color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}

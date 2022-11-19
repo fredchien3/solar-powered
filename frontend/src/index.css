@@ -132,6 +132,16 @@ body {
   top: 0;
 }
 
+.strong-blue-line-top::before {
+  content:"";
+  height: 1px;
+  background:linear-gradient(to right, #00ccff, #3366ff);
+  width:100%;
+  display:block;
+  position: absolute;
+  top: 0;
+}
+
 /* Blue line gradient on bottom */
 
 .blue-line-bottom::after {

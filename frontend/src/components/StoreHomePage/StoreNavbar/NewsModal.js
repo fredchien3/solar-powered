@@ -1,19 +1,34 @@
 import { useState } from "react"
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Modal from "../../../context/Modal";
+import { newsContent } from "./newsContent";
+import "./NewsModal.css";
 
 export default function NewsModal() {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   const handleClick = (e) => {
     e.preventDefault();
     setShowModal(true);
   }
-  
+
   const newsModalContent = (
-    <div>
-      <h1>Hello World</h1>
-      <p>lorem ipsum</p>
+    <div className="news-wrapper strong-blue-line-top">
+      <button
+        className="x-news-modal"
+        onClick={() => setShowModal(false)}
+      >
+        <i className="fa-solid fa-xmark" />
+      </button>
+      <div className="news-content">
+        {newsContent}
+      </div>
+      <button
+        className="close-news-modal"
+        onClick={() => setShowModal(false)}
+      >
+        Close
+      </button>
     </div>
   )
 
@@ -22,7 +37,12 @@ export default function NewsModal() {
       <Link to="/news" onClick={handleClick}>
         News
       </Link>
-      {showModal && <Modal onClose={() => setShowModal(false)} children={newsModalContent}/>}
+      {showModal &&
+      <Modal
+        onClose={() => setShowModal(false)}
+
+        children={newsModalContent}
+      />}
     </>
   )
 }

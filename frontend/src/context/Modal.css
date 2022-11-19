@@ -5,6 +5,9 @@
   left: 0;
   bottom: 0;
   z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #modal-background {
@@ -13,17 +16,11 @@
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #modal-content {
   position: absolute;
-  width: 670px;
-  height: 90vh;
-  background-color: black;
   color: white;
   display: flex;
   justify-content: center;
