@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min"
+import NewsModal from "./NewsModal"
 import "./StoreNavbar.css"
 
 export default function StoreNavbar() {
-
   // No dead links:
   const storeNavbarLinks = (
     <div className="store-nav-bar-links">
-      <Link to="/store">Your Store</Link>
+      <Link to="/store" className="store-nav-bar-link">Your Store</Link>
       {/* <Link to="#">New & Noteworthy</Link> */}
       {/* <Link to="#">Categories</Link> */}
       {/* <Link to="#">Points Shop</Link> */}
-      {/* <Link to="#">News</Link> */}
+      <NewsModal />
       {/* <Link to="#">Labs</Link> */}
     </div>
   )

@@ -14,6 +14,7 @@ import * as userActions from './store/users';
 import * as wishlistItemActions from './store/wishlistItems';
 import * as reviewActions from './store/reviews';
 import * as reviewVoteActions from './store/reviewVotes';
+import { ModalProvider } from './context/Modal';
 
 const store = configureStore();
 
@@ -32,11 +33,13 @@ if (process.env.NODE_ENV !== 'production') {
 
 function Root() {
   return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
+    <ModalProvider>
+      <Provider store={store}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Provider>
+    </ModalProvider>
   );
 }
 

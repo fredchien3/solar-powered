@@ -23,7 +23,7 @@ export default function StoreHomePage({ error }) {
   }, [dispatch]);
   
   let errorMessage;
-  if (error) errorMessage = <div class="flash-error">{error}</div>
+  if (error) errorMessage = <div className="flash-error">{error}</div>
   
   let signInBox;
   if (!currentUser.id) signInBox = (
