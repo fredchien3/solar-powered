@@ -11,17 +11,6 @@
   flex-direction: column;
 }
 
-/* Blue line gradient */
-.reviews-index-empty::before {
-  content:"";
-  height:1px;
-  background:linear-gradient(to right, #3a6e8b 0%, transparent 80%);
-  width: 100%;
-  display:block;
-  position: absolute;
-  top: 0;
-}
-
 .reviews-index-empty {
   position: relative;
   width: 100%;

@@ -6,16 +6,6 @@
   position: relative;
 }
 
-/* Blue line gradient */
-.review-tile::before {
-  content:"";
-  height:1px;
-  background:linear-gradient(to right, #3a6e8b 0%, transparent 100%);
-  width:100%;
-  display:block;
-  position: absolute;
-}
-
 .review-tile-left {
   width: 200px;
   padding: 8px;

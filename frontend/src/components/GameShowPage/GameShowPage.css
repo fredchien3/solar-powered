@@ -276,17 +276,6 @@
   color: white;
 }
 
-/* Blue line gradient */
-.about-this-game h1::after {
-  content:"";
-  height:1px;
-  background:linear-gradient(to right, #3a6e8b 0%, transparent 100%);
-  width:100%;
-  display:block;
-  margin-top: 4px;
-}
-
-
 .game-show-main-right {
   width: 308px;
   height: 100%;

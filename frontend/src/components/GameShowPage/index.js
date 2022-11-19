@@ -148,7 +148,7 @@ export default function GameShowPage() {
             </div>
           </div>
           <article className="about-this-game">
-            <h1>About this game</h1>
+            <h1 className="blue-line-bottom">About this game</h1>
             {game.longDescription}
           </article>
         </aside>

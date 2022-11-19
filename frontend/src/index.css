@@ -120,6 +120,29 @@ body {
   color: #d2efa9; 
 }
 
+/* Blue line gradient on top */
+
+.blue-line-top::before {
+  content:"";
+  height:1px;
+  background:linear-gradient(to right, #3a6e8b 0%, transparent 100%);
+  width:100%;
+  display:block;
+  position: absolute;
+  top: 0;
+}
+
+/* Blue line gradient on bottom */
+
+.blue-line-bottom::after {
+  content:"";
+  height:1px;
+  background:linear-gradient(to right, #3a6e8b 0%, transparent 100%);
+  width:100%;
+  display:block;
+  margin-top: 4px;
+}
+
 .no-rating {
   color: #556772;
 }
