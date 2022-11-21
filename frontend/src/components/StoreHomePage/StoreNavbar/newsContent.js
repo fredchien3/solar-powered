@@ -39,12 +39,20 @@ export const newsContent = (
       <span>
         <h3 id="news-text">NEWS</h3>
         <h3 id="posted-text">POSTED</h3>
-        <h3>{prettifyDate("11/19/2022")}</h3>
+        <h3>{prettifyDate("11/9/2022")}</h3>
       </span>
-      <h1>Lorem Ipsum</h1>
+      <h1>Reviews Added!</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante massa, varius eu ante quis, hendrerit eleifend ligula. Suspendisse mauris mi, auctor et laoreet in, scelerisque quis enim. Cras elementum elementum vestibulum. Donec commodo quam nec libero vestibulum venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan arcu non fermentum viverra. Duis ut turpis feugiat, elementum libero sed, bibendum lectus. Curabitur euismod feugiat lacus. Donec non libero mattis, vehicula diam et, suscipit nunc. Nulla bibendum in sapien non consectetur. Mauris gravida scelerisque sem, in ullamcorper nulla cursus vel. Cras ac arcu quis metus suscipit ultrices. Vivamus congue urna et rhoncus tempor. Sed dictum eleifend ex nec ultrices. Nulla rutrum non quam at ornare.
+        Hello user! I just pushed a pretty exciting feature. You can now write reviews for any games that you own. Reviews will be displayed on the game show page for everyone to see, and on top of that, games will now dynamically calculate and display the percentage of positive reviews. 
       </p>
+      <p>
+        Currently, the summary text is set to "Positive", "Mostly Positive", "Mixed", and "Negative", of course depending on how many users recommend the game versus how many do not recommend it. This review score summary is shown on each game's individual show page as well as the store home page when you hover over a game!
+      </p>
+      <p>
+        Go ahead and try writing a review for your favorite game! Don't forget to select a thumbs up or thumbs down to represent whether or not you recommend the game to other users. If you change your mind, you can always edit or delete your review.
+      </p>
+      <p>Until the next!</p>
+      <p>- Fred</p>
     </article>
   </>
 )
