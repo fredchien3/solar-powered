@@ -41,7 +41,7 @@ export const newsContent = (
         <h3 id="posted-text">POSTED</h3>
         <h3>{prettifyDate("11/9/2022")}</h3>
       </span>
-      <h1>Reviews Added!</h1>
+      <h1>REVIEWS!</h1>
       <p>
         Hello user! I just pushed a pretty exciting feature. You can now write reviews for any games that you own. Reviews will be displayed on the game show page for everyone to see, and on top of that, games will now dynamically calculate and display the percentage of positive reviews. 
       </p>
@@ -52,6 +52,34 @@ export const newsContent = (
         Go ahead and try writing a review for your favorite game! Don't forget to select a thumbs up or thumbs down to represent whether or not you recommend the game to other users. If you change your mind, you can always edit or delete your review.
       </p>
       <p>Until the next!</p>
+      <p>- Fred</p>
+    </article>
+    <article className="news-article">
+      <span>
+        <h3 id="news-text">NEWS</h3>
+        <h3 id="posted-text">POSTED</h3>
+        <h3>{prettifyDate("11/7/2022")}</h3>
+      </span>
+      <h1>Wishlist Feature Added</h1>
+      <p>
+        Hello user - just implemented a quick little wishlist feature. Well, the feature ended up being neither quick nor little.
+      </p>
+      <p>
+        I was able to structure it really similarly to the cart feature, where a logged in user can add and delete games from the wishlist. Purchasing a game that was on your wishlist will remove it from your wishlist.
+      </p>
+      <p>
+        I also wanted users to be able to view other users' wishlists. To that end, I made accomodations in the frontend using the same custom route logic I came up with for the library page. Just like how the library page works, when you visit '/users/:username/wishlist', the Wishlist component hits the backend with that username string, which queries the database using that username, and then returns the user. After the user data arrives there, the component can then fetch the WishlistItems associated with that user's ID.
+      </p>
+      <p>
+        That's how it worked at first. However, this caused an with the little white wishlist button above the store navbar that tracks how many items are in your wishlist. It made it so when you visit another user's wishlist, the number in the button reflects what's in that user's wishlist! It should always only display the number of items in the currently logged in user's wishlist, which is a problem I didn't face when I implemented the cart button as you can't view other users' carts.
+      </p>
+      <p>
+        I was able to solve it by completely restructuring the relevant Redux state and backend response, splitting the WishlistItems state into two top-level keys: currentUser and otherUser. Now when viewing another user's wishlist, the info that is fetched is stored under the otherUser key, leaving the wishlist button count unaffected.
+      </p>
+      <p>
+        I spent a long time restructuring, refactoring, optimizing, cleaning up, and it was worth it! The feature works, the components make fewer fetches, and the Redux state receives fewer actions. Feels good man.
+      </p>
+      <p>Have fun!</p>
       <p>- Fred</p>
     </article>
   </>
