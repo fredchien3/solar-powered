@@ -82,5 +82,21 @@ export const newsContent = (
       <p>Have fun!</p>
       <p>- Fred</p>
     </article>
+    <article className="news-article">
+      <span>
+        <h3 id="news-text">NEWS</h3>
+        <h3 id="posted-text">POSTED</h3>
+        <h3>{prettifyDate("10/21/2022")}</h3>
+      </span>
+      <h1>Presentation Day!</h1>
+      <p>
+        Today was full stack project presentation day at App Academy! Everybody got up and gave a two minute demo on their progress, and it was awesome seeing the results of my cohort mates' hard work.
+      </p>
+      <p>
+        I'm glad I didn't run into any bugs while I was presenting. I think taking the extra time to clean up my code and test weird scenarios to make sure everything's bug free is always worth it. Plus my last minute scramble to add more games to the database and add the long description display to the game show page was also a worthwhile time investment.
+      </p>
+      <p>Still a long way to go, plenty of features I want to add. Onward!</p>
+      <p>- Fred</p>
+    </article>
   </>
 )
