@@ -98,5 +98,21 @@ export const newsContent = (
       <p>Still a long way to go, plenty of features I want to add. Onward!</p>
       <p>- Fred</p>
     </article>
+    <article className="news-article">
+      <span>
+        <h3 id="news-text">NEWS</h3>
+        <h3 id="posted-text">POSTED</h3>
+        <h3>{prettifyDate("10/20/2022")}</h3>
+      </span>
+      <h1>"Is This Game Relevant To You" Box Added</h1>
+      <p>
+        This is a little feature, but a pretty cool one nonetheless. There is now a box on the right column of the game show page that I like to call the Relevant Box. If there is no account currently logged in, the box prompts the user to log in. If there is an account logged in, the box displays information regarding whether the game is relevant to the user by drawing on data specific to the logged in account!
+      </p>
+      <p>
+        Right now, the only component of the new relevance box is whether the displayed game is similar to other games in the current user's library. In the future, after friending is implemented, it will show that a game is relevant by looking at the current user's friends' libraries to see if their friends play it.
+      </p>
+      <p>The Relevant Box is a small feature with a high upfront cost, but I think it's a nice touch and it opens up opportunity for more features later on.</p>
+      <p>- Fred</p>
+    </article>
   </>
 )
