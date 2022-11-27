@@ -135,5 +135,26 @@ export const newsContent = (
       </p>
       <p>- Fred</p>
     </article>
+    <article className="news-article">
+      <span>
+        <h3 id="news-text">NEWS</h3>
+        <h3 id="posted-text">POSTED</h3>
+        <h3>{prettifyDate("10/10/2022")}</h3>
+      </span>
+      <h1>User Authentication Added</h1>
+      <p>
+        An app is born! I have completed the initial setup on this exciting new web app that I have named Solar Powered. The backend is an API-only Ruby on Rails app, meaning it doesn't render html.erb views like a standard one. Instead, the controllers will return JSON objects to fetches sent in by the React frontend, which will handle the views.
+      </p>
+      <p>
+        Right now the app is just user auth - you can create an account, log in, and log out. I'm using session based auth: when a user logs in, a new session token is generated. The token is stored under that user's database entry and also as a cookie on the user's browser. Now that the cookie is stored in the browser, it is included in every request, where the backend can check the database to find the user with that token and perform the appropriate actions under the correct user. When the user logs out, the session cookie is cleared from the user's browser and the user's database entry.
+      </p>
+      <p>
+        Hey, if you've made it all the way down here, thank you for your time. I'm really proud of what I built and I hope you have enjoyed playing around with the app and seeing the progression of features. Don't hesitate to get in contact with me - all my links are in the footer. I would love to talk shop, collaborate on a project, etc.
+      </p>
+      <p>
+        Bye!
+      </p>
+      <p>- Fred</p>
+    </article>
   </>
 )
