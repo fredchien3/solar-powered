@@ -139,6 +139,27 @@ export const newsContent = (
       <span>
         <h3 id="news-text">NEWS</h3>
         <h3 id="posted-text">POSTED</h3>
+        <h3>{prettifyDate("10/17/2022")}</h3>
+      </span>
+      <h1>Games Added</h1>
+      <p>
+        First signs of life: I just added the store home page and individual game show pages. The home page currently displays all the games in a carousel - each slide represents one game and displays its main image plus four screenshot thumbnails. Hovering over a screenshot thumbnail displays the full-sized screenshot in the main image display.
+      </p>
+      <p>
+        When you click on a game, you get taken to its show page - there is another coursel displaying all of its screenshots, and also the rest of its info like release date, developer, and descriptions.
+      </p>
+      <p>
+        I was considering importing a React library to handle the carousel functionality, but I wanted to challenge myself and implement the two carousels from scratch. It ended up taking a while just because I was having trouble achieving the fade in/fade out effect that the original site uses when switching between carousel slides. In the end, I was able to achieve that transition effect by implementing the slides in a very non-React way: having all slides be displayed, with a opacity: 0 tag on all but one at a time.
+      </p>
+      <p>
+        I'm really happy with how they turned out. Check out the pretty pictures!
+      </p>
+      <p>- Fred</p>
+    </article>
+    <article className="news-article">
+      <span>
+        <h3 id="news-text">NEWS</h3>
+        <h3 id="posted-text">POSTED</h3>
         <h3>{prettifyDate("10/10/2022")}</h3>
       </span>
       <h1>User Authentication Added</h1>
