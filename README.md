@@ -5,19 +5,9 @@
 _The ultimate destination for viewing, purchasing, and reviewing games._
 
 
-
-Solar [(live link🚀)](https://solar-powered.herokuapp.com/) is an admiring tribute to the platform Steam, and to the joy and friendships that it introduced to my life.
+Solar is an admiring tribute to the platform Steam, and to the joy and friendships that it introduced to my life.
 
 The full name "Solar Powered" is a parallel to Steam's [steampowered.com](https://store.steampowered.com/).
-
-## Tech
-
-- React with Redux: handling data on the front end and rendering interactive components
-- Ruby on Rails (as an API): backend for serving data
-- PostgreSQL: database
-- AWS S3: cloud storage for game and user images
-- CSS: pixel-perfect site styling
-- Heroku: hosting
 
 ## Technical implementation details
 
@@ -29,7 +19,7 @@ Each slide of the carousel represents one game, displaying five images: one main
 
 <img src="./readme_assets/1-main-carousel.gif" width="700" alt="main carousel">
 
-_(not Steam!)_
+_(this is Solar, not Steam!)_
 
 While planning this feature, I looked into some carousel libraries online.
 However, I wanted to practice my React skills. Also, one of my primary goals for this app is pixel perfection - including transitions and effects.
@@ -153,7 +143,16 @@ This figure contains all the images, which are set to _visibility: hidden; opaci
 
 <img src="./readme_assets/library.png" width="700" alt="game list">
 
-## To-dos/future features
+## Tech
+
+- React + Redux: handling data on the front end and rendering interactive components
+- Ruby on Rails: backend for serving data
+- PostgreSQL: database
+- AWS S3: cloud storage for game and user images
+- CSS: pixel-perfect site styling
+- Render: hosting
+
+## To-dos/future work
 
 - Writing, editing, deleting reviews
 
