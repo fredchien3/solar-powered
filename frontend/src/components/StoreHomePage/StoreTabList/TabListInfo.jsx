@@ -1,4 +1,4 @@
-import { ratingColor, ratingSummary } from '../../../helpers';
+import { ratingColor, ratingSummary } from '../../../utils/helpers';
 import './TabListInfo.css';
 
 export default function TabListInfo({ game, active }) {

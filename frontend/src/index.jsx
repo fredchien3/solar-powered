@@ -14,7 +14,7 @@ import * as userActions from './store/users';
 import * as wishlistItemActions from './store/wishlistItems';
 import * as reviewActions from './store/reviews';
 import * as reviewVoteActions from './store/reviewVotes';
-import { ModalProvider } from './context/Modal';
+import { ModalProvider } from './contexts/Modal';
 
 const store = configureStore();
 
@@ -53,7 +53,7 @@ const renderApplication = () => {
 };
 
 if (sessionStorage.getItem('X-CSRF-Token') && sessionStorage.getItem('currentUser')) {
-renderApplication();
+  renderApplication();
 } else {
-store.dispatch(sessionActions.restoreSession()).then(renderApplication);
+  store.dispatch(sessionActions.restoreSession()).then(renderApplication());
 }

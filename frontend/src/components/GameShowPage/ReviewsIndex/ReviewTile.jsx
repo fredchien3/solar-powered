@@ -1,4 +1,4 @@
-import { longDate } from '../../../helpers';
+import { longDate } from '../../../utils/helpers';
 import { ThumbsUp, ThumbsDown } from '../ReviewBox/ReviewBox';
 import './ReviewTile.css';
 import defaultAvatar from '../../default_avatar.jpg';

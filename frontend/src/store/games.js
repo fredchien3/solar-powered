@@ -7,7 +7,7 @@ const SET_GAMES = "games/SET_GAMES";
 const ADD_GAME = "games/ADD_GAME";
 const ADD_GAMES = "games/ADD_GAMES";
 
-export const setGames = (games) => { 
+export const setGames = (games) => {
   return {
     type: SET_GAMES,
     payload: games
@@ -21,7 +21,7 @@ export const addGames = (games) => {
   }
 }
 
-const addGame = (game) => { 
+const addGame = (game) => {
   return {
     type: ADD_GAME,
     payload: game

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import { numberifyDate, prettifyDate, ratingColor, ratingSummary } from "../../helpers";
+import { numberifyDate, prettifyDate, ratingColor, ratingSummary } from "../../utils/helpers";
 import { deleteWishlistItem } from "../../store/wishlistItems";
 import CartButton from "../GameShowPage/CartButton/CartButton";
 import "./WishlistItem.css";

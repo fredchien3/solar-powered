@@ -3,7 +3,7 @@ import defaultAvatar from "../../default_avatar.jpg";
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import ReviewForm from './ReviewForm';
 import { useSelector } from 'react-redux';
-import { longDate } from '../../../helpers';
+import { longDate } from '../../../utils/helpers';
 
 export function ThumbsUp({ size }) {
   size ||= 44;

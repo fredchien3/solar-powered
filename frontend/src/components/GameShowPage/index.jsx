@@ -7,7 +7,7 @@ import "./GameShowPage.css";
 import GameShowCarousel from "./GameShowCarousel/GameShowCarousel";
 import { fetchLibraryItems } from "../../store/libraryItems";
 import RelevantBox from "./RelevantBox/RelevantBox";
-import { prettifyDate, ratingColor, ratingSummary } from "../../helpers";
+import { prettifyDate, ratingColor, ratingSummary } from "../../utils/helpers";
 import WishlistButton from "./WishlistButton/WishlistButton";
 import CartButton from "./CartButton/CartButton";
 import ReviewBox from "./ReviewBox/ReviewBox";

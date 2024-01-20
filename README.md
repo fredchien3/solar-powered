@@ -40,7 +40,7 @@ export default function FeaturedBox({ games }) {
       if (newIndex >= numGames) newIndex = 0;
     } else if (newIndex < 0) {
       newIndex = numGames - 1;
-    } 
+    }
     setIndex(newIndex);
   }
 
@@ -58,7 +58,7 @@ export default function FeaturedBox({ games }) {
         show={index === i ? true : false}
       />
     );
-    
+
     nubs.push(
       <span id={"featured-carousel-nub-" + i}
         className={index === i ? "featured-carousel-nub nub-active" : "featured-carousel-nub"}
@@ -85,25 +85,25 @@ export default function FeaturedSlide({ game, show }) {
   const handleMouseLeave = () => {setDisplayUrl(game.mainImageUrl)};
 
   const goToShowPage = () => {history.push('/games/' + game.id)};
-  
-  const featuredImages = [];  
+
+  const featuredImages = [];
   const screenshotDivs = [];
   for (let i = 0; i < 4; i++) {
     const url = game.imageUrls[i];
     featuredImages.push(
-      <img 
-        key={url} 
-        src={url} 
+      <img
+        key={url}
+        src={url}
         alt={game.title + ' featured #' + (i+1)}
         className={url === displayUrl ? "featured-image-show" : "featured-image-hide"}
       />
     );
-    
+
     screenshotDivs.push(
-    <div 
-      className="featured-screenshot-div" 
-      onMouseEnter={handleMouseEnter} 
-      onMouseLeave={handleMouseLeave} 
+    <div
+      className="featured-screenshot-div"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       key={url}>
         <img src={url} alt={game.title + ' screenshot #' + (i+1)} />
     </div>
@@ -111,7 +111,7 @@ export default function FeaturedSlide({ game, show }) {
   }
   return(
     <section className={show ? "store-featured-carousel-slide" : "store-featured-carousel-slide slide-hide"} onClick={goToShowPage}>
-      <figure style={{"backgroundImage": `url(${game.mainImageUrl})`}}>{featuredImages}</figure>
+      <figure style={{"backgroundImage": `url($"https://placehold.co/616x353")`}}>{featuredImages}</figure>
       ...
     ...
   )

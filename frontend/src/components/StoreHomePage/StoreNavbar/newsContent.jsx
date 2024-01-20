@@ -1,4 +1,4 @@
-import { prettifyDate } from "../../../helpers";
+import { prettifyDate } from "../../../utils/helpers";
 
 export const newsContent = (
   <>

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import Modal from "../../../context/Modal";
+import Modal from "../../../contexts/Modal";
 import { newsContent } from "./newsContent";
 import "./NewsModal.css";
 
