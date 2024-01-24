@@ -12,7 +12,7 @@ export default function FeaturedBox({ games }) {
       if (newIndex >= numGames) newIndex = 0;
     } else if (newIndex < 0) {
       newIndex = numGames - 1;
-    } 
+    }
     setIndex(newIndex);
   }
 

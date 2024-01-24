@@ -22,7 +22,7 @@ export default function CartPage() {
     return <CartItem cartItem={cartItem} key={cartItem.id} />;
   });
   const cartEmpty = (cartItems.length === 0);
-  
+
   const pricesArray = useSelector(state => {
     return cartItemsArray.map(cartItem => state.games[cartItem.gameId].price);
   })
@@ -39,7 +39,7 @@ export default function CartPage() {
         .catch(res => alert(res))
     }
   }
-  
+
   const handleRemoveAll = () => {
     alert('Removing all items from cart!');
     // replace with modal later
@@ -61,7 +61,7 @@ export default function CartPage() {
     // selfOrGiftString = "";
     disablePurchaseForMyself = true;
   }
-  
+
   if (!currentUser) {
     return <Redirect to="login" />;
   } else {

@@ -18,7 +18,7 @@ export default function RelevantBox({ currentUser, gameId }) {
   let similarGame1 = otherOwnedGames[0] || {};
   let similarGame2 = otherOwnedGames[1] || {};
   let relevantBoxContents;
-  if (currentUser.id) {  
+  if (currentUser.id) {
     relevantBoxContents = (
       <div>
         {similarGame1.id && <div className="relevant-similar-games-tile">

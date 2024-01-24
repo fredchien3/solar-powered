@@ -10,7 +10,7 @@ import "./WishlistPage.css";
 export default function WishlistPage() {
   const dispatch = useDispatch();
   const { username } = useParams();
-  
+
   const currentUser = useSelector(state => state.session.user || {});
 
   const viewingOwnWishlist = currentUser.username === username;
@@ -51,7 +51,7 @@ export default function WishlistPage() {
       <section className="wishlist-main-column">
         <header>
           <img src={defaultAvatar} className="wishlist-profile-pic" alt="avatar" />
-          <h1 className="wishlist-title">{wishlistUser.displayName}'s wishlist</h1> 
+          <h1 className="wishlist-title">{wishlistUser.displayName}'s wishlist</h1>
         </header>
         {/* <div className="wishlist-control-bar"></div> */}
         <div className="wishlist-divider"></div>

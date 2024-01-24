@@ -12,20 +12,17 @@
 #  publisher         :string           not null
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
-#  main_image_url    :string           not null
-#  banner_image_url  :string           not null
-#  image_urls        :text             default([]), is an Array
-#  small_image_url   :string           default(""), not null
+#  name              :string           default(""), not null
 #
 class Game < ApplicationRecord
-  validates_presence_of :title, :price, :release_date, :short_description, :long_description, :developer, :publisher, :main_image_url, :banner_image_url
+  validates_presence_of :title, :price, :release_date, :short_description, :long_description, :developer, :publisher
 
   has_many :cart_items,
     dependent: :destroy
   # has_many :shoppers,
   #   through: :cart_items,
   #   source: :user
-  
+
   has_many :library_items
   has_many :owners,
     through: :library_items,
@@ -40,5 +37,25 @@ class Game < ApplicationRecord
 
   def num_reviews
     reviews.length
+  end
+
+  def main_image_url
+    "/images/#{self.name}/#{self.name}-main.jpg"
+  end
+
+  def banner_image_url
+    "/images/#{self.name}/#{self.name}-banner.jpg"
+  end
+
+  def small_image_url
+    "/images/#{self.name}/#{self.name}-small.jpg"
+  end
+
+  def image_urls
+    filenames = Dir.entries("./frontend/public/images/#{self.name}")
+      .sort_by{ |filename| filename.split('-').last.to_i }
+    urls = filenames
+      .select {|file| file.match?(/#{self.name}-\d+/)}
+      .map {|filename| "/images/#{self.name}/#{filename}"}
   end
 end

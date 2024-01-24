@@ -71,7 +71,7 @@ export default function Navigation() {
           Install Solar
         </button>
         <div className="login-signup-links">
-          <Link to="/login">login</Link> |  
+          <Link to="/login">login</Link> |
           <Link to="/signup">signup</Link>
         </div>
       </div>
@@ -90,9 +90,9 @@ export default function Navigation() {
     cartButton = <></>;
     wishlistButton = <></>;
   }
-  
+
   if (location.pathname.includes("/"))
-  
+
   return (
     <nav className="header-nav">
       <div className="header-nav-content">

@@ -24,15 +24,15 @@ export default function GameShowPage() {
   const game = useSelector(state => state.games[gameId] || {});
 
   document.title = game.id ? game.title + " on Solar" : "loading...";
-  
+
   const libraryItemsArray = useSelector(state => Object.values(state.libraryItems.currentUser));
 
   const gameAlreadyInLibrary = libraryItemsArray.some(libraryItem => libraryItem.gameId === gameId);
-  
+
   const reviews = useSelector(state => {
     return Object.values(state.reviews).filter(review => review.gameId === gameId)
   });
-  
+
   let averageScore;
   const numReviews = reviews.length;
   if (numReviews > 0) {
@@ -51,8 +51,8 @@ export default function GameShowPage() {
     </span>
     {numReviews > 0 ? <p>{`(${numReviews})`}</p> : <></>}
   </a>
-  
-  
+
+
   useEffect(() => {
     if (!game.id) dispatch(fetchGame(gameId));
   }, [dispatch, gameId, game.id]);
@@ -64,7 +64,7 @@ export default function GameShowPage() {
   useEffect(() => {
     dispatch(fetchReviews(gameId));
   }, [dispatch, gameId])
-  
+
   let wishlistControls = (
     <div className="wishlist-buttons-bar">
       <Link to="/login">Sign in</Link> to add this item to your wishlist{/* , follow it, or mark it as ignored */}

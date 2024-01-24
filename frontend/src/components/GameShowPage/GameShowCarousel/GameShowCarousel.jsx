@@ -20,21 +20,21 @@ export default function GameShowCarousel({ game }) {
     return <img
       src={url}
       className={index === i ? "game-show-carousel-image show-image-selected" : "game-show-carousel-image"}
-      alt={game.title + ' image #' + (i+1)}
+      alt={game.title + ' image #' + (i + 1)}
       key={url}
     />
   })
-  
+
   const thumbs = game.imageUrls.map((url, i) => {
     return <img
       src={url}
       className={index === i ? "game-show-carousel-thumb show-thumb-selected" : "game-show-carousel-thumb"}
-      alt={game.title + ' thumbnail #' + (i+1)}
+      alt={game.title + ' thumbnail #' + (i + 1)}
       onClick={() => setIndex(i)}
       key={url}
     />
   })
-  
+
   return (
     <div className="game-show-carousel-wrapper">
       <figure className="game-show-carousel-slides-wrapper">

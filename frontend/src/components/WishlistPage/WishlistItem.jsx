@@ -21,7 +21,7 @@ export default function WishlistItem({ wishlistItem, viewingOwnWishlist }) {
       </span>
     );
   }
-  
+
   return (
     <div className="wishlist-item-wrapper">
       <Link to={"/games/" + game.id} className="wishlist-item-img-wrapper">

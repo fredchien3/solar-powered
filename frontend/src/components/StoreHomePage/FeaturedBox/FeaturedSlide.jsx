@@ -5,32 +5,37 @@ export default function FeaturedSlide({ game, show }) {
   const history = useHistory();
   const [displayUrl, setDisplayUrl] = useState(game.mainImageUrl);
 
-  const handleMouseEnter = (e) => {setDisplayUrl(e.target.src)};
+  const handleMouseEnter = (e) => {
+    const url = new URL(e.target.src).pathname;
+    setDisplayUrl(url);
+  };
 
-  const handleMouseLeave = () => {setDisplayUrl(game.mainImageUrl)};
+  const handleMouseLeave = () => {setDisplayUrl(game.mainImageUrl);console.log(game.mainImageUrl)};
 
   const goToShowPage = () => {history.push('/games/' + game.id)};
-  
-  const featuredImages = [];  
+
+  const featuredImages = [];
   const screenshotDivs = [];
+
   for (let i = 0; i < 4; i++) {
     const url = game.imageUrls[i];
+
     featuredImages.push(
-      <img 
-        key={url} 
-        src={url} 
-        alt={game.title + ' featured #' + (i+1)}
+      <img
+        key={url}
+        src={url}
+        alt={game.title + ' featured #' + (i + 1)}
         className={url === displayUrl ? "featured-image-show" : "featured-image-hide"}
       />
     );
-    
+
     screenshotDivs.push(
-      <div 
-        className="featured-screenshot-div" 
-        onMouseEnter={handleMouseEnter} 
-        onMouseLeave={handleMouseLeave} 
+      <div
+        className="featured-screenshot-div"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         key={url}>
-          <img src={url} alt={game.title + ' screenshot #' + (i+1)} />
+          <img src={url} alt={game.title + ' screenshot #' + (i + 1)} />
       </div>
     );
   }

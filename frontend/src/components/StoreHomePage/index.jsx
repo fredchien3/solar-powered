@@ -14,17 +14,17 @@ export default function StoreHomePage({ error }) {
 
   const sessionSlice = useSelector(state => state.session);
   const currentUser = sessionSlice.user || {};
-  
+
   let games = [];
   games = useSelector(state => Object.values(state.games))
 
   useEffect(() => {
     dispatch(fetchGames());
   }, [dispatch]);
-  
+
   let errorMessage;
   if (error) errorMessage = <div className="flash-error">{error}</div>
-  
+
   let signInBox;
   if (!currentUser.id) signInBox = (
     <div className="store-sign-in-box">
@@ -33,7 +33,7 @@ export default function StoreHomePage({ error }) {
       <span>Or <Link to="/signup">sign up</Link> and join Solar for free</span>
     </div>
   )
-  
+
   // shuffle games
   for (let i = games.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -42,7 +42,7 @@ export default function StoreHomePage({ error }) {
 
   const tablistGames = games.slice(0, 10);
   const featuredGames = games.slice(10, games.length);
-  
+
   return (
     <div className="store-home-page">
       {errorMessage}
