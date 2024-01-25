@@ -1,4 +1,4 @@
-import { longDate } from '../../../utils/helpers';
+import { longDate } from '../../../utils/formatDate';
 import { ThumbsUp, ThumbsDown } from '../ReviewBox/ReviewBox';
 import './ReviewTile.css';
 import defaultAvatar from '../../default_avatar.jpg';
@@ -12,13 +12,13 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 export default function ReviewTile({ review }) {
   const dispatch = useDispatch();
   const history = useHistory();
-  
+
   const [editing, setEditing] = useState(false);
-  
+
   const thumb = review.recommended ? <ThumbsUp size={40} /> : <ThumbsDown size={40} />
   const author = useSelector(state => state.users[review.authorId]);
   const currentUser = useSelector(state => state.session.user) || {};
-  
+
   const [helpfulCount, funnyCount] = useSelector(state => {
     const reviewVotes = Object.values(state.reviewVotes)
       .filter(reviewVote => reviewVote.reviewId === review.id);
@@ -30,13 +30,13 @@ export default function ReviewTile({ review }) {
     });
     return [helpfulCount, funnyCount];
   })
-  
+
   let previousVote = useSelector(state => {
     return Object.values(state.reviewVotes).find(vote => {
       return vote.userId === currentUser.id && vote.reviewId === review.id;
     })
   }) || {};
-  
+
   const handleVote = (value) => {
     if (currentUser.id) {
       if (previousVote.id && previousVote.value === value) {
@@ -52,15 +52,15 @@ export default function ReviewTile({ review }) {
       history.push('/login');
     }
   }
-  
+
   const toggleEditing = () => {
     setEditing(e => !e);
   }
-  
+
   const handleDelete = () => {
     dispatch(deleteReview(review.id));
   }
-  
+
   const prevYes = previousVote.value === "yes";
   const prevNo = previousVote.value === "no";
   const prevFunny = previousVote.value === "funny";
@@ -69,21 +69,21 @@ export default function ReviewTile({ review }) {
     <>
       <h2>Was this review helpful?</h2>
       <div className="review-controls">
-        <button 
+        <button
           className={prevYes ? "light-blue-button voted-yes": "light-blue-button"}
           onClick={() => handleVote("yes")}
         >
           <i className="fa-solid fa-flip-horizontal fa-thumbs-up" />
           Yes
         </button>
-        <button 
+        <button
           className={prevNo ? "light-blue-button voted-no": "light-blue-button"}
           onClick={() => handleVote("no")}
         >
           <i className="fa-solid fa-flip-horizontal fa-thumbs-down" />
           No
         </button>
-        <button 
+        <button
           className={prevFunny ? "light-blue-button voted-funny": "light-blue-button"}
           onClick={() => handleVote("funny")}
         >
@@ -130,7 +130,7 @@ export default function ReviewTile({ review }) {
   if (editing) reviewTileRight = (
     <ReviewForm review={review} setEditing={setEditing} />
   )
-  
+
   let helpfulText;
   if (helpfulCount === 0) {
     helpfulText = <></>;
@@ -148,7 +148,7 @@ export default function ReviewTile({ review }) {
   } else {
     funnyText = <p>{funnyCount} people found this review funny</p>;
   }
-    
+
   return (
     <article className="review-tile blue-line-top" id={`review-by-author-${review.authorId}`}>
       <div className="review-tile-left">

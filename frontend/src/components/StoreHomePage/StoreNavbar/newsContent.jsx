@@ -1,4 +1,4 @@
-import { prettifyDate } from "../../../utils/helpers";
+import { prettifyDate } from "../../../utils/formatDate";
 
 export const newsContent = (
   <>
@@ -43,7 +43,7 @@ export const newsContent = (
       </span>
       <h1>REVIEWS!</h1>
       <p>
-        Hello user! I just pushed a pretty exciting feature. You can now write reviews for any games that you own. Reviews will be displayed on the game show page for everyone to see, and on top of that, games will now dynamically calculate and display the percentage of positive reviews. 
+        Hello user! I just pushed a pretty exciting feature. You can now write reviews for any games that you own. Reviews will be displayed on the game show page for everyone to see, and on top of that, games will now dynamically calculate and display the percentage of positive reviews.
       </p>
       <p>
         Currently, the summary text is set to "Positive", "Mostly Positive", "Mixed", and "Negative", of course depending on how many users recommend the game versus how many do not recommend it. This review score summary is shown on each game's individual show page as well as the store home page when you hover over a game!
@@ -125,7 +125,7 @@ export const newsContent = (
         Today, I wrapped up and pushed the shopping feature! This is the first feature that enablers user interaction with the app (with many more planned). Users can now add games to their cart and purchase games from their cart. The feature adds the cart page, where logged in users can view/remove their cart items or checkout to purchase them. It also adds the library page that allows anyone to view anyone's library - this uses some fun custom routing that takes a user's username rather than their ID. It's the way the original site routes to user accounts, and I think it looks nicer that way.
       </p>
       <p>
-        There is a lot of behind-the-scenes work going on as part of this feature. First of all, there is a little green shopping cart link that shows up above the store navbar, but only when there is a logged in user with one or more games in the cart. Because this green cart link persists through many pages on the site, I built the logic into the global website navbar so that it doesn't need to re-fetch when navigating through every page. 
+        There is a lot of behind-the-scenes work going on as part of this feature. First of all, there is a little green shopping cart link that shows up above the store navbar, but only when there is a logged in user with one or more games in the cart. Because this green cart link persists through many pages on the site, I built the logic into the global website navbar so that it doesn't need to re-fetch when navigating through every page.
       </p>
       <p>
         There is also logic accomodating the button text on a game's show page, reflecting whether the game is available to add to cart, already in the user's cart, or already in the user's library.

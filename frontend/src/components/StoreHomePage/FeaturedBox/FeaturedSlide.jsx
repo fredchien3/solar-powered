@@ -10,7 +10,7 @@ export default function FeaturedSlide({ game, show }) {
     setDisplayUrl(url);
   };
 
-  const handleMouseLeave = () => {setDisplayUrl(game.mainImageUrl);console.log(game.mainImageUrl)};
+  const handleMouseLeave = () => {setDisplayUrl(game.mainImageUrl)};
 
   const goToShowPage = () => {history.push('/games/' + game.id)};
 

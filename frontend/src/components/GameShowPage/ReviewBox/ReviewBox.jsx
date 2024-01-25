@@ -3,7 +3,7 @@ import defaultAvatar from "../../default_avatar.jpg";
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import ReviewForm from './ReviewForm';
 import { useSelector } from 'react-redux';
-import { longDate } from '../../../utils/helpers';
+import { longDate } from '../../../utils/formatDate';
 
 export function ThumbsUp({ size }) {
   size ||= 44;
@@ -33,7 +33,7 @@ export default function ReviewBox({ game, currentUser, gameAlreadyInLibrary }) {
   const userHasAlreadyReviewed = useSelector(state => {
     return Object.values(state.reviews).find(review => review.authorId === currentUser.id)
   });
-  
+
   if (!gameAlreadyInLibrary) return (<></>);
 
   let reviewBox = (
