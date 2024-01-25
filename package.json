@@ -9,6 +9,17 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "16.13.1"
-  }
+    "node": "16.x"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredchien3/solar-powered.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fredchien3/solar-powered/issues"
+  },
+  "homepage": "https://github.com/fredchien3/solar-powered#readme"
 }

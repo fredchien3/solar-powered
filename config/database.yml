@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: solar_production
-  username: solar
-  password: <%= ENV["SOLAR_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
