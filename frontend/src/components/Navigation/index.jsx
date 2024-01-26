@@ -33,7 +33,7 @@ export default function Navigation() {
           Community
         </a>
         {currentUser ? <Link to={`/users/${currentUser.username}/games`}>{currentUser.displayName}</Link> : <></>}
-        <a href="https://fredchien.com/"
+        <a href="https://www.linkedin.com/in/fchien/"
           target="_blank"
           rel="noreferrer">
           {currentUser ? "Chat" : "About"}
