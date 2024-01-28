@@ -1,6 +1,6 @@
 class Api::CartItemsController < ApplicationController
-  before_action :require_logged_in
-  
+  before_action :require_logged_in, only: [:create, :destroy]
+
   def create
     @cart_item = CartItem.new(user_id: current_user.id, game_id: params[:game_id])
     if @cart_item.save!
@@ -19,10 +19,10 @@ class Api::CartItemsController < ApplicationController
     if (params[:id] == "all")
       @cart_items = CartItem.where(user_id: current_user.id)
       @cart_items.destroy_all
-    else 
+    else
       @cart_item = CartItem.find(params[:id])
       @cart_item.destroy
     end
-    render json: { message: 'success' } 
+    render json: { message: 'success' }
   end
 end

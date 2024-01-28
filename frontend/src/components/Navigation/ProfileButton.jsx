@@ -10,10 +10,11 @@ export default function ProfileButton({currentUser}) {
   const history = useHistory();
   const [showMenu, setShowMenu] = useState(false);
 
-  const handleLogout = () => {
+  const handleLogout = (e) => {
+    e.preventDefault();
     dispatch(logout()).then(history.push('/store'));
   }
-  
+
   const menu = (
     <div className="profile-button-dropdown">
       <Link to={`/users/${currentUser.username}/games`}>View profile</Link>
@@ -23,11 +24,11 @@ export default function ProfileButton({currentUser}) {
       <Link to="#">Change language</Link>
     </div>
   )
-  
+
   const openMenu = () => {
     if (!showMenu) setShowMenu(true);
   }
-  
+
   useEffect(() => {
     if (showMenu)  {
       const closeMenu = () => setShowMenu(false);
