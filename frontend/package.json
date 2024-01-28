@@ -39,5 +39,6 @@
     "@vitejs/plugin-react": "^4.2.1",
     "redux-logger": "^3.0.6",
     "vite": "^5.0.12"
-  }
+  },
+  "type": "module"
 }

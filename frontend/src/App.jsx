@@ -1,14 +1,14 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import StoreHomePage from './components/StoreHomePage';
-import LoginFormPage from './components/LoginFormPage';
-import Navigation from './components/Navigation';
-import SignupFormPage from './components/SignupFormPage';
-import GameShowPage from './components/GameShowPage';
-import CartPage from './components/CartPage';
-import LibraryPage from './components/LibraryPage';
-import Footer from './components/Footer';
-import WishlistPage from './components/WishlistPage';
+import StoreHomePage from './components/StoreHomePage/StoreHomePage';
+import LoginFormPage from './components/LoginFormPage/LoginFormPage';
+import Navigation from './components/Navigation/Navigation';
+import SignupFormPage from './components/SignupFormPage/SignupFormPage';
+import GameShowPage from './components/GameShowPage/GameShowPage';
+import CartPage from './components/CartPage/CartPage';
+import LibraryPage from './components/LibraryPage/LibraryPage';
+import Footer from './components/Footer/Footer';
+import WishlistPage from './components/WishlistPage/WishlistPage';
 
 function App() {
   return (
