@@ -7,6 +7,7 @@ import "./StoreHomePage.css"
 import StoreNavbar from "./StoreNavbar/StoreNavbar";
 import StoreSidebar from "./StoreSidebar/StoreSidebar";
 import StoreTabList from "./StoreTabList/StoreTabList";
+import arrangeGames from "../../utils/arrangeGames";
 
 export default function StoreHomePage({ error }) {
   document.title = "Welcome to Solar";
@@ -34,12 +35,7 @@ export default function StoreHomePage({ error }) {
     </div>
   )
 
-  // shuffle games
-  for (let i = games.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [games[i], games[j]] = [games[j], games[i]];
-  }
-
+  arrangeGames(games);
   const tablistGames = games.slice(0, 10);
   const featuredGames = games.slice(10, games.length);
 

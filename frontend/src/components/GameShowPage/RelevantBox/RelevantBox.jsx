@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "./RelevantBox.css";
+import arrangeGames from "../../../utils/arrangeGames";
 
 export default function RelevantBox({ currentUser, gameId }) {
   const otherOwnedGames = useSelector(state => {
@@ -9,11 +10,7 @@ export default function RelevantBox({ currentUser, gameId }) {
     return ownedGames.filter(game => game?.id !== gameId);
   });
 
-  // shuffle
-  // for (let i = otherOwnedGames.length - 1; i > 0; i--) {
-  //   const j = Math.floor(Math.random() * (i + 1));
-  //   [otherOwnedGames[i], otherOwnedGames[j]] = [otherOwnedGames[j], otherOwnedGames[i]];
-  // }
+  arrangeGames(otherOwnedGames, gameId);
 
   let similarGame1 = otherOwnedGames[0] || {};
   let similarGame2 = otherOwnedGames[1] || {};
