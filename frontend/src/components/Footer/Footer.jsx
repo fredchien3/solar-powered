@@ -23,24 +23,11 @@ export default function Footer() {
           <p>Tech Stack</p> |
           <a href="https://reactjs.org/">React</a> |
           <a href="https://react-redux.js.org/">Redux</a> |
-          <a href="https://aws.amazon.com/s3/">AWS S3</a> |
           <a href="https://rubyonrails.org/">Ruby on Rails</a> |
           <a href="https://www.postgresql.org/">PostgreSQL</a>
         </span>
         <span>
           <p>Get In Touch</p> |
-          <a href="https://www.linkedin.com/in/fchien/">
-            <i className="fa-brands fa-linkedin" />
-            LinkedIn
-          </a> |
-          <a href="https://angel.co/u/fred-chien/">
-            <i className="fa-brands fa-angellist" />
-            AngelList
-          </a> |
-          <a href="https://github.com/fredchien3/">
-            <i className="fa-brands fa-square-github" />
-            Github
-          </a> |
           <a href="mailto: fred.chien3@gmail.com">
             <i className="fa-regular fa-envelope" />
             Email
