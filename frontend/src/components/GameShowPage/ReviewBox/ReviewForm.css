@@ -71,7 +71,7 @@
   color: #2B5066;
   padding: 8px 16px;
   border-radius: 4px;
-  border: 2px solid #17202f;
+  border: 2px solid var(--dark-blue);
 }
 
 .post-review-button:hover {

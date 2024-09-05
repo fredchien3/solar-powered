@@ -8,5 +8,5 @@
 }
 
 .wishlist-button.active:hover {
-  background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+  background: linear-gradient(-60deg, #417a9b 5%,var(--light-blue) 95%);
 }

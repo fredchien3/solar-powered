@@ -1,5 +1,5 @@
 .game-show-page {
-  background-color: #1b2838;
+  background-color: var(--medium-blue);
   width: 100vw;
   padding-bottom: 80px;
   display: flex;
@@ -72,7 +72,9 @@
   width: 940px;
   height: 432px;
   padding-bottom: 12px;
-  background: linear-gradient(to right, rgba(0,0,0,0) 50%,rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(
+    to right, transparent 50%,var(--40-tint) 100%
+  );
   display: flex;
   justify-content: space-between;
 }
@@ -96,7 +98,7 @@
 .game-show-main-info-panel > p {
   font-size: 13px;
   line-height: 18px;
-  color: #c6d4df;
+  color: var(--83-grayb);
   display: flex;
   padding-top: 6px;
   padding-right: 16px;
@@ -133,14 +135,14 @@
 }
 
 .review-summary td, .developer-publisher {
-  color: #66C0F4;
+  color: var(--light-blue);
 }
 
 .review-summary td p {
   display: inline;
   margin-left: 4px;
   font-size: 12px;
-  
+
   color: #556772;
 }
 
@@ -177,8 +179,8 @@
   align-items: center;
   padding: 0 7px;
   margin: 0px 2px 3px 0;
-  color: #67c1f5;
-  background-color: rgba(103, 193, 245, 0.2);
+  color: var(--light-blue);
+  background-color: var(--blue-tint);
   border: none;
   border-radius: 2px;
   height: 19px;
@@ -186,8 +188,8 @@
 }
 
 .user-tags-row button:hover {
-  color: #ffffff;
-  background: linear-gradient(135deg, #67c1f5 0%,#417a9b 100%);
+  color: white;
+  background: linear-gradient(135deg, var(--light-blue) 0%,#417a9b 100%);
   cursor: pointer;
 }
 
@@ -196,10 +198,10 @@
   width: 908px;
   display: flex;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--20-tint);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
-  color: #c6d4df;
+  color: var(--83-grayb);
   padding: 16px;
   margin-bottom: 32px;
 }
@@ -255,7 +257,7 @@
   display: flex;
   justify-content: center;
   white-space: nowrap;
-  color: #c6d4df;
+  color: var(--83-grayb);
   padding: 0 10px;
 }
 

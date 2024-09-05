@@ -1,7 +1,7 @@
 .tab-list-item {
   width: 618px;
   height: 69px;
-  background-color: rgb(0, 0, 0, 0.2);
+  background-color: var(--20-tint);
   margin-bottom: 5px;
   display: flex;
   border-right: 14px none;
@@ -24,11 +24,11 @@
 .tab-list-item div * {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  color: #c7d5e0;
+  color: var(--83-grayb);
 }
 
 .tab-list-item div p {
-  color: #acdbf5;
+  color: var(--83-grayb);
   font-family: Tahoma, Arial, Helvetica, sans-serif;
   font-size: 13px;
 }
@@ -36,7 +36,7 @@
 .tab-list-item.tab-active {
   background: linear-gradient( to right, #c6e6f8 5%,#95bcd3 95%);
   cursor: pointer;
-  border-right: 14px solid #95bcd3;
+  border-right: 14px solid var(--71-grayb);
 }
 
 .tab-list-item.tab-active * {

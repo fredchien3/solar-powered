@@ -8,7 +8,7 @@
 }
 
 .login-form-wrapper {
-  background-color: #181a21;
+  background-color: var(--dark-blue);
   display: flex;
   justify-content: space-between;
   margin-top: 174px;
@@ -77,51 +77,15 @@
   height: 20px;
 }
 
-.remember-me:hover {
-  cursor: pointer;
-}
-
 .remember-me input {
   width: 16px;
   margin: 0 6px 0 0;
-  cursor: pointer;
 }
-
-/* .remember-me input {
-  appearance: inherit;
-  width: 14px;
-  height: 14px;
-  padding: 3px;
-  margin: 0 6px 0 0;
-  border: none;
-  box-sizing: content-box;
-  background-color: #393c44;
-  cursor: pointer;
-  display: grid;
-  place-content: center;
-}
-
-.remember-me input::before {
-  content: "";
-  width: 0.65em;
-  height: 0.65em;
-  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-  transform: scale(0);
-  transform-origin: bottom left;
-}
-
-.remember-me input:checked::before {
-  transform: scale(1);
-}
-
-.remember-me input:focus {
-  outline: 2px solid lightblue;
-} */
 
 .login-form button {
   width: 270px;
   height: 50px;
-  background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+  background: var(--neon-blue-sweep);
   outline: none;
   border: none;
   border-radius: 2px;
@@ -135,14 +99,14 @@
   bottom: 56px;
 }
 
-.login-form button:hover {
+.login-form button:hover, .new-beta-feature button:hover {
+  background: var(--neon-blue-sweep-30);
   cursor: pointer;
-  background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
 }
 
-.login-form button:active {
-  outline: 1px solid #06bfff;
-  background: linear-gradient(90deg, #06BFFF 60%, #2D73FF 100%);
+.login-form button:active, .new-beta-feature button:active {
+  background: var(--neon-blue-sweep-60);
+  outline: 1px solid var(--neon-blue);
 }
 
 .error-border {
@@ -168,7 +132,7 @@
 }
 
 .cant-sign-in {
-  color: #b8b6b4;
+  color: var(--75-gray);
   font-size: 12px;
   position: absolute;
   display: flex;
@@ -181,11 +145,10 @@
 }
 
 .cant-sign-in:hover {
-  color: #E9E9E9;
+  color: var(--90-gray);
 }
 
 .new-beta-feature {
-  /* background-color: white; */
   width: 200px;
   height: 280px;
 }
@@ -218,18 +181,8 @@
   font-family: 'Motiva Sans 700', sans-serif;
 }
 
-.new-beta-feature button:hover {
-  background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
-  cursor: pointer;
-}
-
-.new-beta-feature button:active {
-  outline: 1px solid #06bfff;
-  background: linear-gradient(90deg, #06BFFF 50%, #2D73FF 100%);
-}
-  
 .new-beta-feature a {
-  color: #b8b6b4;
+  color: var(--75-gray);
   font-size: 12px;
   display: flex;
   width: 100%;

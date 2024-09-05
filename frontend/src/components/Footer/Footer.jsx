@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="array-logo">ARRA<span>y</span></div>
         <section className="legal-text-wrapper">
           <p>
-            © 2022 Array Corporation. Made with ♥ by <a href="https://www.linkedin.com/in/fchien/">Fred Chien</a>.
+            © 2024 Array Corporation. Made with ♥ by <a href="https://www.linkedin.com/in/fchien/">Fred Chien</a> in New York.
             Solar is a fullstack clone of <a href="https://store.steampowered.com/">Steam</a>.
             All trademarks are property of their respective owners in the US and other countries.
             This is for all the good times, and to many more.

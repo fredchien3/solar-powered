@@ -7,7 +7,7 @@
   background: none;
   border: none;
   margin-right: 6px;
-  color: #c5c3c2;
+  color: var(--75-gray);
   font-size: 11px;
 }
 
@@ -42,11 +42,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #171a21;
+  background: var(--dark-blue);
   width: 150px;
   height: 132px;
   padding: 6px 0 6px 0;
-  box-shadow: 0 0 12px #000000;
+  box-shadow: 0 0 12px black;
   animation: fadein 2s;
   overflow: hidden;
   z-index: 3;
@@ -55,7 +55,7 @@
 .profile-button-dropdown * {
   background: none;
   border: none;
-  color: #b8b6b4;
+  color: var(--75-gray);
   display: flex;
   align-items: center;
   height: 27px;

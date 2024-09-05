@@ -54,7 +54,7 @@
 }
 
 .wishlist-item-purchase {
-  background-color: rgba(0,0,0,0.2);
+  background-color: var(--20-tint);
   padding: 2px;
   height: 32px;
   display: flex;

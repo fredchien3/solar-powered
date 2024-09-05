@@ -1,7 +1,7 @@
 .footer-wrapper {
   width: 100%;
   height: 182px;
-  background-color: #171a21;
+  background-color: var(--dark-blue);
   box-sizing: border-box;
   padding-top: 40px;
   display: flex;
@@ -10,8 +10,8 @@
 }
 
 .footer-sandwich {
-  border-top: 1px solid #363c44;
-  border-bottom: 1px solid #363c44;
+  border-top: 1px solid var(--24-grayb);
+  border-bottom: 1px solid var(--24-grayb);
   width: 940px;
   height: 53px;
   box-sizing: border-box;
@@ -26,7 +26,7 @@
   background-color: #969eab;
   width: 84px;
   height: 25px;
-  color: #171a21;
+  color: var(--dark-blue);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -56,7 +56,7 @@
 }
 
 .legal-text-wrapper a {
-  color: #C6D4DF;
+  color: var(--83-grayb);
   text-decoration: none;
 }
 
@@ -103,7 +103,7 @@
 }
 
 .footer-links a {
-  color: #C6D4DF;
+  color: var(--83-grayb);
   text-decoration: none;
   margin: 0 7px;
   height: 100%;

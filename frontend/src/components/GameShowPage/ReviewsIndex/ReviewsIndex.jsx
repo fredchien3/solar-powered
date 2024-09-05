@@ -6,19 +6,19 @@ export default function ReviewsIndex({ reviews, ratingSummaryText, ratingClass }
     return (
       <section className="reviews-index" id="reviews">
         <div className="reviews-index-main-column">
-          <div className="reviews-index-empty blue-line-top">
+          <div className="reviews-index-empty dull-blue-line-top">
             <h1>There are no reviews for this game</h1>
             <h2>You can write your own review for this game to share your experience with the community. Use the area above the purchase buttons on this page to write your review.</h2>
           </div>
         </div>
       </section>
     );
-  } 
+  }
 
   const reviewTiles = reviews.map(review => {
     return <ReviewTile review={review} key={review.id} />
   });
-  
+
   const reviewsSummary = (
     <h3 className={ratingClass}>
       {ratingSummaryText} <span>({reviews.length} reviews)</span>

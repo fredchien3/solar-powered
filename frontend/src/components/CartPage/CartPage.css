@@ -1,7 +1,7 @@
 .cart-page {
   width: 100%;
   padding-bottom: 100px;
-  background-color: #1b2838;
+  background-color: var(--medium-blue);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@
 .checkout-page-body-p {
   font-family: 'Motiva Sans 300', sans-serif;
   font-size: 13px;
-  color: #c6d4df;
+  color: var(--83-grayb);
 }
 
 .cart-page-glow-background {
@@ -68,7 +68,7 @@
 }
 
 .checkout-wrapper {
-  background: rgba( 0, 0, 0, 0.2 );
+  background: var(--20-tint);
   width: 100%;
   padding: 30px 16px 23px 16px;
   box-sizing: border-box;
@@ -78,7 +78,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 13px;
-  color: #c7d5e0;
+  color: var(--83-grayb);
 }
 
 .estimated-total-wrapper h1 {
@@ -123,7 +123,7 @@
   text-decoration: none;
 }
 
-.cart-remove { 
+.cart-remove {
   /* the remove button */
   margin-top: 6px;
   color: #56707f;
@@ -133,7 +133,7 @@
 
 .cart-remove:hover {
   cursor: pointer;
-  color: #67c1f5;
+  color: var(--light-blue);
 }
 
 .cart-page-main-right {

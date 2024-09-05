@@ -3,7 +3,7 @@
   padding-bottom: 100px;
   box-sizing: border-box;
   min-height: 59vh;
-  background-color: #1b2838;
+  background-color: var(--medium-blue);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +43,7 @@
 
 .link-to-profile:hover {
   cursor: pointer;
-  color: #66C0F4;
+  color: var(--light-blue);
 }
 
 .library-header > div span {
@@ -54,13 +54,13 @@
 
 .link-to-games {
   font-size: 14px;
-  color: #ebebeb;
+  color: var(--90-gray);
   text-decoration: none;
 }
 
 .link-to-games:hover {
   cursor: pointer;
-  color: #66C0F4;
+  color: var(--light-blue);
 }
 
 .library-main-column {

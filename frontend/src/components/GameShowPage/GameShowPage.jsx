@@ -71,6 +71,7 @@ export default function GameShowPage() {
       <Link to="/login">Sign in</Link> to add this item to your wishlist{/* , follow it, or mark it as ignored */}
     </div>
   );
+
   if (currentUser.id) {
     wishlistControls = (
       <div className="wishlist-buttons-bar">

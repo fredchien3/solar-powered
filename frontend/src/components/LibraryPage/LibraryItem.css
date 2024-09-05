@@ -1,5 +1,5 @@
 .library-item-wrapper {
-  background: rgba( 0, 0, 0, 0.2 );
+  background: var(--20-tint);
   width: 100%;
   height: 90px;
   padding: 8px;
@@ -36,9 +36,9 @@
 .library-item-info-wrapper a {
   width: 85px;
   height: 26px;
-  background-color: rgba( 103, 193, 245, 0.2 );
+  background-color: var(--blue-tint);
   border-radius: 2px;
-  color: #66c0f4;
+  color: var(--light-blue);
   box-sizing: border-box;
   font-size: 11px;
   font-family: Arial, Helvetica, sans-serif;

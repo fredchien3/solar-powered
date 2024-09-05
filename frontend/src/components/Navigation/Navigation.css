@@ -7,8 +7,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #171a21;
-  color: #b8b6b4;
+  background-color: var(--dark-blue);
+  color: var(--75-gray);
   height: 104px;
   padding-left: 11px;
 }
@@ -99,7 +99,7 @@
 }
 
 .login-signup-links a {
-  color: #b8b6b4;
+  color: var(--75-gray);
   font-size: 11px;
   text-decoration: none;
   margin: 0 11px 0 11px;
@@ -117,7 +117,7 @@
   width: 110px;
   height: 24px;
   background-color: #616a72;
-  color: #e5e4dc;
+  color: var(--90-gray);
   border: none;
   font-size: 11px;
   margin-right: 14px;
@@ -140,7 +140,7 @@
 }
 
 .login-signup-links {
-  color: #b8b6b4;
+  color: var(--75-gray);
 }
 
 .mail-button {
@@ -172,7 +172,7 @@
   height: 20px;
   border: none;
   border-radius: 1px;
-  box-shadow: 0 0 3px #000;
+  box-shadow: 0 0 3px black;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
@@ -190,7 +190,7 @@
 
 .silver-wishlist-link:hover {
   color: #111111;
-  background: linear-gradient(135deg, #ffffff 0%,#919aa3 100%);
+  background: linear-gradient(135deg, white 0%,#919aa3 100%);
 }
 
 .green-cart-link {

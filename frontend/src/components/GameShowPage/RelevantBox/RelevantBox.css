@@ -1,10 +1,10 @@
 .game-relevant {
   width: 100%;
-  background: linear-gradient(to right, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%);
+  background: linear-gradient(to right, var(--20-tint) 0%,rgba(0,0,0,0.5) 100%);
 }
 
 .game-relevant h1 {
-  background-color: rgba(0,0,0,0.2);
+  background-color: var(--20-tint);
   height: 38px;
   display: flex;
   align-items: center;
@@ -23,7 +23,7 @@
   color: #acb2b8;
   font-size: 14px;
   line-height: 22px;
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 20px;
 }
 
@@ -38,7 +38,7 @@
 
 .relevant-login-signup-buttons span {
   margin: 0 4px;
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: Arial, Helvetica, sans-serif;
   color: #acb2b8;
   font-size: 14px;
 }
@@ -46,7 +46,7 @@
 /* Logged in */
 
 .relevant-similar-games-tile {
-  color: #969696;
+  color: var(--60-gray);
   font-size: 14px;
   padding: 0 7px;
 }

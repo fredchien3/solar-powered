@@ -1,5 +1,5 @@
 .store-home-page {
-  background: url(https://store.akamai.steamstatic.com/public/images/v6/colored_body_top.png?v=2) center top no-repeat #1b2838;
+  background: url(https://store.akamai.steamstatic.com/public/images/v6/colored_body_top.png?v=2) center top no-repeat var(--medium-blue);
   width: 100vw;
   padding-bottom: 100px;
   display: flex;
@@ -41,20 +41,28 @@
 
 .button-left {
   left: -46px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4) 5%, transparent 95%);
+  background-image: linear-gradient(
+    to right, var(--40-tint) 5%, transparent 95%
+  );
 }
 
 .button-left:hover {
-  background-image: linear-gradient(to right, rgba(171, 218, 244, 0.3) 5%, rgba(171, 218, 244, 0) 95%);
+  background-image: linear-gradient(
+    to right, rgba(171, 218, 244, 0.3) 5%, transparent 95%
+  );
 }
 
 .button-right {
   right: -46px;
-  background-image: linear-gradient(to right, transparent 5%, rgba(0, 0, 0, 0.4) 95%);
+  background-image: linear-gradient(
+    to right, transparent 5%, var(--40-tint) 95%
+  );
 }
 
 .button-right:hover {
-  background-image: linear-gradient(to right, rgba(171, 218, 244, 0) 5%, rgba(171, 218, 244, 0.3) 95%);
+  background-image: linear-gradient(
+    to right, transparent 5%, rgba(171, 218, 244, 0.3) 95%
+  );
 }
 
 .store-sign-in-box {
@@ -65,7 +73,7 @@
   width: 908px;
   height: 130px;
   padding: 16px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--20-tint);
   margin-bottom: 80px;
   font-size: 15px;
   color: #8f98a0;
@@ -77,7 +85,7 @@
 
 .store-sign-in-box > span > a:hover {
   color: white;
-  color: #66c0f4;
+  color: var(--light-blue);
 }
 
 .store-sign-in-box > a {

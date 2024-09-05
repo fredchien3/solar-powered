@@ -13,7 +13,7 @@ export default function NewsModal() {
   }
 
   const newsModalContent = (
-    <div className="news-wrapper strong-blue-line-top">
+    <div className="news-wrapper neon-blue-line-top">
       <button
         className="x-news-modal"
         onClick={() => setShowModal(false)}

@@ -14,7 +14,7 @@
 .store-nav-bar-links {
   display: flex;
   height: 100%;
-  color: #e5e5e5;
+  color: var(--90-gray);
 }
 
 .store-nav-bar-links a {
@@ -80,7 +80,7 @@
 }
 
 .store-nav-bar-submit:hover {
-  background-color: #66beef;
+  background-color: var(--light-blue);
   color: #2a3e5b;
   cursor: pointer;
 }

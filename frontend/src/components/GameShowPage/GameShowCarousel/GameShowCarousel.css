@@ -53,7 +53,7 @@
 .game-show-carousel-thumbs-wrapper::-webkit-scrollbar {
   width: 5px;
   height: 18px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--20-tint);
   border-radius: 3px;
 }
 

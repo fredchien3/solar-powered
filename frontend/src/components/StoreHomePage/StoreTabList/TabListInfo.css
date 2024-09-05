@@ -32,7 +32,7 @@
   height: 38px;
   background-color: rgba( 38, 54, 69, 0.6);
   font-family: Arial, Helvetica, sans-serif;
-  color: #c6d4df;
+  color: var(--83-grayb);
   font-size: 12px;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@
 }
 
 .no-rating-homepage {
-  color: #929396;
+  color: var(--60-gray);
 }
 
 .tab-list-info-user-reviews > div > p {
