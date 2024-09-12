@@ -2,28 +2,52 @@
 @import url('reset.css');
 
 :root {
-  --strong-blue: hsl(220, 100%, 60%);
-  --neon-blue:   hsl(195, 100%, 50%);
-  --light-blue:  hsl(201, 81%, 67%);
-  --mid-blue:    hsl(202, 41%, 33%);
-  --medium-blue: hsl(213, 35%, 16%);
-  --dark-blue:   hsl(222, 18%, 11%);
+  --strong-blue: hsl(220, 100%, 60%); /* only login + signup buttons */
+  --neon-blue:   hsl(195, 100%, 50%); /* only login + signup buttons */
 
-  --90-gray:     hsl(0, 0%, 90%);
-  --75-gray:     hsl(0, 0%, 75%);
-  --60-gray:     hsl(0, 0%, 60%);
+  --light-blue:  hsl(201, 81%, 67%); /* links and positive rating */
+  --mid-blue:    hsl(202, 41%, 33%); /* only light blue button hover */
+  --medium-blue: hsl(213, 35%, 16%); /* main bg color */
+  --dark-blue:   hsl(222, 18%, 11%); /* header and footer */
 
-  --83-grayb:    hsl(206, 29%, 83%); /* various text */
-  --71-grayb:    hsl(202, 41%, 71%); /* tab list bg only */
-  --60-grayb:    hsl(206, 19%, 60%); /* tab list bg only */
-  --24-grayb:    hsl(214, 11%, 24%); /* footer border only */
+  --90-gray:     hsl(0, 0%, 90%); /* various text + links */
+  --75-gray:     hsl(0, 0%, 75%); /* various text + headers */
+  --60-gray:     hsl(0, 0%, 60%); /* only Similar to games + no reviews (StoreHome) */
+  --7-gray:      hsl(0, 0%, 7%); /* only link to cart/wishlist hover text */
+
+  --83-grayb:    hsl(206, 29%, 83%); /* various text + links */
+  --71-grayb:    hsl(202, 41%, 71%); /* only tab list bg */
+  --60-grayb:    hsl(206, 19%, 60%); /* only tab list bg */
+  --40-grayb:    hsl(203, 15%, 40%); /* various muted text + no reviews (GameShow) */
+  --24-grayb:    hsl(214, 11%, 24%); /* only footer border */
+
+  --13-gray:     hsl(0, 0%, 13%); /* only scrollbar corner */
+  --32-grayb:    hsl(220, 5%, 32%); /* only scrollbar */
 
   --40-tint:     hsla(0, 0%, 0%, 0.4);
   --30-tint:     hsla(0, 0%, 0%, 0.3);
   --20-tint:     hsla(0, 0%, 0%, 0.2);
-  --blue-tint:   hsla(202, 88%, 68%, 0.2);
+  --blue-tint:   hsla(202, 88%, 68%, 0.2); /* light blue button bg */
 
-  --neon-blue-sweep: linear-gradient(
+  /* green button refers to cart checkout button and StoreHomePage sign in */
+  --pale-green:  hsl(73, 68%, 72%); /* green button text */
+  --42-green:    hsl(73, 93%, 42%); /* green button top hovered, plus link-to-cart text */
+  --31-green:    hsl(73, 93%, 31%); /* green button top */
+  --27-green:    hsl(73, 93%, 27%); /* green button bottom hovered */
+  --21-green:    hsl(73, 93%, 21%); /* green button bottom */
+
+  /* Add to Cart button */
+  --pale-green-2: hsl(85, 69%, 80%); /* only */
+  --left-green:   hsl(85, 68%, 41%); /* only */
+  --right-green:  hsl(87, 67%, 32%); /* only */
+  --left-green-hover:  hsl(85, 68%, 50%); /* only */
+  --right-green-hover: hsl(87, 67%, 39%); /* only */
+
+  --error-orange: hsl(24, 71%, 64%); /* only */
+  --mixed-rating: hsl(38, 33%, 59%); /* only */
+  --red-rating:   hsl(19, 63%, 39%); /* only */
+
+  --neon-blue-sweep: linear-gradient( /* only login + signup buttons */
     to right, var(--neon-blue) 0%, var(--strong-blue) 100%
   );
   --neon-blue-sweep-30: linear-gradient(
@@ -33,8 +57,8 @@
     to right, var(--neon-blue) 60%, var(--strong-blue) 100%
   );
 
-  --dull-blue-sweep: linear-gradient(
-    to right, #3a6e8b 0%, transparent 100%
+  --dull-blue-sweep: linear-gradient( /* fancy line on game show page */
+    to right, hsl(201, 41%, 39%) 0%, transparent 100%
   );
 }
 
@@ -50,7 +74,7 @@ body {
 }
 
 .flash-error {
-  background: #e49762;
+  background: var(--error-orange);
   color: black;
   position: absolute;
   top: 105px;
@@ -74,11 +98,9 @@ body {
   align-items: center;
 }
 
-.light-blue-button:hover {
+.light-blue-button:not(:disabled):hover {
   cursor: pointer;
-  background: linear-gradient(
-    -60deg, var(--mid-blue) 5%, var(--light-blue) 95%
-  ) !important;
+  background: linear-gradient(to right, var(--light-blue) 5%, var(--mid-blue) 95%);
   color: white;
 }
 
@@ -87,18 +109,13 @@ body {
   cursor: default;
 }
 
-.light-blue-button:disabled:hover {
-  background: var(--blue-tint);
-  color: var(--light-blue);
-}
-
-/* Top-down gradient, like cart checkout and store home page 'sign in' */
+/* Top-down gradient: cart checkout and store home page 'sign in' */
 .green-button {
-  color: #D2E885;
+  color: var(--pale-green);
 
   height: 30px;
   padding: 0 15px;
-  background: linear-gradient(#799905 5%, #536904 95%);
+  background: linear-gradient(var(--31-green) 5%, var(--21-green) 95%);
   border: none;
   border-radius: 3px;
   font-family: 'Motiva Sans 400';
@@ -110,8 +127,8 @@ body {
   align-items: center;
 }
 
-.green-button:hover {
-  background: linear-gradient( to bottom, #a4d007 5%, #6b8705 95%);
+.green-button:not(:disabled):hover {
+  background: linear-gradient(to bottom, var(--42-green) 5%, var(--27-green) 95%);
   color: white;
   cursor: pointer;
 }
@@ -121,29 +138,23 @@ body {
   cursor: default;
 }
 
-.green-button:disabled:hover {
-  background: linear-gradient(#799905 5%, #536904 95%);
-  color: #D2E885;
-}
-
 /* Left-to-right gradient, 'Add to Cart' */
-
 .add-to-cart-button {
-  color: #d2efa9;
+  color: var(--pale-green-2);
 
   height: 30px;
   padding: 0 15px;
-  background: linear-gradient( to right, #75b022 5%, #588a1b 95%);
+  background: linear-gradient(to right, var(--left-green) 5%, var(--right-green) 95%);
   border: none;
   border-radius: 2px;
   font-family: 'Motiva Sans 400';
   font-size: 15px;
   margin-right: 1px;
-  text-shadow: 1px 1px 0px rgb(0 0 0 / 30%);
+  text-shadow: 1px 1px 0px var(--30-tint);
 }
 
-.add-to-cart-button:hover {
-  background: linear-gradient( to right, #8ed629 5%, #6aa621 95%);
+.add-to-cart-button:not(:disabled):hover {
+  background: linear-gradient(to right, var(--left-green-hover) 5%, var(--right-green-hover) 95%);
   color: white;
   cursor: pointer;
 }
@@ -151,11 +162,6 @@ body {
 .add-to-cart-button:disabled {
   opacity: 0.45;
   cursor: default;
-}
-
-.add-to-cart-button:disabled:hover {
-  background: linear-gradient( to right, #75b022 5%, #588a1b 95%);
-  color: #d2efa9;
 }
 
 /* Blue line gradient on top */
@@ -190,7 +196,7 @@ body {
 }
 
 .no-rating {
-  color: #556772;
+  color: var(--40-grayb);
 }
 
 .light-blue-rating {
@@ -198,11 +204,11 @@ body {
 }
 
 .mixed-rating {
-  color: #B9A074;
+  color: var(--mixed-rating);
 }
 
 .red-rating {
-  color: #A34C25;
+  color: var(--red-rating);
 }
 
 sup {
@@ -212,7 +218,7 @@ sup {
 
 @keyframes flashErrorsFadeIn {
   0% { background-color: white; }
-  100% { background-color: #e49762; }
+  100% { background-color: var(--error-orange); }
 }
 
 ::-webkit-scrollbar {
@@ -222,16 +228,16 @@ sup {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4e5157;
+  background: var(--32-grayb);
   border-radius: 15px;
   border: 4px solid transparent;
   background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  border: 4px solid #4e5157;
+  border: 4px solid var(--32-grayb);
 }
 
 ::-webkit-scrollbar-corner {
-  background: #202020;
+  background: var(--13-gray);
 }

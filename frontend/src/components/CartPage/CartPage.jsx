@@ -55,10 +55,8 @@ export default function CartPage() {
     })
   }
 
-  // let selfOrGiftString = <p className="checkout-page-body-p">Purchase as a gift feature coming soon.</p>;
   let disablePurchaseForMyself = false;
   if (cartEmpty) {
-    // selfOrGiftString = "";
     disablePurchaseForMyself = true;
   }
 
@@ -81,10 +79,8 @@ export default function CartPage() {
                 <span><h1>Estimated total</h1><sup>1</sup></span>
                 <h1>${totalPrice === 0 ? "0.00" : totalPrice}</h1>
               </div>
-              {/* {selfOrGiftString} */}
               <div className="checkout-buttons continue-shopping">
                 <button className="green-button" onClick={handlePurchase} disabled={disablePurchaseForMyself}>Purchase for myself</button>
-                {/* <buttonclassName="green-button" disabled>Purchase as a gift</button> */}
               </div>
             </div>
             <div className="sales-tax-disclaimer-wrapper checkout-page-body-p">
@@ -94,20 +90,7 @@ export default function CartPage() {
               <Link to="/store" className="light-blue-button continue-shopping">Continue Shopping</Link>
               <span onClick={handleRemoveAll} className="cart-remove">Remove all items</span>
             </div>
-
-            {/* <div className="digital-delivery-wrapper">
-              <h1>Delivery</h1>
-              <div>
-                <i></i>
-                <p>All digital goods are delivered via the Solar desktop application.</p>
-                <p>Solar and your games will be available for download at the end of the purchase.</p>
-              </div>
-            </div> */}
-
           </div>
-          {/* <aside className="cart-page-main-right">
-
-          </aside> */}
         </section>
       </div>
     )

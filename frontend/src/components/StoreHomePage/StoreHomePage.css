@@ -89,5 +89,5 @@
 }
 
 .store-sign-in-box > a {
-  border-top: 1px solid #a4d007;
+  border-top: 1px solid var(--42-green);
 }

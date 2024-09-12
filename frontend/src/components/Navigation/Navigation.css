@@ -182,24 +182,24 @@
   margin-left: 1px;
 }
 
-.silver-wishlist-link {
+.link-to-wishlist {
   background-image: url(https://store.cloudflare.steamstatic.com/public/images/v6/storemenu/background_wishlist.jpg);
   color: white;
   background-color: rgba( 255, 255, 255, 0.4 );
 }
 
-.silver-wishlist-link:hover {
-  color: #111111;
+.link-to-wishlist:hover {
+  color: var(--7-gray);
   background: linear-gradient(135deg, white 0%,#919aa3 100%);
 }
 
-.green-cart-link {
-  color: #a4d007;
+.link-to-cart {
+  color: var(--42-green);
   background-color: rgba( 164, 208, 7, 0.4 );
 }
 
-.green-cart-link:hover {
-  color: #111111;
+.link-to-cart:hover {
+  color: var(--7-gray);
   background-color: rgba( 164, 208, 7, 0.75 );
   cursor: pointer;
 }

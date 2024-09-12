@@ -10,7 +10,7 @@ export default function WishlistButton({ gameId, currentUser, gameAlreadyInLibra
     .find(wishlistItem => wishlistItem.gameId === gameId)
     ?.id
   });
-  
+
   let wishlistButtonText = "Add to your wishlist";
   if (gameAlreadyInLibrary) {
     wishlistButtonText = "In Library";
@@ -22,15 +22,17 @@ export default function WishlistButton({ gameId, currentUser, gameAlreadyInLibra
   }
 
   const handleAddToWishlist = () => {
-    if (gameAlreadyInWishlist) { // game is in wishlist
+    if (gameAlreadyInWishlist) {
       dispatch(deleteWishlistItem(gameAlreadyInWishlist));
-    } else { // game is not in wishlist
+    } else {
       dispatch(createWishlistItem({userId: currentUser.id, gameId: gameId}));
     }
   }
 
-  const buttonClass = gameAlreadyInWishlist ? "light-blue-button wishlist-button active" : "light-blue-button wishlist-button"
-  
+  const buttonClass = gameAlreadyInWishlist
+    ? "light-blue-button wishlist-button active"
+    : "light-blue-button wishlist-button";
+
   return (
     <button
       className={buttonClass}

@@ -78,11 +78,11 @@ export default function Navigation() {
     )
   }
 
-  let wishlistButton = <Link to={`/users/${currentUser?.username}/wishlist`} className="silver-wishlist-link">
+  let wishlistButton = <Link to={`/users/${currentUser?.username}/wishlist`} className="link-to-wishlist">
     Wishlist ({numCurrentUserWishlistItems})
   </Link>
 
-  let cartButton = <Link to="/cart" className="green-cart-link">
+  let cartButton = <Link to="/cart" className="link-to-cart">
     Cart ({numCartItems})
   </Link>;
 
