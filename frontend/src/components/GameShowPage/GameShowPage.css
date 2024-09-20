@@ -33,12 +33,12 @@
 
 .game-show-breadcrumbs {
   font-size: 12px;
-  color: #8f98a0;
+  color: var(--59-graybb);
 }
 
 .game-show-breadcrumbs a {
   text-decoration: none;
-  color: #8f98a0;
+  color: var(--59-graybb);
 }
 
 .game-show-breadcrumbs a:hover {
@@ -151,7 +151,7 @@
 }
 
 .release-date-row td {
-  color: #8f98a0;
+  color: var(--59-graybb);
 }
 
 .developer-publisher:hover {
@@ -173,24 +173,15 @@
   display: flex;
 }
 
-.user-tags-row button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 7px;
-  margin: 0px 2px 3px 0;
-  color: var(--light-blue);
-  background-color: var(--blue-tint);
-  border: none;
-  border-radius: 2px;
+.user-tag-button {
   height: 19px;
+  padding: 0 7px;
   font-size: 11px;
+  margin: 0px 2px 3px 0;
 }
 
-.user-tags-row button:hover {
-  color: white;
-  background: linear-gradient(135deg, var(--light-blue) 0%,#417a9b 100%);
-  cursor: pointer;
+.user-tag-button:hover {
+  background: linear-gradient(135deg, var(--light-blue) 0%, var(--ml-blue) 100%);
 }
 
 .wishlist-buttons-bar {
@@ -239,7 +230,6 @@
 .buy-box-buttons {
   background-color: black;
   border-radius: 2px;
-  /* width: 183px; */
   height: 32px;
   padding: 2px;
   display: flex;
@@ -252,7 +242,6 @@
 }
 
 .buy-box-buttons p {
-  /* width: 38%; */
   display: flex;
   justify-content: center;
   white-space: nowrap;
@@ -260,13 +249,11 @@
   padding: 0 10px;
 }
 
-/* Add to cart button in index CSS */
-
 .about-this-game {
   width: 98%;
   margin-top: 30px;
   font-size: 14px;
-  color: #acb2b8;
+  color: var(--70-graybb);
   line-height: 1.5em;
   white-space: pre-line;
 }

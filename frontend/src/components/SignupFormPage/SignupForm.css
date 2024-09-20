@@ -166,7 +166,7 @@
   border: none;
   font-family: Arial, sans-serif;
   font-size: 14px;
-  color: rgb(195, 225, 248);
+  color: white;
   border-radius: 2px;
   text-shadow: 1px 1px 0px var(--30-tint);
   box-shadow: 2px 2px 5px var(--20-tint);

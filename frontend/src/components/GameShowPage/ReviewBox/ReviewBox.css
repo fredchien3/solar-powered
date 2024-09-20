@@ -8,7 +8,7 @@
   font-size: 18px;
   font-family: "Motiva Sans 300", Sans-serif;
   line-height: 40px;
-  color: #a3cf06;
+  color: var(--42-green);
   position: relative;
   padding-left: 78px;
   box-sizing: border-box;
@@ -17,7 +17,7 @@
 
 .in-library-flag {
   position: absolute;
-  background-color: #a3cf06;
+  background-color: var(--42-green);
   height: 18px;
   left: -8px;
   top: 10px;
@@ -52,7 +52,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   line-height: 17px;
-  color: #8f98a0;
+  color: var(--59-graybb);
 }
 
 .review-form-main > h2 {

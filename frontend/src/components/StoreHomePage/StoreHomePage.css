@@ -76,7 +76,7 @@
   background-color: var(--20-tint);
   margin-bottom: 80px;
   font-size: 15px;
-  color: #8f98a0;
+  color: var(--59-graybb);
 }
 
 .store-sign-in-box > span > a {

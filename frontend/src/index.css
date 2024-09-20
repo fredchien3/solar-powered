@@ -6,6 +6,7 @@
   --neon-blue:   hsl(195, 100%, 50%); /* only login + signup buttons */
 
   --light-blue:  hsl(201, 81%, 67%); /* links and positive rating */
+  --ml-blue:     hsl(202, 41%, 43%); /* some gradients */
   --mid-blue:    hsl(202, 41%, 33%); /* only light blue button hover */
   --medium-blue: hsl(213, 35%, 16%); /* main bg color */
   --dark-blue:   hsl(222, 18%, 11%); /* header and footer */
@@ -19,7 +20,11 @@
   --71-grayb:    hsl(202, 41%, 71%); /* only tab list bg */
   --60-grayb:    hsl(206, 19%, 60%); /* only tab list bg */
   --40-grayb:    hsl(203, 15%, 40%); /* various muted text + no reviews (GameShow) */
-  --24-grayb:    hsl(214, 11%, 24%); /* only footer border */
+
+  --70-graybb:   hsl(210, 8%, 70%); /* game and review body text */
+  --59-graybb:   hsl(208, 8%, 59%); /* footer content + various light text */
+  --40-graybb:   hsl(205, 6%, 40%); /* footer dividers and install solar button only */
+  --24-graybb:   hsl(214, 11%, 24%); /* only footer border */
 
   --13-gray:     hsl(0, 0%, 13%); /* only scrollbar corner */
   --32-grayb:    hsl(220, 5%, 32%); /* only scrollbar */
@@ -31,7 +36,7 @@
 
   /* green button refers to cart checkout button and StoreHomePage sign in */
   --pale-green:  hsl(73, 68%, 72%); /* green button text */
-  --42-green:    hsl(73, 93%, 42%); /* green button top hovered, plus link-to-cart text */
+  --42-green:    hsl(73, 93%, 42%); /* green button top hovered + link-to-cart text + green check + review form header  */
   --31-green:    hsl(73, 93%, 31%); /* green button top */
   --27-green:    hsl(73, 93%, 27%); /* green button bottom hovered */
   --21-green:    hsl(73, 93%, 21%); /* green button bottom */
@@ -84,15 +89,15 @@ body {
 }
 
 .light-blue-button {
-  height: 32px;
-  padding: 0 15px;
-  background: var(--blue-tint);
-  border: none;
   color: var(--light-blue);
+  background: var(--blue-tint);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  border-radius: 2px;
+  height: 32px;
+  padding: 0 15px;
   margin-bottom: -2px;
+  border: none;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;

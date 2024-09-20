@@ -95,10 +95,8 @@
 .review-tile-right > p {
   font-size: 13px;
   line-height: 17px;
-  color: #acb2b8;
+  color: var(--70-graybb);
   margin-right: 8px;
-  /* max-height: 225px; */
-  /* overflow: hidden; */
 }
 
 .review-tile-right > h2 {

@@ -10,20 +10,20 @@
 }
 
 .footer-sandwich {
-  border-top: 1px solid var(--24-grayb);
-  border-bottom: 1px solid var(--24-grayb);
+  border-top: 1px solid var(--24-graybb);
+  border-bottom: 1px solid var(--24-graybb);
   width: 940px;
   height: 53px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  color: #8F98A0;
+  color: var(--59-graybb);
   padding: 8px 0;
   margin-bottom: 16px;
 }
 
 .array-logo {
-  background-color: #969eab;
+  background-color: var(--59-graybb);
   width: 84px;
   height: 25px;
   color: var(--dark-blue);
@@ -86,7 +86,7 @@
   width: 940px;
   font-size: 13px;
   font-size: 13px;
-  color: #61686D;
+  color: var(--40-graybb);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,7 +94,7 @@
 }
 
 .footer-links p {
-  color: #8F98A0;
+  color: var(--59-graybb);
   margin-right: 6px;
 }
 
