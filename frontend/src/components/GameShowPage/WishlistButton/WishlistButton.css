@@ -6,7 +6,3 @@
 .wishlist-button.active {
   background-color: rgba(103, 193, 245, 0.6);
 }
-
-.wishlist-button.active:hover {
-  background: linear-gradient(-60deg, var(--ml-blue) 5%,var(--light-blue) 95%);
-}

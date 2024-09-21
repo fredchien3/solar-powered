@@ -96,5 +96,5 @@
 
 .remove-from-wishlist:hover {
   cursor: pointer;
-  color: #d8dde2;
+  color: var(--87-graybb);
 }

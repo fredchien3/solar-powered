@@ -48,7 +48,7 @@
   display: inline;
   margin-right: 6px;
   font-size: 12px;
-  color: #868f98;
+  color: var(--54-gray);
 }
 
 .news-article > h1 {
@@ -68,12 +68,12 @@
 
 #news-text {
   font-family: 'Motiva Sans 500', sans-serif;
-  color: #289cff;
+  color: var(--streon-blue);
 }
 
 #posted-text {
   font-family: 'Motiva Sans 100', sans-serif;
-  color: #b1b4b9;
+  color: var(--75-gray);
   letter-spacing: 1px;
 }
 
@@ -83,8 +83,8 @@
   right: 16px;
   font-family: 'Motiva Sans 400';
   border: none;
-  background-color: #3d4450;
-  color: #dee2e5;
+  background-color: var(--24-graybb);
+  color: var(--87-graybb);
   padding: 8px 10px;
   border-radius: 2px;
   transition: 0.4s;
@@ -92,7 +92,7 @@
 
 .close-news-modal:hover {
   cursor: pointer;
-  background-color: #464d58;
+  background-color: var(--31-graybb);
   color: white;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }

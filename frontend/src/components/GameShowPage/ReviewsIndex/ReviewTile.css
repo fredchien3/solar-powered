@@ -24,7 +24,7 @@
 .review-tile-left > header > img {
   width: 32px;
   height: 32px;
-  border: 2px solid #41778f;
+  border: 2px solid var(--ml-blue);
   margin-right: 8px;
 }
 
@@ -35,13 +35,13 @@
 
 #review-author-username {
   font-family: 'Motiva Sans 700' sans-serif;
-  color: #c1dbf4;
+  color: var(--83-grayb);
   font-size: 13px;
   margin-bottom: 10px;
 }
 
 .review-tile-left a {
-  color: #c1dbf4;
+  color: var(--83-grayb);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
 }
@@ -73,7 +73,7 @@
 
 .review-tile-header-summary > h1 {
   font-size: 16px;
-  color: #d6d7d8;
+  color: var(--87-graybb);
   margin-top: 5px;
 }
 
@@ -88,7 +88,7 @@
   margin-bottom: 8px;
   font-size: 10px;
   text-transform: uppercase;
-  color: #8091a2;
+  color: var(--59-graybb);
   opacity: 0.6;
 }
 
@@ -101,11 +101,11 @@
 
 .review-tile-right > h2 {
   margin-top: 8px;
-  border-top: 1px solid #363f4c;
+  border-top: 1px solid var(--24-graybb);
   padding-top: 8px;
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(129, 145, 162, 0.6);
+  color: var(--40-graybb);
 }
 
 .review-controls {
@@ -116,7 +116,7 @@
 
 .review-controls > button.light-blue-button {
   margin: 0 3px 0 0;
-  background: #212c3d;
+  background: var(--medium-blue);
   padding: 1px 6px;
   height: 20px;
   font-size: 12px;
@@ -128,19 +128,19 @@
 
 .voted-yes, .voted-no, .voted-funny {
   color: white;
-  background: rgba( 103, 193, 245, 0.4 ) !important;
+  background: var(--mid-blue) !important;
 }
 
 .voted-yes > i {
-  color: #6bb64d;
+  color: var(--left-green-hover);
 }
 
 .voted-no > i {
-  color: #993b3b;
+  color: var(--red-rating);
 }
 
 .voted-funny > i {
-  color: #c1be33;
+  color: var(--funny-yellow);
 }
 
 .review-vote-stats {

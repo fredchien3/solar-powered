@@ -48,7 +48,7 @@
 
 .library-header > div span {
   font-size: 16px;
-  color: #828282;
+  color: var(--54-gray);
   margin: 0px 4px 0 10px;
 }
 

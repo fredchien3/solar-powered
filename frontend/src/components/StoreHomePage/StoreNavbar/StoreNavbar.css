@@ -58,7 +58,7 @@
 }
 
 .store-nav-bar-search::placeholder {
-  color: #0e1c25;
+  color: var(--dark-blue);
   font-style: italic;
   font-size: 15px;
   font-weight: 100;
@@ -74,14 +74,14 @@
   align-items: center;
   border-radius: 2px;
   border: none;
-  background-color: #55a0cc;
-  color: #2c4a67;
+  background-color: var(--light-blue);
+  color: var(--mid-blue);
   font-size: 16px;
 }
 
 .store-nav-bar-submit:hover {
   background-color: var(--light-blue);
-  color: #2a3e5b;
+  color: var(--medium-blue);
   cursor: pointer;
 }
 

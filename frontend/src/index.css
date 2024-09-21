@@ -3,28 +3,44 @@
 
 :root {
   --strong-blue: hsl(220, 100%, 60%); /* only login + signup buttons */
-  --neon-blue:   hsl(195, 100%, 50%); /* only login + signup buttons */
+  --streon-blue: hsl(208, 100%, 58%); /* only news header */
+  --neon-blue:   hsl(195, 100%, 50%); /* login + signup buttons, highlighted text and border */
 
-  --light-blue:  hsl(201, 81%, 67%); /* links and positive rating */
-  --ml-blue:     hsl(202, 41%, 43%); /* some gradients */
-  --mid-blue:    hsl(202, 41%, 33%); /* only light blue button hover */
-  --medium-blue: hsl(213, 35%, 16%); /* main bg color */
-  --dark-blue:   hsl(222, 18%, 11%); /* header and footer */
+  --light-blue:  hsl(201, 81%, 67%); /* light blue button hover left. Links, positive rating text, Post review hover top. search glass background, blue thumb */
+  --mll-blue:    hsl(202, 60%, 46%); /* only Post review hover bottom */
+  --ml-blue:     hsl(202, 41%, 43%); /* only carousel arrows, blue profile pic border */
+  --mid-blue:    hsl(202, 41%, 33%); /* light blue button hover right, Post review text, search glass color */
+
+  --thumb-blue-light: hsl(204, 40%, 35%); /* only thumbs up icons  */
+  --thumb-blue-dark:  hsl(204, 50%, 28%); /* only thumbs up icons */
+  --red-thumb:        hsl(0, 67%, 63%); /* only */
+  --thumb-red-light:  hsl(353, 32%, 30%); /* only thumbs down icons */
+  --thumb-red-dark:   hsl(353, 45%, 21%); /* only thumbs down icons */
+
+  --27-blue:     hsl(207, 38%, 27%); /* review header bg only */
+  --medium-blue: hsl(213, 35%, 16%); /* main bg color. search glass hover. review vote bg */
+  --md-blue:     hsl(212, 22%, 17%); /* only review input background */
+  --dark-blue:   hsl(222, 18%, 11%); /* header and footer. search input placeholder */
 
   --90-gray:     hsl(0, 0%, 90%); /* various text + links */
+  --84-gray:     hsl(0, 0%, 84%); /* review box input text */
   --75-gray:     hsl(0, 0%, 75%); /* various text + headers */
   --60-gray:     hsl(0, 0%, 60%); /* only Similar to games + no reviews (StoreHome) */
+  --54-gray:     hsl(0, 0%, 54%); /* text for no reviews, review is posted, library breadcrumb */
   --7-gray:      hsl(0, 0%, 7%); /* only link to cart/wishlist hover text */
 
+  --84-grayb:    hsl(202, 82%, 87%); /* Post review top gradient */
   --83-grayb:    hsl(206, 29%, 83%); /* various text + links */
-  --71-grayb:    hsl(202, 41%, 71%); /* only tab list bg */
+  --71-grayb:    hsl(202, 41%, 71%); /* tab list bg, post review bottom gradient */
   --60-grayb:    hsl(206, 19%, 60%); /* only tab list bg */
   --40-grayb:    hsl(203, 15%, 40%); /* various muted text + no reviews (GameShow) */
 
+  --87-graybb:   hsl(210, 15%, 87%); /* remove from wishlist hover, close news text, review title */
   --70-graybb:   hsl(210, 8%, 70%); /* game and review body text */
-  --59-graybb:   hsl(208, 8%, 59%); /* footer content + various light text */
-  --40-graybb:   hsl(205, 6%, 40%); /* footer dividers and install solar button only */
-  --24-graybb:   hsl(214, 11%, 24%); /* only footer border */
+  --59-graybb:   hsl(208, 8%, 59%); /* footer content + various light text, review posted date */
+  --40-graybb:   hsl(205, 6%, 40%); /* footer + review divider lines, install solar button bg */
+  --31-graybb:   hsl(217, 11%, 31%); /* only close news hover */
+  --24-graybb:   hsl(214, 11%, 24%); /* footer border, close news */
 
   --13-gray:     hsl(0, 0%, 13%); /* only scrollbar corner */
   --32-grayb:    hsl(220, 5%, 32%); /* only scrollbar */
@@ -34,23 +50,24 @@
   --20-tint:     hsla(0, 0%, 0%, 0.2);
   --blue-tint:   hsla(202, 88%, 68%, 0.2); /* light blue button bg */
 
-  /* green button refers to cart checkout button and StoreHomePage sign in */
-  --pale-green:  hsl(73, 68%, 72%); /* green button text */
-  --42-green:    hsl(73, 93%, 42%); /* green button top hovered + link-to-cart text + green check + review form header  */
-  --31-green:    hsl(73, 93%, 31%); /* green button top */
-  --27-green:    hsl(73, 93%, 27%); /* green button bottom hovered */
-  --21-green:    hsl(73, 93%, 21%); /* green button bottom */
+  /* green-button: cart checkout button + StoreHomePage sign in; T-B */
+  --pale-green:  hsl(73, 68%, 72%); /* text */
+  --42-green:    hsl(73, 93%, 42%); /* top hovered + link-to-cart text + green check + review form header  */
+  --31-green:    hsl(73, 93%, 31%); /* top */
+  --27-green:    hsl(73, 93%, 27%); /* bottom hovered */
+  --21-green:    hsl(73, 93%, 21%); /* bottom */
 
-  /* Add to Cart button */
+  /* add-to-cart button; L-R */
   --pale-green-2: hsl(85, 69%, 80%); /* only */
   --left-green:   hsl(85, 68%, 41%); /* only */
   --right-green:  hsl(87, 67%, 32%); /* only */
-  --left-green-hover:  hsl(85, 68%, 50%); /* only */
+  --left-green-hover:  hsl(85, 68%, 50%); /* only + helpful review vote */
   --right-green-hover: hsl(87, 67%, 39%); /* only */
 
   --error-orange: hsl(24, 71%, 64%); /* only */
-  --mixed-rating: hsl(38, 33%, 59%); /* only */
-  --red-rating:   hsl(19, 63%, 39%); /* only */
+  --mixed-rating: hsl(38, 33%, 59%); /* only text */
+  --red-rating:   hsl(19, 63%, 39%); /* only text, unhelpful review vote */
+  --funny-yellow: hsl(59, 58%, 48%); /* only funny review vote */
 
   --neon-blue-sweep: linear-gradient( /* only login + signup buttons */
     to right, var(--neon-blue) 0%, var(--strong-blue) 100%

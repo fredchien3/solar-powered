@@ -19,10 +19,10 @@ export default function StoreNavbar() {
     <nav className="store-nav-bar">
       {storeNavbarLinks}
       {/* No dead links */}
-      {/* <input className="store-nav-bar-search"type="search" placeholder="search" />
+      <input className="store-nav-bar-search"type="search" placeholder="search" />
       <button className="store-nav-bar-submit">
         <i className="fa-solid fa-magnifying-glass"></i>
-      </button> */}
+      </button>
     </nav>
   )
 }

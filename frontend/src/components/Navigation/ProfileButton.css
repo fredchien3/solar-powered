@@ -19,7 +19,7 @@
 .small-avatar-wrapper {
   width: 36px;
   height: 36px;
-  border: 2px solid #458097;
+  border: 2px solid var(--ml-blue);
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
@@ -66,24 +66,20 @@
   font-family: inherit;
 }
 
-.profile-button-dropdown *:hover {
+.profile-button-dropdown a:hover {
   cursor: pointer;
   color: white;
 }
 
 .profile-button-dropdown p {
-  color: #57cbde;
+  color: var(--neon-blue);
   margin-left: 4px;
   padding: 0;
   display: block;
   overflow: hidden;
-  margin-bottom: -3px;
+  margin-bottom: -4px;
   height: 100%;
   line-height: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.profile-button-dropdown p:hover {
-  color: #57cbde;
 }

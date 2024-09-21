@@ -77,7 +77,7 @@
 .review-form-wrapper > a > img {
   width: 92px;
   height: 92px;
-  border: 1px solid #53a4c4;
+  border: 1px solid var(--neon-blue);
 }
 
 /* thumbs up and thumbs down styling */
@@ -95,13 +95,13 @@
 }
 
 .review-form-thumb.thumbs-up {
-  background: linear-gradient(#355f7b, #234e6a);
+  background: linear-gradient(var(--thumb-blue-light), var(--thumb-blue-dark));
   color: var(--light-blue);
 }
 
 .review-form-thumb.thumbs-down {
-  background: linear-gradient(#64343a, #4d1d23);
-  color: #e06363;
+  background: linear-gradient(var(--thumb-red-light), var(--thumb-red-dark));
+  color: var(--red-thumb);
 }
 
 .review-form-thumb.fourty {
@@ -117,7 +117,7 @@
 
 .review-form-wrapper > h3 {
   font-size: 14px;
-  color: #898A8C;
+  color: var(--54-gray);
   font-family: Arial, Helvetica, sans-serif;
   width: 95%;
   margin-left: 10px;

@@ -180,10 +180,6 @@
   margin: 0px 2px 3px 0;
 }
 
-.user-tag-button:hover {
-  background: linear-gradient(135deg, var(--light-blue) 0%, var(--ml-blue) 100%);
-}
-
 .wishlist-buttons-bar {
   margin-top: 444px;
   width: 908px;
