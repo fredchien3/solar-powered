@@ -22,7 +22,7 @@
 }
 
 .news-content {
-  background: linear-gradient(to bottom, #2a303c, #222631);
+  background: linear-gradient(to bottom, var(--21-blue), #222631);
   width: 690px;
   position: absolute;
   margin: 0 auto;

@@ -44,7 +44,7 @@ export default function StoreHomePage({ error }) {
       {errorMessage}
       <StoreNavbar />
       <div className="store-featured-box-wide-wrapper">
-        <StoreSidebar />
+        {/* <StoreSidebar /> */}
         <FeaturedBox games={featuredGames} />
       </div>
       {signInBox}

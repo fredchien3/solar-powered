@@ -4,21 +4,28 @@
 :root {
   --strong-blue: hsl(220, 100%, 60%); /* only login + signup buttons */
   --streon-blue: hsl(208, 100%, 58%); /* only news header */
-  --neon-blue:   hsl(195, 100%, 50%); /* login + signup buttons, highlighted text and border */
+  --neon-blue:   hsl(195, 100%, 50%); /* login + signup buttons, highlighted text and border, storenavbar button hover (60%) */
 
-  --light-blue:  hsl(201, 81%, 67%); /* light blue button hover left. Links, positive rating text, Post review hover top. search glass background, blue thumb */
+  --light-blue:  hsl(201, 81%, 67%); /* light blue button hover left.
+  Links, positive rating text, Post review hover top. search glass background, blue thumb */
   --mll-blue:    hsl(202, 60%, 46%); /* only Post review hover bottom */
   --ml-blue:     hsl(202, 41%, 43%); /* only carousel arrows, blue profile pic border */
   --mid-blue:    hsl(202, 41%, 33%); /* light blue button hover right, Post review text, search glass color */
 
-  --thumb-blue-light: hsl(204, 40%, 35%); /* only thumbs up icons  */
+  --storenav-blue-left:  hsl(212, 42%, 42%); /* only storenavbar left gradient */
+  --storenav-blue-mid:   hsl(209, 51%, 46%); /* only storenavbar mid gradient */
+  --storenav-blue-right: hsl(229, 76%, 25%); /* only storenavbar right gradient */
+
+  --thumb-blue-light: hsl(204, 40%, 35%); /* thumbs up icons, search bar background  */
   --thumb-blue-dark:  hsl(204, 50%, 28%); /* only thumbs up icons */
   --red-thumb:        hsl(0, 67%, 63%); /* only */
   --thumb-red-light:  hsl(353, 32%, 30%); /* only thumbs down icons */
   --thumb-red-dark:   hsl(353, 45%, 21%); /* only thumbs down icons */
 
   --27-blue:     hsl(207, 38%, 27%); /* review header bg only */
-  --medium-blue: hsl(213, 35%, 16%); /* main bg color. search glass hover. review vote bg */
+  --21-blue:     hsl(215, 21%, 21%); /* library header bg + news modal top gradient + tab list titles */
+
+  --medium-blue: hsl(215, 31%, 16%); /* main bg color. search glass hover. review vote bg */
   --md-blue:     hsl(212, 22%, 17%); /* only review input background */
   --dark-blue:   hsl(222, 18%, 11%); /* header and footer. search input placeholder */
 
@@ -27,24 +34,35 @@
   --75-gray:     hsl(0, 0%, 75%); /* various text + headers */
   --60-gray:     hsl(0, 0%, 60%); /* only Similar to games + no reviews (StoreHome) */
   --54-gray:     hsl(0, 0%, 54%); /* text for no reviews, review is posted, library breadcrumb */
+  --33-gray:     hsl(0, 0%, 33%); /* only mail button hover bg */
+  --15-gray:     hsl(0, 0%, 15%); /* only mail button bg */
   --7-gray:      hsl(0, 0%, 7%); /* only link to cart/wishlist hover text */
 
   --84-grayb:    hsl(202, 82%, 87%); /* Post review top gradient */
+  --82-grayb:    hsl(201, 78%, 82%); /* only featured game price */
   --83-grayb:    hsl(206, 29%, 83%); /* various text + links */
   --71-grayb:    hsl(202, 41%, 71%); /* tab list bg, post review bottom gradient */
   --60-grayb:    hsl(206, 19%, 60%); /* only tab list bg */
   --40-grayb:    hsl(203, 15%, 40%); /* various muted text + no reviews (GameShow) */
 
   --87-graybb:   hsl(210, 15%, 87%); /* remove from wishlist hover, close news text, review title */
-  --70-graybb:   hsl(210, 8%, 70%); /* game and review body text */
-  --59-graybb:   hsl(208, 8%, 59%); /* footer content + various light text, review posted date */
+  --70-graybb:   hsl(210, 8%, 70%); /* game and review body text + wishlist item info text */
+
+  --59-graybb:   hsl(208, 8%, 59%); /* footer content + various light text,
+  review posted date, wishlist right gradient */
+
+  --55-graybb:   hsl(210, 15%, 55%); /* only featured nub active */
+  --47-graybb:   hsl(210, 17%, 47%); /* only featured nub hover */
+  --39-graybb:   hsl(209, 23%, 39%); /* only featured nub */
+
   --40-graybb:   hsl(205, 6%, 40%); /* footer + review divider lines, install solar button bg */
   --31-graybb:   hsl(217, 11%, 31%); /* only close news hover */
-  --24-graybb:   hsl(214, 11%, 24%); /* footer border, close news */
+  --24-graybb:   hsl(214, 11%, 24%); /* footer border, close news, featured sidebar tag */
 
   --13-gray:     hsl(0, 0%, 13%); /* only scrollbar corner */
   --32-grayb:    hsl(220, 5%, 32%); /* only scrollbar */
 
+  --40-tint-white: hsla(0, 0%, 100%, 0.4); /* link to wishlist bg, search shadow */
   --40-tint:     hsla(0, 0%, 0%, 0.4);
   --30-tint:     hsla(0, 0%, 0%, 0.3);
   --20-tint:     hsla(0, 0%, 0%, 0.2);

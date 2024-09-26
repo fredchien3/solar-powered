@@ -24,7 +24,7 @@
 .wishlist-item-info {
   height: 136px;
   width: 597px;
-  color: #b2b8bd;
+  color: var(--70-graybb);
 }
 
 .wishlist-item-info h1 {

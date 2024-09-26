@@ -66,7 +66,7 @@ export default function Navigation() {
   } else {
     rightCluster = (
       <div className="right-cluster">
-        <button className="install-solar green">
+        <button className="install-solar">
           <i className="fa-solid fa-download"></i>
           Install Solar
         </button>

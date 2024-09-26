@@ -139,7 +139,7 @@
   margin: 5px 2px 3px 0;
   font-size: 11px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #394148;
+  background-color: var(--24-graybb);
   border-radius: 2px;
   display: flex;
   justify-content: center;
@@ -155,7 +155,7 @@
   align-items: flex-end;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
-  color: #acdbf5;
+  color: var(--82-grayb);
 }
 
 .price-line p {
@@ -174,7 +174,7 @@
 }
 
 .featured-carousel-nub {
-  background-color: #4d657b;
+  background-color: var(--39-graybb);
   width: 15px;
   height: 9px;
   margin: 15px 2px;
@@ -184,9 +184,9 @@
 
 .featured-carousel-nub:hover {
   cursor: pointer;
-  background-color: #64788c;
+  background-color: var(--47-graybb);
 }
 
 .nub-active {
-  background-color: #7a8b9c;
+  background-color: var(--55-graybb);
 }

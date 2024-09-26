@@ -12,7 +12,7 @@
 .library-header {
   width: 978px;
   height: 102px;
-  background-color: #2a3340;
+  background-color: var(--21-blue);
   padding: 18px 20px 16px 30px;
   box-sizing: border-box;
   display: flex;

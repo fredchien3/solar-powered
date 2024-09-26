@@ -135,10 +135,6 @@
   color: white;
 }
 
-.green {
-  background-color: #5c7e10;
-}
-
 .login-signup-links {
   color: var(--75-gray);
 }
@@ -146,7 +142,7 @@
 .mail-button {
   width: 27px;
   height: 24px;
-  background-color: #262625;
+  background-color: var(--15-gray);
   border: none;
   cursor: pointer;
   color: white;
@@ -154,7 +150,7 @@
 }
 
 .mail-button:hover {
-  background-color: #575451;
+  background-color: var(--33-gray);
 }
 
 .wishlist-and-cart-wrapper {
@@ -185,21 +181,21 @@
 .link-to-wishlist {
   background-image: url(https://store.cloudflare.steamstatic.com/public/images/v6/storemenu/background_wishlist.jpg);
   color: white;
-  background-color: rgba( 255, 255, 255, 0.4 );
+  background-color: var(--40-tint-white);
 }
 
 .link-to-wishlist:hover {
   color: var(--7-gray);
-  background: linear-gradient(135deg, white 0%,#919aa3 100%);
+  background: linear-gradient(135deg, white 0%,var(--59-graybb) 100%);
 }
 
 .link-to-cart {
   color: var(--42-green);
-  background-color: rgba( 164, 208, 7, 0.4 );
+  background-color: rgba(164, 208, 7, 0.4);
 }
 
 .link-to-cart:hover {
   color: var(--7-gray);
-  background-color: rgba( 164, 208, 7, 0.75 );
+  background-color: rgba(164, 208, 7, 0.75);
   cursor: pointer;
 }

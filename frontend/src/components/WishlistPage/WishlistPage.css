@@ -1,5 +1,5 @@
 .wishlist-page {
-  background-color: #202326;
+  background-color: var(--medium-blue);
   width: 100%;
   display: flex;
   flex-direction: column;
