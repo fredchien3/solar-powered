@@ -44,7 +44,7 @@
 
 .wishlist-divider {
   height: 1px;
-  background-color: rgba(255,255,255,0.2);
+  background-color: var(--20-tint-white);
   margin-bottom: 10px;
   width: 100%;
 }

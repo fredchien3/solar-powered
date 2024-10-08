@@ -1,7 +1,7 @@
 .news-wrapper {
   width: 706px;
   height: 90vh;
-  background: radial-gradient(circle at top left, #343941, #25282e 50%);
+  background: radial-gradient(circle at top left, var(--24-graybb), var(--15-blue) 50%);
   color: white;
   position: relative;
 }
@@ -9,10 +9,10 @@
 .x-news-modal {
   background: none;
   border: none;
-  color: #788a92;
+  color: var(--55-graybb);
   font-size: 16px;
   position: absolute;
-  top: 3px;
+  top: 8px;
   right: 2px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .news-content {
-  background: linear-gradient(to bottom, var(--21-blue), #222631);
+  background: linear-gradient(to bottom, var(--21-blue), var(--medium-blue));
   width: 690px;
   position: absolute;
   margin: 0 auto;
@@ -94,5 +94,5 @@
   cursor: pointer;
   background-color: var(--31-graybb);
   color: white;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px var(--50-tint);
 }

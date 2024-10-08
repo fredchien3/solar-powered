@@ -15,7 +15,7 @@
   padding: 26px 32px;
   width: 636px;
   height: 280px;
-  color: #1999ff;
+  color: var(--streon-blue);
 }
 
 .login-form {
@@ -55,7 +55,7 @@
   width: 412px;
   height: 39px;
   font-size: 15px;
-  background-color: #32353c;
+  background-color: var(--10-tint-white);
   border: 1px solid transparent;
   border-radius: 2px;
   margin-bottom: 16px;
@@ -64,7 +64,7 @@
 }
 
 .login-form input:hover {
-  background-color: #393c44;
+  background-color: var(--15-tint-white);
 }
 
 .remember-me {
@@ -110,7 +110,7 @@
 }
 
 .error-border {
-  border: 1px solid #c15755 !important;
+  border: 1px solid var(--error-red) !important;
 }
 
 .login-form-errors {
@@ -128,7 +128,7 @@
 .login-form-errors li {
   font-family: 'Motiva Sans 500', sans-serif;
   font-size: 12px;
-  color: #c15755;
+  color: var(--error-red);
 }
 
 .cant-sign-in {
@@ -142,10 +142,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-.cant-sign-in:hover {
-  color: var(--90-gray);
 }
 
 .new-beta-feature {
@@ -175,7 +171,7 @@
 .new-beta-feature button {
   border: none;
   border-radius: 2px;
-  background-color: #303138;
+  background-color: var(--10-tint-white);
   color: white;
   padding: 8px 16px;
   font-family: 'Motiva Sans 700', sans-serif;
@@ -185,7 +181,9 @@
   color: var(--75-gray);
   font-size: 12px;
   display: flex;
-  width: 100%;
-  height: 24px;
   margin-top: 16px;
+}
+
+.cant-sign-in:hover, .new-beta-feature a:hover {
+  color: var(--90-gray);
 }

@@ -50,7 +50,7 @@
   font-family: 'Motiva Sans 300', sans-serif;
   font-size: 34px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 0 rgb(0 0 0 / 40%);
+  text-shadow: 1px 1px 0 var(--40-tint);
 }
 
 .cart-page-main-column-wrapper {
@@ -139,6 +139,4 @@
 .cart-page-main-right {
   width: 308px;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.192);
 }
-

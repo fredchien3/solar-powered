@@ -1,6 +1,6 @@
 .game-relevant {
   width: 100%;
-  background: linear-gradient(to right, var(--20-tint) 0%,rgba(0,0,0,0.5) 100%);
+  background: linear-gradient(to right, var(--20-tint) 0%,var(--50-tint) 100%);
 }
 
 .game-relevant h1 {

@@ -34,11 +34,11 @@
 }
 
 .tab-list-item.tab-active {
-  background: linear-gradient(to right, #c6e6f8 5%,#95bcd3 95%);
-  cursor: pointer;
+  background: linear-gradient(to right, var(--87-grayb) 5%, var(--71-grayb) 95%);
   border-right: 14px solid var(--71-grayb);
+  cursor: pointer;
 }
 
 .tab-list-item.tab-active * {
-  color: #263645;
+  color: var(--21-blue);
 }
