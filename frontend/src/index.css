@@ -6,7 +6,7 @@
   --streon-blue: hsl(208, 100%, 58%); /* sign in header text, news header text  */
   --neon-blue:   hsl(195, 100%, 50%); /* login + signup buttons, highlighted text and border, storenavbar button hover (60%) */
 
-  --light-blue:  hsl(201, 81%, 67%); /* light blue button hover left.
+  --light-blue:  hsl(201, 81%, 67%); /* ubiquitous light blue button hover left.
   Links, positive rating text, Post review hover top. search glass background, blue thumb */
   --mll-blue:    hsl(202, 60%, 46%); /* only Post review hover bottom */
   --ml-blue:     hsl(202, 41%, 43%); /* only carousel arrows, blue profile pic border */
@@ -16,13 +16,13 @@
   --storenav-blue-mid:   hsl(209, 51%, 46%); /* only storenavbar mid gradient */
   --storenav-blue-right: hsl(229, 76%, 25%); /* only storenavbar right gradient */
 
-  --thumb-blue-light: hsl(204, 40%, 35%); /* thumbs up icons, search bar background  */
+  --thumb-blue-light: hsl(204, 40%, 35%); /* thumbs up icons, search bar background, game show carousel thumb hovered */
   --thumb-blue-dark:  hsl(204, 50%, 28%); /* only thumbs up icons */
   --red-thumb:        hsl(0, 67%, 63%); /* only */
   --thumb-red-light:  hsl(353, 32%, 30%); /* only thumbs down icons */
   --thumb-red-dark:   hsl(353, 45%, 21%); /* only thumbs down icons */
 
-  --27-blue:     hsl(207, 38%, 27%); /* review header bg only */
+  --27-blue:     hsl(207, 38%, 27%); /* review header bg, game show carousel thumb(mixed), tablist bg top gradient */
   --21-blue:     hsl(215, 21%, 21%); /* library header bg + news top gradient + TabList titles */
 
   --15-blue:     hsl(218, 11%, 15%); /* signup bg, news border gradient bg */
@@ -37,11 +37,10 @@
   --54-gray:     hsl(0, 0%, 54%); /* text for no reviews, review is posted, library breadcrumb */
   --33-gray:     hsl(0, 0%, 33%); /* mail button hover bg, litterbug border */
   --15-gray:     hsl(0, 0%, 15%); /* mail button bg, litterbug bg */
-  --7-gray:      hsl(0, 0%, 7%); /* only link to cart/wishlist hover text */
 
-  --87-grayb:    hsl(202, 78%, 87%); /* only TabList bg left */
+  --87-grayb:    hsl(202, 78%, 87%); /* TabList bg left, wishlistitem(mixed) */
   --84-grayb:    hsl(202, 82%, 87%); /* Post review top gradient */
-  --82-grayb:    hsl(201, 78%, 82%); /* only featured game price */
+  --82-grayb:    hsl(201, 78%, 82%); /* featured game price, store home left and right hover gradient */
   --83-grayb:    hsl(206, 29%, 83%); /* various text + links */
   --71-grayb:    hsl(202, 41%, 71%); /* TabList bg mid, post review bottom gradient */
   --60-grayb:    hsl(206, 19%, 60%); /* only TabList bg right */
@@ -80,7 +79,7 @@
 
   /* green-button: cart checkout button + StoreHomePage sign in; T-B */
   --pale-green:  hsl(73, 68%, 72%); /* text */
-  --42-green:    hsl(73, 93%, 42%); /* top hovered + link-to-cart text + green check + review form header  */
+  --42-green:    hsl(73, 93%, 42%); /* top hovered + link-to-cart text and bg(mixed) + green check + review form header */
   --31-green:    hsl(73, 93%, 31%); /* top */
   --27-green:    hsl(73, 93%, 27%); /* bottom hovered */
   --21-green:    hsl(73, 93%, 21%); /* bottom */
@@ -136,7 +135,7 @@ body {
 
 .light-blue-button {
   color: var(--light-blue);
-  background: var(--blue-tint);
+  background: color-mix(in hsl, var(--light-blue), transparent 80%);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   height: 32px;

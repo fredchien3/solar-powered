@@ -70,9 +70,7 @@
   width: 940px;
   height: 432px;
   padding-bottom: 12px;
-  background: linear-gradient(
-    to right, transparent 50%,var(--40-tint) 100%
-  );
+  background: linear-gradient(to right, transparent 50%, var(--40-tint) 100%);
   display: flex;
   justify-content: space-between;
 }

@@ -41,13 +41,13 @@
 }
 
 .review-form-options-button:disabled {
-  background: rgba(103, 193, 245, 0.6);
+  background-color: color-mix(in hsl, var(--light-blue), transparent 40%);
   opacity: 1;
   color: white;
 }
 
 .review-form-options-button:disabled:hover {
-  background: rgba(103, 193, 245, 0.6);
+  background-color: color-mix(in hsl, var(--light-blue), transparent 40%);
   color: white;
 }
 
@@ -77,6 +77,5 @@
 .post-review-button:hover {
   cursor: pointer;
   color: white;
-  background: linear-gradient(to bottom, rgb(102,192,244) 5%, rgb(47,137,188) 95%);
   background: linear-gradient(to bottom, var(--light-blue) 5%, var(--mll-blue) 95%);
 }

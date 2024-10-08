@@ -185,17 +185,17 @@
 }
 
 .link-to-wishlist:hover {
-  color: var(--7-gray);
+  color: black;
   background: linear-gradient(135deg, white 0%,var(--59-graybb) 100%);
 }
 
 .link-to-cart {
   color: var(--42-green);
-  background-color: rgba(164, 208, 7, 0.4);
+  background-color: color-mix(in hsl, var(--42-green), transparent 60%);
 }
 
 .link-to-cart:hover {
-  color: var(--7-gray);
-  background-color: rgba(164, 208, 7, 0.75);
+  color: black;
+  background-color: color-mix(in hsl, var(--42-green), transparent 25%);
   cursor: pointer;
 }

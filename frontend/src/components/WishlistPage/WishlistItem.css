@@ -2,7 +2,7 @@
   width: 908px;
   height: 147px;
   padding: 16px 16px 8px 16px;
-  background-color: rgba(64, 81, 99, 0.9);
+  background-color: color-mix(in hsl, var(--87-grayb), transparent 80%);
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
@@ -91,7 +91,7 @@
 
 .remove-from-wishlist {
   margin: 0 4px;
-  border-bottom: 1px dotted rgba( 178, 184, 189, .6 );
+  border-bottom: 1px dotted;
 }
 
 .remove-from-wishlist:hover {
