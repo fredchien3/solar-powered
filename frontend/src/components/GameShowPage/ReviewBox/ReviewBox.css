@@ -4,7 +4,11 @@
 }
 
 .review-form-component > header {
-  background: linear-gradient(to right, rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%);
+  background: linear-gradient(
+    to right,
+    color-mix(in hsl, var(--42-green), transparent 40%) 0%,
+    color-mix(in hsl, var(--21-green), transparent 40%) 100%
+  );
   font-size: 18px;
   font-family: "Motiva Sans 300", Sans-serif;
   line-height: 40px;
@@ -38,7 +42,7 @@
 
 .review-form-main {
   padding: 16px;
-  background: linear-gradient(135deg, rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%);
+  background-image: linear-gradient(-60deg, var(--30-tint-white) 5%,var(--10-tint-white) 95%);
 }
 
 .review-form-main > h1 {

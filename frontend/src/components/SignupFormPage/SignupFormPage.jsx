@@ -18,7 +18,7 @@ export default function SignupFormPage() {
   if (sessionSlice.user) {
     history.push('/');
   }
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (password === confirmPassword) {
@@ -34,7 +34,7 @@ export default function SignupFormPage() {
       setErrors(['Passwords do not match'])
     }
   }
-  
+
   return (
     <div className="signup-page">
       <section className="signup-page-background"></section>

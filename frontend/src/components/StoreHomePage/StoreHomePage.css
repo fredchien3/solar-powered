@@ -41,28 +41,20 @@
 
 .button-left {
   left: -46px;
-  background-image: linear-gradient(
-    to right, var(--40-tint) 5%, transparent 95%
-  );
+  background-image: linear-gradient(to left, transparent 5%, var(--40-tint) 95%);
 }
 
 .button-left:hover {
-  background-image: linear-gradient(
-    to right, rgba(171, 218, 244, 0.3) 5%, transparent 95%
-  );
+  background-image: linear-gradient(to left, transparent 5%, var(--82-grayb) 300%);
 }
 
 .button-right {
   right: -46px;
-  background-image: linear-gradient(
-    to right, transparent 5%, var(--40-tint) 95%
-  );
+  background-image: linear-gradient(to right, transparent 5%, var(--40-tint) 95%);
 }
 
 .button-right:hover {
-  background-image: linear-gradient(
-    to right, transparent 5%, rgba(171, 218, 244, 0.3) 95%
-  );
+  background-image: linear-gradient(to right, transparent 5%, var(--82-grayb) 300%);
 }
 
 .store-sign-in-box {

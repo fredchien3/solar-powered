@@ -1,9 +1,7 @@
 .store-tab-list-wide-wrapper {
   width: 100%;
   height: 771px;
-  background-image: linear-gradient(
-    rgb(42, 71, 94) 5%, transparent 70%
-  );
+  background-image: linear-gradient(var(--27-blue) 5%, transparent 70%);
   display: flex;
   justify-content: center;
 }
@@ -38,8 +36,6 @@
 .store-tab-list-right-col {
   width: 308px;
   height: 100%;
-  background-image: linear-gradient(
-    to right, var(--71-grayb) 5%, var(--60-grayb) 95%
-  );
+  background-image: linear-gradient(to right, var(--71-grayb) 5%, var(--60-grayb) 95%);
   position: relative;
 }

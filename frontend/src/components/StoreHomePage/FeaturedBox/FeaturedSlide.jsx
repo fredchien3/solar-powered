@@ -6,8 +6,10 @@ export default function FeaturedSlide({ game, show }) {
   const [displayUrl, setDisplayUrl] = useState(game.mainImageUrl);
 
   const handleMouseEnter = (e) => {
-    const url = new URL(e.target.src).pathname;
-    setDisplayUrl(url);
+    if (e.target.src) {
+      const url = new URL(e.target.src).pathname;
+      setDisplayUrl(url);
+    }
   };
 
   const handleMouseLeave = () => {setDisplayUrl(game.mainImageUrl)};
