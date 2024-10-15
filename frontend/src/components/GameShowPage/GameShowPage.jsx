@@ -85,7 +85,6 @@ export default function GameShowPage() {
 
   return (
     <div className="game-show-page">
-      <div className="game-show-page-dynamic-background"></div>
       <StoreNavbar />
       <header className="game-show-title-wrapper">
         <div>

@@ -9,13 +9,6 @@
   z-index: 1;
 }
 
-.game-show-page-dynamic-background {
-  position: absolute;
-  width: 1438px;
-  height: 789px;
-  z-index: -1;
-}
-
 .game-show-title-wrapper {
   width: 940px;
   height: 74px;
