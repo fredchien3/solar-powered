@@ -45,7 +45,7 @@
 }
 
 .button-left:hover {
-  background-image: linear-gradient(to left, transparent 5%, var(--82-grayb) 300%);
+  background-image: linear-gradient(to left, transparent 5%, var(--87-blue-gray-bg) 300%);
 }
 
 .button-right {
@@ -54,7 +54,7 @@
 }
 
 .button-right:hover {
-  background-image: linear-gradient(to right, transparent 5%, var(--82-grayb) 300%);
+  background-image: linear-gradient(to right, transparent 5%, var(--87-blue-gray-bg) 300%);
 }
 
 .store-sign-in-box {
@@ -68,7 +68,7 @@
   background-color: var(--20-tint);
   margin-bottom: 80px;
   font-size: 15px;
-  color: var(--59-graybb);
+  color: var(--60-gray-text);
 }
 
 .store-sign-in-box > span > a {

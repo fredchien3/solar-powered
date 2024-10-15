@@ -24,18 +24,18 @@
 .tab-list-item div * {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  color: var(--83-grayb);
+  color: var(--83-blue-gray-text);
 }
 
 .tab-list-item div p {
-  color: var(--83-grayb);
+  color: var(--83-blue-gray-text);
   font-family: Tahoma, Arial, Helvetica, sans-serif;
   font-size: 13px;
 }
 
 .tab-list-item.tab-active {
-  background: linear-gradient(to right, var(--87-grayb) 5%, var(--71-grayb) 95%);
-  border-right: 14px solid var(--71-grayb);
+  background: linear-gradient(to right, var(--87-blue-gray-bg) 5%, var(--71-blue-gray-bg) 95%);
+  border-right: 14px solid var(--71-blue-gray-bg);
   cursor: pointer;
 }
 

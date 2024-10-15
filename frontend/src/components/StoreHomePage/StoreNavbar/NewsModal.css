@@ -48,20 +48,20 @@
   display: inline;
   margin-right: 6px;
   font-size: 12px;
-  color: var(--54-gray);
+  color: var(--54-gray-text);
 }
 
 .news-article > h1 {
   font-size: 24px;
   line-height: 36px;
-  color: var(--90-gray);
+  color: var(--90-gray-text);
   font-family: 'Motiva Sans 100', sans-serif;
   margin-bottom: 24px;
 }
 
 .news-article > p {
   font-size: 14px;
-  color: var(--83-grayb);
+  color: var(--83-blue-gray-text);
   line-height: 19px;
   margin-bottom: 12px;
 }
@@ -73,7 +73,7 @@
 
 #posted-text {
   font-family: 'Motiva Sans 100', sans-serif;
-  color: var(--75-gray);
+  color: var(--75-gray-text);
   letter-spacing: 1px;
 }
 
@@ -84,7 +84,7 @@
   font-family: 'Motiva Sans 400';
   border: none;
   background-color: var(--24-graybb);
-  color: var(--87-graybb);
+  color: var(--84-gray-text);
   padding: 8px 10px;
   border-radius: 2px;
   transition: 0.4s;

@@ -65,7 +65,7 @@
 .signup-form label {
   /* text-transform: uppercase; */
   font-size: 14px;
-  color: var(--75-gray);
+  color: var(--75-gray-text);
   margin: 5px 0 5px 0;
 }
 
@@ -78,7 +78,7 @@
   box-sizing: content-box;
   border-radius: 3px;
   border: none;
-  color: var(--90-gray);
+  color: var(--90-gray-text);
   margin-bottom: 25px;
   font-size: 13px;
 }

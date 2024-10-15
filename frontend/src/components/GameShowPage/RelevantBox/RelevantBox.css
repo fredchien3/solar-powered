@@ -20,7 +20,7 @@
 /* Logged out */
 
 .game-relevant > div p {
-  color: var(--70-graybb);
+  color: var(--75-gray-text);
   font-size: 14px;
   line-height: 22px;
   font-family: Arial, Helvetica, sans-serif;
@@ -37,15 +37,15 @@
 }
 
 .relevant-login-signup-buttons span {
-  margin: 0 4px;
+  margin: 0 12px;
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--70-graybb);
+  color: var(--75-gray-text);
   font-size: 14px;
 }
 
 /* Logged in */
 .relevant-similar-games-tile {
-  color: var(--60-gray);
+  color: var(--60-gray-text);
   font-size: 14px;
   padding: 0 7px;
 }

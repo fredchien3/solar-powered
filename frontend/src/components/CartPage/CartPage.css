@@ -11,7 +11,7 @@
 .checkout-page-body-p {
   font-family: 'Motiva Sans 300', sans-serif;
   font-size: 13px;
-  color: var(--83-grayb);
+  color: var(--83-blue-gray-text);
 }
 
 .cart-page-glow-background {
@@ -32,11 +32,11 @@
 
 .cart-page-title-wrapper span {
   font-size: 12px;
-  color: var(--40-grayb);
+  color: var(--40-blue-gray-text);
 }
 
 .cart-page-title-wrapper span a {
-  color: var(--40-grayb);
+  color: var(--40-blue-gray-text);
   text-decoration: none;
 }
 
@@ -78,7 +78,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 13px;
-  color: var(--83-grayb);
+  color: var(--83-blue-gray-text);
 }
 
 .estimated-total-wrapper h1 {
@@ -124,7 +124,7 @@
 .cart-remove {
   /* the remove button */
   margin-top: 6px;
-  color: var(--40-grayb);
+  color: var(--40-blue-gray-text);
   text-decoration: underline;
   font-size: 11px;
 }

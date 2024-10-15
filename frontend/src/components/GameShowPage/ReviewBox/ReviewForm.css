@@ -13,7 +13,7 @@
   resize: vertical;
   background-color: var(--md-blue);
   box-sizing: border-box;
-  color: var(--84-gray);
+  color: var(--84-gray-text);
   padding: 10px 11px;
   font-family: 'Motiva Sans 400', sans-serif;
 }
@@ -67,7 +67,7 @@
 .post-review-button {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  background: linear-gradient(to bottom, var(--84-grayb) 5%, var(--71-grayb) 95%);
+  background: linear-gradient(to bottom, var(--87-blue-gray-bg) 5%, var(--71-blue-gray-bg) 95%);
   color: var(--mid-blue);
   padding: 8px 16px;
   border-radius: 4px;

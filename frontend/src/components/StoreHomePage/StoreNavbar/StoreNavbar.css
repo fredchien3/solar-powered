@@ -14,7 +14,7 @@
 .store-nav-bar-links {
   display: flex;
   height: 100%;
-  color: var(--90-gray);
+  color: var(--90-gray-text);
 }
 
 .store-nav-bar-links a {

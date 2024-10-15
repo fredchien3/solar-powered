@@ -48,13 +48,13 @@
 
 .library-header > div span {
   font-size: 16px;
-  color: var(--54-gray);
+  color: var(--54-gray-text);
   margin: 0px 4px 0 10px;
 }
 
 .link-to-games {
   font-size: 14px;
-  color: var(--90-gray);
+  color: var(--90-gray-text);
   text-decoration: none;
 }
 

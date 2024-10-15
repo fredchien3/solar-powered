@@ -35,13 +35,13 @@
 
 #review-author-username {
   font-family: 'Motiva Sans 700' sans-serif;
-  color: var(--83-grayb);
+  color: var(--83-blue-gray-text);
   font-size: 13px;
   margin-bottom: 10px;
 }
 
 .review-tile-left a {
-  color: var(--83-grayb);
+  color: var(--83-blue-gray-text);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
 }
@@ -73,7 +73,7 @@
 
 .review-tile-header-summary > h1 {
   font-size: 16px;
-  color: var(--87-graybb);
+  color: var(--84-gray-text);
   margin-top: 5px;
 }
 
@@ -88,14 +88,14 @@
   margin-bottom: 8px;
   font-size: 10px;
   text-transform: uppercase;
-  color: var(--59-graybb);
+  color: var(--60-gray-text);
   opacity: 0.6;
 }
 
 .review-tile-right > p {
   font-size: 13px;
   line-height: 17px;
-  color: var(--70-graybb);
+  color: var(--75-gray-text);
   margin-right: 8px;
 }
 
