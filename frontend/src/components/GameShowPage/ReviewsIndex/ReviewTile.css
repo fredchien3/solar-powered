@@ -132,11 +132,11 @@
 }
 
 .voted-yes > i {
-  color: var(--left-green-hover);
+  color: var(--light-green-bg-hover);
 }
 
 .voted-no > i {
-  color: var(--red-rating);
+  color: var(--negative-rating);
 }
 
 .voted-funny > i {

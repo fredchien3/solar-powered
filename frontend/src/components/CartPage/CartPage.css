@@ -96,8 +96,6 @@
   justify-content: flex-end;
 }
 
-/* Cart checkout button refactored to index as .green-button */
-
 .sales-tax-disclaimer-wrapper {
   display: flex;
   padding: 21px 16px 23px 16px;

@@ -63,11 +63,22 @@
   --13-gray:     hsl(0, 0%, 13%); /* only scrollbar corner */
   --32-grayb:    hsl(220, 5%, 32%); /* only scrollbar */
 
-  --40-tint-white: hsla(0, 0%, 100%, 0.4); /* link to wishlist bg, search shadow */
-  --30-tint-white: hsla(0, 0%, 100%, 0.3); /* buy box gradient right */
-  --20-tint-white: hsla(0, 0%, 100%, 0.20);
-  --15-tint-white: hsla(0, 0%, 100%, 0.15); /* sign in form input bg hover */
-  --10-tint-white: hsla(0, 0%, 100%, 0.1); /* sign in form input bg */
+  /* green-button */
+  --light-green-text:  hsl(73, 68%, 72%);
+  --light-green-bg:   hsl(85, 68%, 41%);
+  --dark-green-bg:  hsl(87, 67%, 32%);
+  --light-green-bg-hover:  hsl(85, 68%, 50%); /* helpful review vote */
+  --dark-green-bg-hover: hsl(87, 67%, 39%);
+
+  --light-olive-green:    hsl(73, 93%, 42%); /* review form header gradient, link-to-cart text and bg(mixed) + green check + review form header */
+  --dark-olive-green:    hsl(73, 93%, 21%); /* review form header gradient */
+
+  --error-orange:    hsl(24, 71%, 64%); /* only */
+  --error-red:       hsl(0, 50%, 50%); /* login/signup error borders + text */
+
+  --mixed-rating:    hsl(38, 33%, 59%); /* only text */
+  --negative-rating: hsl(19, 63%, 39%); /* text, unhelpful review vote */
+  --funny-yellow:    hsl(59, 58%, 48%); /* only */
 
   --80-tint:     hsla(0, 0%, 0%, 0.8); /* modal */
   --50-tint:     hsla(0, 0%, 0%, 0.5);
@@ -76,39 +87,34 @@
   --20-tint:     hsla(0, 0%, 0%, 0.2);
   --10-tint:     hsla(0, 0%, 0%, 0.1);
   --blue-tint:   hsla(202, 88%, 68%, 0.2); /* light blue button bg */
+  --40-tint-white: hsla(0, 0%, 100%, 0.4); /* link to wishlist bg, search shadow */
+  --30-tint-white: hsla(0, 0%, 100%, 0.3); /* buy box gradient right */
+  --20-tint-white: hsla(0, 0%, 100%, 0.20);
+  --15-tint-white: hsla(0, 0%, 100%, 0.15); /* sign in form input bg hover */
+  --10-tint-white: hsla(0, 0%, 100%, 0.1); /* sign in form input bg */
 
-  /* green-button: cart checkout button + StoreHomePage sign in; T-B */
-  --pale-green:  hsl(73, 68%, 72%); /* text */
-  --42-green:    hsl(73, 93%, 42%); /* top hovered + link-to-cart text and bg(mixed) + green check + review form header */
-  --31-green:    hsl(73, 93%, 31%); /* top */
-  --27-green:    hsl(73, 93%, 27%); /* bottom hovered */
-  --21-green:    hsl(73, 93%, 21%); /* bottom */
-
-  /* add-to-cart button; L-R */
-  --pale-green-2: hsl(85, 69%, 80%); /* only */
-  --left-green:   hsl(85, 68%, 41%); /* only */
-  --right-green:  hsl(87, 67%, 32%); /* only */
-  --left-green-hover:  hsl(85, 68%, 50%); /* only + helpful review vote */
-  --right-green-hover: hsl(87, 67%, 39%); /* only */
-
-  --error-orange: hsl(24, 71%, 64%); /* only */
-  --error-red:    hsl(0, 50%, 50%); /* login/signup error borders + text */
-  --mixed-rating: hsl(38, 33%, 59%); /* only text */
-  --red-rating:   hsl(19, 63%, 39%); /* only text, unhelpful review vote */
-  --funny-yellow: hsl(59, 58%, 48%); /* only funny review vote */
-
-  --neon-blue-sweep: linear-gradient( /* only login + signup buttons */
-    to right, var(--neon-blue) 0%, var(--strong-blue) 100%
+  /* login + signup buttons */
+  --neon-blue-sweep: linear-gradient(
+    to right,
+    var(--neon-blue) 0%,
+    var(--strong-blue) 100%
   );
   --neon-blue-sweep-30: linear-gradient(
-    to right, var(--neon-blue) 30%, var(--strong-blue) 100%
+    to right,
+    var(--neon-blue) 30%,
+    var(--strong-blue) 100%
   );
   --neon-blue-sweep-60: linear-gradient(
-    to right, var(--neon-blue) 60%, var(--strong-blue) 100%
+    to right,
+    var(--neon-blue) 60%,
+    var(--strong-blue) 100%
   );
 
-  --dull-blue-sweep: linear-gradient( /* fancy line on game show page */
-    to right, hsl(201, 41%, 39%) 0%, transparent 100%
+  --storenav-gradient:linear-gradient(
+    to right,
+    var(--storenav-blue-left),
+    var(--storenav-blue-mid),
+    var(--storenav-blue-right)
   );
 }
 
@@ -161,24 +167,23 @@ body {
 
 /* Top-down gradient: cart checkout and store home page 'sign in' */
 .green-button {
-  color: var(--pale-green);
-
+  color: var(--light-green-text);
   height: 30px;
   padding: 0 15px;
-  background: linear-gradient(var(--31-green) 5%, var(--21-green) 95%);
+  background: linear-gradient(to right, var(--light-green-bg) 5%, var(--dark-green-bg) 95%);
   border: none;
   border-radius: 3px;
   font-family: 'Motiva Sans 400';
   font-size: 15px;
   margin-left: 16px;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  text-shadow: 1px 1px 0px var(--30-tint);
 }
 
 .green-button:not(:disabled):hover {
-  background: linear-gradient(to bottom, var(--42-green) 5%, var(--27-green) 95%);
+  background: linear-gradient(to right, var(--light-green-bg-hover) 5%, var(--dark-green-bg-hover) 95%);
   color: white;
   cursor: pointer;
 }
@@ -188,37 +193,11 @@ body {
   cursor: default;
 }
 
-/* Left-to-right gradient, 'Add to Cart' */
-.add-to-cart-button {
-  color: var(--pale-green-2);
-
-  height: 30px;
-  padding: 0 15px;
-  background: linear-gradient(to right, var(--left-green) 5%, var(--right-green) 95%);
-  border: none;
-  border-radius: 2px;
-  font-family: 'Motiva Sans 400';
-  font-size: 15px;
-  margin-right: 1px;
-  text-shadow: 1px 1px 0px var(--30-tint);
-}
-
-.add-to-cart-button:not(:disabled):hover {
-  background: linear-gradient(to right, var(--left-green-hover) 5%, var(--right-green-hover) 95%);
-  color: white;
-  cursor: pointer;
-}
-
-.add-to-cart-button:disabled {
-  opacity: 0.45;
-  cursor: default;
-}
-
 /* Blue line gradient on top */
 .dull-blue-line-top::before {
   content: "";
   height: 1px;
-  background: var(--dull-blue-sweep);
+  background: var(--storenav-gradient);
   width: 100%;
   display: block;
   position: absolute;
@@ -239,7 +218,7 @@ body {
 .blue-line-bottom::after {
   content: "";
   height: 1px;
-  background: var(--dull-blue-sweep);
+  background: var(--storenav-gradient);
   width: 100%;
   display: block;
   margin-top: 4px;
@@ -257,8 +236,8 @@ body {
   color: var(--mixed-rating);
 }
 
-.red-rating {
-  color: var(--red-rating);
+.negative-rating {
+  color: var(--negative-rating);
 }
 
 sup {

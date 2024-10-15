@@ -190,12 +190,12 @@
 }
 
 .link-to-cart {
-  color: var(--42-green);
-  background-color: color-mix(in hsl, var(--42-green), transparent 60%);
+  color: var(--light-olive-green);
+  background-color: color-mix(in hsl, var(--light-olive-green), transparent 60%);
 }
 
 .link-to-cart:hover {
   color: black;
-  background-color: color-mix(in hsl, var(--42-green), transparent 25%);
+  background-color: color-mix(in hsl, var(--light-olive-green), transparent 25%);
   cursor: pointer;
 }

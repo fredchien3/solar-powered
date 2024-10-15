@@ -4,7 +4,7 @@
   align-items: center;
   width: 940px;
   height: 35px;
-  background: linear-gradient(to right, var(--storenav-blue-left) 10%, var(--storenav-blue-mid) 25%, var(--storenav-blue-right) 100%);
+  background: var(--storenav-gradient);
   margin-top: 31px;
   margin-bottom: 16px;
   position: relative;
