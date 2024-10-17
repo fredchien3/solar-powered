@@ -1,4 +1,5 @@
 import csrfFetch from "./csrf";
+import { REMOVE_SESSION_USER } from "./session";
 
 export const SET_LIBRARY_ITEMS = "libraryItems/SET_LIBRARY_ITEMS";
 export const SET_OTHER_LIBRARY = "libraryItems/SET_OTHER_LIBRARY";
@@ -34,6 +35,8 @@ export default function libraryItemsReducer(state = initialState, action) {
     case SET_OTHER_LIBRARY:
       newState.otherUser = action.payload.libraryItems;
       return newState;
+    case REMOVE_SESSION_USER:
+      return initialState;
     default:
       return state;
   }
