@@ -9,6 +9,8 @@
   --mid-blue:    hsl(202, 41%, 33%); /* light-blue-button hover right, Post review text,
   Post review hover bottom, carousel arrows */
 
+  --light-orange: hsl(32, 100%, 62%);
+
   --storenav-blue-left:  hsl(212, 42%, 42%); /* only storenavbar left gradient */
   --storenav-blue-mid:   hsl(209, 51%, 46%); /* only storenavbar mid gradient */
   --storenav-blue-right: hsl(229, 76%, 25%); /* only storenavbar right gradient */

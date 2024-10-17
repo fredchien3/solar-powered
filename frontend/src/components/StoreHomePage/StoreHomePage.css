@@ -1,16 +1,30 @@
 .store-home-page {
-  background: url(https://store.akamai.steamstatic.com/public/images/v6/colored_body_top.png?v=2) center top no-repeat var(--medium-blue);
+  background:
+    radial-gradient(
+      circle at 20% -6%,
+      color-mix(in hsl, var(--light-orange), transparent 50%) 0%,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% -8%,
+      color-mix(in hsl, var(--neon-blue), transparent 60%) 0%,
+      var(--medium-blue) 25%
+    );
   width: 100vw;
-  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .store-featured-box-wide-wrapper {
-  background: url(https://store.akamai.steamstatic.com/public/images/v6/home/cluster_bg.png?v=1) center bottom no-repeat transparent;
-  width: 100%;
-  height: 454px;
+  background:
+    radial-gradient(
+      circle at 50% 150%,
+      color-mix(in hsl, var(--neon-blue), transparent 50%) 0%,
+      transparent 75%
+    );
+  width: 70%;
+  height: 450px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

@@ -1,9 +1,10 @@
 .store-tab-list-wide-wrapper {
   width: 100%;
   height: 771px;
-  background-image: linear-gradient(var(--27-blue) 5%, transparent 70%);
+  background-image: linear-gradient(var(--27-blue) 5%, var(--medium-blue) 70%);
   display: flex;
   justify-content: center;
+  padding-bottom: 100px;
 }
 
 .store-tab-list {
