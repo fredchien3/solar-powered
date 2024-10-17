@@ -30,7 +30,7 @@
 .library-item-info-wrapper p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
-  color: var(--40-blue-gray-text);
+  color: var(--40-blue-gray);
 }
 
 .library-item-info-wrapper a {

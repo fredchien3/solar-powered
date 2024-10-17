@@ -56,12 +56,12 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   line-height: 17px;
-  color: var(--60-gray-text);
+  color: var(--60-gray);
 }
 
 .review-form-main > h2 {
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--83-blue-gray-text);
+  color: var(--83-blue-gray);
   font-size: 12px;
   margin-top: 16px;
 }
@@ -99,13 +99,13 @@
 }
 
 .review-form-thumb.thumbs-up {
-  background: linear-gradient(var(--thumb-blue-light), var(--thumb-blue-dark));
+  background: linear-gradient(var(--light-blue-thumb), var(--dark-blue-thumb));
   color: var(--light-blue);
 }
 
 .review-form-thumb.thumbs-down {
-  background: linear-gradient(var(--thumb-red-light), var(--thumb-red-dark));
-  color: var(--red-thumb);
+  background: linear-gradient(var(--light-red-thumb), var(--dark-red-thumb));
+  color: var(--main-red-thumb);
 }
 
 .review-form-thumb.fourty {
@@ -121,7 +121,7 @@
 
 .review-form-wrapper > h3 {
   font-size: 14px;
-  color: var(--54-gray-text);
+  color: var(--54-gray);
   font-family: Arial, Helvetica, sans-serif;
   width: 95%;
   margin-left: 10px;

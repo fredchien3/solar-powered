@@ -64,7 +64,7 @@
 }
 
 .game-show-carousel-thumbs-wrapper::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, var(--thumb-blue-light) 0%,var(--thumb-blue-dark) 100%);
+  background: linear-gradient(135deg, var(--light-blue-thumb) 0%,var(--dark-blue-thumb) 100%);
   cursor: pointer !important;
 }
 
@@ -78,13 +78,13 @@
   height: 18px;
   border-radius: 3px;
   border: none;
-  color: var(--ml-blue);
+  color: var(--mid-blue);
   position: absolute;
   bottom: 1px;
 }
 
 .game-show-carousel-button:hover {
-  background: linear-gradient(135deg, var(--thumb-blue-light) 0%,var(--thumb-blue-dark) 100%);
+  background: linear-gradient(135deg, var(--light-blue-thumb) 0%,var(--dark-blue-thumb) 100%);
   cursor: pointer;
   color: white;
 }

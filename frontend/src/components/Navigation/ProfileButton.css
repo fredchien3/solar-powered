@@ -7,7 +7,7 @@
   background: none;
   border: none;
   margin-right: 6px;
-  color: var(--75-gray-text);
+  color: var(--75-gray);
   font-size: 11px;
 }
 
@@ -19,7 +19,7 @@
 .small-avatar-wrapper {
   width: 36px;
   height: 36px;
-  border: 2px solid var(--ml-blue);
+  border: 2px solid var(--light-blue);
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
@@ -55,7 +55,7 @@
 .profile-button-dropdown * {
   background: none;
   border: none;
-  color: var(--75-gray-text);
+  color: var(--75-gray);
   display: flex;
   align-items: center;
   height: 27px;

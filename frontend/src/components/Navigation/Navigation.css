@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--dark-blue);
-  color: var(--75-gray-text);
+  color: var(--75-gray);
   height: 104px;
   padding-left: 11px;
 }
@@ -34,6 +34,7 @@
   font-size: 28px;
   position: absolute;
   left: 0;
+  transition: 0.2s;
 }
 
 .logo i {
@@ -99,7 +100,7 @@
 }
 
 .login-signup-links a {
-  color: var(--75-gray-text);
+  color: var(--75-gray);
   font-size: 11px;
   text-decoration: none;
   margin: 0 11px 0 11px;
@@ -116,8 +117,8 @@
   align-items: center;
   width: 110px;
   height: 24px;
-  background-color: var(--40-graybb);
-  color: var(--90-gray-text);
+  background-color: var(--40-gray);
+  color: var(--84-gray);
   border: none;
   font-size: 11px;
   margin-right: 14px;
@@ -136,13 +137,13 @@
 }
 
 .login-signup-links {
-  color: var(--75-gray-text);
+  color: var(--75-gray);
 }
 
 .mail-button {
   width: 27px;
   height: 24px;
-  background-color: var(--15-gray);
+  background-color: var(--24-gray);
   border: none;
   cursor: pointer;
   color: white;
@@ -186,7 +187,7 @@
 
 .link-to-wishlist:hover {
   color: black;
-  background: linear-gradient(135deg, white 0%,var(--59-graybb) 100%);
+  background: linear-gradient(135deg, white 0%,var(--60-gray) 100%);
 }
 
 .link-to-cart {

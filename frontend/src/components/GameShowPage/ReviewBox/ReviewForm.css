@@ -6,14 +6,14 @@
 }
 
 .review-form-text {
-  border: 1px solid var(--thumb-blue-dark);
+  border: 1px solid var(--dark-blue-thumb);
   border-radius: 3px;
   height: 148px;
   width: 100%;
   resize: vertical;
-  background-color: var(--md-blue);
+  background-color: var(--21-blue);
   box-sizing: border-box;
-  color: var(--84-gray-text);
+  color: var(--84-gray);
   padding: 10px 11px;
   font-family: 'Motiva Sans 400', sans-serif;
 }
@@ -67,7 +67,7 @@
 .post-review-button {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  background: linear-gradient(to bottom, var(--87-blue-gray-bg) 5%, var(--71-blue-gray-bg) 95%);
+  background: linear-gradient(to bottom, var(--87-blue-gray) 5%, var(--71-blue-gray) 95%);
   color: var(--mid-blue);
   padding: 8px 16px;
   border-radius: 4px;
@@ -77,5 +77,5 @@
 .post-review-button:hover {
   cursor: pointer;
   color: white;
-  background: linear-gradient(to bottom, var(--light-blue) 5%, var(--mll-blue) 95%);
+  background: linear-gradient(to bottom, var(--light-blue) 5%, var(--mid-blue) 95%);
 }

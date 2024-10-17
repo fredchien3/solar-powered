@@ -33,7 +33,7 @@
 .reviews-index-empty > h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
-  color: var(--54-gray-text);
+  color: var(--54-gray);
   text-align: center;
   line-height: 18px;
   margin-top: -8px;
@@ -71,7 +71,7 @@
 }
 
 .reviews-header-summary > h3 > span {
-  color: var(--60-blue-gray-bg);
+  color: var(--60-blue-gray);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
 }

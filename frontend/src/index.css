@@ -1,66 +1,55 @@
 /* Site wide styles */
 @import url('reset.css');
 
+/* degree-color-modifier */
 :root {
-  --strong-blue: hsl(220, 100%, 60%); /* only login + signup buttons */
-  --streon-blue: hsl(208, 100%, 58%); /* sign in header text, news header text  */
-  --neon-blue:   hsl(195, 100%, 50%); /* login + signup buttons, highlighted text and border, storenavbar button hover (60%) */
-
-  --light-blue:  hsl(201, 81%, 67%); /* ubiquitous light blue button hover left.
-  Links, positive rating text, Post review hover top. search glass background, blue thumb */
-  --mll-blue:    hsl(202, 60%, 46%); /* only Post review hover bottom */
-  --ml-blue:     hsl(202, 41%, 43%); /* only carousel arrows, blue profile pic border */
-  --mid-blue:    hsl(202, 41%, 33%); /* light blue button hover right, Post review text, search glass color */
+  --strong-blue: hsl(220, 100%, 60%); /* login + signup, various header text */
+  --neon-blue:   hsl(195, 100%, 50%); /* login + signup, various accents */
+  --light-blue:  hsl(201, 81%, 67%); /* light-blue-button hover left, various text and elements */
+  --mid-blue:    hsl(202, 41%, 33%); /* light-blue-button hover right, Post review text,
+  Post review hover bottom, carousel arrows */
 
   --storenav-blue-left:  hsl(212, 42%, 42%); /* only storenavbar left gradient */
   --storenav-blue-mid:   hsl(209, 51%, 46%); /* only storenavbar mid gradient */
   --storenav-blue-right: hsl(229, 76%, 25%); /* only storenavbar right gradient */
 
-  --thumb-blue-light: hsl(204, 40%, 35%); /* thumbs up icons, search bar background, game show carousel thumb hovered */
-  --thumb-blue-dark:  hsl(204, 50%, 28%); /* only thumbs up icons */
-  --red-thumb:        hsl(0, 67%, 63%); /* only */
-  --thumb-red-light:  hsl(353, 32%, 30%); /* only thumbs down icons */
-  --thumb-red-dark:   hsl(353, 45%, 21%); /* only thumbs down icons */
+  --light-blue-thumb: hsl(204, 40%, 35%); /* thumbs up icons, game show carousel thumb hovered */
+  --dark-blue-thumb:  hsl(204, 50%, 28%); /* only thumbs up icons */
+  --main-red-thumb:   hsl(0, 67%, 63%); /* only. counterpart is light-blue */
+  --light-red-thumb:  hsl(353, 32%, 30%); /* only thumbs down icons */
+  --dark-red-thumb:   hsl(353, 45%, 21%); /* only thumbs down icons */
 
   --27-blue:     hsl(207, 38%, 27%); /* review header bg, game show carousel thumb(mixed), tablist bg top gradient */
-  --21-blue:     hsl(215, 21%, 21%); /* library header bg + news top gradient + TabList titles */
-
+  --21-blue:     hsl(215, 21%, 21%); /* library header bg + news top gradient + TabList titles + review input bg */
   --15-blue:     hsl(218, 11%, 15%); /* signup bg, news border gradient bg */
-  --medium-blue: hsl(215, 31%, 16%); /* main bg color. search glass hover. review vote bg. news bottom gradient */
-  --md-blue:     hsl(212, 22%, 17%); /* only review input background */
-  --dark-blue:   hsl(222, 18%, 11%); /* header and footer. search input placeholder */
+  --medium-blue: hsl(215, 31%, 16%); /* main bg color, review vote bg, news bottom gradient */
+  --dark-blue:   hsl(222, 18%, 11%); /* header and footer */
 
-  --90-gray-text: hsl(0, 0%, 90%); /* various text + links */
-  --84-gray-text: hsl(0, 0%, 84%); /* review box input text, remove from wishlist hover, close news text, review title */
-  --75-gray-text: hsl(210, 8%, 75%); /* various text + headers */
-  --60-gray-text: hsl(210, 8%, 60%); /* Similar to games + no reviews (StoreHome), footer content + various light text, review posted date, wishlist right gradient */
-  --54-gray-text: hsl(0, 0%, 54%); /* text for no reviews, review is posted, library breadcrumb */
-  --33-gray:      hsl(0, 0%, 33%); /* mail button hover bg, litterbug border, scrollbar */
-  --15-gray:      hsl(0, 0%, 15%); /* mail button bg, litterbug bg */
+  --90-gray: hsl(0, 0%, 90%); /* various text + links */
+  --84-gray: hsl(0, 0%, 84%); /* review box input text, remove from wishlist hover, close news text, review title */
+  --75-gray: hsl(210, 8%, 75%); /* various text + headers */
+  --60-gray: hsl(210, 8%, 60%); /* Similar to games + no reviews (StoreHome), footer content + various light text, review posted date, wishlist right gradient, news modal x */
+  --54-gray: hsl(0, 0%, 54%); /* text for no reviews, review is posted, library breadcrumb, footer links divider */
+  --40-gray: hsl(205, 6%, 40%); /* footer + review divider lines, install solar button bg */
+  --33-gray: hsl(214, 11%, 33%); /* mail button hover bg, litterbug border, scrollbar, close news hover */
+  --24-gray: hsl(214, 11%, 24%); /* footer border, close news, featured sidebar tag, news border gradient circle, mail button bg */
+  --15-gray: hsl(0, 0%, 15%); /* litterbug bg */
 
-  --83-blue-gray-text: hsl(206, 29%, 83%); /* various text + links */
-  --40-blue-gray-text: hsl(203, 15%, 40%); /* various muted text + no reviews (GameShow) */
-  --87-blue-gray-bg: hsl(202, 80%, 87%); /* TabList bg left, wishlistitem(mixed), Post review top gradient, featured game price, store home L+R hover gradient */
-  --71-blue-gray-bg: hsl(202, 41%, 71%); /* TabList bg mid, post review bottom gradient */
-  --60-blue-gray-bg: hsl(206, 19%, 60%); /* TabList bg right */
-
-  --55-graybb:   hsl(210, 16%, 55%); /* featured nub active, news modal X */
-  --47-graybb:   hsl(210, 17%, 47%); /* only featured nub hover */
-  --39-graybb:   hsl(209, 23%, 39%); /* only featured nub */
-
-  --40-graybb:   hsl(205, 6%, 40%); /* footer + review divider lines, install solar button bg */
-  --31-graybb:   hsl(217, 11%, 31%); /* only close news hover */
-  --24-graybb:   hsl(214, 11%, 24%); /* footer border, close news, featured sidebar tag, news border gradient circle */
+  --83-blue-gray: hsl(206, 29%, 83%); /* various text + links */
+  --40-blue-gray: hsl(203, 15%, 40%); /* various muted text + no reviews (GameShow) */
+  --87-blue-gray: hsl(202, 80%, 87%); /* TabList bg left, various gradients and text */
+  --71-blue-gray: hsl(202, 41%, 71%); /* TabList bg mid, post review bottom gradient */
+  --60-blue-gray: hsl(206, 19%, 60%); /* TabList bg right */
 
   /* green-button */
-  --light-green-text:  hsl(73, 68%, 72%);
-  --light-green-bg:   hsl(85, 68%, 41%);
-  --dark-green-bg:  hsl(87, 67%, 32%);
-  --light-green-bg-hover:  hsl(85, 68%, 50%); /* helpful review vote */
-  --dark-green-bg-hover: hsl(87, 67%, 39%);
+  --light-green-text:     hsl(73, 68%, 72%);
+  --light-green-bg:       hsl(85, 68%, 41%);
+  --dark-green-bg:        hsl(87, 67%, 32%);
+  --light-green-bg-hover: hsl(85, 68%, 50%); /* also helpful review vote */
+  --dark-green-bg-hover:  hsl(87, 67%, 39%);
 
   --light-olive-green:    hsl(73, 93%, 42%); /* review form header gradient, link-to-cart text and bg(mixed) + green check + review form header */
-  --dark-olive-green:    hsl(73, 93%, 21%); /* review form header gradient */
+  --dark-olive-green:     hsl(73, 93%, 21%); /* review form header gradient */
 
   --error-orange:    hsl(24, 71%, 64%); /* only */
   --error-red:       hsl(0, 50%, 50%); /* login/signup error borders + text */
@@ -69,13 +58,13 @@
   --negative-rating: hsl(19, 63%, 39%); /* text, unhelpful review vote */
   --funny-yellow:    hsl(59, 58%, 48%); /* only */
 
-  --80-tint:     hsla(0, 0%, 0%, 0.8); /* modal */
-  --50-tint:     hsla(0, 0%, 0%, 0.5);
-  --40-tint:     hsla(0, 0%, 0%, 0.4);
-  --30-tint:     hsla(0, 0%, 0%, 0.3);
-  --20-tint:     hsla(0, 0%, 0%, 0.2);
-  --10-tint:     hsla(0, 0%, 0%, 0.1);
-  --blue-tint:   hsla(202, 88%, 68%, 0.2); /* light blue button bg */
+  --80-tint:   hsla(0, 0%, 0%, 0.8); /* modal */
+  --50-tint:   hsla(0, 0%, 0%, 0.5);
+  --40-tint:   hsla(0, 0%, 0%, 0.4);
+  --30-tint:   hsla(0, 0%, 0%, 0.3);
+  --20-tint:   hsla(0, 0%, 0%, 0.2);
+  --10-tint:   hsla(0, 0%, 0%, 0.1);
+  --blue-tint: hsla(202, 88%, 68%, 0.2); /* light blue button bg */
   --40-tint-white: hsla(0, 0%, 100%, 0.4); /* link to wishlist bg, search shadow */
   --30-tint-white: hsla(0, 0%, 100%, 0.3); /* buy box gradient right */
   --20-tint-white: hsla(0, 0%, 100%, 0.20);
@@ -214,7 +203,7 @@ body {
 }
 
 .no-rating {
-  color: var(--40-blue-gray-text);
+  color: var(--40-blue-gray);
 }
 
 .light-blue-rating {

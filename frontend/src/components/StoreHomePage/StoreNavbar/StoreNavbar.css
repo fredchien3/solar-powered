@@ -14,7 +14,7 @@
 .store-nav-bar-links {
   display: flex;
   height: 100%;
-  color: var(--90-gray-text);
+  color: var(--90-gray);
 }
 
 .store-nav-bar-links a {
@@ -32,7 +32,7 @@
 }
 
 .store-nav-bar-links a:hover {
-  background: linear-gradient(to right, color-mix(in hsl, var(--neon-blue), transparent 60%) 0%, transparent 100%);
+  background: linear-gradient(to right, color-mix(in hsl, var(--neon-blue), transparent 50%) 0%, transparent 100%);
   color: white;
   cursor: pointer;
 }
@@ -40,7 +40,7 @@
 .store-nav-bar-search {
   width: 202px;
   height: 27px;
-  background-color: var(--thumb-blue-light);
+  background-color: var(--light-blue-thumb);
   border-radius: 3px;
   margin-bottom: 1px;
   margin-right: 4px;

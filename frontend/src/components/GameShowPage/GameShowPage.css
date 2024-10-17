@@ -24,12 +24,12 @@
 
 .game-show-breadcrumbs {
   font-size: 12px;
-  color: var(--60-gray-text);
+  color: var(--60-gray);
 }
 
 .game-show-breadcrumbs a {
   text-decoration: none;
-  color: var(--60-gray-text);
+  color: var(--60-gray);
 }
 
 .game-show-breadcrumbs a:hover {
@@ -47,8 +47,6 @@
   justify-content: flex-end;
   align-items: flex-end;
 }
-
-/* community-hub button style refactored to light-blue-button */
 
 .game-show-main-box-wide-wrapper {
   width: 100%;
@@ -87,7 +85,7 @@
 .game-show-main-info-panel > p {
   font-size: 13px;
   line-height: 18px;
-  color: var(--83-blue-gray-text);
+  color: var(--83-blue-gray);
   display: flex;
   padding-top: 6px;
   padding-right: 16px;
@@ -112,7 +110,7 @@
   font-size: 10px;
   text-align: start;
   width: 104px;
-  color: var(--40-blue-gray-text);
+  color: var(--40-blue-gray);
 }
 
 .game-info-table td {
@@ -132,7 +130,7 @@
   margin-left: 4px;
   font-size: 12px;
 
-  color: var(--40-blue-gray-text);
+  color: var(--40-blue-gray);
 }
 
 .release-date-row th, .release-date-row td {
@@ -140,7 +138,7 @@
 }
 
 .release-date-row td {
-  color: var(--60-gray-text);
+  color: var(--60-gray);
 }
 
 .developer-publisher:hover {
@@ -151,7 +149,7 @@
 .popular-tags {
   margin-top: 12px;
   font-size: 12px;
-  color: var(--40-blue-gray-text);
+  color: var(--40-blue-gray);
   display: flex;
   flex-direction: column;
 }
@@ -177,7 +175,7 @@
   background-color: var(--20-tint);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
-  color: var(--83-blue-gray-text);
+  color: var(--83-blue-gray);
   padding: 16px;
   margin-bottom: 32px;
 }
@@ -230,7 +228,7 @@
   display: flex;
   justify-content: center;
   white-space: nowrap;
-  color: var(--83-blue-gray-text);
+  color: var(--83-blue-gray);
   padding: 0 10px;
 }
 
@@ -238,7 +236,7 @@
   width: 98%;
   margin-top: 30px;
   font-size: 14px;
-  color: var(--75-gray-text);
+  color: var(--75-gray);
   line-height: 1.5em;
   white-space: pre-line;
 }

@@ -10,20 +10,20 @@
 }
 
 .footer-sandwich {
-  border-top: 1px solid var(--24-graybb);
-  border-bottom: 1px solid var(--24-graybb);
+  border-top: 1px solid var(--24-gray);
+  border-bottom: 1px solid var(--24-gray);
+  color: var(--60-gray);
   width: 940px;
   height: 53px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  color: var(--60-gray-text);
   padding: 8px 0;
   margin-bottom: 16px;
 }
 
 .array-logo {
-  background-color: var(--60-gray-text);
+  background-color: var(--60-gray);
   width: 84px;
   height: 25px;
   color: var(--dark-blue);
@@ -56,7 +56,7 @@
 }
 
 .legal-text-wrapper a {
-  color: var(--83-blue-gray-text);
+  color: var(--83-blue-gray);
   text-decoration: none;
 }
 
@@ -86,7 +86,7 @@
   width: 940px;
   font-size: 13px;
   font-size: 13px;
-  color: var(--40-graybb);
+  color: var(--54-gray);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,7 +94,7 @@
 }
 
 .footer-links p {
-  color: var(--60-gray-text);
+  color: var(--60-gray);
   margin-right: 6px;
 }
 
@@ -103,7 +103,7 @@
 }
 
 .footer-links a {
-  color: var(--83-blue-gray-text);
+  color: var(--83-blue-gray);
   text-decoration: none;
   margin: 0 7px;
   height: 100%;

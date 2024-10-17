@@ -30,7 +30,7 @@ export default function Navigation() {
         <a href="https://github.com/fredchien3/solar-powered/"
           target="_blank"
           rel="noreferrer">
-          Community
+          GitHub
         </a>
         {currentUser ? <Link to={`/users/${currentUser.username}/games`}>{currentUser.displayName}</Link> : <></>}
         <a href="https://www.linkedin.com/in/fchien/"

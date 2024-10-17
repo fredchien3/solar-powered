@@ -121,10 +121,10 @@ export default function GameShowPage() {
             <div className="popular-tags">
               Popular user-defined tags for this product:
               <div className="user-tags-row">
-                <button class="light-blue-button user-tag-button">Tags</button>
-                <button class="light-blue-button user-tag-button">Coming</button>
-                <button class="light-blue-button user-tag-button">Soon</button>
-                <button class="light-blue-button user-tag-button">+</button>
+                <button className="light-blue-button user-tag-button">Tags</button>
+                <button className="light-blue-button user-tag-button">Coming</button>
+                <button className="light-blue-button user-tag-button">Soon</button>
+                <button className="light-blue-button user-tag-button">+</button>
               </div>
             </div>
           </aside>
