@@ -24,7 +24,7 @@
 .wishlist-profile-pic {
   width: 67px;
   height: 67px;
-  border: none;
+  border: 3px solid var(--light-blue);
 }
 
 .wishlist-title {

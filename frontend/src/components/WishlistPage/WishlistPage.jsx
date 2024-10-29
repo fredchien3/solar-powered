@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { fetchUser } from "../../store/users";
 import { fetchWishlistItems } from "../../store/wishlistItems";
+import fredAvatar from '../fred_and_cober.jpg';
 import defaultAvatar from "../default_avatar.jpg";
 import WishlistItem from "./WishlistItem";
 import "./WishlistPage.css";
@@ -50,7 +51,7 @@ export default function WishlistPage() {
     <div className="wishlist-page">
       <section className="wishlist-main-column">
         <header>
-          <img src={defaultAvatar} className="wishlist-profile-pic" alt="avatar" />
+          <img src={wishlistUser.id === 1 ? fredAvatar : defaultAvatar} className="wishlist-profile-pic" alt="avatar" />
           <h1 className="wishlist-title">{wishlistUser.displayName}'s wishlist</h1>
         </header>
         {/* <div className="wishlist-control-bar"></div> */}

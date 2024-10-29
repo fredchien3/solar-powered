@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { fetchLibraryItems } from '../../store/libraryItems';
 import { fetchUser } from '../../store/users';
+import fredAvatar from '../fred_and_cober.jpg';
 import defaultAvatar from "../default_avatar.jpg";
 import LibraryItem from './LibraryItem';
 import './LibraryPage.css';
@@ -11,9 +12,9 @@ import './LibraryPage.css';
 export default function LibraryPage() {
   const dispatch = useDispatch();
   const { username } = useParams();
-  
+
   const currentUser = useSelector(state => state.session.user || {});
-  
+
   const viewingOwnLibrary = currentUser.username === username;
 
   const userArray = useSelector(state => Object.values(state.users));
@@ -26,7 +27,7 @@ export default function LibraryPage() {
   }
 
   document.title = libraryUser.displayName ? `Solar Community :: ${libraryUser.displayName} :: Games` : "loading...";
-  
+
   useEffect(() => {
     dispatch(fetchUser(username))
       .then(user => {
@@ -51,7 +52,7 @@ export default function LibraryPage() {
   return (
     <div className="library-page">
       <header className="library-header">
-        <img src={defaultAvatar} alt="avatar"></img>
+        <img src={libraryUser.id === 1 ? fredAvatar : defaultAvatar} alt="avatar"></img>
         <div>
           <Link className="link-to-profile" to={'/users/' + libraryUser.username + '/games'}>{libraryUser.displayName}</Link>
           <span>»</span>

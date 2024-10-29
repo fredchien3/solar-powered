@@ -26,6 +26,7 @@
   height: 32px;
   border: 2px solid var(--light-blue);
   margin-right: 8px;
+  object-fit: cover;
 }
 
 .review-tile-left-top-row {

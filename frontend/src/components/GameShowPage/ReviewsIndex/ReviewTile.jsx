@@ -1,6 +1,7 @@
 import { longDate } from '../../../utils/formatDate';
 import { ThumbsUp, ThumbsDown } from '../ReviewBox/ReviewBox';
 import './ReviewTile.css';
+import fredAvatar from '../../fred_and_cober.jpg';
 import defaultAvatar from '../../default_avatar.jpg';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteReview } from '../../../store/reviews';
@@ -153,7 +154,7 @@ export default function ReviewTile({ review }) {
     <article className="review-tile orange-line-top" id={`review-by-author-${review.authorId}`}>
       <div className="review-tile-left">
         <header>
-          <img src={defaultAvatar} alt="avatar" />
+          <img src={author && author.id === 1 ? fredAvatar : defaultAvatar} alt="avatar" />
           <div className="review-tile-left-top-row">
             <a href={`/users/${author.username}/games`} id="review-author-username">{author.displayName}</a>
             <a href={`/users/${author.username}/games`}>{author.numOwnedGames} products in account</a>

@@ -31,7 +31,6 @@ export default function WishlistItem({ wishlistItem, viewingOwnWishlist }) {
       <div className="wishlist-item-info">
         <Link to={"/games/" + game.id}><h1>{game.title}</h1></Link>
         <div className="wishlist-item-info-middle-row">
-
           <div className="wishlist-item-grid">
             <div className="wishlist-item-grid-item">Overall reviews:</div>
             <div className={"wishlist-item-grid-item " + ratingColor(game.averageScore)}>{ratingSummary(game.averageScore)}</div>

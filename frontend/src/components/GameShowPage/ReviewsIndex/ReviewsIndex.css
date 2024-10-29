@@ -3,6 +3,7 @@
   border-top: 1px solid black;
   display: flex;
   justify-content: center;
+  padding-top: 24px;
 }
 
 .reviews-index-main-column {
