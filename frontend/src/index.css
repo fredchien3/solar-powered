@@ -9,6 +9,7 @@
   --mid-blue:    hsl(202, 41%, 33%); /* light-blue-button hover right, Post review text,
   Post review hover bottom, carousel arrows */
 
+  --strong-orange: hsl(27, 100%, 45%);
   --light-orange: hsl(32, 100%, 62%);
 
   --storenav-blue-left:  hsl(212, 42%, 42%); /* only storenavbar left gradient */
@@ -17,7 +18,7 @@
 
   --light-blue-thumb: hsl(204, 40%, 35%); /* thumbs up icons, game show carousel thumb hovered */
   --dark-blue-thumb:  hsl(204, 50%, 28%); /* only thumbs up icons */
-  --main-red-thumb:   hsl(0, 67%, 63%); /* only. counterpart is light-blue */
+  --main-red-thumb:   hsl(0, 67%, 63%); /* also all errors and negative rating/vote */
   --light-red-thumb:  hsl(353, 32%, 30%); /* only thumbs down icons */
   --dark-red-thumb:   hsl(353, 45%, 21%); /* only thumbs down icons */
 
@@ -39,9 +40,10 @@
 
   --83-blue-gray: hsl(206, 29%, 83%); /* various text + links */
   --40-blue-gray: hsl(203, 15%, 40%); /* various muted text + no reviews (GameShow) */
-  --87-blue-gray: hsl(202, 80%, 87%); /* TabList bg left, various gradients and text */
-  --71-blue-gray: hsl(202, 41%, 71%); /* TabList bg mid, post review bottom gradient */
-  --60-blue-gray: hsl(206, 19%, 60%); /* TabList bg right */
+
+  --87-orange-gray: hsl(32, 90%, 87%); /* TabList bg left, various gradients and text */
+  --71-orange-gray: hsl(32, 71%, 71%); /* TabList bg mid */
+  --60-orange-gray: hsl(36, 25%, 70%); /* TabList bg right */
 
   /* green-button */
   --light-green-text:     hsl(73, 68%, 72%);
@@ -53,11 +55,7 @@
   --light-olive-green:    hsl(73, 93%, 42%); /* review form header gradient, link-to-cart text and bg(mixed) + green check + review form header */
   --dark-olive-green:     hsl(73, 93%, 21%); /* review form header gradient */
 
-  --error-orange:    hsl(24, 71%, 64%); /* only */
-  --error-red:       hsl(0, 50%, 50%); /* login/signup error borders + text */
-
   --mixed-rating:    hsl(38, 33%, 59%); /* only text */
-  --negative-rating: hsl(19, 63%, 39%); /* text, unhelpful review vote */
   --funny-yellow:    hsl(59, 58%, 48%); /* only */
 
   --80-tint:   hsla(0, 0%, 0%, 0.8); /* modal */
@@ -76,18 +74,18 @@
   /* login + signup buttons */
   --neon-blue-sweep: linear-gradient(
     to right,
-    var(--neon-blue) 0%,
-    var(--strong-blue) 100%
+    var(--light-orange) 0%,
+    var(--strong-orange) 100%
   );
   --neon-blue-sweep-30: linear-gradient(
     to right,
-    var(--neon-blue) 30%,
-    var(--strong-blue) 100%
+    var(--light-orange) 30%,
+    var(--strong-orange) 100%
   );
   --neon-blue-sweep-60: linear-gradient(
     to right,
-    var(--neon-blue) 60%,
-    var(--strong-blue) 100%
+    var(--light-orange) 60%,
+    var(--strong-orange) 100%
   );
 
   --storenav-gradient:linear-gradient(
@@ -103,6 +101,18 @@ body {
   color: white;
 }
 
+.glow {
+  text-shadow: 0 0 24px var(--light-orange);
+  transition: 0.2s;
+  color: var(--light-orange);
+}
+
+.glow:hover {
+  text-shadow:
+    0 0 24px var(--light-orange),
+    0 0 32px var(--light-orange);
+}
+
 .main-display-flex {
   display: flex;
   justify-content: center;
@@ -110,7 +120,7 @@ body {
 }
 
 .flash-error {
-  background: var(--error-orange);
+  background: var(--main-red-thumb);
   color: black;
   position: absolute;
   top: 105px;
@@ -145,7 +155,7 @@ body {
   cursor: default;
 }
 
-/* Top-down gradient: cart checkout and store home page 'sign in' */
+/* cart checkout, store home page 'sign in', buy box */
 .green-button {
   color: var(--light-green-text);
   height: 30px;
@@ -155,7 +165,6 @@ body {
   border-radius: 3px;
   font-family: 'Motiva Sans 400';
   font-size: 15px;
-  margin-left: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,18 +182,8 @@ body {
   cursor: default;
 }
 
-/* Blue line gradient on top */
-.dull-blue-line-top::before {
-  content: "";
-  height: 1px;
-  background: var(--storenav-gradient);
-  width: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-}
-
-.neon-blue-line-top::before {
+/* Reviews */
+.blue-line-top::before {
   content: "";
   height: 1px;
   background: var(--neon-blue-sweep);
@@ -194,11 +193,11 @@ body {
   top: 0;
 }
 
-/* Blue line gradient on bottom */
+/* Game show */
 .blue-line-bottom::after {
   content: "";
   height: 1px;
-  background: var(--storenav-gradient);
+  background: var(--neon-blue-sweep);
   width: 100%;
   display: block;
   margin-top: 4px;
@@ -216,8 +215,8 @@ body {
   color: var(--mixed-rating);
 }
 
-.negative-rating {
-  color: var(--negative-rating);
+.main-red-thumb {
+  color: var(--main-red-thumb);
 }
 
 sup {
@@ -227,7 +226,7 @@ sup {
 
 @keyframes flashErrorsFadeIn {
   0% { background-color: white; }
-  100% { background-color: var(--error-orange); }
+  100% { background-color: var(--main-red-thumb); }
 }
 
 ::-webkit-scrollbar {

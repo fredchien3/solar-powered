@@ -30,19 +30,9 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: inherit;
   font-size: 28px;
   position: absolute;
   left: 0;
-  transition: 0.2s;
-  color: var(--light-orange);
-  text-shadow: 0 0 24px var(--light-orange);
-}
-
-.logo:hover {
-  text-shadow:
-    0 0 24px var(--light-orange),
-    0 0 32px var(--light-orange);
 }
 
 .logo i {

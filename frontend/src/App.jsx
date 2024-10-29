@@ -44,7 +44,7 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route>
-            <StoreHomePage error={"URL Not Found :^)"} />
+            <StoreHomePage error={"URL Not Found :^("} />
           </Route>
         </Switch>
       </section>

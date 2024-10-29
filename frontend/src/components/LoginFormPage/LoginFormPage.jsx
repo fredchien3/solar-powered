@@ -22,7 +22,7 @@ export default function LoginFormPage() {
   useEffect(() => {
     setErrors([]);
   }, [credential, password])
-  
+
   const handleSubmit = (e) => {
     if (e) e.preventDefault();
     setErrors([]);
@@ -56,7 +56,7 @@ export default function LoginFormPage() {
       }, i * 90)
     }
   }
-  
+
   let inputPassword = 'MoolyFTW';
   const fillPassword = () => {
     for (let i = 0; i < inputPassword.length; i++) {
@@ -65,12 +65,12 @@ export default function LoginFormPage() {
       }, i * 100)
     }
   }
-  
+
   const loginDemoUser = () => {
     const demoUser = { credential: inputCredential, password: inputPassword };
     return (dispatch(login(demoUser)));
   }
-  
+
   return (
     <div className="login-page">
       <div className="login-form-wrapper">

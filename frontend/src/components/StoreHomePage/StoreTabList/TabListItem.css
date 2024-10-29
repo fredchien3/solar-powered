@@ -34,8 +34,8 @@
 }
 
 .tab-list-item.tab-active {
-  background: linear-gradient(to right, var(--87-blue-gray) 5%, var(--71-blue-gray) 95%);
-  border-right: 14px solid var(--71-blue-gray);
+  background: linear-gradient(to right, var(--87-orange-gray) 5%, var(--71-orange-gray) 95%);
+  border-right: 14px solid var(--71-orange-gray);
   cursor: pointer;
 }
 

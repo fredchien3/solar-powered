@@ -60,13 +60,13 @@ export default function SignupFormPage() {
             <div className="captcha-logo-wrapper">
               <i className="fa-solid fa-recycle"></i>
               <h3>reCYCLE</h3>
-              <h4>Privacy - Terms</h4>
+              {/* <h4>Privacy - Terms</h4> */}
             </div>
           </div>
-          <label className="agreement-wrapper">
+          {/* <label className="agreement-wrapper">
             <input type="checkbox" checked disabled></input>
             I am 13 years of age or older and agree to the terms of the <Link to="/subscriber_agreement" onClick={e => e.preventDefault()}>Solar Subscriber Agreement</Link> and the <Link to="/privacy_agreement" onClick={e => e.preventDefault()}>Array Privacy Policy</Link>.
-          </label>
+          </label> */}
           <button type="submit">Continue</button>
         </form>
       </section>

@@ -2,7 +2,7 @@
   width: 908px;
   height: 147px;
   padding: 16px 16px 8px 16px;
-  background-color: color-mix(in hsl, var(--87-blue-gray), transparent 80%);
+  background-color: color-mix(in hsl, var(--83-blue-gray), transparent 80%);
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;

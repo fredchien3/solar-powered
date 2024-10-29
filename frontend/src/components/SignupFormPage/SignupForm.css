@@ -38,7 +38,7 @@
 }
 
 .signup-form-errors {
-  border: 2px solid var(--error-red);
+  border: 2px solid var(--main-red-thumb);
   background-color: var(--40-tint);
   width: 676px;
   padding: 10px;
@@ -50,7 +50,7 @@
 }
 
 @keyframes signupErrorsFadeIn {
-  0% { background-color: var(--error-orange); }
+  0% { background-color: var(--main-red-thumb); }
   100% { background-color: var(--40-tint); }
 }
 
@@ -60,6 +60,7 @@
   text-transform: uppercase;
   margin-bottom: 34px;
   letter-spacing: 2px;
+  color: var(--light-orange);
 }
 
 .signup-form label {

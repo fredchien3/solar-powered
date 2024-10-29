@@ -67,7 +67,7 @@
 .post-review-button {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  background: linear-gradient(to bottom, var(--87-blue-gray) 5%, var(--71-blue-gray) 95%);
+  background: linear-gradient(to bottom, var(--84-gray) 5%, var(--75-gray) 95%);
   color: var(--mid-blue);
   padding: 8px 16px;
   border-radius: 4px;

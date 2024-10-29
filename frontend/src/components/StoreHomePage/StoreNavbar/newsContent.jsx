@@ -6,6 +6,33 @@ export const newsContent = (
       <span>
         <h3 id="news-text">NEWS</h3>
         <h3 id="posted-text">POSTED</h3>
+        <h3>{prettifyDate("10/28/2024")}</h3>
+      </span>
+      <h1>CSS Consolidation and Changes</h1>
+      <p>
+        A bit of background: this project started as a pixel perfect clone of Steam, as you probably guessed. The idea was to learn and practice Rails, React, CSS, etc., and cloning an existing site meant I didn't have to invent and design a brand new user interface from scratch. That way I could focus on mastering the coding aspect.
+      </p>
+      <p>
+        But since I started this project, I had a vague notion in the back of my mind of somehow making it my own. I wanted to tweak some of the colors, refresh some of the dated CSS, and add in a bit of solar flare so to speak.
+      </p>
+      <p>
+        Well, I finally got started. First, I needed to consolidate all the many CSS colors that were just individually labeled (this was a consequence of overusing the color picker tool on the original Steam website). I went through every stylesheet in the repo and refactored out repeating colors into variables -- Search and Replace was helpful for this.
+      </p>
+      <p>
+        After all the colors in the project were neatly arranged in the index file for me to see, I could start to whittle them down and combine similar colors. That would finally make my life easier when it was time to change colors and add new hues.
+      </p>
+      <p>
+        Hope you like the new visuals!
+      </p>
+      <p>- Fred</p>
+      <p>
+        P.S. Oh, also, I fixed a bothersome bug where logging out of one account and in to another would not properly clear the first account's owned games. Had to go into the backend code for that.
+      </p>
+    </article>
+    <article className="news-article">
+      <span>
+        <h3 id="news-text">NEWS</h3>
+        <h3 id="posted-text">POSTED</h3>
         <h3>{prettifyDate("11/19/2022")}</h3>
       </span>
       <h1>News Popup Added</h1>

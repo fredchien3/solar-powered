@@ -136,7 +136,7 @@
 }
 
 .voted-no > i {
-  color: var(--negative-rating);
+  color: var(--main-red-thumb);
 }
 
 .voted-funny > i {

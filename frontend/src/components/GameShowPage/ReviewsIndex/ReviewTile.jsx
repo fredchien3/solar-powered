@@ -150,7 +150,7 @@ export default function ReviewTile({ review }) {
   }
 
   return (
-    <article className="review-tile dull-blue-line-top" id={`review-by-author-${review.authorId}`}>
+    <article className="review-tile blue-line-top" id={`review-by-author-${review.authorId}`}>
       <div className="review-tile-left">
         <header>
           <img src={defaultAvatar} alt="avatar" />

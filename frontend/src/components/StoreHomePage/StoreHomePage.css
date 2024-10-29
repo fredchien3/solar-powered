@@ -47,6 +47,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.2s;
+  opacity: 75%;
 }
 
 .store-home-button:hover {
@@ -55,20 +57,24 @@
 
 .button-left {
   left: -46px;
-  background-image: linear-gradient(to left, transparent 5%, var(--40-tint) 95%);
+  background-image: linear-gradient(to left, transparent 5%, var(--light-orange) 250%);
+  border-radius: 2px 0 0 2px;
 }
 
 .button-left:hover {
-  background-image: linear-gradient(to left, transparent 5%, var(--87-blue-gray) 300%);
+  background-image: linear-gradient(to left, transparent 5%, var(--light-orange) 250%);
+  opacity: 100%;
 }
 
 .button-right {
   right: -46px;
-  background-image: linear-gradient(to right, transparent 5%, var(--40-tint) 95%);
+  background-image: linear-gradient(to right, transparent 5%, var(--light-orange) 500%);
+  border-radius: 0 2px 2px 0;
 }
 
 .button-right:hover {
-  background-image: linear-gradient(to right, transparent 5%, var(--87-blue-gray) 300%);
+  background-image: linear-gradient(to right, transparent 5%, var(--light-orange) 250%);
+  opacity: 100%;
 }
 
 .store-sign-in-box {
@@ -90,11 +96,5 @@
 }
 
 .store-sign-in-box > span > a:hover {
-  color: white;
   color: var(--light-blue);
-}
-
-.store-sign-in-box > a {
-  border-top: 1px solid var(--light-olive-green);
-  border-left: 1px solid var(--light-olive-green);
 }

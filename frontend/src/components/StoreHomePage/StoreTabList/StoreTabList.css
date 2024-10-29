@@ -37,6 +37,6 @@
 .store-tab-list-right-col {
   width: 308px;
   height: 100%;
-  background-image: linear-gradient(to right, var(--71-blue-gray) 5%, var(--60-blue-gray) 95%);
+  background-image: linear-gradient(to right, var(--71-orange-gray) 5%, var(--60-orange-gray) 95%);
   position: relative;
 }

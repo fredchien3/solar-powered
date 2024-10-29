@@ -96,7 +96,7 @@ export default function Navigation() {
   return (
     <nav className="header-nav">
       <div className="header-nav-content">
-        <Link to="/" className="logo">
+        <Link to="/" className="logo glow">
           <i className="fa-solid fa-sun"></i>
           <h1>Solar</h1>
         </Link>

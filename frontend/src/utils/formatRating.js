@@ -41,7 +41,7 @@ export const ratingColor = (averageScore) => {
     case averageScore >= 40:
       return "mixed-rating";
     case averageScore >= 0:
-      return "negative-rating";
+      return "main-red-thumb";
     default:
       return "Fred something went wrong";
   }
