@@ -17,12 +17,12 @@
 }
 
 .store-featured-box-wide-wrapper {
-  background:
-    radial-gradient(
-      circle at 50% 150%,
-      color-mix(in hsl, var(--neon-blue), transparent 50%) 0%,
-      transparent 75%
-    );
+  /* background: radial-gradient(
+    circle at 50% 150%,
+    color-mix(in hsl, var(--light-orange), transparent 30%) 0%,
+    transparent 75%
+  );
+  border-radius: 0 0 4px 4px; */
   width: 70%;
   height: 450px;
   box-sizing: border-box;
@@ -57,23 +57,21 @@
 
 .button-left {
   left: -46px;
-  background-image: linear-gradient(to left, transparent 5%, var(--light-orange) 250%);
+  background-image: linear-gradient(to left, transparent 5%, var(--40-tint-white) 225%);
   border-radius: 2px 0 0 2px;
 }
 
 .button-left:hover {
-  background-image: linear-gradient(to left, transparent 5%, var(--light-orange) 250%);
   opacity: 100%;
 }
 
 .button-right {
   right: -46px;
-  background-image: linear-gradient(to right, transparent 5%, var(--light-orange) 500%);
+  background-image: linear-gradient(to right, transparent 5%, var(--40-tint-white) 225%);
   border-radius: 0 2px 2px 0;
 }
 
 .button-right:hover {
-  background-image: linear-gradient(to right, transparent 5%, var(--light-orange) 250%);
   opacity: 100%;
 }
 

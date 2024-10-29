@@ -174,27 +174,27 @@
   padding: 0 26px;
   z-index: 2;
   text-decoration: none;
-  margin-left: 1px;
+  margin-left: 3px;
+  transition: 0.2s;
 }
 
 .link-to-wishlist {
-  background-image: url(https://store.cloudflare.steamstatic.com/public/images/v6/storemenu/background_wishlist.jpg);
   color: white;
-  background-color: var(--40-tint-white);
+  background: var(--40-blue-gray);
 }
 
 .link-to-wishlist:hover {
   color: black;
-  background: linear-gradient(135deg, white 0%,var(--60-gray) 100%);
+  background: var(--75-gray);
 }
 
 .link-to-cart {
-  color: var(--light-olive-green);
-  background-color: color-mix(in hsl, var(--light-olive-green), transparent 60%);
+  color: var(--87-orange-gray);
+  background-color: color-mix(in hsl, var(--light-orange), transparent 35%);
 }
 
 .link-to-cart:hover {
   color: black;
-  background-color: color-mix(in hsl, var(--light-olive-green), transparent 25%);
+  background-color: color-mix(in hsl, var(--strong-orange), transparent 30%);
   cursor: pointer;
 }

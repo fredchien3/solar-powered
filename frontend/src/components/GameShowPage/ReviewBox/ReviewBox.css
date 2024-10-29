@@ -6,22 +6,22 @@
 .review-form-component > header {
   background: linear-gradient(
     to right,
-    color-mix(in hsl, var(--light-olive-green), transparent 40%) 0%,
-    color-mix(in hsl, var(--dark-olive-green), transparent 40%) 100%
+    color-mix(in hsl, var(--light-orange), transparent 40%) 0%,
+    color-mix(in hsl, var(--dark-orange), transparent 40%) 100%
   );
+  color: var(--light-orange);
   font-size: 18px;
   font-family: "Motiva Sans 300", Sans-serif;
   line-height: 40px;
-  color: var(--light-olive-green);
   position: relative;
-  padding-left: 78px;
+  padding-left:84px;
   box-sizing: border-box;
   margin-bottom: 1px;
 }
 
 .in-library-flag {
   position: absolute;
-  background-color: var(--light-olive-green);
+  background-color: var(--light-orange);
   height: 18px;
   left: -8px;
   top: 10px;
@@ -32,7 +32,7 @@
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 2px black;
-  padding: 1px 6px 0 6px;
+  padding: 0 6px;
   box-sizing: border-box;
 }
 

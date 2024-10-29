@@ -55,7 +55,7 @@
 }
 
 .relevant-similar-games-tile i {
-  color: var(--light-olive-green);
+  color: var(--helpful-green);
   margin-left: -16px;
   margin-right: 2px;
 }

@@ -30,7 +30,7 @@ export default function StoreHomePage({ error }) {
   if (!currentUser.id) signInBox = (
     <div className="store-sign-in-box">
       Sign in to view personalized recommendations
-      <Link className="green-button" to="/login">Sign In</Link>
+      <Link className="orange-button" to="/login">Sign In</Link>
       <span>Or <Link to="/signup">sign up</Link> and join Solar for free</span>
     </div>
   )

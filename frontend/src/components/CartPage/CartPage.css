@@ -15,11 +15,29 @@
 }
 
 .cart-page-glow-background {
-  background: url(https://store.akamai.steamstatic.com/public/images//v6/temp/cluster_bg_2.png) bottom center no-repeat;
-  width: 100%;
-  height: 230px;
   position: absolute;
   z-index: -1;
+  background: radial-gradient(
+    circle at 50% 120%,
+    color-mix(in hsl, var(--light-orange), transparent 50%) 0%,
+    transparent 95%
+  );
+  height: 180px;
+  width: 1060px;
+}
+
+.cart-page-glow-background::after {
+  content: "";
+  height: 40px;
+  width: 1060px;
+  display: block;
+  position: absolute;
+  bottom: -42px;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    color-mix(in hsl, var(--light-orange), transparent 30%) 0%,
+    transparent 75%
+  );
 }
 
 .cart-page-title-wrapper {

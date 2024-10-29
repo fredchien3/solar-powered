@@ -4,11 +4,11 @@
   align-items: center;
   width: 940px;
   height: 35px;
-  background: var(--storenav-gradient);
   margin-top: 31px;
   margin-bottom: 16px;
   position: relative;
-  box-shadow: 0 0 3px var(--40-tint);
+  box-shadow: 0 0 8px var(--50-tint);
+  background: var(--15-tint-white);
 }
 
 .store-nav-bar-links {
@@ -28,11 +28,15 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: 700;
-  text-shadow: 0px 2px 3px var(--30-tint);
+  text-shadow: 0px 0px 4px black;
 }
 
 .store-nav-bar-links a:hover {
-  background: linear-gradient(to right, color-mix(in hsl, var(--neon-blue), transparent 50%) 0%, transparent 100%);
+  background: linear-gradient(
+    to right,
+    color-mix(in hsl, var(--neon-blue), transparent 50%) 0%,
+    transparent 100%
+  );
   color: white;
   cursor: pointer;
 }

@@ -72,7 +72,7 @@
 }
 
 .profile-button-dropdown p {
-  color: var(--neon-blue);
+  color: var(--strong-orange);
   margin-left: 4px;
   padding: 0;
   display: block;
@@ -82,4 +82,8 @@
   line-height: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.profile-button-dropdown a:hover p {
+  color: var(--light-orange);
 }

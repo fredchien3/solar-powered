@@ -63,13 +63,12 @@
 
 .wishlist-item-purchase p {
   font-size: 12px;
-  font-family: 'Motiva Sans 100', sans-serif;
   color: white;
   margin: 0px 16px;
   height: 100%;
   display: flex;
-  align-items: flex-end;
-  padding-bottom: 6px;
+  align-items: center;
+  padding-top: 2px;
   box-sizing: border-box;
 }
 

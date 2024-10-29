@@ -55,12 +55,11 @@
 }
 
 .signup-form h1 {
-  font-family: 'Motiva Sans 100';
+  font-family: 'Motiva Sans 100', sans-serif;
   font-size: 34px;
   text-transform: uppercase;
   margin-bottom: 34px;
   letter-spacing: 2px;
-  color: var(--light-orange);
 }
 
 .signup-form label {
@@ -160,7 +159,7 @@
 }
 
 .signup-form button {
-  background: var(--neon-blue-sweep);
+  background: var(--neon-orange-gradient);
   width: 162px;
   height: 38px;
   border: none;
@@ -172,11 +171,11 @@
 }
 
 .signup-form button:hover {
-  background: var(--neon-blue-sweep-30);
+  background: var(--neon-orange-gradient-30);
   cursor: pointer;
 }
 
 .signup-form button:active {
-  background: var(--neon-blue-sweep-60);
-  outline: 1px solid var(--neon-blue);
+  background: var(--neon-orange-gradient-60);
+  outline: 1px solid var(--light-orange);
 }

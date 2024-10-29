@@ -10,11 +10,8 @@
   Post review hover bottom, carousel arrows */
 
   --strong-orange: hsl(27, 100%, 45%);
-  --light-orange: hsl(32, 100%, 62%);
-
-  --storenav-blue-left:  hsl(212, 42%, 42%); /* only storenavbar left gradient */
-  --storenav-blue-mid:   hsl(209, 51%, 46%); /* only storenavbar mid gradient */
-  --storenav-blue-right: hsl(229, 76%, 25%); /* only storenavbar right gradient */
+  --light-orange:  hsl(32, 100%, 62%);
+  --dark-orange:   hsl(27, 100%, 25%);
 
   --light-blue-thumb: hsl(204, 40%, 35%); /* thumbs up icons, game show carousel thumb hovered */
   --dark-blue-thumb:  hsl(204, 50%, 28%); /* only thumbs up icons */
@@ -41,22 +38,14 @@
   --83-blue-gray: hsl(206, 29%, 83%); /* various text + links */
   --40-blue-gray: hsl(203, 15%, 40%); /* various muted text + no reviews (GameShow) */
 
-  --87-orange-gray: hsl(32, 90%, 87%); /* TabList bg left, various gradients and text */
-  --71-orange-gray: hsl(32, 71%, 71%); /* TabList bg mid */
-  --60-orange-gray: hsl(36, 25%, 70%); /* TabList bg right */
+  --pale-orange-text: hsl(32, 100%, 95%);
+  --87-orange-gray:   hsl(32, 80%, 77%); /* TabList bg left, link to cart text */
+  --71-orange-gray:   hsl(32, 50%, 61%); /* TabList bg mid */
+  --60-orange-gray:   hsl(36, 25%, 60%); /* TabList bg right */
 
-  /* green-button */
-  --light-green-text:     hsl(73, 68%, 72%);
-  --light-green-bg:       hsl(85, 68%, 41%);
-  --dark-green-bg:        hsl(87, 67%, 32%);
-  --light-green-bg-hover: hsl(85, 68%, 50%); /* also helpful review vote */
-  --dark-green-bg-hover:  hsl(87, 67%, 39%);
-
-  --light-olive-green:    hsl(73, 93%, 42%); /* review form header gradient, link-to-cart text and bg(mixed) + green check + review form header */
-  --dark-olive-green:     hsl(73, 93%, 21%); /* review form header gradient */
-
-  --mixed-rating:    hsl(38, 33%, 59%); /* only text */
-  --funny-yellow:    hsl(59, 58%, 48%); /* only */
+  --helpful-green: hsl(85, 68%, 50%); /* and relevant green check + link to cart */
+  --mixed-rating:  hsl(38, 33%, 59%); /* only text */
+  --funny-yellow:  hsl(59, 58%, 48%); /* only */
 
   --80-tint:   hsla(0, 0%, 0%, 0.8); /* modal */
   --50-tint:   hsla(0, 0%, 0%, 0.5);
@@ -71,28 +60,21 @@
   --15-tint-white: hsla(0, 0%, 100%, 0.15); /* sign in form input bg hover */
   --10-tint-white: hsla(0, 0%, 100%, 0.1); /* sign in form input bg */
 
-  /* login + signup buttons */
-  --neon-blue-sweep: linear-gradient(
+  /* login + signup buttons and ubiquitous orange-button */
+  --neon-orange-gradient: linear-gradient(
     to right,
     var(--light-orange) 0%,
     var(--strong-orange) 100%
   );
-  --neon-blue-sweep-30: linear-gradient(
+  --neon-orange-gradient-30: linear-gradient(
     to right,
     var(--light-orange) 30%,
     var(--strong-orange) 100%
   );
-  --neon-blue-sweep-60: linear-gradient(
+  --neon-orange-gradient-60: linear-gradient(
     to right,
     var(--light-orange) 60%,
     var(--strong-orange) 100%
-  );
-
-  --storenav-gradient:linear-gradient(
-    to right,
-    var(--storenav-blue-left),
-    var(--storenav-blue-mid),
-    var(--storenav-blue-right)
   );
 }
 
@@ -156,11 +138,11 @@ body {
 }
 
 /* cart checkout, store home page 'sign in', buy box */
-.green-button {
-  color: var(--light-green-text);
+.orange-button {
+  color: var(--pale-orange-text);
   height: 30px;
   padding: 0 15px;
-  background: linear-gradient(to right, var(--light-green-bg) 5%, var(--dark-green-bg) 95%);
+  background: var(--neon-orange-gradient);
   border: none;
   border-radius: 3px;
   font-family: 'Motiva Sans 400';
@@ -171,33 +153,37 @@ body {
   text-shadow: 1px 1px 0px var(--30-tint);
 }
 
-.green-button:not(:disabled):hover {
-  background: linear-gradient(to right, var(--light-green-bg-hover) 5%, var(--dark-green-bg-hover) 95%);
+.orange-button:not(:disabled):hover {
+  background: var(--neon-orange-gradient-30);
   color: white;
   cursor: pointer;
 }
 
-.green-button:disabled {
+.orange-button:not(:disabled):active {
+  background: var(--neon-orange-gradient-60);
+}
+
+.orange-button:disabled {
   opacity: 0.45;
   cursor: default;
 }
 
 /* Reviews */
-.blue-line-top::before {
+.orange-line-top::before {
   content: "";
   height: 1px;
-  background: var(--neon-blue-sweep);
   width: 100%;
+  background: var(--neon-orange-gradient);
   display: block;
   position: absolute;
   top: 0;
 }
 
 /* Game show */
-.blue-line-bottom::after {
+.orange-line-bottom::after {
   content: "";
   height: 1px;
-  background: var(--neon-blue-sweep);
+  background: var(--neon-orange-gradient);
   width: 100%;
   display: block;
   margin-top: 4px;

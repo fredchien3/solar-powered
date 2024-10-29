@@ -38,7 +38,7 @@ export default function CartButton({ gameId, gameAlreadyInLibrary = false }) {
 
   return (
     <button
-      className="green-button"
+      className="orange-button"
       onClick={handleAddToCart}
       disabled={gameAlreadyInLibrary}
     >

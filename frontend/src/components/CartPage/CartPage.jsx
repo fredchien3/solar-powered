@@ -76,15 +76,15 @@ export default function CartPage() {
             {cartItems}
             <div className="checkout-wrapper">
               <div className="estimated-total-wrapper">
-                <span><h1>Estimated total</h1><sup>1</sup></span>
+                <span><h1>Estimated total</h1><sup> 1</sup></span>
                 <h1>${totalPrice === 0 ? "0.00" : totalPrice}</h1>
               </div>
               <div className="checkout-buttons continue-shopping">
-                <button className="green-button" onClick={handlePurchase} disabled={disablePurchaseForMyself}>Purchase for myself</button>
+                <button className="orange-button" onClick={handlePurchase} disabled={disablePurchaseForMyself}>Purchase</button>
               </div>
             </div>
             <div className="sales-tax-disclaimer-wrapper checkout-page-body-p">
-              <sup>1</sup><p>Sales tax will be calculated during checkout where applicable</p>
+              <sup>1</sup><p>You have infinite money. Buy as many games as you want!</p>
             </div>
             <div className="continue-shopping-wrapper">
               <Link to="/store" className="light-blue-button continue-shopping">Continue Shopping</Link>

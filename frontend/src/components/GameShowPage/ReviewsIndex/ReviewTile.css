@@ -132,7 +132,7 @@
 }
 
 .voted-yes > i {
-  color: var(--light-green-bg-hover);
+  color: var(--helpful-green);
 }
 
 .voted-no > i {

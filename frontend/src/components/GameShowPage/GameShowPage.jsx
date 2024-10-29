@@ -118,7 +118,7 @@ export default function GameShowPage() {
                 </tr>
               </tbody>
             </table>
-            <div className="popular-tags">
+            {/* <div className="popular-tags">
               Popular user-defined tags for this product:
               <div className="user-tags-row">
                 <button className="light-blue-button user-tag-button">Tags</button>
@@ -126,7 +126,7 @@ export default function GameShowPage() {
                 <button className="light-blue-button user-tag-button">Soon</button>
                 <button className="light-blue-button user-tag-button">+</button>
               </div>
-            </div>
+            </div> */}
           </aside>
         </div>
       </section>
@@ -149,7 +149,7 @@ export default function GameShowPage() {
             </div>
           </div>
           <article className="about-this-game">
-            <h1 className="blue-line-bottom">About this game</h1>
+            <h1 className="orange-line-bottom">About this game</h1>
             {game.longDescription}
           </article>
         </aside>

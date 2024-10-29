@@ -119,7 +119,7 @@ export default function ReviewTile({ review }) {
         {thumb}
         <div className="review-tile-header-summary">
           <h1>Recommended</h1>
-          <span>100 hrs on record (50 hrs at review time)</span>
+          {/* <span>100 hrs on record (50 hrs at review time)</span> */}
         </div>
       </header>
       <h1>Posted: {longDate(review.createdAt)}</h1>
@@ -150,7 +150,7 @@ export default function ReviewTile({ review }) {
   }
 
   return (
-    <article className="review-tile blue-line-top" id={`review-by-author-${review.authorId}`}>
+    <article className="review-tile orange-line-top" id={`review-by-author-${review.authorId}`}>
       <div className="review-tile-left">
         <header>
           <img src={defaultAvatar} alt="avatar" />

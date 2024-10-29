@@ -26,7 +26,7 @@
 .login-form h1 {
   position: absolute;
   text-transform: uppercase;
-  font-family:'Motiva Sans 100', sans-serif;
+  font-family: 'Motiva Sans 100', sans-serif;
   font-size: 32px;
   color: white;
   font-weight: 200;
@@ -85,7 +85,7 @@
 .login-form button {
   width: 270px;
   height: 50px;
-  background: var(--neon-blue-sweep);
+  background: var(--neon-orange-gradient);
   outline: none;
   border: none;
   border-radius: 2px;
@@ -100,13 +100,13 @@
 }
 
 .login-form button:hover, .new-beta-feature button:hover {
-  background: var(--neon-blue-sweep-30);
+  background: var(--neon-orange-gradient-30);
   cursor: pointer;
 }
 
 .login-form button:active, .new-beta-feature button:active {
-  background: var(--neon-blue-sweep-60);
-  outline: 1px solid var(--neon-blue);
+  background: var(--neon-orange-gradient-60);
+  outline: 1px solid var(--light-orange);
 }
 
 .error-border {
