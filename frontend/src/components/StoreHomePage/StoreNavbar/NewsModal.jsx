@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Modal from "../../../contexts/Modal";
 import { newsContent } from "./newsContent";
@@ -6,6 +6,16 @@ import "./NewsModal.css";
 
 export default function NewsModal() {
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const close = (e) => {
+      if(e.key === 'Escape'){
+        setShowModal(false);
+      }
+    }
+    window.addEventListener('keydown', close)
+    return () => window.removeEventListener('keydown', close)
+  }, [])
 
   const handleClick = (e) => {
     e.preventDefault();

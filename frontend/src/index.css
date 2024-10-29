@@ -132,6 +132,10 @@ body {
   color: white;
 }
 
+.light-blue-button:not(:disabled):active {
+  background: linear-gradient(to right, var(--light-blue) 45%, var(--mid-blue) 95%);
+}
+
 .light-blue-button:disabled {
   opacity: 0.45;
   cursor: default;
