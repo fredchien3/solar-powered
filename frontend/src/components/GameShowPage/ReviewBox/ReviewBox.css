@@ -78,10 +78,15 @@
   padding-right: 8px;
 }
 
+.review-form-wrapper > a {
+  width: 92px;
+  height: 92px;
+}
+
 .review-form-wrapper > a > img {
   width: 92px;
   height: 92px;
-  border: 1px solid var(--neon-blue);
+  border: 2px solid var(--neon-blue);
 }
 
 /* thumbs up and thumbs down styling */
@@ -117,7 +122,6 @@
 .review-form-thumb.fourty > i {
   font-size: 30px;
 }
-/*  */
 
 .review-form-wrapper > h3 {
   font-size: 14px;

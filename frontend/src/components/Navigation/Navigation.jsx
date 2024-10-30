@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 import ProfileButton from "./ProfileButton";
 import './Navigation.css'
+import fredAvatar from '../fred_and_cober.jpg';
 import defaultAvatar from "../default_avatar.jpg";
 import { fetchCartItems } from "../../store/cartItems";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
@@ -59,7 +60,7 @@ export default function Navigation() {
         </button>
         <ProfileButton currentUser={currentUser} />
         <Link to={'/users/' + currentUser.username + '/games'} className="small-avatar-wrapper">
-          <img alt="avatar" src={defaultAvatar} className="small-avatar"/>
+          <img alt="avatar" src={currentUser.id === 1 ? fredAvatar : defaultAvatar} className="small-avatar"/>
         </Link>
       </div>
     )

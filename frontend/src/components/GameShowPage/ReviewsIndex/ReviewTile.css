@@ -98,6 +98,7 @@
   line-height: 17px;
   color: var(--75-gray);
   margin-right: 8px;
+  white-space: pre-wrap;
 }
 
 .review-tile-right > h2 {

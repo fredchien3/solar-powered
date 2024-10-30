@@ -1,4 +1,5 @@
 import './ReviewBox.css';
+import fredAvatar from '../../fred_and_cober.jpg';
 import defaultAvatar from "../../default_avatar.jpg";
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import ReviewForm from './ReviewForm';
@@ -40,10 +41,10 @@ export default function ReviewBox({ game, currentUser, gameAlreadyInLibrary }) {
     <>
       <h1>Write a review for {game.title}</h1>
       <p>Please describe what you liked or disliked about this game and whether you recommend it to others.</p>
-      <p>Please remember to be polite and follow the Rules and Guidelines.</p>
+      {/* <p>Please remember to be polite and follow the Rules and Guidelines.</p> */}
       <div className="review-form-wrapper">
         <Link to={`/users/${currentUser.username}/games`}>
-          <img src={defaultAvatar} alt="avatar" />
+          <img src={currentUser.id === 1 ? fredAvatar : defaultAvatar} alt="avatar" />
         </Link>
         <ReviewForm game={game} />
       </div>
